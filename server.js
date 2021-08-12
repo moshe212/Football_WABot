@@ -50,7 +50,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   console.log("whatsapp okk", req.body);
   const docTitle = await footballFunc.GetDataFromSheet();
   console.log(docTitle);
-  const cycle = "5.\n2021";
+  const cycle = "5.2021";
   const jsonFile = {
     reply:
       "? אהלן, אני הבוט של היציע: ליגת העל 2021 האם ברצונכם למלא את ניחושי המחזור " +
