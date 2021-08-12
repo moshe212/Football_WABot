@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "credittransaction",
+  "private_key_id": "d9fe1ef7e128c9c9f4658185a1daca0be07d359b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCriGNmGHh+px1Y\nbRcoxt0NpG86zo5jZa28oVcqYiOwNtbW8gcr0cidZwGc7QZGEFKeI9X+xOyq1Bbm\n09zS13Nsq9znqEV0oJUtQeGdXPIp/c1yjGVR9g/rUzv3ih6P8O/AHJFP+0TzR1nL\n76dC7pVWgVqcdbD56vwnW3NVn0fOXE5HtkDaqP0NjQAjVYrs2LUIJ6XjhWXMmJbL\nAIVKxtJ/GLuOJnc8b5HvZS37MpvUXhoKmPyGLuGFOu/CRr45IbHA8fOwMAv2CXzR\nihKiZDDDtutoGtQ2hFsrjDEhTr9oYz0l8t+88Md6ZzfahYkoznqE2Ao5z4Xo+AhV\nJLGFjUORAgMBAAECggEAEXtcwAjB7QyMm9jAab48xLlrwadQETbJamZaGx516y1n\nn2/6xZ9DjjEzk6H/h+/9b5MQ6f55bV6gt+VDRfTB1YM9iBmY/I4qLfrfKtnQb3Gn\nuOMwp1YH4NCylaOswjhIwwBWWfuulwnAT93MovBsZWzZBoWjJBFsIfm6yzDo0VHh\nyzpIGq3OebnROKB2BWt4ojVIOb2GP2Dd5lZ27e8GlyduY0sbO2Xq6XejYY3EEGK3\no+sRM09BBaX7lwW15IdLM0ZjoTOxA8oH83AprV7C1zV2cJBIUyvvvxKBpsE/6JGJ\nXrtxXDnqegPnnxzRqo64Q096IyUjL8rBVLpJEDPgEQKBgQDVBS3HP+HEkgCqatFG\nQbzuDL0/q/3jFbczTDWAvXVVl3IzDtxM6xcHeVNCdcY5mcZrhK6hmfnc3m9H9Ruy\nugqHGHk52tijIU8nwxp9qZQia1POFcCltWxK2pZVc3bDv5pSuIN+ienuC2qMKoVo\nQSS4Bz0fojsjXsvovrG9YluaeQKBgQDOJFGFBKb2RTUfTqYRS3PaKIBzJtGIBseV\nXvKtOfKit8JgasP1xTbWxqbnyVWX6RjdNeh4+e4eU0KdifzG8DKl+/l7U7lixqQE\nL6vRqZn1Qs6AwJCD8Dl/iH8+nxnVUch8pZK22HeSoqqzo8ugzKpomf8qE8KiOU2g\nasyIjV0r2QKBgQC/FVovNZqr3dxDAnafczCqyTqp9vpTzZL8rQwBY/HwyV1jd50e\nUnPh/G83WrZpzQs0P1z3EUwVWGKyRaiG9mOjM8zqnOlfy+1ZWaZVutxq06PlZZXe\nD5QIwXPBS0Xp6eHg+iraQ5RYOF1nRm1NS8JIYhXuXnR2Ef8P1J9TpvtM4QKBgQCh\n+HttDvi5LCvPS5bEpAqFcalr0SZ1wQ302cPIRG3XWJeL9pe+dpTeMPxXxyRP1kFJ\nHuBonchxX25KJm/NSFIjhVbDhkd1yyp4d5SDisWDplhnZeanJIupH3ELnStJJ5dm\nCRq8PF3Hg7SorZyD3gxPYCDTyO73VBsgXooTCTAaEQKBgGfWj2TmKgH07Jj9tF8Q\nIaaUH7iMJpjbDE0gs2WC0d2iMmu2S+IQ/pjMnDDgUzZY4ZIvkXse5mcnjGsgeTgP\nqXNkLdA7yn8m81vpT7uCKfJg21rnE6dme0TIyXLzbxydwb7RBisk4I9v9bx6YHo0\n9jy8uTsXIOuw4YWRKz9zthGy\n-----END PRIVATE KEY-----\n",
+  "client_email": "credittransaction@credittransaction.iam.gserviceaccount.com",
+  "client_id": "106766786507671712456",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/credittransaction%40credittransaction.iam.gserviceaccount.com"
+}
