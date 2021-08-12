@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, "Client/build")));
+// app.use(express.static(path.join(__dirname, "Client/build")));
 
 let port = process.env.PORT;
 if (port == null || port == "") {
@@ -61,7 +61,9 @@ app.post("/api/Whatsapp", async (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/Client/build/index.html"));
+  console.log(req.body);
+  res.send("non rout");
+  //   res.sendFile(path.join(__dirname + "/Client/build/index.html"));
 });
 
 // connectToDB().then(() => {
