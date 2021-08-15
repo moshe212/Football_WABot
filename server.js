@@ -51,12 +51,15 @@ app.post("/api/Whatsapp", async (req, res) => {
   const docTitle = await footballFunc.GetDataFromSheet();
   console.log(docTitle);
   const cycle = "5.2021";
+  //   const jsonFile = {
+  //     reply:
+  //       " אהלן, אני הבוט של היציע: ליגת העל 2021 האם ברצונכם למלא את ניחושי המחזור " +
+  //       cycle +
+  //       "?" +
+  //       "\n  כן - הקש 1 \n לא - הקש 2",
+  //   };
   const jsonFile = {
-    reply:
-      " אהלן, אני הבוט של היציע: ליגת העל 2021 האם ברצונכם למלא את ניחושי המחזור " +
-      cycle +
-      "?" +
-      "\n  כן - הקש 1 \n לא - הקש 2",
+    replys: [{ message: "test1" }, { message: "test2" }, { message: "test3" }],
   };
   res.send(jsonFile);
 });
