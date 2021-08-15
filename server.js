@@ -59,7 +59,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   //       "\n  כן - הקש 1 \n לא - הקש 2",
   //   };
   const jsonFile = {
-    replys: [{ message: "test1" }, { message: "test2" }, { message: "test3" }],
+    replies: [{ message: "test1" }, { message: "test2" }, { message: "test3" }],
   };
   res.send(jsonFile);
 });
