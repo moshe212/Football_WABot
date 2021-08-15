@@ -47,7 +47,7 @@ function connectToDB() {
 }
 
 app.post("/api/Whatsapp", async (req, res) => {
-  console.log("whatsapp okk", req.query);
+  console.log("whatsapp okk", req);
   const docTitle = await footballFunc.GetDataFromSheet();
   console.log(docTitle);
   const cycle = "5.2021";
