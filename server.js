@@ -61,18 +61,18 @@ app.post("/api/Whatsapp", async (req, res) => {
   const stage = req.body.query.ruleId;
   console.log(stage);
   const cycledate = "17.08.2021";
-  let textMessage1 = "";
-  let textMessage2 = "";
-  let textMessage3 = "";
+  let textMessage1 = "empty";
+  let textMessage2 = "empty";
+  let textMessage3 = "empty";
   switch (stage) {
-    case "4":
+    case 4:
       textMessage1 =
         " אהלן, אני הבוט של היציע: ליגת העל 2021 האם ברצונכם למלא את ניחושי המחזור " +
         cycle +
         "?";
       textMessage2 = "\n  כן - הקש 1 \n לא - הקש 2";
       break;
-    case "9":
+    case 9:
       textMessage1 =
         "בוט: אז מה אתם אוכלים לי את הראש? תחזרו לכאן כשתרצו למלא ניחושים, ותשתדלו שזה יקרה לפני ה-" +
         cycledate +
