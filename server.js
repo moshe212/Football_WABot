@@ -59,6 +59,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   //     "\n  כן - הקש 1 \n לא - הקש 2",
   // };
   const stage = req.body.query.ruleId;
+  console.log(stage);
   const cycledate = "17.08.2021";
   let textMessage1 = "";
   let textMessage2 = "";
