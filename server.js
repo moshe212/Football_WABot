@@ -58,15 +58,38 @@ app.post("/api/Whatsapp", async (req, res) => {
   //     "?" +
   //     "\n  כן - הקש 1 \n לא - הקש 2",
   // };
+  const stage = req.body.query.ruleId;
+  const cycledate = "17.08.2021";
+  let textMessage1 = "";
+  let textMessage2 = "";
+  let textMessage3 = "";
+  switch (stage) {
+    case "4":
+      textMessage1 =
+        " אהלן, אני הבוט של היציע: ליגת העל 2021 האם ברצונכם למלא את ניחושי המחזור " +
+        cycle +
+        "?";
+      textMessage2 = "\n  כן - הקש 1 \n לא - הקש 2";
+      break;
+    case "9":
+      textMessage1 =
+        "בוט: אז מה אתם אוכלים לי את הראש? תחזרו לכאן כשתרצו למלא ניחושים, ותשתדלו שזה יקרה לפני ה-" +
+        cycledate +
+        ". יאללה ביי! 😎 ";
+      break;
+    case "Papayas":
+      console.log("Mangoes and papayas are $2.79 a pound.");
+      // expected output: "Mangoes and papayas are $2.79 a pound."
+      break;
+    default:
+      console.log(`Sorry, we are out of ${expr}.`);
+  }
   const jsonFile = {
     replies: [
       {
-        message:
-          " אהלן, אני הבוט של היציע: ליגת העל 2021 האם ברצונכם למלא את ניחושי המחזור " +
-          cycle +
-          "?",
+        message: textMessage1,
       },
-      { message: "\n  כן - הקש 1 \n לא - הקש 2" },
+      { message: textMessage2 },
     ],
   };
   res.send(jsonFile);
