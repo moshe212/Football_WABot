@@ -86,7 +86,9 @@ app.post("/api/Whatsapp", async (req, res) => {
       {
         message: textMessage1,
       },
-      { message: textMessage2 },
+      {
+        message: textMessage2,
+      },
     ],
   };
   res.send(jsonFile);
