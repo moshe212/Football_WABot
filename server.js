@@ -77,12 +77,8 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycledate +
         ". יאללה ביי! 😎 ";
       break;
-    case "Papayas":
-      console.log("Mangoes and papayas are $2.79 a pound.");
-      // expected output: "Mangoes and papayas are $2.79 a pound."
-      break;
     default:
-      console.log(`Sorry, we are out of ${expr}.`);
+      console.log(`Sorry, we are out of range.`);
   }
   const jsonFile = {
     replies: [
