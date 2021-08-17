@@ -78,6 +78,49 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycledate +
         ". יאללה ביי! 😎 ";
       break;
+    case 12:
+      textMessage1 =
+        "בוט: החלטתם לשגע אותי היום? לכו תעשו שיעורי בית ותחזרו למלא את הניחושים כשתהיו מוכנים, ולא יאוחר " +
+        cycledate +
+        " 😎";
+
+      break;
+    case 11:
+      textMessage1 =
+        "בוט: מחזור <מספר מחזור>, משחק מספר 1: <קבוצה א׳> נגד <קבוצה ב׳>.";
+
+      break;
+    case 15:
+      textMessage1 =
+        "בוט: מחזור <מספר מחזור>, משחק מספר 2: <קבוצה א׳> נגד <קבוצה ב׳>.";
+
+      break;
+    case 16:
+      textMessage1 =
+        "בוט: מחזור <מספר מחזור>, משחק מספר 3: <קבוצה א׳> נגד <קבוצה ב׳>.";
+
+      break;
+    case 17:
+      textMessage1 =
+        "בוט: מחזור <מספר מחזור>, משחק מספר 4: <קבוצה א׳> נגד <קבוצה ב׳>.";
+
+      break;
+    case 18:
+      textMessage1 =
+        "בוט: מחזור <מספר מחזור>, משחק מספר 5: <קבוצה א׳> נגד <קבוצה ב׳>.";
+
+      break;
+    case 19:
+      textMessage1 =
+        "בוט: מחזור <מספר מחזור>, משחק מספר 6: <קבוצה א׳> נגד <קבוצה ב׳>.";
+
+      break;
+    case 20:
+      textMessage1 =
+        "בוט: מחזור <מספר מחזור>, משחק מספר 7: <קבוצה א׳> נגד <קבוצה ב׳>.";
+
+      break;
+
     default:
       console.log(`Sorry, we are out of range.`);
   }
