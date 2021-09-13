@@ -1,7 +1,7 @@
 const { GoogleSpreadsheet } = require("google-spreadsheet");
 const moment = require("moment"); // require
 
-const GetDataFromSheet = async function () {
+const GetDataFromSheet = async function (sheetTitle) {
   const creds = require("../config/CreditTransaction-d9fe1ef7e128.json");
   // Initialize the sheet - doc ID is the long id in the sheets URL
   const doc = new GoogleSpreadsheet(
@@ -11,10 +11,14 @@ const GetDataFromSheet = async function () {
   try {
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo(); // loads document properties and worksheets
-
-    const docTitle = doc.title;
-    console.log("for");
-    return docTitle;
+    const sheet = doc.sheetsByTitle[sheetTitle];
+    if (sheet) {
+      const rows = await sheet.getRows(); // can pass in { limit, offset }
+      return rows;
+    }
+    // const docTitle = doc.title;
+    // console.log("docTitle");
+    // return docTitle;
   } catch (e) {
     throw e;
   }

@@ -48,8 +48,8 @@ function connectToDB() {
 
 app.post("/api/Whatsapp", async (req, res) => {
   console.log("whatsapp okk", req.body);
-  const docTitle = await footballFunc.GetDataFromSheet();
-  console.log(docTitle);
+  const Data = await footballFunc.GetDataFromSheet("תאריכי מחזורים");
+  console.log(Data);
   const cycle = "5.2021";
   // const jsonFile = {
   //   reply:
