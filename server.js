@@ -52,18 +52,23 @@ app.post("/api/Whatsapp", async (req, res) => {
   console.log("whatsapp okk", req.body);
   const Data = await footballFunc.GetDataFromSheet("תאריכי מחזורים");
   for (let i = 0; i < Data.length; i++) {
-    console.log(Data[i]);
+    // console.log(Data[i]);
     const startDate = moment(
       Data[i]._rawData[0].replace("/", "-"),
       "DD-MM-YYYY"
     );
     const endDate = moment(Data[i]._rawData[1].replace("/", "-"), "DD-MM-YYYY");
+    const CurrentDate = moment();
     const cycleNum = Data[i]._rawData[2];
-    console.log(startDate, endDate);
+    let isBetween = false;
+    if (moment(CurrentDate).isBetween(startDate, endDate)) {
+      isBetween = true;
+    }
+    console.log(startDate, endDate, isBetween);
   }
   // const cycle = cycleNum
   // console.log(Data);
-  // const cycle = "5.2021";
+  const cycle = "5.2021";
   // const jsonFile = {
   //   reply:
   //     " אהלן, אני הבוט של היציע: ליגת העל 2021 האם ברצונכם למלא את ניחושי המחזור " +
