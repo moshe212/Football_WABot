@@ -5,7 +5,7 @@ const GetDataFromSheet = async function () {
   const creds = require("../config/CreditTransaction-d9fe1ef7e128.json");
   // Initialize the sheet - doc ID is the long id in the sheets URL
   const doc = new GoogleSpreadsheet(
-    "1SU3sfh1PsiQBcB5Fg1edy5SKUfDaeQ-8C61qfj6gk3c"
+    "1J3iFj9uM3TEC3y__u02PFnq5M5YKSezXP6TVYOEGMto"
   );
 
   try {
