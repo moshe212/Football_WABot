@@ -64,7 +64,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     if (moment(CurrentDate).isBetween(startDate, endDate, undefined, "[)")) {
       isBetween = true;
     }
-    console.log(startDate, endDate, isBetween);
+    console.log(startDate, endDate, CurrentDate, isBetween);
   }
   // const cycle = cycleNum
   // console.log(Data);
