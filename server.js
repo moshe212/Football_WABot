@@ -49,7 +49,10 @@ function connectToDB() {
 app.post("/api/Whatsapp", async (req, res) => {
   console.log("whatsapp okk", req.body);
   const Data = await footballFunc.GetDataFromSheet("תאריכי מחזורים");
-  console.log(Data);
+  for (let i = 0; i < Data.length; i++) {
+    console.log(Data[i]);
+  }
+  // console.log(Data);
   const cycle = "5.2021";
   // const jsonFile = {
   //   reply:
