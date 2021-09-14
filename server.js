@@ -56,15 +56,12 @@ app.post("/api/Whatsapp", async (req, res) => {
     const startDate = moment(
       Data[i]._rawData[0].replace("/", "-"),
       "DD-MM-YYYY"
-    ).format("DD-MM-YYYY");
-    const endDate = moment(
-      Data[i]._rawData[1].replace("/", "-"),
-      "DD-MM-YYYY"
-    ).format("DD-MM-YYYY");
-    const CurrentDate = moment().format("DD-MM-YYYY");
+    );
+    const endDate = moment(Data[i]._rawData[1].replace("/", "-"), "DD-MM-YYYY");
+    const CurrentDate = moment().format("MM-DD-YYYY");
     const cycleNum = Data[i]._rawData[2];
     let isBetween = false;
-    if (moment(CurrentDate).isBetween(startDate, endDate, "undef", "(]")) {
+    if (moment(CurrentDate).isBetween(startDate, endDate, undefined, "(]")) {
       isBetween = true;
     }
     // if (moment(CurrentDate) >= endDate) {
