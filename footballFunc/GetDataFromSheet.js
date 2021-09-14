@@ -1,7 +1,7 @@
 const { GoogleSpreadsheet } = require("google-spreadsheet");
 const moment = require("moment"); // require
 
-const GetDataFromSheet = async function (sheetTitle) {
+const getDataFromSheet = async function (sheetTitle) {
   const creds = require("../config/CreditTransaction-d9fe1ef7e128.json");
   // Initialize the sheet - doc ID is the long id in the sheets URL
   const doc = new GoogleSpreadsheet(
@@ -35,4 +35,4 @@ const GetDataFromSheet = async function (sheetTitle) {
   // }
 };
 
-module.exports = { GetDataFromSheet };
+module.exports = { getDataFromSheet };

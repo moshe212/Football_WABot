@@ -50,27 +50,10 @@ function connectToDB() {
 
 app.post("/api/Whatsapp", async (req, res) => {
   console.log("whatsapp okk", req.body);
-  const Data = await footballFunc.GetDataFromSheet("תאריכי מחזורים");
-  for (let i = 0; i < Data.length; i++) {
-    // console.log(Data[i]);
-    const startDate = moment(
-      Data[i]._rawData[0].replace("/", "-"),
-      "DD-MM-YYYY"
-    );
-    const endDate = moment(Data[i]._rawData[1].replace("/", "-"), "DD-MM-YYYY");
-    const CurrentDate = moment();
-    const cycleNum = Data[i]._rawData[2];
-    let isBetween = false;
-    if (moment(CurrentDate).isBetween(startDate, endDate, undefined, "(]")) {
-      isBetween = true;
-    }
-    // if (moment(CurrentDate) >= endDate) {
-    //   isBetween = true;
-    // }
-    console.log(startDate, endDate, CurrentDate, isBetween);
-  }
+  const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
+  const cycleNum = await footballFunc.getCycle(Data);
   // const cycle = cycleNum
-  // console.log(Data);
+  console.log(cycleNum);
   const cycle = "5.2021";
   // const jsonFile = {
   //   reply:
