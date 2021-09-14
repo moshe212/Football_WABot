@@ -53,9 +53,15 @@ app.post("/api/Whatsapp", async (req, res) => {
   const Data = await footballFunc.GetDataFromSheet("תאריכי מחזורים");
   for (let i = 0; i < Data.length; i++) {
     // console.log(Data[i]);
-    const startDate = Data[i]._rawData[0];
-    const endDate = Data[i]._rawData[1];
-    const CurrentDate = moment();
+    const startDate = moment(
+      Data[i]._rawData[0].replace("/", "-"),
+      "DD-MM-YYYY"
+    ).format("DD-MM-YYYY");
+    const endDate = moment(
+      Data[i]._rawData[1].replace("/", "-"),
+      "DD-MM-YYYY"
+    ).format("DD-MM-YYYY");
+    const CurrentDate = moment().format("DD-MM-YYYY");
     const cycleNum = Data[i]._rawData[2];
     let isBetween = false;
     if (moment(CurrentDate).isBetween(startDate, endDate, "undef", "(]")) {
