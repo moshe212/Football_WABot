@@ -22,4 +22,4 @@ const getCycle = (data) => {
   return cycleNum;
 };
 
-module.exports = { getCycle };
+module.exports = getCycle;
