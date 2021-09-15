@@ -11,7 +11,7 @@ const moment = require("moment"); // require
 
 // const autoIncrement = require("mongoose-auto-increment");
 
-const { footballFunc } = require("./footballFunc");
+const { footballFunc } = require("./footballFunc").default;
 
 const { models } = require("./models");
 const { mongoFunc } = require("./mongoFunc");
