@@ -1,7 +1,7 @@
-import getDataFromSheet from "./getDataFromSheet";
-import getCycle from "./getCycle.js";
+const { getDataFromSheet } = require("./getDataFromSheet");
+const { getCycle } = require("./getCycle.js");
 
 const footballFunc = { getDataFromSheet, getCycle };
 
-export default { footballFunc };
+module.exports = { footballFunc };
 // module.exports = { connectToDB };
