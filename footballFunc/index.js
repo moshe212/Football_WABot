@@ -1,7 +1,7 @@
-const { getDataFromSheet } = require("./getDataFromSheet");
-const { getCycle } = require("./getCycle.js");
+const GetDataFromSheet = require("./getDataFromSheet");
+const getCycle = require("./getCycle.js");
 
-const footballFunc = { getDataFromSheet, getCycle };
+const footballFunc = { GetDataFromSheet, getCycle };
 
 module.exports = { footballFunc };
 // module.exports = { connectToDB };
