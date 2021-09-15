@@ -35,4 +35,4 @@ const getDataFromSheet = async function (sheetTitle) {
   // }
 };
 
-module.exports = getDataFromSheet;
+module.exports = { getDataFromSheet };
