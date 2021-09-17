@@ -19,7 +19,7 @@ const getCycle = (data) => {
     ) {
       isBetween = true;
       console.log(startDate, endDate, CurrentDate, cycleNum, isBetween);
-      return cycleNum;
+      return [startDate, endDate, CurrentDate, cycleNum, isBetween];
     }
   }
 };
