@@ -12,7 +12,13 @@ const getCycle = async (data) => {
     );
     const endDate = moment(data[i]._rawData[1].replace("/", "-"), "DD-MM-YYYY");
     const CurrentDate = moment();
-    console.log(startDate, endDate, CurrentDate);
+    console.log(
+      startDate,
+      endDate,
+      CurrentDate,
+      moment(CurrentDate).isBetween(startDate, endDate, undefined, "(]"),
+      moment(CurrentDate).isBetween(startDate, endDate, undefined, "[)")
+    );
 
     if (
       moment(CurrentDate).isBetween(startDate, endDate, undefined, "(]") ||
