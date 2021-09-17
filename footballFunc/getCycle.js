@@ -1,7 +1,7 @@
 const moment = require("moment");
 
 const getCycle = async (data) => {
-  console.log(data);
+  //   console.log(data);
   let isBetween = false;
   let cycleNum = "";
   for (let i = 0; i < data.length; i++) {
@@ -12,7 +12,6 @@ const getCycle = async (data) => {
     );
     const endDate = moment(data[i]._rawData[1].replace("/", "-"), "DD-MM-YYYY");
     const CurrentDate = moment();
-    cycleNum = data[i]._rawData[2];
 
     if (
       moment(CurrentDate).isBetween(startDate, endDate, undefined, "(]") ||
@@ -20,11 +19,12 @@ const getCycle = async (data) => {
     ) {
       isBetween = true;
       console.log(startDate, endDate, CurrentDate, cycleNum, isBetween);
-      break;
+      cycleNum = data[i]._rawData[2];
+      return cycleNum;
+      //   break;
       //   return [startDate, endDate, CurrentDate, cycleNum, isBetween];
     }
   }
-  return cycleNum;
 };
 
 module.exports = { getCycle };
