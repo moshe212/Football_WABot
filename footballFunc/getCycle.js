@@ -20,6 +20,7 @@ const getCycle = async (data) => {
     ) {
       isBetween = true;
       console.log(startDate, endDate, CurrentDate, cycleNum, isBetween);
+      break;
       //   return [startDate, endDate, CurrentDate, cycleNum, isBetween];
     }
   }
