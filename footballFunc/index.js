@@ -1,5 +1,5 @@
 const { getDataFromSheet } = require("./getDataFromSheet");
-const { getCycle } = require("./getCycle.js");
+const { getCycle } = require("./getCycle");
 
 const footballFunc = { getDataFromSheet, getCycle };
 

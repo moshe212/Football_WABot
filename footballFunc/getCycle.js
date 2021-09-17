@@ -1,6 +1,7 @@
 const moment = require("moment");
 
 const getCycle = (data) => {
+  console.log(data);
   let isBetween = false;
   let cycleNum = "";
   for (let i = 0; i < data.length; i++) {
@@ -19,9 +20,10 @@ const getCycle = (data) => {
     ) {
       isBetween = true;
       console.log(startDate, endDate, CurrentDate, cycleNum, isBetween);
-      return [startDate, endDate, CurrentDate, cycleNum, isBetween];
+      //   return [startDate, endDate, CurrentDate, cycleNum, isBetween];
     }
   }
+  return cycleNum;
 };
 
 module.exports = { getCycle };
