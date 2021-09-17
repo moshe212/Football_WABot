@@ -1,6 +1,6 @@
 const moment = require("moment");
 
-const getCycle = (data) => {
+const getCycle = async (data) => {
   console.log(data);
   let isBetween = false;
   let cycleNum = "";
