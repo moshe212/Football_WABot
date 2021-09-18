@@ -5,20 +5,19 @@ const getCycle = async (data) => {
   let isBetween = false;
   let cycleNum = "";
   for (let i = 0; i < data.length; i++) {
-    // console.log(Data[i]);
     const startDate = moment(
       data[i]._rawData[0].replace("/", "-"),
       "DD-MM-YYYY"
     );
     const endDate = moment(data[i]._rawData[1].replace("/", "-"), "DD-MM-YYYY");
-    const CurrentDate = moment("17-09-2021", "DD-MM-YYYY");
-    console.log(
-      startDate,
-      endDate,
-      CurrentDate,
-      moment(CurrentDate).isBetween(startDate, endDate, undefined, "(]"),
-      moment(CurrentDate).isBetween(startDate, endDate, undefined, "[)")
-    );
+    const CurrentDate = moment();
+    // console.log(
+    //   startDate,
+    //   endDate,
+    //   CurrentDate,
+    //   moment(CurrentDate).isBetween(startDate, endDate, undefined, "(]"),
+    //   moment(CurrentDate).isBetween(startDate, endDate, undefined, "[)")
+    // );
 
     if (
       moment(CurrentDate).isBetween(startDate, endDate, undefined, "(]") ||
@@ -28,7 +27,6 @@ const getCycle = async (data) => {
       console.log(startDate, endDate, CurrentDate, cycleNum, isBetween);
       cycleNum = data[i]._rawData[2];
       break;
-      //   return [startDate, endDate, CurrentDate, cycleNum, isBetween];
     }
   }
   return cycleNum;
