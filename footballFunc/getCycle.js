@@ -31,9 +31,11 @@ const getCycle = async (data) => {
   }
   if (!cycleText.includes("זמן ניחושים")) {
     const cycleNum = cycleText.substring(cycleText.length - 2).trim();
-    return cycleNum;
+    const endGuessTime = moment(endDate).add(1, "days");
+    return [cycleNum, endGuessTime];
   } else {
-    return 0;
+    const endGuessTime = moment(endDate).add(1, "days");
+    return [0, endGuessTime];
   }
 };
 

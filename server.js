@@ -51,51 +51,38 @@ function connectToDB() {
 app.post("/api/Whatsapp", async (req, res) => {
   console.log("whatsapp okk", req.body);
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
-  const cycleNum = await footballFunc.getCycle(Data);
-  const Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-  const GamesList = [];
-  for (let g = 0; g < Games.length; g++) {
-    console.log(
-      Games[g]._rawData[0],
-      Games[g]._rawData[1],
-      Games[g]._rawData[2]
-    );
+  const res_cycle = await footballFunc.getCycle(Data);
+  const cycleNum = res_cycle[0];
+  const cycleDate = res_cycle[1];
 
-    if (Games[g]._rawData[0] === cycleNum) {
-      const team1 = Games[g]._rawData[1];
-      const team2 = Games[g]._rawData[2];
-      GamesList.push([team1, team2]);
-    }
-  }
-  console.log(GamesList);
-  // const cycle = cycleNum
-  console.log("cycleNum", cycleNum);
-  const cycle = "5.2021";
-  // const jsonFile = {
-  //   reply:
-  //     " אהלן, אני הבוט של היציע: ליגת העל 2021 האם ברצונכם למלא את ניחושי המחזור " +
-  //     cycle +
-  //     "?" +
-  //     "\n  כן - הקש 1 \n לא - הקש 2",
-  // };
+  console.log("cycleNum", cycleNum, cycleDate);
+  // const cycle = "5.2021";
   const stage = req.body.query.ruleId;
   console.log(stage);
-  const cycledate = "17.08.2021";
+  // const cycledate = "17.08.2021";
   let textMessage1 = "empty";
   let textMessage2 = "empty";
   let textMessage3 = "empty";
   switch (stage) {
     case 4:
-      textMessage1 =
-        " אהלן, אני הבוט של היציע: ליגת העל 2021 האם ברצונכם למלא את ניחושי המחזור " +
-        cycle +
-        "?";
-      textMessage2 = "\n  כן - הקש 1 \n לא - הקש 2";
-      break;
+      if (cycleNum !== 0) {
+        textMessage1 =
+          " אהלן, אני הבוט של היציע: ליגת העל 2021 האם ברצונכם למלא את ניחושי המחזור " +
+          cycleNum +
+          "?";
+        textMessage2 = "\n  כן - הקש 1 \n לא - הקש 2";
+        break;
+      } else {
+        textMessage1 = " אהלן, אני הבוט של היציע: ליגת העל " + moment().year();
+        textMessage2 =
+          "אנחנו נמצאים באמצע מחזור לכן לא ניתן לשלוח ניחושים כרגע, ניתן לחזור לשלוח ניחושים בתאריך" +
+          cycleDate;
+      }
+
     case 9:
       textMessage1 =
-        "בוט: אז מה אתם אוכלים לי את הראש? תחזרו לכאן כשתרצו למלא ניחושים, ותשתדלו שזה יקרה לפני ה-" +
-        cycledate +
+        " אז מה אתם אוכלים לי את הראש? תחזרו לכאן כשתרצו למלא ניחושים, ותשתדלו שזה יקרה לפני ה-" +
+        cycleDate +
         ". יאללה ביי! 😎 ";
       break;
     case 12:
@@ -106,8 +93,20 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 11:
+      const Games = await footballFunc.getDataFromSheet(
+        "רשימת משחקים לפי מחזור"
+      );
+      const GamesList = [];
+      for (let g = 0; g < Games.length; g++) {
+        if (Games[g]._rawData[0] === cycleNum) {
+          const team1 = Games[g]._rawData[1];
+          const team2 = Games[g]._rawData[2];
+          GamesList.push([team1, team2]);
+        }
+      }
+      console.log(GamesList);
       textMessage1 =
-        "בוט: מחזור  " + cycle + ", משחק מספר 1: <קבוצה א׳> נגד <קבוצה ב׳>.";
+        "מחזור  " + cycleNum + ", משחק מספר 1: <קבוצה א׳> נגד <קבוצה ב׳>.";
 
       break;
     case 21:
