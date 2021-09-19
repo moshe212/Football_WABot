@@ -53,13 +53,14 @@ app.post("/api/Whatsapp", async (req, res) => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
   const cycleNum = await footballFunc.getCycle(Data);
   const Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+  const GamesList = [];
   for (let g = 0; g < Games.length; g++) {
     console.log(
       Games[g]._rawData[0],
       Games[g]._rawData[1],
       Games[g]._rawData[2]
     );
-    const GamesList = [];
+
     if (Games[g]._rawData[0] === cycleNum) {
       const team1 = Games[g]._rawData[1];
       const team2 = Games[g]._rawData[2];
