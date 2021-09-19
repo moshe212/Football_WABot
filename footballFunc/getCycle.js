@@ -3,7 +3,7 @@ const moment = require("moment");
 const getCycle = async (data) => {
   //   console.log(data);
   let isBetween = false;
-  let cycleNum = "";
+  let cycleText = "";
   for (let i = 0; i < data.length; i++) {
     const startDate = moment(
       data[i]._rawData[0].replace("/", "-"),
@@ -25,11 +25,16 @@ const getCycle = async (data) => {
     ) {
       isBetween = true;
       console.log(startDate, endDate, CurrentDate, cycleNum, isBetween);
-      cycleNum = data[i]._rawData[2];
+      cycleText = data[i]._rawData[2];
       break;
     }
   }
-  return cycleNum;
+  if (cycleText.includes("זמן ניחושים")) {
+    const cycleNum = trim(cycleText.substring(cycleText.length - 2));
+    return cycleNum;
+  } else {
+    return 0;
+  }
 };
 
 module.exports = { getCycle };
