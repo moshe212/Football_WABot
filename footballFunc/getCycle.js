@@ -29,7 +29,7 @@ const getCycle = async (data) => {
       break;
     }
   }
-  if (cycleText.includes("זמן ניחושים")) {
+  if (!cycleText.includes("זמן ניחושים")) {
     const cycleNum = trim(cycleText.substring(cycleText.length - 2));
     return cycleNum;
   } else {
