@@ -161,7 +161,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[3][0];
       Team2 = GamesList[3][1];
       textMessage1 =
-        "מחזור  " + cycleNum + " משחק מספר 3: " + Team1 + " נגד " + Team2;
+        "מחזור  " + cycleNum + " משחק מספר 4: " + Team1 + " נגד " + Team2;
 
       break;
     case 24:
@@ -178,7 +178,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[4][0];
       Team2 = GamesList[4][1];
       textMessage1 =
-        "מחזור  " + cycleNum + " משחק מספר 4: " + Team1 + " נגד " + Team2;
+        "מחזור  " + cycleNum + " משחק מספר 5: " + Team1 + " נגד " + Team2;
 
       break;
     case 25:
@@ -195,7 +195,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[5][0];
       Team2 = GamesList[5][1];
       textMessage1 =
-        "מחזור  " + cycleNum + " משחק מספר 5: " + Team1 + " נגד " + Team2;
+        "מחזור  " + cycleNum + " משחק מספר 6: " + Team1 + " נגד " + Team2;
 
       break;
     case 26:
@@ -212,7 +212,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[6][0];
       Team2 = GamesList[6][1];
       textMessage1 =
-        "מחזור  " + cycleNum + " משחק מספר 6: " + Team1 + " נגד " + Team2;
+        "מחזור  " + cycleNum + " משחק מספר 7: " + Team1 + " נגד " + Team2;
 
       break;
 
