@@ -67,7 +67,9 @@ app.post("/api/Whatsapp", async (req, res) => {
     case 4:
       if (cycleNum !== 0) {
         textMessage1 =
-          " אהלן, אני הבוט של היציע: ליגת העל 2021 האם ברצונכם למלא את ניחושי המחזור " +
+          " אהלן, אני הבוט של היציע: ליגת העל  " +
+          moment().year() +
+          " האם ברצונכם למלא את ניחושי המחזור " +
           cycleNum +
           "?";
         textMessage2 = "\n  כן - הקש 1 \n לא - הקש 2";
