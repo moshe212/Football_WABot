@@ -56,10 +56,8 @@ app.post("/api/Whatsapp", async (req, res) => {
   const cycleDate = moment(res_cycle[1]).format("DD-MM-YYYY");
 
   console.log("cycleNum", cycleNum, cycleDate);
-  // const cycle = "5.2021";
   const stage = req.body.query.ruleId;
   console.log(stage);
-  // const cycledate = "17.08.2021";
   let textMessage1 = "empty";
   let textMessage2 = "empty";
   let textMessage3 = "empty";
@@ -107,8 +105,10 @@ app.post("/api/Whatsapp", async (req, res) => {
         }
       }
       console.log(GamesList);
+      const Team1 = GamesList[0][0];
+      const Team2 = GamesList[0][1];
       textMessage1 =
-        "מחזור  " + cycleNum + ", משחק מספר 1: <קבוצה א׳> נגד <קבוצה ב׳>.";
+        "מחזור  " + cycleNum + " משחק מספר 1: " + Team1 + " נגד " + Team2;
 
       break;
     case 21:
