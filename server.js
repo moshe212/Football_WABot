@@ -112,49 +112,153 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 21:
+      const Games = await footballFunc.getDataFromSheet(
+        "רשימת משחקים לפי מחזור"
+      );
+      const GamesList = [];
+      for (let g = 0; g < Games.length; g++) {
+        if (Games[g]._rawData[0] === cycleNum) {
+          const team1 = Games[g]._rawData[1];
+          const team2 = Games[g]._rawData[2];
+          GamesList.push([team1, team2]);
+        }
+      }
+      console.log(GamesList);
+      const Team1 = GamesList[1][0];
+      const Team2 = GamesList[1][1];
       textMessage1 =
-        "בוט: מחזור <מספר מחזור>, משחק מספר 2: <קבוצה א׳> נגד <קבוצה ב׳>.";
+        "מחזור  " + cycleNum + " משחק מספר 2: " + Team1 + " נגד " + Team2;
 
       break;
     case 22:
+      const Games = await footballFunc.getDataFromSheet(
+        "רשימת משחקים לפי מחזור"
+      );
+      const GamesList = [];
+      for (let g = 0; g < Games.length; g++) {
+        if (Games[g]._rawData[0] === cycleNum) {
+          const team1 = Games[g]._rawData[1];
+          const team2 = Games[g]._rawData[2];
+          GamesList.push([team1, team2]);
+        }
+      }
+      console.log(GamesList);
+      const Team1 = GamesList[2][0];
+      const Team2 = GamesList[2][1];
       textMessage1 =
-        "בוט: מחזור <מספר מחזור>, משחק מספר 3: <קבוצה א׳> נגד <קבוצה ב׳>.";
+        "מחזור  " + cycleNum + " משחק מספר 3: " + Team1 + " נגד " + Team2;
 
       break;
     case 23:
+      const Games = await footballFunc.getDataFromSheet(
+        "רשימת משחקים לפי מחזור"
+      );
+      const GamesList = [];
+      for (let g = 0; g < Games.length; g++) {
+        if (Games[g]._rawData[0] === cycleNum) {
+          const team1 = Games[g]._rawData[1];
+          const team2 = Games[g]._rawData[2];
+          GamesList.push([team1, team2]);
+        }
+      }
+      console.log(GamesList);
+      const Team1 = GamesList[3][0];
+      const Team2 = GamesList[3][1];
       textMessage1 =
-        "בוט: מחזור <מספר מחזור>, משחק מספר 4: <קבוצה א׳> נגד <קבוצה ב׳>.";
+        "מחזור  " + cycleNum + " משחק מספר 3: " + Team1 + " נגד " + Team2;
 
       break;
     case 24:
+      const Games = await footballFunc.getDataFromSheet(
+        "רשימת משחקים לפי מחזור"
+      );
+      const GamesList = [];
+      for (let g = 0; g < Games.length; g++) {
+        if (Games[g]._rawData[0] === cycleNum) {
+          const team1 = Games[g]._rawData[1];
+          const team2 = Games[g]._rawData[2];
+          GamesList.push([team1, team2]);
+        }
+      }
+      console.log(GamesList);
+      const Team1 = GamesList[4][0];
+      const Team2 = GamesList[4][1];
       textMessage1 =
-        "בוט: מחזור <מספר מחזור>, משחק מספר 5: <קבוצה א׳> נגד <קבוצה ב׳>.";
+        "מחזור  " + cycleNum + " משחק מספר 4: " + Team1 + " נגד " + Team2;
 
       break;
     case 25:
+      const Games = await footballFunc.getDataFromSheet(
+        "רשימת משחקים לפי מחזור"
+      );
+      const GamesList = [];
+      for (let g = 0; g < Games.length; g++) {
+        if (Games[g]._rawData[0] === cycleNum) {
+          const team1 = Games[g]._rawData[1];
+          const team2 = Games[g]._rawData[2];
+          GamesList.push([team1, team2]);
+        }
+      }
+      console.log(GamesList);
+      const Team1 = GamesList[5][0];
+      const Team2 = GamesList[5][1];
       textMessage1 =
-        "בוט: מחזור <מספר מחזור>, משחק מספר 6: <קבוצה א׳> נגד <קבוצה ב׳>.";
+        "מחזור  " + cycleNum + " משחק מספר 5: " + Team1 + " נגד " + Team2;
 
       break;
     case 26:
+      const Games = await footballFunc.getDataFromSheet(
+        "רשימת משחקים לפי מחזור"
+      );
+      const GamesList = [];
+      for (let g = 0; g < Games.length; g++) {
+        if (Games[g]._rawData[0] === cycleNum) {
+          const team1 = Games[g]._rawData[1];
+          const team2 = Games[g]._rawData[2];
+          GamesList.push([team1, team2]);
+        }
+      }
+      console.log(GamesList);
+      const Team1 = GamesList[6][0];
+      const Team2 = GamesList[6][1];
       textMessage1 =
-        "בוט: מחזור <מספר מחזור>, משחק מספר 7: <קבוצה א׳> נגד <קבוצה ב׳>.";
+        "מחזור  " + cycleNum + " משחק מספר 6: " + Team1 + " נגד " + Team2;
 
       break;
 
     default:
       console.log(`Sorry, we are out of range.`);
   }
-  const jsonFile = {
-    replies: [
-      {
-        message: textMessage1,
-      },
-      {
-        message: textMessage2,
-      },
-    ],
-  };
+  const jsonFile =
+    textMessage2 !== "empty"
+      ? {
+          replies: [
+            {
+              message: textMessage1,
+            },
+            {
+              message: textMessage2,
+            },
+          ],
+        }
+      : {
+          replies: [
+            {
+              message: textMessage1,
+            },
+          ],
+        };
+  // const jsonFile = {
+
+  //   replies: [
+  //     {
+  //       message: textMessage1,
+  //     },
+  //     {
+  //       message: textMessage2,
+  //     },
+  //   ],
+  // };
   res.send(jsonFile);
 });
 
