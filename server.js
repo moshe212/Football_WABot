@@ -52,6 +52,10 @@ app.post("/api/Whatsapp", async (req, res) => {
   console.log("whatsapp okk", req.body);
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
   const cycleNum = await footballFunc.getCycle(Data);
+  const Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+  for (let g = 0; g < Games.length; g++) {
+    console.log(Games[g]);
+  }
   // const cycle = cycleNum
   console.log("cycleNum", cycleNum);
   const cycle = "5.2021";
@@ -91,7 +95,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       break;
     case 11:
       textMessage1 =
-        "בוט: מחזור <מספר מחזור>, משחק מספר 1: <קבוצה א׳> נגד <קבוצה ב׳>.";
+        "בוט: מחזור  " + cycle + ", משחק מספר 1: <קבוצה א׳> נגד <קבוצה ב׳>.";
 
       break;
     case 21:
