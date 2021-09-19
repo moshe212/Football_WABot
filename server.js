@@ -53,7 +53,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
   const res_cycle = await footballFunc.getCycle(Data);
   const cycleNum = res_cycle[0];
-  const cycleDate = res_cycle[1];
+  const cycleDate = moment(res_cycle[1]).format("DD-MM-YYYY");
 
   console.log("cycleNum", cycleNum, cycleDate);
   // const cycle = "5.2021";
