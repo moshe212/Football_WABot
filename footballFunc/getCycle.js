@@ -4,12 +4,11 @@ const getCycle = async (data) => {
   //   console.log(data);
   let isBetween = false;
   let cycleText = "";
+  let startDate = "";
+  let endDate = "";
   for (let i = 0; i < data.length; i++) {
-    const startDate = moment(
-      data[i]._rawData[0].replace("/", "-"),
-      "DD-MM-YYYY"
-    );
-    const endDate = moment(data[i]._rawData[1].replace("/", "-"), "DD-MM-YYYY");
+    startDate = moment(data[i]._rawData[0].replace("/", "-"), "DD-MM-YYYY");
+    endDate = moment(data[i]._rawData[1].replace("/", "-"), "DD-MM-YYYY");
     const CurrentDate = moment();
     // console.log(
     //   startDate,
