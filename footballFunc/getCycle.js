@@ -30,7 +30,7 @@ const getCycle = async (data) => {
     }
   }
   if (!cycleText.includes("זמן ניחושים")) {
-    const cycleNum = trim(cycleText.substring(cycleText.length - 2));
+    const cycleNum = cycleText.substring(cycleText.length - 2).trim();
     return cycleNum;
   } else {
     return 0;
