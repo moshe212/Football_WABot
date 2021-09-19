@@ -54,8 +54,19 @@ app.post("/api/Whatsapp", async (req, res) => {
   const cycleNum = await footballFunc.getCycle(Data);
   const Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
   for (let g = 0; g < Games.length; g++) {
-    console.log(Games[g]);
+    console.log(
+      Games[g]._rawData[0],
+      Games[g]._rawData[1],
+      Games[g]._rawData[2]
+    );
+    const GamesList = [];
+    if (Games[g]._rawData[0] === cycleNum) {
+      const team1 = Games[g]._rawData[1];
+      const team2 = Games[g]._rawData[2];
+      GamesList.push([team1, team2]);
+    }
   }
+  console.log(GamesList);
   // const cycle = cycleNum
   console.log("cycleNum", cycleNum);
   const cycle = "5.2021";
