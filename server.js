@@ -62,6 +62,9 @@ app.post("/api/Whatsapp", async (req, res) => {
   let textMessage2 = "empty";
   let textMessage3 = "empty";
   let Games = [];
+  let Team1 = "";
+  let Team2 = "";
+  let GamesList = [];
   switch (stage) {
     case 4:
       if (cycleNum !== 0) {
@@ -95,119 +98,119 @@ app.post("/api/Whatsapp", async (req, res) => {
       break;
     case 11:
       Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-      const GamesList = [];
+      GamesList = [];
       for (let g = 0; g < Games.length; g++) {
         if (Games[g]._rawData[0] === cycleNum) {
-          const team1 = Games[g]._rawData[1];
-          const team2 = Games[g]._rawData[2];
-          GamesList.push([team1, team2]);
+          const team_1 = Games[g]._rawData[1];
+          const team_2 = Games[g]._rawData[2];
+          GamesList.push([team_1, team_2]);
         }
       }
       console.log(GamesList);
-      const Team1 = GamesList[0][0];
-      const Team2 = GamesList[0][1];
+      Team1 = GamesList[0][0];
+      Team2 = GamesList[0][1];
       textMessage1 =
         "מחזור  " + cycleNum + " משחק מספר 1: " + Team1 + " נגד " + Team2;
 
       break;
     case 21:
       Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-      const GamesList = [];
+      GamesList = [];
       for (let g = 0; g < Games.length; g++) {
         if (Games[g]._rawData[0] === cycleNum) {
-          const team1 = Games[g]._rawData[1];
-          const team2 = Games[g]._rawData[2];
-          GamesList.push([team1, team2]);
+          const team_1 = Games[g]._rawData[1];
+          const team_2 = Games[g]._rawData[2];
+          GamesList.push([team_1, team_2]);
         }
       }
       console.log(GamesList);
-      const Team1 = GamesList[1][0];
-      const Team2 = GamesList[1][1];
+      Team1 = GamesList[1][0];
+      Team2 = GamesList[1][1];
       textMessage1 =
         "מחזור  " + cycleNum + " משחק מספר 2: " + Team1 + " נגד " + Team2;
 
       break;
     case 22:
       Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-      const GamesList = [];
+      GamesList = [];
       for (let g = 0; g < Games.length; g++) {
         if (Games[g]._rawData[0] === cycleNum) {
-          const team1 = Games[g]._rawData[1];
-          const team2 = Games[g]._rawData[2];
-          GamesList.push([team1, team2]);
+          const team_1 = Games[g]._rawData[1];
+          const team_2 = Games[g]._rawData[2];
+          GamesList.push([team_1, team_2]);
         }
       }
       console.log(GamesList);
-      const Team1 = GamesList[2][0];
-      const Team2 = GamesList[2][1];
+      Team1 = GamesList[2][0];
+      Team2 = GamesList[2][1];
       textMessage1 =
         "מחזור  " + cycleNum + " משחק מספר 3: " + Team1 + " נגד " + Team2;
 
       break;
     case 23:
       Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-      const GamesList = [];
+      GamesList = [];
       for (let g = 0; g < Games.length; g++) {
         if (Games[g]._rawData[0] === cycleNum) {
-          const team1 = Games[g]._rawData[1];
-          const team2 = Games[g]._rawData[2];
-          GamesList.push([team1, team2]);
+          const team_1 = Games[g]._rawData[1];
+          const team_2 = Games[g]._rawData[2];
+          GamesList.push([team_1, team_2]);
         }
       }
       console.log(GamesList);
-      const Team1 = GamesList[3][0];
-      const Team2 = GamesList[3][1];
+      Team1 = GamesList[3][0];
+      Team2 = GamesList[3][1];
       textMessage1 =
         "מחזור  " + cycleNum + " משחק מספר 3: " + Team1 + " נגד " + Team2;
 
       break;
     case 24:
       Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-      const GamesList = [];
+      GamesList = [];
       for (let g = 0; g < Games.length; g++) {
         if (Games[g]._rawData[0] === cycleNum) {
-          const team1 = Games[g]._rawData[1];
-          const team2 = Games[g]._rawData[2];
-          GamesList.push([team1, team2]);
+          const team_1 = Games[g]._rawData[1];
+          const team_2 = Games[g]._rawData[2];
+          GamesList.push([team_1, team_2]);
         }
       }
       console.log(GamesList);
-      const Team1 = GamesList[4][0];
-      const Team2 = GamesList[4][1];
+      Team1 = GamesList[4][0];
+      Team2 = GamesList[4][1];
       textMessage1 =
         "מחזור  " + cycleNum + " משחק מספר 4: " + Team1 + " נגד " + Team2;
 
       break;
     case 25:
       Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-      const GamesList = [];
+      GamesList = [];
       for (let g = 0; g < Games.length; g++) {
         if (Games[g]._rawData[0] === cycleNum) {
-          const team1 = Games[g]._rawData[1];
-          const team2 = Games[g]._rawData[2];
-          GamesList.push([team1, team2]);
+          const team_1 = Games[g]._rawData[1];
+          const team_2 = Games[g]._rawData[2];
+          GamesList.push([team_1, team_2]);
         }
       }
       console.log(GamesList);
-      const Team1 = GamesList[5][0];
-      const Team2 = GamesList[5][1];
+      Team1 = GamesList[5][0];
+      Team2 = GamesList[5][1];
       textMessage1 =
         "מחזור  " + cycleNum + " משחק מספר 5: " + Team1 + " נגד " + Team2;
 
       break;
     case 26:
       Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-      const GamesList = [];
+      GamesList = [];
       for (let g = 0; g < Games.length; g++) {
         if (Games[g]._rawData[0] === cycleNum) {
-          const team1 = Games[g]._rawData[1];
-          const team2 = Games[g]._rawData[2];
-          GamesList.push([team1, team2]);
+          const team_1 = Games[g]._rawData[1];
+          const team_2 = Games[g]._rawData[2];
+          GamesList.push([team_1, team_2]);
         }
       }
       console.log(GamesList);
-      const Team1 = GamesList[6][0];
-      const Team2 = GamesList[6][1];
+      Team1 = GamesList[6][0];
+      Team2 = GamesList[6][1];
       textMessage1 =
         "מחזור  " + cycleNum + " משחק מספר 6: " + Team1 + " נגד " + Team2;
 
