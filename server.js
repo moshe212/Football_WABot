@@ -79,7 +79,6 @@ app.post("/api/Whatsapp", async (req, res) => {
           " האם ברצונכם למלא את ניחושי המחזור " +
           cycleNum +
           "?";
-        // textMessage2 = "\n  כן - הקש 1 \n לא - הקש 2";
         textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
         break;
       } else {
@@ -97,8 +96,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       break;
     case 12:
       textMessage1 =
-        "בוט: החלטתם לשגע אותי היום? לכו תעשו שיעורי בית ותחזרו למלא את הניחושים כשתהיו מוכנים, ולא יאוחר " +
-        cycledate +
+        "החלטתם לשגע אותי היום? לכו תעשו שיעורי בית ותחזרו למלא את הניחושים כשתהיו מוכנים, ולא יאוחר " +
+        cycleDate +
         " 😎";
 
       break;
