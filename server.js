@@ -48,12 +48,18 @@ function connectToDB() {
   return connection;
 }
 
+const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
+const res_cycle = await footballFunc.getCycle(Data);
+const cycleNum = res_cycle[0];
+const cycleDate = moment(res_cycle[1]).format("DD-MM-YYYY");
+Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+
 app.post("/api/Whatsapp", async (req, res) => {
   console.log("whatsapp okk", req.body);
-  const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
-  const res_cycle = await footballFunc.getCycle(Data);
-  const cycleNum = res_cycle[0];
-  const cycleDate = moment(res_cycle[1]).format("DD-MM-YYYY");
+  // const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
+  // const res_cycle = await footballFunc.getCycle(Data);
+  // const cycleNum = res_cycle[0];
+  // const cycleDate = moment(res_cycle[1]).format("DD-MM-YYYY");
   const user_name = req.query.sender;
 
   console.log("cycleNum", cycleNum, cycleDate);
@@ -102,7 +108,7 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 11:
-      Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+      // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
       GamesList = [];
       for (let g = 0; g < Games.length; g++) {
         if (Games[g]._rawData[0] === cycleNum) {
@@ -123,7 +129,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GuessData = await footballFunc.getDataFromSheet("ליגת העל");
       break;
     case 21:
-      Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+      // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
       GamesList = [];
       for (let g = 0; g < Games.length; g++) {
         if (Games[g]._rawData[0] === cycleNum) {
@@ -140,7 +146,7 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 22:
-      Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+      // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
       GamesList = [];
       for (let g = 0; g < Games.length; g++) {
         if (Games[g]._rawData[0] === cycleNum) {
@@ -157,7 +163,7 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 23:
-      Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+      // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
       GamesList = [];
       for (let g = 0; g < Games.length; g++) {
         if (Games[g]._rawData[0] === cycleNum) {
@@ -174,7 +180,7 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 24:
-      Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+      // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
       GamesList = [];
       for (let g = 0; g < Games.length; g++) {
         if (Games[g]._rawData[0] === cycleNum) {
@@ -191,7 +197,7 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 25:
-      Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+      // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
       GamesList = [];
       for (let g = 0; g < Games.length; g++) {
         if (Games[g]._rawData[0] === cycleNum) {
@@ -208,7 +214,7 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 26:
-      Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+      // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
       GamesList = [];
       for (let g = 0; g < Games.length; g++) {
         if (Games[g]._rawData[0] === cycleNum) {

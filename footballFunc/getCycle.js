@@ -10,23 +10,23 @@ const getCycle = async (data) => {
     startDate = moment(data[i]._rawData[0].replace("/", "-"), "DD-MM-YYYY");
     endDate = moment(data[i]._rawData[1].replace("/", "-"), "DD-MM-YYYY");
     const CurrentDate = moment().format("DD-MM-YYYY");
-    console.log(
-      startDate,
-      endDate,
-      CurrentDate,
-      moment(CurrentDate, "DD-MM-YYYY").isBetween(
-        startDate,
-        endDate,
-        undefined,
-        "(]"
-      ),
-      moment(CurrentDate, "DD-MM-YYYY").isBetween(
-        startDate,
-        endDate,
-        undefined,
-        "[)"
-      )
-    );
+    // console.log(
+    //   startDate,
+    //   endDate,
+    //   CurrentDate,
+    //   moment(CurrentDate, "DD-MM-YYYY").isBetween(
+    //     startDate,
+    //     endDate,
+    //     undefined,
+    //     "(]"
+    //   ),
+    //   moment(CurrentDate, "DD-MM-YYYY").isBetween(
+    //     startDate,
+    //     endDate,
+    //     undefined,
+    //     "[)"
+    //   )
+    // );
 
     if (
       moment(CurrentDate, "DD-MM-YYYY").isBetween(
