@@ -48,12 +48,15 @@ function connectToDB() {
   return connection;
 }
 
+let cycleNum = 0;
+let cycleDate = "";
+let Games = [];
 const getData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
   const res_cycle = await footballFunc.getCycle(Data);
-  const cycleNum = res_cycle[0];
-  const cycleDate = moment(res_cycle[1]).format("DD-MM-YYYY");
-  const Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+  cycleNum = res_cycle[0];
+  cycleDate = moment(res_cycle[1]).format("DD-MM-YYYY");
+  Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
 };
 
 getData();
