@@ -29,8 +29,18 @@ const getCycle = async (data) => {
     );
 
     if (
-      moment(CurrentDate).isBetween(startDate, endDate, undefined, "(]") ||
-      moment(CurrentDate).isBetween(startDate, endDate, undefined, "[)")
+      moment(CurrentDate, "DD-MM-YYYY").isBetween(
+        startDate,
+        endDate,
+        undefined,
+        "(]"
+      ) ||
+      moment(CurrentDate, "DD-MM-YYYY").isBetween(
+        startDate,
+        endDate,
+        undefined,
+        "[)"
+      )
     ) {
       isBetween = true;
       console.log(startDate, endDate, CurrentDate, cycleText, isBetween);
