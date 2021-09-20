@@ -80,7 +80,7 @@ app.post("/api/Whatsapp", async (req, res) => {
           cycleNum +
           "?";
         // textMessage2 = "\n  כן - הקש 1 \n לא - הקש 2";
-        textMessage2 = "\n  כן -  1️⃣ \n לא -  2️⃣";
+        textMessage2 = "\n כן 1️⃣ \n לא 2️⃣";
         break;
       } else {
         textMessage1 = " אהלן, אני הבוט של היציע: ליגת העל " + moment().year();
