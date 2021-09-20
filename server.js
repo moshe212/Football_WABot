@@ -54,6 +54,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   const res_cycle = await footballFunc.getCycle(Data);
   const cycleNum = res_cycle[0];
   const cycleDate = moment(res_cycle[1]).format("DD-MM-YYYY");
+  const user_name = req.query.sender;
 
   console.log("cycleNum", cycleNum, cycleDate);
   const stage = req.body.query.ruleId;
@@ -65,6 +66,10 @@ app.post("/api/Whatsapp", async (req, res) => {
   let Team1 = "";
   let Team2 = "";
   let GamesList = [];
+  let score = "";
+  let ScoreTeam1 = 0;
+  let ScoreTeam2 = 0;
+  let GuessData = [];
   switch (stage) {
     case 4:
       if (cycleNum !== 0) {
@@ -74,7 +79,8 @@ app.post("/api/Whatsapp", async (req, res) => {
           " האם ברצונכם למלא את ניחושי המחזור " +
           cycleNum +
           "?";
-        textMessage2 = "\n  כן - הקש 1 \n לא - הקש 2";
+        // textMessage2 = "\n  כן - הקש 1 \n לא - הקש 2";
+        textMessage2 = "\n  כן -  1️⃣ \n לא -  2️⃣";
         break;
       } else {
         textMessage1 = " אהלן, אני הבוט של היציע: ליגת העל " + moment().year();
@@ -112,6 +118,10 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage1 =
         "מחזור  " + cycleNum + " משחק מספר 1: " + Team1 + " נגד " + Team2;
 
+      score = req.query.message;
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
+      GuessData = await footballFunc.getDataFromSheet("ליגת העל");
       break;
     case 21:
       Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
