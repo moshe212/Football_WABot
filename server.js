@@ -48,11 +48,15 @@ function connectToDB() {
   return connection;
 }
 
-const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
-const res_cycle = await footballFunc.getCycle(Data);
-const cycleNum = res_cycle[0];
-const cycleDate = moment(res_cycle[1]).format("DD-MM-YYYY");
-Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+const getData = async () => {
+  const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
+  const res_cycle = await footballFunc.getCycle(Data);
+  const cycleNum = res_cycle[0];
+  const cycleDate = moment(res_cycle[1]).format("DD-MM-YYYY");
+  const Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+};
+
+getData();
 
 app.post("/api/Whatsapp", async (req, res) => {
   console.log("whatsapp okk", req.body);
@@ -68,7 +72,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   let textMessage1 = "empty";
   let textMessage2 = "empty";
   let textMessage3 = "empty";
-  let Games = [];
+  // let Games = [];
   let Team1 = "";
   let Team2 = "";
   let GamesList = [];
