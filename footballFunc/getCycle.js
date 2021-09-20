@@ -9,7 +9,7 @@ const getCycle = async (data) => {
   for (let i = 0; i < data.length; i++) {
     startDate = moment(data[i]._rawData[0].replace("/", "-"), "DD-MM-YYYY");
     endDate = moment(data[i]._rawData[1].replace("/", "-"), "DD-MM-YYYY");
-    const CurrentDate = moment("18-09-2021", "DD-MM-YYYY");
+    const CurrentDate = moment("20-09-2021", "DD-MM-YYYY");
     console.log(
       startDate,
       endDate,
