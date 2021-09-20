@@ -147,7 +147,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage1 =
         "מחזור  " + cycleNum + " משחק מספר 2: " + Team1 + " נגד " + Team2;
 
-      score = req.query.message;
+      score = req.body.query.message;
       ScoreTeam1 = score.split(":")[0];
       ScoreTeam2 = score.split(":")[1];
       GuessData = await footballFunc.getDataFromSheet("ליגת העל");
