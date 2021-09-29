@@ -157,7 +157,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       ScoreTeam1 = score.split(":")[0];
       ScoreTeam2 = score.split(":")[1];
       GuessData = await footballFunc.getDataFromSheet("ליגת העל");
-      console.lg("cycleIndexNum", cycleIndexNum);
+      console.log("cycleIndexNum", cycleIndexNum);
       break;
     case 22:
       // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
