@@ -193,10 +193,12 @@ app.post("/api/Whatsapp", async (req, res) => {
           "ליגת העל",
           raw_idx,
           3,
+          D,
+          E,
           ScoreTeam1,
           ScoreTeam2
         );
-        console.log(resp_save);
+        console.log("resp_save", resp_save);
       } else {
         console.log("not save");
       }

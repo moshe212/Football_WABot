@@ -4,6 +4,8 @@ const saveData = async function (
   sheetTitle,
   rawindex,
   columnindex,
+  columnLetter1,
+  columnLetter2,
   score1,
   score2
 ) {
@@ -20,10 +22,12 @@ const saveData = async function (
     if (sheet) {
       console.log("idxs", rawindex, columnindex);
       //   await sheet.loadCells("A1:CP" + rawindex);
-      await sheet.loadCells("A304:CP306");
-      const a = sheet.getCellByA1("D" + rawindex);
-      //   const a = sheet.getCellByA1("D605");
-      a.value = score1;
+      await sheet.loadCells("A" + rawindex + ":CP" + columnindex);
+      const cell_team1 = sheet.getCellByA1(columnLetter1 + (rawindex + 2));
+      const cell_team2 = sheet.getCellByA1(columnLetter2 + (rawindex + 2));
+      cell_team1.value = score1;
+      cell_team2.value = score2;
+
       //   const cell_team1 = sheet.getCell(rawindex, columnindex);
       //   const cell_team2 = sheet.getCell(rawindex, columnindex + 1);
       //   cell_team1.value = score1;
