@@ -164,9 +164,9 @@ app.post("/api/Whatsapp", async (req, res) => {
       let index = null;
       console.log("user_name", user_name);
       for (let u = 0; u < UsersIndex.length; u++) {
-        console.log("user_name", user_name, UsersIndex[u].name);
-        if (user_name === UsersIndex[u].name) {
-          index = UsersIndex[u].index_number;
+        console.log("user_name", user_name, UsersIndex[u]._rawData[0]);
+        if (user_name === UsersIndex[u]._rawData[0]) {
+          index = UsersIndex[u]._rawData[1];
         }
       }
       console.log(
@@ -175,8 +175,8 @@ app.post("/api/Whatsapp", async (req, res) => {
         parseInt(cycleIndexNum) + parseInt(index)
       );
       console.log(
-        "GuessData",
-        GuessData[parseInt(cycleIndexNum) + parseInt(index)][1]
+        "GuessData_name",
+        GuessData[parseInt(cycleIndexNum) + parseInt(index)]._rawData[1]
       );
       break;
     case 22:
