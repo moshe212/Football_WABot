@@ -72,6 +72,7 @@ const getData = async () => {
   }
 
   UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
+  console.log(UsersIndex);
 };
 
 getData();
@@ -161,7 +162,9 @@ app.post("/api/Whatsapp", async (req, res) => {
       ScoreTeam2 = score.split(":")[1];
       GuessData = await footballFunc.getDataFromSheet("ליגת העל");
       let index = null;
+      console.log("user_name", user_name);
       for (let u = 0; u < UsersIndex.length; u++) {
+        console.log("user_name", user_name, UsersIndex[u].name);
         if (user_name === UsersIndex[u].name) {
           index = UsersIndex[u].index_number;
         }
