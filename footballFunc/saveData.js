@@ -19,7 +19,7 @@ const saveData = async function (
     const sheet = doc.sheetsByTitle[sheetTitle];
     if (sheet) {
       console.log("idxs", rawindex, columnindex);
-      //   const cells = await sheet.loadCells();
+      const cells = await sheet.loadCells();
       const cell_team1 = sheet.getCell(rawindex, columnindex);
       const cell_team2 = sheet.getCell(rawindex, columnindex + 1);
       cell_team1.value = score1;
@@ -33,17 +33,6 @@ const saveData = async function (
   } catch (e) {
     throw e;
   }
-
-  //   console.log(doc.title);
-  //   await doc.updateProperties({ title: "renamed doc" });
-  // const promises = [];
-  // for (let i = 0; i < BankNames.length; i++) {
-  //   const sheet = doc.sheetsByTitle[BankNames[i]]; // or use doc.sheetsById[id] or doc.sheetsByTitle[title]
-
-  //   if (sheet) {
-  //     const rows = await sheet.getRows(); // can pass in { limit, offset }
-  //   }
-  // }
 };
 
 module.exports = { saveData };
