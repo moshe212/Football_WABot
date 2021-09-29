@@ -20,7 +20,7 @@ const saveData = async function (
     if (sheet) {
       console.log("idxs", rawindex, columnindex);
       //   await sheet.loadCells("A1:CP" + rawindex);
-      await sheet.loadCells("A1:CP306");
+      await sheet.loadCells("A304:CP306");
       const a = sheet.getCellByA1("D" + rawindex);
       //   const a = sheet.getCellByA1("D605");
       a.value = score1;
