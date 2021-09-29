@@ -83,8 +83,8 @@ app.post("/api/Whatsapp", async (req, res) => {
   // const res_cycle = await footballFunc.getCycle(Data);
   // const cycleNum = res_cycle[0];
   // const cycleDate = moment(res_cycle[1]).format("DD-MM-YYYY");
-  const user_name = req.query.sender;
-
+  const user_name = req.body.query.sender;
+  console.log("u", user_name);
   console.log("cycleNum", cycleNum, cycleDate);
   const stage = req.body.query.ruleId;
   console.log(stage);
