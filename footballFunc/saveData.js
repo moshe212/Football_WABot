@@ -22,7 +22,7 @@ const saveData = async function (
     if (sheet) {
       console.log("idxs", rawindex, columnindex);
       //   await sheet.loadCells("A1:CP" + rawindex);
-      await sheet.loadCells("A" + rawindex + ":CP" + columnindex);
+      await sheet.loadCells("A" + rawindex + ":CP" + (rawindex + 2));
       const cell_team1 = sheet.getCellByA1(columnLetter1 + (rawindex + 2));
       const cell_team2 = sheet.getCellByA1(columnLetter2 + (rawindex + 2));
       cell_team1.value = score1;
