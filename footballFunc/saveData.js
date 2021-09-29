@@ -19,9 +19,9 @@ const saveData = async function (
     const sheet = doc.sheetsByTitle[sheetTitle];
     if (sheet) {
       console.log("idxs", rawindex, columnindex);
-      //   const cells = await sheet.loadCells("A1:CP2800");
-      const cell_team1 = sheet.getCell(columnindex, rawindex);
-      const cell_team2 = sheet.getCell(columnindex + 1, rawindex);
+      const cells = await sheet.loadCells();
+      const cell_team1 = sheet.getCell(rawindex, columnindex);
+      const cell_team2 = sheet.getCell(rawindex, columnindex + 1);
       cell_team1.value = score1;
       cell_team2.value = score2;
       const res_save = await sheet.saveUpdatedCells();
