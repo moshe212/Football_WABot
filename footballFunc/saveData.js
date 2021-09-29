@@ -19,7 +19,7 @@ const saveData = async function (
     const sheet = doc.sheetsByTitle[sheetTitle];
     if (sheet) {
       console.log("idxs", rawindex, columnindex);
-      const cells = await sheet.loadCells();
+      //   const cells = await sheet.loadCells();
       const cell_team1 = sheet.getCell(rawindex, columnindex);
       const cell_team2 = sheet.getCell(rawindex, columnindex + 1);
       cell_team1.value = score1;
@@ -27,6 +27,8 @@ const saveData = async function (
       const res_save = await sheet.saveUpdatedCells();
 
       return res_save;
+    } else {
+      return "err";
     }
   } catch (e) {
     throw e;
