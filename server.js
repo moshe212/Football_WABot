@@ -164,12 +164,12 @@ app.post("/api/Whatsapp", async (req, res) => {
       let index = null;
       console.log("user_name", user_name);
       for (let u = 0; u < UsersIndex.length; u++) {
-        console.log(
-          "user_name",
-          user_name,
-          UsersIndex[u]._rawData[0],
-          UsersIndex[u]._rawData[1]
-        );
+        // console.log(
+        //   "user_name",
+        //   user_name,
+        //   UsersIndex[u]._rawData[0],
+        //   UsersIndex[u]._rawData[1]
+        // );
         if (user_name === UsersIndex[u]._rawData[0]) {
           index = UsersIndex[u]._rawData[1];
         }
@@ -193,8 +193,8 @@ app.post("/api/Whatsapp", async (req, res) => {
           "ליגת העל",
           raw_idx,
           3,
-          D,
-          E,
+          "D",
+          "E",
           ScoreTeam1,
           ScoreTeam2
         );
