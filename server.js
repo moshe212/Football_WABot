@@ -99,6 +99,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         textMessage2 =
           "אנחנו נמצאים באמצע מחזור לכן לא ניתן לשלוח ניחושים כרגע, ניתן לחזור לשלוח ניחושים בתאריך" +
           cycleDate;
+        break;
       }
 
     case 9:
