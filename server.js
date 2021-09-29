@@ -53,6 +53,7 @@ let cycleDate = "";
 let Games = [];
 let GamesList = [];
 let cycleIndexNum = 0;
+let UsersIndex = [];
 const getData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
   const res_cycle = await footballFunc.getCycle(Data);
@@ -69,6 +70,8 @@ const getData = async () => {
       GamesList.push([team_1, team_2]);
     }
   }
+
+  UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
 };
 
 getData();
@@ -157,7 +160,21 @@ app.post("/api/Whatsapp", async (req, res) => {
       ScoreTeam1 = score.split(":")[0];
       ScoreTeam2 = score.split(":")[1];
       GuessData = await footballFunc.getDataFromSheet("ליגת העל");
-      console.log("cycleIndexNum", cycleIndexNum);
+      let index = null;
+      for (let u = 0; u < UsersIndex.length; u++) {
+        if (user_name === UsersIndex[u].name) {
+          index = UsersIndex[u].index_number;
+        }
+      }
+      console.log(
+        "cycleIndexNum",
+        cycleIndexNum,
+        parseInt(cycleIndexNum) + parseInt(index)
+      );
+      console.log(
+        "GuessData",
+        GuessData[parseInt(cycleIndexNum) + parseInt(index)][1]
+      );
       break;
     case 22:
       // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
