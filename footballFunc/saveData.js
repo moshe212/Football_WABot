@@ -18,6 +18,8 @@ const saveData = async function (
     await doc.loadInfo(); // loads document properties and worksheets
     const sheet = doc.sheetsByTitle[sheetTitle];
     if (sheet) {
+      console.log("idxs", rawindex, columnindex);
+      const cells = await sheet.loadCells("A1:CP2800");
       const cell_team1 = sheet.getCell(rawindex, columnindex);
       const cell_team2 = sheet.getCell(rawindex, columnindex + 1);
       cell_team1.value = score1;
