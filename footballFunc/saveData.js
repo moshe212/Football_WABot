@@ -22,10 +22,10 @@ const saveData = async function (
       const cells = await sheet.loadCells();
       const a = sheet.getCellByA1("D" + rawindex);
       a.value = score1;
-      const cell_team1 = sheet.getCell(rawindex, columnindex);
-      const cell_team2 = sheet.getCell(rawindex, columnindex + 1);
-      cell_team1.value = score1;
-      cell_team2.value = score2;
+      //   const cell_team1 = sheet.getCell(rawindex, columnindex);
+      //   const cell_team2 = sheet.getCell(rawindex, columnindex + 1);
+      //   cell_team1.value = score1;
+      //   cell_team2.value = score2;
       const res_save = await sheet.saveUpdatedCells();
 
       return res_save;
