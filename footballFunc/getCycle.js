@@ -6,10 +6,12 @@ const getCycle = async (data) => {
   let cycleText = "";
   let startDate = "";
   let endDate = "";
+  let cycleIndex = 0;
   for (let i = 0; i < data.length; i++) {
     startDate = moment(data[i]._rawData[0].replace("/", "-"), "DD-MM-YYYY");
     endDate = moment(data[i]._rawData[1].replace("/", "-"), "DD-MM-YYYY");
     const CurrentDate = moment().format("DD-MM-YYYY");
+
     // console.log(
     //   startDate,
     //   endDate,
@@ -45,16 +47,17 @@ const getCycle = async (data) => {
       isBetween = true;
       console.log(startDate, endDate, CurrentDate, cycleText, isBetween);
       cycleText = data[i]._rawData[2];
+      cycleIndex = data[i]._rawData[4];
       break;
     }
   }
-  if (!cycleText.includes("זמן ניחושים")) {
+  if (cycleText.includes("זמן ניחושים")) {
     const cycleNum = cycleText.substring(cycleText.length - 2).trim();
     const endGuessTime = moment(endDate).add(1, "days");
-    return [cycleNum, endGuessTime];
+    return [cycleNum, endGuessTime, cycleIndex];
   } else {
     const endGuessTime = moment(endDate).add(1, "days");
-    return [0, endGuessTime];
+    return [0, endGuessTime, cycleIndex];
   }
 };
 
