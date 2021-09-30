@@ -112,6 +112,7 @@ app.post("/api/Whatsapp", async (req, res) => {
           " אהלן, אני הבוט של היציע: ליגת העל " +
           moment().year() +
           "\n אינך רשאי להשתמש בבוט. ";
+        break;
       }
       if (cycleNum !== 0) {
         textMessage1 =
