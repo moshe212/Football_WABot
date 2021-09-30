@@ -35,7 +35,7 @@ const saveData_Full = async function (
         user_name
       ) {
         const raw_idx = parseInt(cycleIndexNum) + parseInt(index) - 2;
-        console.log("idxs", raw_idx, columnindex);
+        console.log("idxs", raw_idx);
         //   await sheet.loadCells("A1:CP" + rawindex);
         await sheet.loadCells("A" + raw_idx + ":CP" + (raw_idx + 2));
         const cell_team1 = sheet.getCellByA1(columnLetter1 + (raw_idx + 2));
