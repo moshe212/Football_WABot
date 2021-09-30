@@ -330,6 +330,26 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
 
+    case 41:
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
+      // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
+
+      await footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "ליגת העל",
+        "BX",
+        "BY",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+
     default:
       console.log(`Sorry, we are out of range.`);
   }
