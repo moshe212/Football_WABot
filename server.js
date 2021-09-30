@@ -54,6 +54,7 @@ let Games = [];
 let GamesList = [];
 let cycleIndexNum = 0;
 let UsersIndex = [];
+let GuessData = [];
 const getData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
   const res_cycle = await footballFunc.getCycle(Data);
@@ -72,7 +73,8 @@ const getData = async () => {
   }
 
   UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
-  console.log(UsersIndex);
+  GuessData = await footballFunc.getDataFromSheet("ליגת העל");
+  // console.log(UsersIndex);
 };
 
 getData();
@@ -98,7 +100,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   let score = "";
   let ScoreTeam1 = 0;
   let ScoreTeam2 = 0;
-  let GuessData = [];
+  // let GuessData = [];
   switch (stage) {
     case 4:
       if (cycleNum !== 0) {
@@ -142,15 +144,6 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 21:
-      // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-      // GamesList = [];
-      // for (let g = 0; g < Games.length; g++) {
-      //   if (Games[g]._rawData[0] === cycleNum) {
-      //     const team_1 = Games[g]._rawData[1];
-      //     const team_2 = Games[g]._rawData[2];
-      //     GamesList.push([team_1, team_2]);
-      //   }
-      // }
       console.log(GamesList);
       Team1 = GamesList[1][0];
       Team2 = GamesList[1][1];
@@ -160,76 +153,88 @@ app.post("/api/Whatsapp", async (req, res) => {
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[0];
       ScoreTeam2 = score.split(":")[1];
-      GuessData = await footballFunc.getDataFromSheet("ליגת העל");
-      let index = null;
-      console.log("user_name", user_name);
-      for (let u = 0; u < UsersIndex.length; u++) {
-        // console.log(
-        //   "user_name",
-        //   user_name,
-        //   UsersIndex[u]._rawData[0],
-        //   UsersIndex[u]._rawData[1]
-        // );
-        if (user_name === UsersIndex[u]._rawData[0]) {
-          index = UsersIndex[u]._rawData[1];
-        }
-      }
-      console.log(
-        "cycleIndexNum",
+
+      await footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
         cycleIndexNum,
-        parseInt(cycleIndexNum) + parseInt(index)
-      );
-      console.log(
-        "GuessData_name",
-        GuessData[parseInt(cycleIndexNum) + parseInt(index) - 2]._rawData[1]
+        "ליגת העל",
+        "D",
+        "E",
+        ScoreTeam1,
+        ScoreTeam2
       );
 
-      if (
-        GuessData[parseInt(cycleIndexNum) + parseInt(index) - 2]._rawData[1] ===
-        user_name
-      ) {
-        const raw_idx = parseInt(cycleIndexNum) + parseInt(index) - 2;
-        const resp_save = await footballFunc.saveData(
-          "ליגת העל",
-          raw_idx,
-          3,
-          "D",
-          "E",
-          ScoreTeam1,
-          ScoreTeam2
-        );
-        console.log("resp_save", resp_save);
-      } else {
-        console.log("not save");
-      }
+      // // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
+      // let index = null;
+      // console.log("user_name", user_name);
+      // for (let u = 0; u < UsersIndex.length; u++) {
+      //   // console.log(
+      //   //   "user_name",
+      //   //   user_name,
+      //   //   UsersIndex[u]._rawData[0],
+      //   //   UsersIndex[u]._rawData[1]
+      //   // );
+      //   if (user_name === UsersIndex[u]._rawData[0]) {
+      //     index = UsersIndex[u]._rawData[1];
+      //   }
+      // }
+      // console.log(
+      //   "cycleIndexNum",
+      //   cycleIndexNum,
+      //   parseInt(cycleIndexNum) + parseInt(index)
+      // );
+      // console.log(
+      //   "GuessData_name",
+      //   GuessData[parseInt(cycleIndexNum) + parseInt(index) - 2]._rawData[1]
+      // );
+
+      // if (
+      //   GuessData[parseInt(cycleIndexNum) + parseInt(index) - 2]._rawData[1] ===
+      //   user_name
+      // ) {
+      //   const raw_idx = parseInt(cycleIndexNum) + parseInt(index) - 2;
+      //   const resp_save = await footballFunc.saveData(
+      //     "ליגת העל",
+      //     raw_idx,
+      //     3,
+      //     "D",
+      //     "E",
+      //     ScoreTeam1,
+      //     ScoreTeam2
+      //   );
+      //   console.log("resp_save", resp_save);
+      // } else {
+      //   console.log("not save");
+      // }
       break;
     case 22:
-      // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-      GamesList = [];
-      for (let g = 0; g < Games.length; g++) {
-        if (Games[g]._rawData[0] === cycleNum) {
-          const team_1 = Games[g]._rawData[1];
-          const team_2 = Games[g]._rawData[2];
-          GamesList.push([team_1, team_2]);
-        }
-      }
       console.log(GamesList);
       Team1 = GamesList[2][0];
       Team2 = GamesList[2][1];
       textMessage1 =
         "מחזור  " + cycleNum + " משחק מספר 3: " + Team1 + " נגד " + Team2;
 
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
+      // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
+
+      await footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "ליגת העל",
+        "P",
+        "Q",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
       break;
     case 23:
-      // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-      GamesList = [];
-      for (let g = 0; g < Games.length; g++) {
-        if (Games[g]._rawData[0] === cycleNum) {
-          const team_1 = Games[g]._rawData[1];
-          const team_2 = Games[g]._rawData[2];
-          GamesList.push([team_1, team_2]);
-        }
-      }
       console.log(GamesList);
       Team1 = GamesList[3][0];
       Team2 = GamesList[3][1];
@@ -238,15 +243,6 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 24:
-      // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-      GamesList = [];
-      for (let g = 0; g < Games.length; g++) {
-        if (Games[g]._rawData[0] === cycleNum) {
-          const team_1 = Games[g]._rawData[1];
-          const team_2 = Games[g]._rawData[2];
-          GamesList.push([team_1, team_2]);
-        }
-      }
       console.log(GamesList);
       Team1 = GamesList[4][0];
       Team2 = GamesList[4][1];
@@ -255,15 +251,6 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 25:
-      // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-      GamesList = [];
-      for (let g = 0; g < Games.length; g++) {
-        if (Games[g]._rawData[0] === cycleNum) {
-          const team_1 = Games[g]._rawData[1];
-          const team_2 = Games[g]._rawData[2];
-          GamesList.push([team_1, team_2]);
-        }
-      }
       console.log(GamesList);
       Team1 = GamesList[5][0];
       Team2 = GamesList[5][1];
@@ -272,15 +259,6 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 26:
-      // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-      GamesList = [];
-      for (let g = 0; g < Games.length; g++) {
-        if (Games[g]._rawData[0] === cycleNum) {
-          const team_1 = Games[g]._rawData[1];
-          const team_2 = Games[g]._rawData[2];
-          GamesList.push([team_1, team_2]);
-        }
-      }
       console.log(GamesList);
       Team1 = GamesList[6][0];
       Team2 = GamesList[6][1];
