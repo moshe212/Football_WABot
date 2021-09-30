@@ -4,7 +4,8 @@ const getSavedScore = async function (
   user_name,
   UsersIndex,
   cycleIndexNum,
-  sheetTitle
+  sheetTitle,
+  GamesList
 ) {
   const creds = require("../config/CreditTransaction-d9fe1ef7e128.json");
   // Initialize the sheet - doc ID is the long id in the sheets URL
@@ -33,7 +34,13 @@ const getSavedScore = async function (
         console.log("idxss", raw_idx);
         const SavedGuess = GuessData[raw_idx];
 
-        return SavedGuess;
+        // for(let g = 0; g < GamesList.length; g++){
+        //     const Team1 = GamesList[g][0];
+        //     const Team2 = GamesList[g][1];
+        //     SavedGuess._rawData
+        // }
+
+        return SavedGuess._rawData;
       } else {
         console.log("not find saved guess");
         return "not find saved guess";
