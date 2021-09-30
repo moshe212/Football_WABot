@@ -74,8 +74,6 @@ const getData = async () => {
 
   UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
   for (let l = 0; l < UsersIndex.length; l++) {
-    const team_1 = Games[g]._rawData[1];
-    const team_2 = Games[g]._rawData[2];
     UsersList.push(UsersIndex[l]._rawData[1]);
   }
   GuessData = await footballFunc.getDataFromSheet("ליגת העל");
