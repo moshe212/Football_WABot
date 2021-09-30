@@ -108,6 +108,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     case 4:
       console.log("UsersList", UsersList);
       if (!UsersList.includes(user_name)) {
+        console.log("not includs");
         textMessage1 =
           " אהלן, אני הבוט של היציע: ליגת העל " +
           moment().year() +
