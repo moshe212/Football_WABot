@@ -107,6 +107,12 @@ app.post("/api/Whatsapp", async (req, res) => {
   switch (stage) {
     case 4:
       console.log("UsersList", UsersList);
+      if (!UsersList.includes(user_name)) {
+        textMessage1 =
+          " אהלן, אני הבוט של היציע: ליגת העל " +
+          moment().year() +
+          "\n אינך רשאי להשתמש בבוט. ";
+      }
       if (cycleNum !== 0) {
         textMessage1 =
           " אהלן, אני הבוט של היציע: ליגת העל  " +
