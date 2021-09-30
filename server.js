@@ -55,6 +55,7 @@ let GamesList = [];
 let cycleIndexNum = 0;
 let UsersIndex = [];
 let GuessData = [];
+let UsersList = [];
 const getData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
   const res_cycle = await footballFunc.getCycle(Data);
@@ -63,7 +64,6 @@ const getData = async () => {
   cycleIndexNum = res_cycle[2];
 
   Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-
   for (let g = 0; g < Games.length; g++) {
     if (Games[g]._rawData[0] === cycleNum) {
       const team_1 = Games[g]._rawData[1];
@@ -73,6 +73,11 @@ const getData = async () => {
   }
 
   UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
+  for (let l = 0; l < UsersIndex.length; l++) {
+    const team_1 = Games[g]._rawData[1];
+    const team_2 = Games[g]._rawData[2];
+    UsersList.push(UsersIndex[l]._rawData[1]);
+  }
   GuessData = await footballFunc.getDataFromSheet("ליגת העל");
   // console.log(UsersIndex);
 };
@@ -103,7 +108,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   // let GuessData = [];
   switch (stage) {
     case 4:
-      console.log("UsersIndex", UsersIndex);
+      console.log("UsersList", UsersList);
       if (cycleNum !== 0) {
         textMessage1 =
           " אהלן, אני הבוט של היציע: ליגת העל  " +
