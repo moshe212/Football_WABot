@@ -103,6 +103,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   // let GuessData = [];
   switch (stage) {
     case 4:
+      consolr.log("UsersIndex", UsersIndex);
       if (cycleNum !== 0) {
         textMessage1 =
           " אהלן, אני הבוט של היציע: ליגת העל  " +
