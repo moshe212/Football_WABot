@@ -34,8 +34,8 @@ const getSavedScore = async function (
         console.log("idxss", raw_idx);
         const SavedGuess = GuessData[raw_idx]._rawData;
         let Arr = [];
-        let score1 = "";
-        let score2 = "";
+        let score1 = 0;
+        let score2 = 0;
         let scoresObj = {};
         for (let g = 0; g < GamesList.length; g++) {
           const Team1 = GamesList[g][0];
