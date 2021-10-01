@@ -50,7 +50,8 @@ const getSavedScore = async function (
                 team2: [Team2, score2],
               };
               Arr.push(scoresObj);
-              console.log(Arr);
+              //   console.log(Arr);
+              break;
             case 1:
               score1 = SavedGuess[15];
               score2 = SavedGuess[16];
@@ -59,7 +60,7 @@ const getSavedScore = async function (
                 team2: [Team2, score2],
               };
               Arr.push(scoresObj);
-              console.log(Arr);
+              break;
             case 2:
               score1 = SavedGuess[27];
               score2 = SavedGuess[28];
@@ -68,7 +69,7 @@ const getSavedScore = async function (
                 team2: [Team2, score2],
               };
               Arr.push(scoresObj);
-              console.log(Arr);
+              break;
             case 3:
               score1 = SavedGuess[39];
               score2 = SavedGuess[40];
@@ -77,7 +78,7 @@ const getSavedScore = async function (
                 team2: [Team2, score2],
               };
               Arr.push(scoresObj);
-              console.log(Arr);
+              break;
             case 4:
               score1 = SavedGuess[51];
               score2 = SavedGuess[52];
@@ -86,7 +87,7 @@ const getSavedScore = async function (
                 team2: [Team2, score2],
               };
               Arr.push(scoresObj);
-              console.log(Arr);
+              break;
             case 5:
               score1 = SavedGuess[63];
               score2 = SavedGuess[64];
@@ -95,7 +96,7 @@ const getSavedScore = async function (
                 team2: [Team2, score2],
               };
               Arr.push(scoresObj);
-              console.log(Arr);
+              break;
             case 6:
               score1 = SavedGuess[75];
               score2 = SavedGuess[76];
@@ -104,7 +105,7 @@ const getSavedScore = async function (
                 team2: [Team2, score2],
               };
               Arr.push(scoresObj);
-              console.log(Arr);
+              break;
           }
         }
         console.log(Arr);
