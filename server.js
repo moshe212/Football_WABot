@@ -178,6 +178,15 @@ app.post("/api/Whatsapp", async (req, res) => {
         ScoreTeam2
       );
 
+      const GuessData_Saved = await footballFunc.getSavedScore(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "ליגת העל",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+
       // // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
       // let index = null;
       // console.log("user_name", user_name);
