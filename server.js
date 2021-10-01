@@ -225,8 +225,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[2][0];
       Team2 = GamesList[2][1];
-      // textMessage1 =
-      //   "מחזור  " + cycleNum + " משחק מספר 3: " + Team1 + " נגד " + Team2;
+      textMessage1 =
+        "מחזור  " + cycleNum + " משחק מספר 3: " + Team1 + " נגד " + Team2;
 
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[0];
@@ -241,6 +241,30 @@ app.post("/api/Whatsapp", async (req, res) => {
         "ליגת העל",
         "P",
         "Q",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 23:
+      console.log(GamesList);
+      Team1 = GamesList[3][0];
+      Team2 = GamesList[3][1];
+      // textMessage1 =
+      //   "מחזור  " + cycleNum + " משחק מספר 4: " + Team1 + " נגד " + Team2;
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
+      // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
+
+      await footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "ליגת העל",
+        "AB",
+        "AC",
         ScoreTeam1,
         ScoreTeam2
       );
@@ -265,48 +289,48 @@ app.post("/api/Whatsapp", async (req, res) => {
         ":" +
         GuessData_Saved[0].team1[1] +
         ":" +
-        GuessData_Saved[0].team2[1];
-      +"\n משחק 2: " +
+        GuessData_Saved[0].team2[1] +
+        "\n משחק 2: " +
         GuessData_Saved[1].team1[0] +
         " - " +
         GuessData_Saved[1].team2[0] +
         ":" +
         GuessData_Saved[1].team1[1] +
         ":" +
-        GuessData_Saved[1].team2[1];
-      +"\n משחק 3: " +
+        GuessData_Saved[1].team2[1] +
+        "\n משחק 3: " +
         GuessData_Saved[2].team1[0] +
         " - " +
         GuessData_Saved[2].team2[0] +
         ":" +
         GuessData_Saved[2].team1[1] +
         ":" +
-        GuessData_Saved[2].team2[1];
-      +"\n משחק 4: " +
+        GuessData_Saved[2].team2[1] +
+        "\n משחק 4: " +
         GuessData_Saved[3].team1[0] +
         " - " +
         GuessData_Saved[3].team2[0] +
         ":" +
         GuessData_Saved[3].team1[1] +
         ":" +
-        GuessData_Saved[3].team2[1];
-      +"\n משחק 5: " +
+        GuessData_Saved[3].team2[1] +
+        "\n משחק 5: " +
         GuessData_Saved[4].team1[0] +
         " - " +
         GuessData_Saved[4].team2[0] +
         ":" +
         GuessData_Saved[4].team1[1] +
         ":" +
-        GuessData_Saved[4].team2[1];
-      +"\n משחק 6: " +
+        GuessData_Saved[4].team2[1] +
+        "\n משחק 6: " +
         GuessData_Saved[5].team1[0] +
         " - " +
         GuessData_Saved[5].team2[0] +
         ":" +
         GuessData_Saved[5].team1[1] +
         ":" +
-        GuessData_Saved[5].team2[1];
-      +"\n משחק 7: " +
+        GuessData_Saved[5].team2[1] +
+        "\n משחק 7: " +
         GuessData_Saved[6].team1[0] +
         " - " +
         GuessData_Saved[6].team2[0] +
@@ -315,29 +339,6 @@ app.post("/api/Whatsapp", async (req, res) => {
         ":" +
         GuessData_Saved[6].team2[1];
 
-      break;
-    case 23:
-      console.log(GamesList);
-      Team1 = GamesList[3][0];
-      Team2 = GamesList[3][1];
-      textMessage1 =
-        "מחזור  " + cycleNum + " משחק מספר 4: " + Team1 + " נגד " + Team2;
-      score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[0];
-      ScoreTeam2 = score.split(":")[1];
-      // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
-
-      await footballFunc.saveData_Full(
-        user_name,
-        UsersIndex,
-        GuessData,
-        cycleIndexNum,
-        "ליגת העל",
-        "AB",
-        "AC",
-        ScoreTeam1,
-        ScoreTeam2
-      );
       break;
     case 24:
       console.log(GamesList);
