@@ -436,73 +436,73 @@ app.post("/api/Whatsapp", async (req, res) => {
       break;
 
     case 45:
-      const GuessData_Saved = await footballFunc.getSavedScore(
+      const GuessData_Saved2 = await footballFunc.getSavedScore(
         user_name,
         UsersIndex,
         cycleIndexNum,
         "ליגת העל",
         GamesList
       );
-      console.log("GuessData_Saved2", GuessData_Saved);
+      console.log("GuessData_Saved2", GuessData_Saved2);
 
       textMessage1 =
         "איזה תוצאות תרצו לשנות או לתקן?  " +
         "\n  1️⃣" +
-        GuessData_Saved[0].team1[0] +
+        GuessData_Saved2[0].team1[0] +
         " - " +
-        GuessData_Saved[0].team2[0] +
+        GuessData_Saved2[0].team2[0] +
         ":" +
-        GuessData_Saved[0].team1[1] +
+        GuessData_Saved2[0].team1[1] +
         ":" +
-        GuessData_Saved[0].team2[1] +
+        GuessData_Saved2[0].team2[1] +
         "\n  2️⃣" +
-        GuessData_Saved[1].team1[0] +
+        GuessData_Saved2[1].team1[0] +
         " - " +
-        GuessData_Saved[1].team2[0] +
+        GuessData_Saved2[1].team2[0] +
         ":" +
-        GuessData_Saved[1].team1[1] +
+        GuessData_Saved2[1].team1[1] +
         ":" +
-        GuessData_Saved[1].team2[1] +
+        GuessData_Saved2[1].team2[1] +
         "\n  3️⃣" +
-        GuessData_Saved[2].team1[0] +
+        GuessData_Saved2[2].team1[0] +
         " - " +
-        GuessData_Saved[2].team2[0] +
+        GuessData_Saved2[2].team2[0] +
         ":" +
-        GuessData_Saved[2].team1[1] +
+        GuessData_Saved2[2].team1[1] +
         ":" +
-        GuessData_Saved[2].team2[1] +
+        GuessData_Saved2[2].team2[1] +
         "\n  4️⃣" +
-        GuessData_Saved[3].team1[0] +
+        GuessData_Saved2[3].team1[0] +
         " - " +
-        GuessData_Saved[3].team2[0] +
+        GuessData_Saved2[3].team2[0] +
         ":" +
-        GuessData_Saved[3].team1[1] +
+        GuessData_Saved2[3].team1[1] +
         ":" +
-        GuessData_Saved[3].team2[1] +
+        GuessData_Saved2[3].team2[1] +
         "\n  5️⃣" +
-        GuessData_Saved[4].team1[0] +
+        GuessData_Saved2[4].team1[0] +
         " - " +
-        GuessData_Saved[4].team2[0] +
+        GuessData_Saved2[4].team2[0] +
         ":" +
-        GuessData_Saved[4].team1[1] +
+        GuessData_Saved2[4].team1[1] +
         ":" +
-        GuessData_Saved[4].team2[1] +
+        GuessData_Saved2[4].team2[1] +
         "\n  6️⃣" +
-        GuessData_Saved[5].team1[0] +
+        GuessData_Saved2[5].team1[0] +
         " - " +
-        GuessData_Saved[5].team2[0] +
+        GuessData_Saved2[5].team2[0] +
         ":" +
-        GuessData_Saved[5].team1[1] +
+        GuessData_Saved2[5].team1[1] +
         ":" +
-        GuessData_Saved[5].team2[1] +
+        GuessData_Saved2[5].team2[1] +
         "\n  7️⃣" +
-        GuessData_Saved[6].team1[0] +
+        GuessData_Saved2[6].team1[0] +
         " - " +
-        GuessData_Saved[6].team2[0] +
+        GuessData_Saved2[6].team2[0] +
         ":" +
-        GuessData_Saved[6].team1[1] +
+        GuessData_Saved2[6].team1[1] +
         ":" +
-        GuessData_Saved[6].team2[1];
+        GuessData_Saved2[6].team2[1];
 
       break;
 
