@@ -38,6 +38,7 @@ const getSavedScore = async function (
         let score2 = 0;
         let scoresObj = {};
         for (let g = 0; g < GamesList.length; g++) {
+          console.log("g", g);
           const Team1 = GamesList[g][0];
           const Team2 = GamesList[g][1];
           switch (g) {
