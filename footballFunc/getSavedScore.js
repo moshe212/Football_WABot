@@ -108,7 +108,7 @@ const getSavedScore = async function (
               break;
           }
         }
-        console.log(Arr);
+        // console.log(Arr);
         return Arr;
       } else {
         console.log("not find saved guess");

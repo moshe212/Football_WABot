@@ -159,8 +159,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[1][0];
       Team2 = GamesList[1][1];
-      textMessage1 =
-        "מחזור  " + cycleNum + " משחק מספר 2: " + Team1 + " נגד " + Team2;
+      // textMessage1 =
+      //   "מחזור  " + cycleNum + " משחק מספר 2: " + Team1 + " נגד " + Team2;
 
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[0];
@@ -186,6 +186,19 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
+
+      textMessage1 =
+        "אלו הניחושים שלכם למחזור  " +
+        cycleNum +
+        " : " +
+        "\n משחק מספר 1: " +
+        GuessData_Saved[0].team1[0] +
+        " - " +
+        GuessData_Saved[0].team2[0] +
+        ":" +
+        GuessData_Saved[0].team1[1] +
+        ":" +
+        GuessData_Saved[0].team2[1];
 
       // // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
       // let index = null;
