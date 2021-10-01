@@ -367,14 +367,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         "ליגת העל",
         GamesList
       );
-      console.log(
-        "GuessData_Saved",
-        GuessData_Saved[1],
-        GuessData_Saved[3],
-        GuessData_Saved[4],
-        GuessData_Saved[15],
-        GuessData_Saved[16]
-      );
+      console.log("GuessData_Saved", GuessData_Saved);
       break;
 
     default:
