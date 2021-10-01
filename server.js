@@ -250,8 +250,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[3][0];
       Team2 = GamesList[3][1];
-      // textMessage1 =
-      //   "מחזור  " + cycleNum + " משחק מספר 4: " + Team1 + " נגד " + Team2;
+      textMessage1 =
+        "מחזור  " + cycleNum + " משחק מספר 4: " + Team1 + " נגד " + Team2;
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[0];
       ScoreTeam2 = score.split(":")[1];
@@ -268,76 +268,6 @@ app.post("/api/Whatsapp", async (req, res) => {
         ScoreTeam1,
         ScoreTeam2
       );
-
-      const GuessData_Saved = await footballFunc.getSavedScore(
-        user_name,
-        UsersIndex,
-        cycleIndexNum,
-        "ליגת העל",
-        GamesList
-      );
-      console.log("GuessData_Saved", GuessData_Saved);
-
-      textMessage1 =
-        "אלו הניחושים שלכם למחזור  " +
-        cycleNum +
-        " : " +
-        "\n משחק 1: " +
-        GuessData_Saved[0].team1[0] +
-        " - " +
-        GuessData_Saved[0].team2[0] +
-        ":" +
-        GuessData_Saved[0].team1[1] +
-        ":" +
-        GuessData_Saved[0].team2[1] +
-        "\n משחק 2: " +
-        GuessData_Saved[1].team1[0] +
-        " - " +
-        GuessData_Saved[1].team2[0] +
-        ":" +
-        GuessData_Saved[1].team1[1] +
-        ":" +
-        GuessData_Saved[1].team2[1] +
-        "\n משחק 3: " +
-        GuessData_Saved[2].team1[0] +
-        " - " +
-        GuessData_Saved[2].team2[0] +
-        ":" +
-        GuessData_Saved[2].team1[1] +
-        ":" +
-        GuessData_Saved[2].team2[1] +
-        "\n משחק 4: " +
-        GuessData_Saved[3].team1[0] +
-        " - " +
-        GuessData_Saved[3].team2[0] +
-        ":" +
-        GuessData_Saved[3].team1[1] +
-        ":" +
-        GuessData_Saved[3].team2[1] +
-        "\n משחק 5: " +
-        GuessData_Saved[4].team1[0] +
-        " - " +
-        GuessData_Saved[4].team2[0] +
-        ":" +
-        GuessData_Saved[4].team1[1] +
-        ":" +
-        GuessData_Saved[4].team2[1] +
-        "\n משחק 6: " +
-        GuessData_Saved[5].team1[0] +
-        " - " +
-        GuessData_Saved[5].team2[0] +
-        ":" +
-        GuessData_Saved[5].team1[1] +
-        ":" +
-        GuessData_Saved[5].team2[1] +
-        "\n משחק 7: " +
-        GuessData_Saved[6].team1[0] +
-        " - " +
-        GuessData_Saved[6].team2[0] +
-        ":" +
-        GuessData_Saved[6].team1[1] +
-        ":" +
-        GuessData_Saved[6].team2[1];
 
       break;
     case 24:
@@ -431,14 +361,149 @@ app.post("/api/Whatsapp", async (req, res) => {
         ScoreTeam2
       );
 
-      // const GuessData_Saved = await footballFunc.getSavedScore(
-      //   user_name,
-      //   UsersIndex,
-      //   cycleIndexNum,
-      //   "ליגת העל",
-      //   GamesList
-      // );
-      // console.log("GuessData_Saved", GuessData_Saved);
+      const GuessData_Saved = await footballFunc.getSavedScore(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "ליגת העל",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+
+      textMessage1 =
+        "אלו הניחושים שלכם למחזור  " +
+        cycleNum +
+        " : " +
+        "\n משחק 1: " +
+        GuessData_Saved[0].team1[0] +
+        " - " +
+        GuessData_Saved[0].team2[0] +
+        ":" +
+        GuessData_Saved[0].team1[1] +
+        ":" +
+        GuessData_Saved[0].team2[1] +
+        "\n משחק 2: " +
+        GuessData_Saved[1].team1[0] +
+        " - " +
+        GuessData_Saved[1].team2[0] +
+        ":" +
+        GuessData_Saved[1].team1[1] +
+        ":" +
+        GuessData_Saved[1].team2[1] +
+        "\n משחק 3: " +
+        GuessData_Saved[2].team1[0] +
+        " - " +
+        GuessData_Saved[2].team2[0] +
+        ":" +
+        GuessData_Saved[2].team1[1] +
+        ":" +
+        GuessData_Saved[2].team2[1] +
+        "\n משחק 4: " +
+        GuessData_Saved[3].team1[0] +
+        " - " +
+        GuessData_Saved[3].team2[0] +
+        ":" +
+        GuessData_Saved[3].team1[1] +
+        ":" +
+        GuessData_Saved[3].team2[1] +
+        "\n משחק 5: " +
+        GuessData_Saved[4].team1[0] +
+        " - " +
+        GuessData_Saved[4].team2[0] +
+        ":" +
+        GuessData_Saved[4].team1[1] +
+        ":" +
+        GuessData_Saved[4].team2[1] +
+        "\n משחק 6: " +
+        GuessData_Saved[5].team1[0] +
+        " - " +
+        GuessData_Saved[5].team2[0] +
+        ":" +
+        GuessData_Saved[5].team1[1] +
+        ":" +
+        GuessData_Saved[5].team2[1] +
+        "\n משחק 7: " +
+        GuessData_Saved[6].team1[0] +
+        " - " +
+        GuessData_Saved[6].team2[0] +
+        ":" +
+        GuessData_Saved[6].team1[1] +
+        ":" +
+        GuessData_Saved[6].team2[1];
+
+      textMessage2 = "\n 1️⃣ לאישור \n2️⃣ לשינוי או תיקון";
+
+      break;
+
+    case 45:
+      const GuessData_Saved = await footballFunc.getSavedScore(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "ליגת העל",
+        GamesList
+      );
+      console.log("GuessData_Saved2", GuessData_Saved);
+
+      textMessage1 =
+        "איזה תוצאות תרצו לשנות או לתקן?  " +
+        "\n  1️⃣" +
+        GuessData_Saved[0].team1[0] +
+        " - " +
+        GuessData_Saved[0].team2[0] +
+        ":" +
+        GuessData_Saved[0].team1[1] +
+        ":" +
+        GuessData_Saved[0].team2[1] +
+        "\n  2️⃣" +
+        GuessData_Saved[1].team1[0] +
+        " - " +
+        GuessData_Saved[1].team2[0] +
+        ":" +
+        GuessData_Saved[1].team1[1] +
+        ":" +
+        GuessData_Saved[1].team2[1] +
+        "\n  3️⃣" +
+        GuessData_Saved[2].team1[0] +
+        " - " +
+        GuessData_Saved[2].team2[0] +
+        ":" +
+        GuessData_Saved[2].team1[1] +
+        ":" +
+        GuessData_Saved[2].team2[1] +
+        "\n  4️⃣" +
+        GuessData_Saved[3].team1[0] +
+        " - " +
+        GuessData_Saved[3].team2[0] +
+        ":" +
+        GuessData_Saved[3].team1[1] +
+        ":" +
+        GuessData_Saved[3].team2[1] +
+        "\n  5️⃣" +
+        GuessData_Saved[4].team1[0] +
+        " - " +
+        GuessData_Saved[4].team2[0] +
+        ":" +
+        GuessData_Saved[4].team1[1] +
+        ":" +
+        GuessData_Saved[4].team2[1] +
+        "\n  6️⃣" +
+        GuessData_Saved[5].team1[0] +
+        " - " +
+        GuessData_Saved[5].team2[0] +
+        ":" +
+        GuessData_Saved[5].team1[1] +
+        ":" +
+        GuessData_Saved[5].team2[1] +
+        "\n  7️⃣" +
+        GuessData_Saved[6].team1[0] +
+        " - " +
+        GuessData_Saved[6].team2[0] +
+        ":" +
+        GuessData_Saved[6].team1[1] +
+        ":" +
+        GuessData_Saved[6].team2[1];
+
       break;
 
     default:
