@@ -502,9 +502,100 @@ app.post("/api/Whatsapp", async (req, res) => {
         ":" +
         GuessData_Saved2[6].team1[1] +
         ":" +
-        GuessData_Saved2[6].team2[1];
+        GuessData_Saved2[6].team2[1] +
+        "\n נא להשיב במבנה הבא: ";
+
+      textMessage2 = "משחק 1 תוצאה 1:2";
 
       break;
+
+    case 80:
+      const gameNum = req.body.query.message.split(" ")[1];
+      const score1 = req.body.query.message.split(" ")[3][0];
+      const score2 = req.body.query.message.split(" ")[3][1];
+      console.log("answer", score1, score2, gameNum);
+      // switch (gameNum) {
+      //   case 1:
+      //     console.log(GamesList);
+      //     Team1 = GamesList[0][0];
+      //     Team2 = GamesList[0][1];
+      //     textMessage1 =
+      //       "מחזור  " + cycleNum + " משחק מספר 1: " + Team1 + " נגד " + Team2;
+
+      //     break;
+      //   case 2:
+      //     console.log(GamesList);
+      //     Team1 = GamesList[1][0];
+      //     Team2 = GamesList[1][1];
+      //     textMessage1 =
+      //       "מחזור  " + cycleNum + " משחק מספר 2: " + Team1 + " נגד " + Team2;
+
+      //     break;
+
+      //   case 3:
+      //     console.log(GamesList);
+      //     Team1 = GamesList[2][0];
+      //     Team2 = GamesList[2][1];
+      //     textMessage1 =
+      //       "מחזור  " + cycleNum + " משחק מספר 3: " + Team1 + " נגד " + Team2;
+
+      //     break;
+
+      //   case 4:
+      //     console.log(GamesList);
+      //     Team1 = GamesList[3][0];
+      //     Team2 = GamesList[3][1];
+      //     textMessage1 =
+      //       "מחזור  " + cycleNum + " משחק מספר 4: " + Team1 + " נגד " + Team2;
+
+      //     break;
+
+      //   case 5:
+      //     console.log(GamesList);
+      //     Team1 = GamesList[4][0];
+      //     Team2 = GamesList[4][1];
+      //     textMessage1 =
+      //       "מחזור  " + cycleNum + " משחק מספר 5: " + Team1 + " נגד " + Team2;
+
+      //     break;
+
+      //   case 6:
+      //     console.log(GamesList);
+      //     Team1 = GamesList[5][0];
+      //     Team2 = GamesList[5][1];
+      //     textMessage1 =
+      //       "מחזור  " + cycleNum + " משחק מספר 6: " + Team1 + " נגד " + Team2;
+
+      //     break;
+
+      //   case 7:
+      //     console.log(GamesList);
+      //     Team1 = GamesList[6][0];
+      //     Team2 = GamesList[6][1];
+      //     textMessage1 =
+      //       "מחזור  " + cycleNum + " משחק מספר 7: " + Team1 + " נגד " + Team2;
+
+      //     break;
+      // }
+      break;
+
+    case 59:
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
+      // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
+
+      await footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "ליגת העל",
+        "BL",
+        "BM",
+        ScoreTeam1,
+        ScoreTeam2
+      );
 
     default:
       console.log(`Sorry, we are out of range.`);
