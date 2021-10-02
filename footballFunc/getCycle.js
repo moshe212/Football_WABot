@@ -10,7 +10,8 @@ const getCycle = async (data) => {
   for (let i = 0; i < data.length; i++) {
     startDate = moment(data[i]._rawData[0].replace("/", "-"), "DD-MM-YYYY");
     endDate = moment(data[i]._rawData[1].replace("/", "-"), "DD-MM-YYYY");
-    const CurrentDate = moment().format("DD-MM-YYYY");
+    // const CurrentDate = moment().format("DD-MM-YYYY");
+    const CurrentDate = moment("02-10-2021").format("DD-MM-YYYY");
 
     // console.log(
     //   startDate,
@@ -51,7 +52,7 @@ const getCycle = async (data) => {
       break;
     }
   }
-  if (!cycleText.includes("זמן ניחושים")) {
+  if (cycleText.includes("זמן ניחושים")) {
     const cycleNum = cycleText.substring(cycleText.length - 2).trim();
     const endGuessTime = moment(endDate).add(1, "days");
     return [cycleNum, endGuessTime, cycleIndex];
