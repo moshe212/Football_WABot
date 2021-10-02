@@ -514,6 +514,9 @@ app.post("/api/Whatsapp", async (req, res) => {
       const score1 = req.body.query.message.split(" ")[3][0];
       const score2 = req.body.query.message.split(" ")[3][1];
       console.log("answer", score1, score2, gameNum);
+
+      textMessage1 = "answer";
+
       // switch (gameNum) {
       //   case 1:
       //     console.log(GamesList);
