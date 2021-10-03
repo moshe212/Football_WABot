@@ -9,6 +9,16 @@ const saveFix = async function (
   GuessData,
   cycleIndexNum
 ) {
+  console.log(
+    "fix",
+    gameNum,
+    score1,
+    score2,
+    user_name,
+    UsersIndex,
+    GuessData,
+    cycleIndexNum
+  );
   try {
     switch (gameNum) {
       case 1:
@@ -150,7 +160,6 @@ const saveFix = async function (
 
         break;
     }
-    return true;
   } catch (e) {
     console.log("not saved");
     return false;
