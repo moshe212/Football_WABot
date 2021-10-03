@@ -375,7 +375,11 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(GuessData_Saved, false);
+      textMessage = footballFunc.chooseGameToFix(
+        GuessData_Saved,
+        false,
+        cycleNum
+      );
       textMessage1 = textMessage[0];
       textMessage2 = textMessage[1];
 
@@ -390,7 +394,11 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(GuessData_Saved, true);
+      textMessage = footballFunc.chooseGameToFix(
+        GuessData_Saved,
+        true,
+        cycleNum
+      );
       textMessage1 = textMessage[0];
       textMessage2 = textMessage[1];
       textMessage3 = textMessage[2];
@@ -426,7 +434,11 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(GuessData_Saved, true);
+      textMessage = footballFunc.chooseGameToFix(
+        GuessData_Saved,
+        true,
+        cycleNum
+      );
       textMessage1 = textMessage[0];
       textMessage2 = textMessage[1];
       textMessage3 = textMessage[2];
@@ -462,7 +474,11 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(GuessData_Saved, true);
+      textMessage = footballFunc.chooseGameToFix(
+        GuessData_Saved,
+        true,
+        cycleNum
+      );
       textMessage1 = textMessage[0];
       textMessage2 = textMessage[1];
       textMessage3 = textMessage[2];
@@ -497,7 +513,11 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(GuessData_Saved, true);
+      textMessage = footballFunc.chooseGameToFix(
+        GuessData_Saved,
+        true,
+        cycleNum
+      );
       textMessage1 = textMessage[0];
       textMessage2 = textMessage[1];
       textMessage3 = textMessage[2];
@@ -532,7 +552,11 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(GuessData_Saved, true);
+      textMessage = footballFunc.chooseGameToFix(
+        GuessData_Saved,
+        true,
+        cycleNum
+      );
       textMessage1 = textMessage[0];
       textMessage2 = textMessage[1];
       textMessage3 = textMessage[2];
@@ -567,7 +591,11 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(GuessData_Saved, true);
+      textMessage = footballFunc.chooseGameToFix(
+        GuessData_Saved,
+        true,
+        cycleNum
+      );
       textMessage1 = textMessage[0];
       textMessage2 = textMessage[1];
       textMessage3 = textMessage[2];
@@ -602,7 +630,11 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(GuessData_Saved, true);
+      textMessage = footballFunc.chooseGameToFix(
+        GuessData_Saved,
+        true,
+        cycleNum
+      );
       textMessage1 = textMessage[0];
       textMessage2 = textMessage[1];
       textMessage3 = textMessage[2];

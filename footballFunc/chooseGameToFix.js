@@ -1,4 +1,4 @@
-const chooseGameToFix = async function (GuessData_Saved, message2) {
+const chooseGameToFix = async function (GuessData_Saved, message2, cycleNum) {
   const textMessage1 =
     "אלו הניחושים שלכם למחזור  " +
     cycleNum +
