@@ -380,6 +380,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         false,
         cycleNum
       );
+      console.log("textMessage", textMessage);
       textMessage1 = textMessage[0];
       textMessage2 = textMessage[1];
 
