@@ -56,6 +56,9 @@ let cycleIndexNum = 0;
 let UsersIndex = [];
 let GuessData = [];
 let UsersList = [];
+let gameNum = 0;
+let score1 = 0;
+let score2 = 0;
 const getData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
   const res_cycle = await footballFunc.getCycle(Data);
@@ -510,9 +513,9 @@ app.post("/api/Whatsapp", async (req, res) => {
       break;
 
     case 80:
-      const gameNum = req.body.query.message.split(" ")[1];
-      const score1 = req.body.query.message.split(" ")[3].split(":")[0];
-      const score2 = req.body.query.message.split(" ")[3].split(":")[1];
+      gameNum = req.body.query.message.split(" ")[1];
+      score1 = req.body.query.message.split(" ")[3].split(":")[0];
+      score2 = req.body.query.message.split(" ")[3].split(":")[1];
       console.log("answer", score1, score2, gameNum);
 
       await saveFix(gameNum, score1, score2);
@@ -594,9 +597,9 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "משחק 1 תוצאה 1:2";
 
     case 83:
-      const gameNum = req.body.query.message.split(" ")[1];
-      const score1 = req.body.query.message.split(" ")[3].split(":")[0];
-      const score2 = req.body.query.message.split(" ")[3].split(":")[1];
+      gameNum = req.body.query.message.split(" ")[1];
+      score1 = req.body.query.message.split(" ")[3].split(":")[0];
+      score2 = req.body.query.message.split(" ")[3].split(":")[1];
       console.log("answer", score1, score2, gameNum);
 
       await saveFix(gameNum, score1, score2);
