@@ -375,7 +375,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(
+      textMessage = await footballFunc.chooseGameToFix(
         GuessData_Saved,
         false,
         cycleNum
@@ -395,7 +395,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(
+      textMessage = await footballFunc.chooseGameToFix(
         GuessData_Saved,
         true,
         cycleNum
@@ -436,7 +436,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(
+      textMessage = await footballFunc.chooseGameToFix(
         GuessData_Saved,
         true,
         cycleNum
@@ -476,7 +476,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(
+      textMessage = await footballFunc.chooseGameToFix(
         GuessData_Saved,
         true,
         cycleNum
@@ -515,7 +515,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(
+      textMessage = await footballFunc.chooseGameToFix(
         GuessData_Saved,
         true,
         cycleNum
@@ -554,7 +554,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(
+      textMessage = await footballFunc.chooseGameToFix(
         GuessData_Saved,
         true,
         cycleNum
@@ -593,7 +593,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(
+      textMessage = await footballFunc.chooseGameToFix(
         GuessData_Saved,
         true,
         cycleNum
@@ -632,7 +632,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = footballFunc.chooseGameToFix(
+      textMessage = await footballFunc.chooseGameToFix(
         GuessData_Saved,
         true,
         cycleNum
