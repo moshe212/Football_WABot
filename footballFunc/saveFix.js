@@ -1,6 +1,14 @@
 const { saveData_Full } = require("./saveData_Full");
 
-const saveFix = async function (gameNum, score1, score2) {
+const saveFix = async function (
+  gameNum,
+  score1,
+  score2,
+  user_name,
+  UsersIndex,
+  GuessData,
+  cycleIndexNum
+) {
   try {
     switch (gameNum) {
       case 1:

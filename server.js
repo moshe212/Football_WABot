@@ -518,7 +518,15 @@ app.post("/api/Whatsapp", async (req, res) => {
       score2 = req.body.query.message.split(" ")[3].split(":")[1];
       console.log("answer", score1, score2, gameNum);
 
-      await footballFunc.saveFix(gameNum, score1, score2);
+      await footballFunc.saveFix(
+        gameNum,
+        score1,
+        score2,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
 
       textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
       textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
@@ -602,7 +610,15 @@ app.post("/api/Whatsapp", async (req, res) => {
       score2 = req.body.query.message.split(" ")[3].split(":")[1];
       console.log("answer", score1, score2, gameNum);
 
-      await footballFunc.saveFix(gameNum, score1, score2);
+      await footballFunc.saveFix(
+        gameNum,
+        score1,
+        score2,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
 
       textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
       textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
