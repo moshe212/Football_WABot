@@ -1,4 +1,5 @@
 const { saveData_Full } = require("./saveData_Full");
+const { footballFunc } = require("../footballFunc");
 
 const saveFix = async function (
   gameNum,
@@ -15,17 +16,18 @@ const saveFix = async function (
     score1,
     score2,
     user_name,
-    UsersIndex,
+    // UsersIndex,
     // GuessData,
     cycleIndexNum
   );
   try {
     switch (gameNum) {
       case 1:
+        console.log("case 1");
         ScoreTeam1 = score1;
         ScoreTeam2 = score2;
 
-        await saveData_Full(
+        await footballFunc.saveData_Full(
           user_name,
           UsersIndex,
           GuessData,
