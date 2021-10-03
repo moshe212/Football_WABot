@@ -604,6 +604,8 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       textMessage2 = "משחק 1 תוצאה 1:2";
 
+      break;
+
     case 83:
       gameNum = req.body.query.message.split(" ")[1];
       score1 = req.body.query.message.split(" ")[3].split(":")[0];
