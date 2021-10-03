@@ -20,6 +20,8 @@ const saveFix = async function (
     // GuessData,
     cycleIndexNum
   );
+  let ScoreTeam1 = 0;
+  let ScoreTeam2 = 0;
   try {
     switch (gameNum) {
       case 1:
@@ -150,6 +152,7 @@ const saveFix = async function (
     }
   } catch (e) {
     console.log("not saved");
+    console.log(e);
     return false;
   }
 };
