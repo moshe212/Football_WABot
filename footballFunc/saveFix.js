@@ -29,7 +29,7 @@ const saveFix = async function (
         ScoreTeam1 = score1;
         ScoreTeam2 = score2;
 
-        await footballFunc.saveData_Full(
+        await saveData_Full(
           user_name,
           UsersIndex,
           GuessData,
@@ -43,6 +43,7 @@ const saveFix = async function (
 
         break;
       case 2:
+        console.log("case 2");
         ScoreTeam1 = score1;
         ScoreTeam2 = score2;
 
