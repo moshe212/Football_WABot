@@ -16,7 +16,7 @@ const saveFix = async function (
     score2,
     user_name,
     UsersIndex,
-    GuessData,
+    // GuessData,
     cycleIndexNum
   );
   try {
@@ -36,8 +36,6 @@ const saveFix = async function (
           ScoreTeam1,
           ScoreTeam2
         );
-        textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
-        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
 
         break;
       case 2:
@@ -55,8 +53,6 @@ const saveFix = async function (
           ScoreTeam1,
           ScoreTeam2
         );
-        textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
-        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
 
         break;
 
@@ -75,8 +71,6 @@ const saveFix = async function (
           ScoreTeam1,
           ScoreTeam2
         );
-        textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
-        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
 
         break;
 
@@ -95,8 +89,6 @@ const saveFix = async function (
           ScoreTeam1,
           ScoreTeam2
         );
-        textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
-        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
 
         break;
 
@@ -115,8 +107,6 @@ const saveFix = async function (
           ScoreTeam1,
           ScoreTeam2
         );
-        textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
-        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
 
         break;
 
@@ -135,8 +125,6 @@ const saveFix = async function (
           ScoreTeam1,
           ScoreTeam2
         );
-        textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
-        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
 
         break;
 
@@ -155,8 +143,6 @@ const saveFix = async function (
           ScoreTeam1,
           ScoreTeam2
         );
-        textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
-        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
 
         break;
     }
