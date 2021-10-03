@@ -519,9 +519,9 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("answer", score1, score2, gameNum);
 
       await footballFunc.saveFix(
-        gameNum,
-        score1,
-        score2,
+        parseInt(gameNum),
+        parseInt(score1),
+        parseInt(score2),
         user_name,
         UsersIndex,
         GuessData,
@@ -613,9 +613,9 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("answer", score1, score2, gameNum);
 
       await footballFunc.saveFix(
-        gameNum,
-        score1,
-        score2,
+        parseInt(gameNum),
+        parseInt(score1),
+        parseInt(score2),
         user_name,
         UsersIndex,
         GuessData,
