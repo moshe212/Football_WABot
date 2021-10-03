@@ -32,7 +32,7 @@ const saveData_Full = async function (
       console.log("1", parseInt(cycleIndexNum), parseInt(index) - 2);
       console.log(
         "2",
-        GuessData[(parseInt(cycleIndexNum), parseInt(index) - 2)]
+        GuessData[parseInt(cycleIndexNum) + parseInt(index) - 2]
       );
       if (
         GuessData[parseInt(cycleIndexNum) + parseInt(index) - 2]._rawData[1] ===
