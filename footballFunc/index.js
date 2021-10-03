@@ -4,6 +4,7 @@ const { saveData } = require("./saveData");
 const { saveData_Full } = require("./saveData_Full");
 const { getSavedScore } = require("./getSavedScore");
 const { saveFix } = require("./saveFix");
+const { chooseGameToFix } = require("./chooseGameToFix");
 
 const footballFunc = {
   getDataFromSheet,
@@ -12,6 +13,7 @@ const footballFunc = {
   saveData_Full,
   getSavedScore,
   saveFix,
+  chooseGameToFix,
 };
 
 module.exports = { footballFunc };

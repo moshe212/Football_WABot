@@ -1,5 +1,4 @@
 const { saveData_Full } = require("./saveData_Full");
-const { footballFunc } = require("../footballFunc");
 
 const saveFix = async function (
   gameNum,
