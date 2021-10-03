@@ -48,7 +48,7 @@ const saveData_Full = async function (
         cell_team2.value = score2;
 
         const res_save = await sheet.saveUpdatedCells();
-
+        console.log("save");
         return res_save;
       } else {
         console.log("not save");
