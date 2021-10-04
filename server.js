@@ -111,7 +111,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   let textMessage = "";
   // let GuessData = [];
   switch (stage) {
-    case 4:
+    case 33:
       console.log("UsersList", UsersList);
       if (!UsersList.includes(user_name)) {
         console.log("not includs");
@@ -138,20 +138,20 @@ app.post("/api/Whatsapp", async (req, res) => {
         break;
       }
 
-    case 9:
+    case 35:
       textMessage1 =
         " אז מה אתם אוכלים לי את הראש? תחזרו לכאן כשתרצו למלא ניחושים, ותשתדלו שזה יקרה לפני ה-" +
         cycleDate +
         ". יאללה ביי! 😎 ";
       break;
-    case 12:
+    case 38:
       textMessage1 =
         "החלטתם לשגע אותי היום? לכו תעשו שיעורי בית ותחזרו למלא את הניחושים כשתהיו מוכנים, ולא יאוחר " +
         cycleDate +
         " 😎";
 
       break;
-    case 11:
+    case 37:
       // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
 
       console.log(GamesList);
@@ -161,7 +161,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         "מחזור  " + cycleNum + " משחק מספר 1: " + Team1 + " נגד " + Team2;
 
       break;
-    case 21:
+    case 46:
       console.log(GamesList);
       Team1 = GamesList[1][0];
       Team2 = GamesList[1][1];
@@ -227,7 +227,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       //   console.log("not save");
       // }
       break;
-    case 22:
+    case 47:
       console.log(GamesList);
       Team1 = GamesList[2][0];
       Team2 = GamesList[2][1];
@@ -252,7 +252,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       );
 
       break;
-    case 23:
+    case 48:
       console.log(GamesList);
       Team1 = GamesList[3][0];
       Team2 = GamesList[3][1];
@@ -276,7 +276,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       );
 
       break;
-    case 24:
+    case 49:
       console.log(GamesList);
       Team1 = GamesList[4][0];
       Team2 = GamesList[4][1];
@@ -300,7 +300,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       );
 
       break;
-    case 25:
+    case 50:
       console.log(GamesList);
       Team1 = GamesList[5][0];
       Team2 = GamesList[5][1];
@@ -324,7 +324,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       );
 
       break;
-    case 26:
+    case 51:
       console.log(GamesList);
       Team1 = GamesList[6][0];
       Team2 = GamesList[6][1];
@@ -349,7 +349,7 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
 
-    case 41:
+    case 64:
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[0];
       ScoreTeam2 = score.split(":")[1];
@@ -386,7 +386,7 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
 
-    case 45:
+    case 68:
       GuessData_Saved = await footballFunc.getSavedScore(
         user_name,
         UsersIndex,
@@ -407,7 +407,7 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
 
-    case 80:
+    case 69:
       gameNum = req.body.query.message.split(" ")[1];
       score1 = req.body.query.message.split(" ")[3].split(":")[0];
       score2 = req.body.query.message.split(" ")[3].split(":")[1];
@@ -427,7 +427,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
       break;
 
-    case 81:
+    case 70:
       GuessData_Saved = await footballFunc.getSavedScore(
         user_name,
         UsersIndex,
@@ -447,7 +447,7 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
 
-    case 83:
+    case 72:
       gameNum = req.body.query.message.split(" ")[1];
       score1 = req.body.query.message.split(" ")[3].split(":")[0];
       score2 = req.body.query.message.split(" ")[3].split(":")[1];
@@ -467,7 +467,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
       break;
 
-    case 85:
+    case 73:
       GuessData_Saved = await footballFunc.getSavedScore(
         user_name,
         UsersIndex,
@@ -486,7 +486,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = textMessage[2];
       break;
 
-    case 90:
+    case 79:
       gameNum = req.body.query.message.split(" ")[1];
       score1 = req.body.query.message.split(" ")[3].split(":")[0];
       score2 = req.body.query.message.split(" ")[3].split(":")[1];
@@ -506,7 +506,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
       break;
 
-    case 93:
+    case 82:
       GuessData_Saved = await footballFunc.getSavedScore(
         user_name,
         UsersIndex,
@@ -525,7 +525,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = textMessage[2];
       break;
 
-    case 95:
+    case 84:
       gameNum = req.body.query.message.split(" ")[1];
       score1 = req.body.query.message.split(" ")[3].split(":")[0];
       score2 = req.body.query.message.split(" ")[3].split(":")[1];
@@ -545,7 +545,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
       break;
 
-    case 98:
+    case 87:
       GuessData_Saved = await footballFunc.getSavedScore(
         user_name,
         UsersIndex,
@@ -564,7 +564,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = textMessage[2];
       break;
 
-    case 100:
+    case 89:
       gameNum = req.body.query.message.split(" ")[1];
       score1 = req.body.query.message.split(" ")[3].split(":")[0];
       score2 = req.body.query.message.split(" ")[3].split(":")[1];
@@ -584,7 +584,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
       break;
 
-    case 103:
+    case 92:
       GuessData_Saved = await footballFunc.getSavedScore(
         user_name,
         UsersIndex,
@@ -603,7 +603,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = textMessage[2];
       break;
 
-    case 105:
+    case 94:
       gameNum = req.body.query.message.split(" ")[1];
       score1 = req.body.query.message.split(" ")[3].split(":")[0];
       score2 = req.body.query.message.split(" ")[3].split(":")[1];
@@ -623,7 +623,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
       break;
 
-    case 108:
+    case 97:
       GuessData_Saved = await footballFunc.getSavedScore(
         user_name,
         UsersIndex,
@@ -642,7 +642,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = textMessage[2];
       break;
 
-    case 110:
+    case 99:
       gameNum = req.body.query.message.split(" ")[1];
       score1 = req.body.query.message.split(" ")[3].split(":")[0];
       score2 = req.body.query.message.split(" ")[3].split(":")[1];
