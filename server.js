@@ -171,6 +171,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[0];
       ScoreTeam2 = score.split(":")[1];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
 
       await footballFunc.saveData_Full(
         user_name,
