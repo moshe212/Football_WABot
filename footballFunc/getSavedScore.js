@@ -43,8 +43,8 @@ const getSavedScore = async function (
           const Team2 = GamesList[g][1];
           switch (g) {
             case 0:
-              score1 = SavedGuess[3];
-              score2 = SavedGuess[4];
+              score1 = SavedGuess[4];
+              score2 = SavedGuess[3];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
@@ -53,8 +53,8 @@ const getSavedScore = async function (
               //   console.log(Arr);
               break;
             case 1:
-              score1 = SavedGuess[15];
-              score2 = SavedGuess[16];
+              score1 = SavedGuess[16];
+              score2 = SavedGuess[15];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
@@ -62,8 +62,8 @@ const getSavedScore = async function (
               Arr.push(scoresObj);
               break;
             case 2:
-              score1 = SavedGuess[27];
-              score2 = SavedGuess[28];
+              score1 = SavedGuess[28];
+              score2 = SavedGuess[27];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
@@ -71,8 +71,8 @@ const getSavedScore = async function (
               Arr.push(scoresObj);
               break;
             case 3:
-              score1 = SavedGuess[39];
-              score2 = SavedGuess[40];
+              score1 = SavedGuess[40];
+              score2 = SavedGuess[39];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
@@ -80,8 +80,8 @@ const getSavedScore = async function (
               Arr.push(scoresObj);
               break;
             case 4:
-              score1 = SavedGuess[51];
-              score2 = SavedGuess[52];
+              score1 = SavedGuess[52];
+              score2 = SavedGuess[51];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
@@ -89,8 +89,8 @@ const getSavedScore = async function (
               Arr.push(scoresObj);
               break;
             case 5:
-              score1 = SavedGuess[63];
-              score2 = SavedGuess[64];
+              score1 = SavedGuess[64];
+              score2 = SavedGuess[63];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
@@ -98,8 +98,8 @@ const getSavedScore = async function (
               Arr.push(scoresObj);
               break;
             case 6:
-              score1 = SavedGuess[75];
-              score2 = SavedGuess[76];
+              score1 = SavedGuess[76];
+              score2 = SavedGuess[75];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
