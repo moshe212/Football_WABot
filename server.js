@@ -174,7 +174,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      await footballFunc.saveData_Full(
+      footballFunc.saveData_Full(
         user_name,
         UsersIndex,
         GuessData,
