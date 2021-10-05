@@ -457,7 +457,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       score2 = req.body.query.message.split(" ")[3].split(":")[0];
       console.log("answer", score1, score2, gameNum);
 
-      await footballFunc.saveFix(
+      footballFunc.saveFix(
         parseInt(gameNum),
         parseInt(score1),
         parseInt(score2),
@@ -496,7 +496,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       score2 = req.body.query.message.split(" ")[3].split(":")[0];
       console.log("answer", score1, score2, gameNum);
 
-      await footballFunc.saveFix(
+      footballFunc.saveFix(
         parseInt(gameNum),
         parseInt(score1),
         parseInt(score2),
@@ -535,7 +535,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       score2 = req.body.query.message.split(" ")[3].split(":")[0];
       console.log("answer", score1, score2, gameNum);
 
-      await footballFunc.saveFix(
+      footballFunc.saveFix(
         parseInt(gameNum),
         parseInt(score1),
         parseInt(score2),
@@ -574,7 +574,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       score2 = req.body.query.message.split(" ")[3].split(":")[0];
       console.log("answer", score1, score2, gameNum);
 
-      await footballFunc.saveFix(
+      footballFunc.saveFix(
         parseInt(gameNum),
         parseInt(score1),
         parseInt(score2),
@@ -613,7 +613,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       score2 = req.body.query.message.split(" ")[3].split(":")[0];
       console.log("answer", score1, score2, gameNum);
 
-      await footballFunc.saveFix(
+      footballFunc.saveFix(
         parseInt(gameNum),
         parseInt(score1),
         parseInt(score2),
