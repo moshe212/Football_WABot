@@ -191,11 +191,11 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage1 =
         "*מחזור  " +
         cycleNum +
-        " משחק מספר 1: " +
+        " משחק מספר 1: *" +
+        "\n" +
         Team1 +
         " נגד " +
-        Team2 +
-        "*";
+        Team2;
 
       break;
     case 46:
