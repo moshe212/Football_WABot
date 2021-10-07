@@ -271,9 +271,9 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[2][0];
       Team2 = GamesList[2][1];
-      const str = "מחזור  " + cycleNum + ", משחק מספר 3: ";
+      const str3 = "מחזור  " + cycleNum + ", משחק מספר 3: ";
 
-      textMessage1 = str.bold() + Team1 + " נגד " + Team2;
+      textMessage1 = str3.bold() + Team1 + " נגד " + Team2;
 
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
