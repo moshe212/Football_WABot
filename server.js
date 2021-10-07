@@ -194,7 +194,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         " משחק מספר 1: *" +
         "\n" +
         Team1 +
-        " נגד " +
+        " - " +
         Team2;
 
       break;
