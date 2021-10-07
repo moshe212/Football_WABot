@@ -9,7 +9,8 @@ const saveData_Full = async function (
   columnLetter1,
   columnLetter2,
   score1,
-  score2
+  score2,
+  IsFirst
 ) {
   const creds = require("../config/CreditTransaction-d9fe1ef7e128.json");
   // Initialize the sheet - doc ID is the long id in the sheets URL
@@ -27,6 +28,12 @@ const saveData_Full = async function (
       for (let u = 0; u < UsersIndex.length; u++) {
         if (user_name === UsersIndex[u]._rawData[0]) {
           index = UsersIndex[u]._rawData[1];
+          if (IsFirst) {
+            console.log("first", IsFirst);
+            UsersIndex[u].is_first_time = 1;
+            await UsersIndex[u].save();
+            return "save first";
+          }
         }
       }
       console.log("1", parseInt(cycleIndexNum), parseInt(index) - 2);

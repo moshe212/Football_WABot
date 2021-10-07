@@ -662,6 +662,19 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycleIndexNum
       );
 
+      await footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        null,
+        null,
+        "אינדקס משתמשים",
+        null,
+        null,
+        null,
+        null,
+        true
+      );
+
       textMessage1 = "הנתונים נשמרו בהצלחה! ";
       textMessage2 = "נתראה במחזור הבא. ";
 
