@@ -80,12 +80,6 @@ const getData = async () => {
   UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
   for (let l = 0; l < UsersIndex.length; l++) {
     UsersList.push(UsersIndex[l]._rawData[0]);
-    if (user_name === UsersIndex[l]._rawData[0]) {
-      const first = UsersIndex[l]._rawData[2];
-      if (first === "1") {
-        isFirst = false;
-      }
-    }
   }
   GuessData = await footballFunc.getDataFromSheet("ליגת העל");
   // console.log(UsersIndex);
@@ -129,6 +123,15 @@ app.post("/api/Whatsapp", async (req, res) => {
         break;
       }
       if (cycleNum !== 0) {
+        for (let l = 0; l < UsersIndex.length; l++) {
+          if (user_name === UsersIndex[l]._rawData[0]) {
+            const first = UsersIndex[l]._rawData[2];
+            if (first === "1") {
+              isFirst = false;
+            }
+          }
+        }
+
         if (isFirst) {
           UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
           for (let l = 0; l < UsersIndex.length; l++) {
