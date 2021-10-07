@@ -189,9 +189,11 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[0][0];
       Team2 = GamesList[0][1];
       textMessage1 =
-        "*מחזור  " +
+        "*" +
+        "מחזור  " +
+        "*" +
         cycleNum +
-        " משחק מספר 1: *" +
+        " משחק מספר 1: " +
         "\n" +
         Team1 +
         " - " +
