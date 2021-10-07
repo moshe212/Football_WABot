@@ -59,6 +59,7 @@ let UsersList = [];
 let gameNum = 0;
 let score1 = 0;
 let score2 = 0;
+let isFirst = true;
 
 const getData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
@@ -78,7 +79,12 @@ const getData = async () => {
 
   UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
   for (let l = 0; l < UsersIndex.length; l++) {
-    UsersList.push(UsersIndex[l]._rawData[0]);
+    if (user_name === UsersIndex[l]._rawData[0]) {
+      const first = UsersIndex[l]._rawData[2];
+      if (first === "1") {
+        isFirst = false;
+      }
+    }
   }
   GuessData = await footballFunc.getDataFromSheet("ליגת העל");
   // console.log(UsersIndex);
@@ -122,13 +128,34 @@ app.post("/api/Whatsapp", async (req, res) => {
         break;
       }
       if (cycleNum !== 0) {
-        textMessage1 =
-          " אהלן, אני הבוט של היציע: ליגת העל  " +
-          moment().year() +
-          " האם ברצונכם למלא את ניחושי המחזור " +
-          cycleNum +
-          "?";
-        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
+        if (isFirst) {
+          UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
+          for (let l = 0; l < UsersIndex.length; l++) {
+            if (user_name === UsersIndex[l]._rawData[0]) {
+              const first = UsersIndex[l]._rawData[2];
+              if (first === "1") {
+                isFirst = false;
+              }
+            }
+          }
+        }
+        if (isFirst) {
+          textMessage1 =
+            " היי, אני הבוט של היציע: ליגת העל  " +
+            moment().year() +
+            "\n האם ברצונכם למלא את ניחושי המחזור " +
+            cycleNum +
+            "?";
+          textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
+        } else {
+          textMessage1 =
+            " היי, איזה כיף שחזרתם!  " +
+            "\n האם ברצונכם למלא את ניחושי המחזור " +
+            cycleNum +
+            "?";
+          textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
+        }
+
         break;
       } else {
         textMessage1 = " אהלן, אני הבוט של היציע: ליגת העל " + moment().year();

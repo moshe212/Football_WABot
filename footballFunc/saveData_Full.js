@@ -28,6 +28,7 @@ const saveData_Full = async function (
       for (let u = 0; u < UsersIndex.length; u++) {
         if (user_name === UsersIndex[u]._rawData[0]) {
           index = UsersIndex[u]._rawData[1];
+          console.log(IsFirst);
           if (IsFirst) {
             console.log("first", IsFirst);
             UsersIndex[u].is_first_time = 1;
