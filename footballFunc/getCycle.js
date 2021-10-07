@@ -11,8 +11,9 @@ const getCycle = async (data) => {
     startDate = moment(data[i]._rawData[0].replace("/", "-"), "DD-MM-YYYY");
     endDate = moment(data[i]._rawData[1].replace("/", "-"), "DD-MM-YYYY");
     const CurrentDate1 = moment().format("DD-MM-YYYY");
-    const CurrentDate = moment().subtract(4, "days").format("DD-MM-YYYY");
-    console.log("current", CurrentDate, CurrentDate1);
+    const CurrentDate2 = moment().subtract(4, "days").format("DD-MM-YYYY");
+    const CurrentDate = moment("14/12/2021".replace("/", "-"), "DD-MM-YYYY");
+    console.log("current", CurrentDate, CurrentDate2);
     // console.log(
     //   startDate,
     //   endDate,
