@@ -188,16 +188,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[0][0];
       Team2 = GamesList[0][1];
-      textMessage1 =
-        "*" +
-        "מחזור  " +
-        "*" +
-        cycleNum +
-        " משחק מספר 1: " +
-        "\n" +
-        Team1 +
-        " - " +
-        Team2;
+      const str = "מחזור  " + cycleNum + ", משחק מספר 1: ";
+      textMessage1 = str.bold() + "\n" + Team1 + " - " + Team2;
 
       break;
     case 46:
@@ -279,8 +271,9 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[2][0];
       Team2 = GamesList[2][1];
-      textMessage1 =
-        "מחזור  " + cycleNum + " משחק מספר 3: " + Team1 + " נגד " + Team2;
+      const str = "מחזור  " + cycleNum + ", משחק מספר 3: ";
+
+      textMessage1 = str.bold() + Team1 + " נגד " + Team2;
 
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
