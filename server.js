@@ -419,6 +419,19 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage1 = textMessage[0];
       textMessage2 = textMessage[1];
 
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        null,
+        null,
+        "אינדקס משתמשים",
+        null,
+        null,
+        null,
+        null,
+        true
+      );
+
       break;
 
     case 68:
