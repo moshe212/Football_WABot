@@ -147,14 +147,14 @@ app.post("/api/Whatsapp", async (req, res) => {
           textMessage1 =
             " היי, אני הבוט של היציע: ליגת העל  " +
             moment().year() +
-            "\n האם ברצונכם למלא את ניחושי המחזור " +
+            "\n האם ברצונכם למלא את ניחושי המחזור ה " +
             cycleNum +
             "?";
           textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
         } else {
           textMessage1 =
             " היי, איזה כיף שחזרתם!  " +
-            "\n האם ברצונכם למלא את ניחושי המחזור " +
+            "\n האם ברצונכם למלא את ניחושי המחזור ה" +
             cycleNum +
             "?";
           textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
@@ -189,7 +189,13 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[0][0];
       Team2 = GamesList[0][1];
       textMessage1 =
-        "מחזור  " + cycleNum + " משחק מספר 1: " + Team1 + " נגד " + Team2;
+        "*מחזור  " +
+        cycleNum +
+        " משחק מספר 1: " +
+        Team1 +
+        " נגד " +
+        Team2 +
+        "*";
 
       break;
     case 46:
@@ -704,19 +710,6 @@ app.post("/api/Whatsapp", async (req, res) => {
         UsersIndex,
         GuessData,
         cycleIndexNum
-      );
-
-      await footballFunc.saveData_Full(
-        user_name,
-        UsersIndex,
-        null,
-        null,
-        "אינדקס משתמשים",
-        null,
-        null,
-        null,
-        null,
-        true
       );
 
       textMessage1 = "הנתונים נשמרו בהצלחה! ";
