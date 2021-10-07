@@ -189,23 +189,17 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[0][0];
       Team2 = GamesList[0][1];
       const str = "מחזור  " + cycleNum + ", משחק מספר 1: ";
-      textMessage1 = str.bold() + "\n" + Team1 + " - " + Team2;
+      textMessage1 = str + "\n" + Team1 + " - " + Team2;
 
       break;
     case 46:
       console.log(GamesList);
       Team1 = GamesList[1][0];
       Team2 = GamesList[1][1];
-      textMessage1 =
-        "*" +
-        "מחזור  " +
-        "*" +
-        cycleNum +
-        " משחק מספר 2: " +
-        "\n" +
-        Team1 +
-        " - " +
-        Team2;
+
+      const str2 = "מחזור  " + cycleNum + ", משחק מספר 2: ";
+      textMessage1 = str2 + "\n" + Team1 + " נגד " + Team2;
+
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
@@ -224,56 +218,14 @@ app.post("/api/Whatsapp", async (req, res) => {
         ScoreTeam2
       );
 
-      // // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
-      // let index = null;
-      // console.log("user_name", user_name);
-      // for (let u = 0; u < UsersIndex.length; u++) {
-      //   // console.log(
-      //   //   "user_name",
-      //   //   user_name,
-      //   //   UsersIndex[u]._rawData[0],
-      //   //   UsersIndex[u]._rawData[1]
-      //   // );
-      //   if (user_name === UsersIndex[u]._rawData[0]) {
-      //     index = UsersIndex[u]._rawData[1];
-      //   }
-      // }
-      // console.log(
-      //   "cycleIndexNum",
-      //   cycleIndexNum,
-      //   parseInt(cycleIndexNum) + parseInt(index)
-      // );
-      // console.log(
-      //   "GuessData_name",
-      //   GuessData[parseInt(cycleIndexNum) + parseInt(index) - 2]._rawData[1]
-      // );
-
-      // if (
-      //   GuessData[parseInt(cycleIndexNum) + parseInt(index) - 2]._rawData[1] ===
-      //   user_name
-      // ) {
-      //   const raw_idx = parseInt(cycleIndexNum) + parseInt(index) - 2;
-      //   const resp_save = await footballFunc.saveData(
-      //     "ליגת העל",
-      //     raw_idx,
-      //     3,
-      //     "D",
-      //     "E",
-      //     ScoreTeam1,
-      //     ScoreTeam2
-      //   );
-      //   console.log("resp_save", resp_save);
-      // } else {
-      //   console.log("not save");
-      // }
       break;
     case 47:
       console.log(GamesList);
       Team1 = GamesList[2][0];
       Team2 = GamesList[2][1];
-      const str3 = "מחזור  " + cycleNum + ", משחק מספר 3: ";
 
-      textMessage1 = str3.bold() + Team1 + " נגד " + Team2;
+      const str3 = "מחזור  " + cycleNum + ", משחק מספר 3: ";
+      textMessage1 = str3 + Team1 + " נגד " + Team2;
 
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
@@ -297,8 +249,10 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[3][0];
       Team2 = GamesList[3][1];
-      textMessage1 =
-        "מחזור  " + cycleNum + " משחק מספר 4: " + Team1 + " נגד " + Team2;
+
+      const str4 = "מחזור  " + cycleNum + ", משחק מספר 4: ";
+      textMessage1 = str4 + "\n" + Team1 + " נגד " + Team2;
+
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
@@ -321,8 +275,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[4][0];
       Team2 = GamesList[4][1];
-      textMessage1 =
-        "מחזור  " + cycleNum + " משחק מספר 5: " + Team1 + " נגד " + Team2;
+      const str5 = "מחזור  " + cycleNum + ", משחק מספר 5: ";
+      textMessage1 = str5 + "\n" + Team1 + " נגד " + Team2;
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
@@ -345,8 +299,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[5][0];
       Team2 = GamesList[5][1];
-      textMessage1 =
-        "מחזור  " + cycleNum + " משחק מספר 6: " + Team1 + " נגד " + Team2;
+      const str6 = "מחזור  " + cycleNum + ", משחק מספר 6: ";
+      textMessage1 = str6 + "\n" + Team1 + " נגד " + Team2;
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
@@ -369,8 +323,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[6][0];
       Team2 = GamesList[6][1];
-      textMessage1 =
-        "מחזור  " + cycleNum + " משחק מספר 7: " + Team1 + " נגד " + Team2;
+      const str7 = "מחזור  " + cycleNum + ", משחק מספר 7: ";
+      textMessage1 = str7 + "\n" + Team1 + " נגד " + Team2;
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
