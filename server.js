@@ -143,7 +143,7 @@ app.post("/api/Whatsapp", async (req, res) => {
             }
           }
         }
-        if (isFirst) {
+        if (isFirst1) {
           textMessage1 =
             " היי, אני הבוט של היציע: ליגת העל  " +
             moment().year() +
