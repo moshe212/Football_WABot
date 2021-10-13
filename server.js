@@ -458,6 +458,25 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
 
+    case 71:
+      // GuessData_Saved = await footballFunc.getSavedScore(
+      //   user_name,
+      //   UsersIndex,
+      //   cycleIndexNum,
+      //   "ליגת העל",
+      //   GamesList
+      // );
+      // console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix(
+        GuessData_Saved,
+        false,
+        cycleNum
+      );
+      textMessage1 = textMessage[0];
+      textMessage2 = "הניחושים נקלטו בהצלחה!" + "/n ניפגש במחזור הבא";
+
+      break;
+
     case 72:
       gameNum = req.body.query.message.split(" ")[1];
       score1 = req.body.query.message.split(" ")[3].split(":")[1];
