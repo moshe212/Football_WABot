@@ -179,8 +179,10 @@ app.post("/api/Whatsapp", async (req, res) => {
       break;
     case 38:
       textMessage1 =
-        "החלטתם לשגע אותי היום? לכו תעשו שיעורי בית ותחזרו למלא את הניחושים כשתהיו מוכנים, ולא יאוחר " +
+        "החלטתם לשגע אותי היום? לכו תעשו שיעורי בית ותחזרו למלא את הניחושים כשתהיו מוכנים.שימו לב שאתם עושים זאת לא יאוחר מה- " +
+        "*" +
         cycleDate +
+        "*" +
         " 😎";
 
       break;
