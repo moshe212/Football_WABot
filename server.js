@@ -473,7 +473,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycleNum
       );
       textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו בהצלחה!" + "/n ניפגש במחזור הבא.";
+      textMessage2 = "הניחושים נקלטו בהצלחה!" + "\n ניפגש במחזור הבא.";
 
       break;
 
@@ -516,6 +516,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = textMessage[2];
       break;
 
+    case 74:
+      GuessData_Saved = await footballFunc.getSavedScore(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "ליגת העל",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix(
+        GuessData_Saved,
+        false,
+        cycleNum
+      );
+      textMessage1 = textMessage[0];
+      textMessage2 = "הניחושים נקלטו בהצלחה!" + "\n ניפגש במחזור הבא.";
+
+      break;
+
     case 79:
       gameNum = req.body.query.message.split(" ")[1];
       score1 = req.body.query.message.split(" ")[3].split(":")[1];
@@ -553,6 +572,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage1 = textMessage[0];
       textMessage2 = textMessage[1];
       textMessage3 = textMessage[2];
+      break;
+
+    case 83:
+      GuessData_Saved = await footballFunc.getSavedScore(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "ליגת העל",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix(
+        GuessData_Saved,
+        false,
+        cycleNum
+      );
+      textMessage1 = textMessage[0];
+      textMessage2 = "הניחושים נקלטו בהצלחה!" + "\n ניפגש במחזור הבא.";
+
       break;
 
     case 84:
@@ -594,6 +632,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = textMessage[2];
       break;
 
+    case 88:
+      GuessData_Saved = await footballFunc.getSavedScore(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "ליגת העל",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix(
+        GuessData_Saved,
+        false,
+        cycleNum
+      );
+      textMessage1 = textMessage[0];
+      textMessage2 = "הניחושים נקלטו בהצלחה!" + "\n ניפגש במחזור הבא.";
+
+      break;
+
     case 89:
       gameNum = req.body.query.message.split(" ")[1];
       score1 = req.body.query.message.split(" ")[3].split(":")[1];
@@ -631,6 +688,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage1 = textMessage[0];
       textMessage2 = textMessage[1];
       textMessage3 = textMessage[2];
+      break;
+
+    case 93:
+      GuessData_Saved = await footballFunc.getSavedScore(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "ליגת העל",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix(
+        GuessData_Saved,
+        false,
+        cycleNum
+      );
+      textMessage1 = textMessage[0];
+      textMessage2 = "הניחושים נקלטו בהצלחה!" + "\n ניפגש במחזור הבא.";
+
       break;
 
     case 94:
@@ -672,6 +748,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = textMessage[2];
       break;
 
+    case 98:
+      GuessData_Saved = await footballFunc.getSavedScore(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "ליגת העל",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix(
+        GuessData_Saved,
+        false,
+        cycleNum
+      );
+      textMessage1 = textMessage[0];
+      textMessage2 = "הניחושים נקלטו בהצלחה!" + "\n ניפגש במחזור הבא.";
+
+      break;
+
     case 99:
       gameNum = req.body.query.message.split(" ")[1];
       score1 = req.body.query.message.split(" ")[3].split(":")[1];
@@ -688,8 +783,21 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycleIndexNum
       );
 
-      textMessage1 = "הנתונים נשמרו בהצלחה! ";
-      textMessage2 = "נתראה במחזור הבא. ";
+      GuessData_Saved = await footballFunc.getSavedScore(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "ליגת העל",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix(
+        GuessData_Saved,
+        false,
+        cycleNum
+      );
+      textMessage1 = textMessage[0];
+      textMessage2 = "הניחושים נקלטו בהצלחה!" + "\n ניפגש במחזור הבא.";
 
       break;
 
