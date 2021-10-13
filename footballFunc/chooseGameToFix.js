@@ -4,8 +4,6 @@ const chooseGameToFix = async function (GuessData_Saved, message2, cycleNum) {
       cycleNum +
       "." +
       " בחרו את המשחק והניחוש אותו תרצו לשנות." +
-      "\n יש להשיב במבנה הבא: " +
-      "*משחק 1 תוצאה 2:1*" +
       "\n 1️⃣" +
       GuessData_Saved[0].team1[0] +
       " - " +
@@ -123,10 +121,11 @@ const chooseGameToFix = async function (GuessData_Saved, message2, cycleNum) {
       GuessData_Saved[6].team2[1];
 
   const textMessage2 = message2
-    ? " נא להשיב במבנה הבא: "
+    ? "יש להשיב במבנה הבא: " + "*משחק 1 תוצאה 2:1*"
     : "\n 1️⃣ לאישור וסיום \n 2️⃣ לשינוי ועריכה ";
 
-  const textMessage3 = message2 ? "*משחק 1 תוצאה 1:2*" : "empty";
+  // const textMessage3 = message2 ? "*משחק 1 תוצאה 1:2*" : "empty";
+  const textMessage3 = "empty";
 
   return [textMessage1, textMessage2, textMessage3];
 };
