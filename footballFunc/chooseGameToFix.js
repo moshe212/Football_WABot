@@ -4,7 +4,8 @@ const chooseGameToFix = async function (GuessData_Saved, message2, cycleNum) {
       cycleNum +
       "." +
       " בחרו את המשחק והניחוש אותו תרצו לשנות." +
-      "\n 1️⃣" +
+      "\n*משחק 1:*" +
+      "\n" +
       GuessData_Saved[0].team1[0] +
       " - " +
       GuessData_Saved[0].team2[0] +
@@ -12,7 +13,8 @@ const chooseGameToFix = async function (GuessData_Saved, message2, cycleNum) {
       GuessData_Saved[0].team1[1] +
       ":" +
       GuessData_Saved[0].team2[1] +
-      "\n 2️⃣" +
+      "\n*משחק 2:*" +
+      "\n" +
       GuessData_Saved[1].team1[0] +
       " - " +
       GuessData_Saved[1].team2[0] +
@@ -20,7 +22,8 @@ const chooseGameToFix = async function (GuessData_Saved, message2, cycleNum) {
       GuessData_Saved[1].team1[1] +
       ":" +
       GuessData_Saved[1].team2[1] +
-      "\n 3️⃣" +
+      "\n*משחק 3:*" +
+      "\n" +
       GuessData_Saved[2].team1[0] +
       " - " +
       GuessData_Saved[2].team2[0] +
@@ -28,7 +31,8 @@ const chooseGameToFix = async function (GuessData_Saved, message2, cycleNum) {
       GuessData_Saved[2].team1[1] +
       ":" +
       GuessData_Saved[2].team2[1] +
-      "\n 4️⃣" +
+      "\n*משחק 4:*" +
+      "\n" +
       GuessData_Saved[3].team1[0] +
       " - " +
       GuessData_Saved[3].team2[0] +
@@ -36,7 +40,8 @@ const chooseGameToFix = async function (GuessData_Saved, message2, cycleNum) {
       GuessData_Saved[3].team1[1] +
       ":" +
       GuessData_Saved[3].team2[1] +
-      "\n 5️⃣" +
+      "\n*משחק 5:*" +
+      "\n" +
       GuessData_Saved[4].team1[0] +
       " - " +
       GuessData_Saved[4].team2[0] +
@@ -44,7 +49,8 @@ const chooseGameToFix = async function (GuessData_Saved, message2, cycleNum) {
       GuessData_Saved[4].team1[1] +
       ":" +
       GuessData_Saved[4].team2[1] +
-      "\n 6️⃣" +
+      "\n*משחק 6:*" +
+      "\n" +
       GuessData_Saved[5].team1[0] +
       " - " +
       GuessData_Saved[5].team2[0] +
@@ -52,7 +58,8 @@ const chooseGameToFix = async function (GuessData_Saved, message2, cycleNum) {
       GuessData_Saved[5].team1[1] +
       ":" +
       GuessData_Saved[5].team2[1] +
-      "\n 7️⃣" +
+      "\n*משחק 7:*" +
+      "\n" +
       GuessData_Saved[6].team1[0] +
       " - " +
       GuessData_Saved[6].team2[0] +
