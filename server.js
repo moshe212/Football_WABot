@@ -149,7 +149,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         if (isFirst) {
           textMessage1 =
             " היי, אני הבוט של *היציע: ליגת העל.*  " +
-            moment().year() +
+            // moment().year() +
             "\n האם ברצונכם למלא את ניחושי המחזור ה " +
             cycleNum +
             "?";
