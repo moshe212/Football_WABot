@@ -329,6 +329,8 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       const str7 = "*המחזור ה-*" + "*" + cycleNum + "*" + "*, משחק מספר 7:* ";
       textMessage1 = str7 + "\n" + Team1 + " - " + Team2;
+      textMessage2 =
+        "לאחר שליחת הניחוש למשחק זה יתכן עיכוב בקבלת התגובה עקב שמירת הנתונים ועיבודם על ידי הבוט. נא להתאזר בסבלנות.";
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
