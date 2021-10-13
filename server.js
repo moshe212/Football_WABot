@@ -66,7 +66,8 @@ const getData = async () => {
   const res_cycle = await footballFunc.getCycle(Data);
   cycleNum = res_cycle[0];
   const cycleDate1 = moment(res_cycle[1]).format("DD-MM-YYYY");
-  cycleDate = cycleDate1.replace("-", ".");
+  const cycleDate2 = cycleDate1.replace("-", ".");
+  cycleDate = cycleDate2.replace("-", ".");
   console.log("cycleDate", cycleDate, cycleDate.replace("-", "."));
   cycleIndexNum = res_cycle[2];
 
