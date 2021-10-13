@@ -120,7 +120,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (!UsersList.includes(user_name)) {
         console.log("not includs");
         textMessage1 =
-          " אהלן, אני הבוט של היציע: ליגת העל " +
+          " אהלן, אני הבוט של *היציע: ליגת העל* " +
           moment().year() +
           "\n אינך רשאי להשתמש בבוט. ";
         break;
