@@ -459,14 +459,14 @@ app.post("/api/Whatsapp", async (req, res) => {
       break;
 
     case 71:
-      // GuessData_Saved = await footballFunc.getSavedScore(
-      //   user_name,
-      //   UsersIndex,
-      //   cycleIndexNum,
-      //   "ליגת העל",
-      //   GamesList
-      // );
-      // console.log("GuessData_Saved", GuessData_Saved);
+      GuessData_Saved = await footballFunc.getSavedScore(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "ליגת העל",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix(
         GuessData_Saved,
         false,
