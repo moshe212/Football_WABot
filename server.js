@@ -482,7 +482,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycleNum
       );
       textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו בהצלחה!" + "\n ניפגש במחזור הבא.";
+      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
 
       break;
 
@@ -540,7 +540,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycleNum
       );
       textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו בהצלחה!" + "\n ניפגש במחזור הבא.";
+      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
 
       break;
 
@@ -598,7 +598,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycleNum
       );
       textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו בהצלחה!" + "\n ניפגש במחזור הבא.";
+      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
 
       break;
 
@@ -656,7 +656,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycleNum
       );
       textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו בהצלחה!" + "\n ניפגש במחזור הבא.";
+      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
 
       break;
 
@@ -714,7 +714,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycleNum
       );
       textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו בהצלחה!" + "\n ניפגש במחזור הבא.";
+      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
 
       break;
 
@@ -772,7 +772,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycleNum
       );
       textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו בהצלחה!" + "\n ניפגש במחזור הבא.";
+      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
 
       break;
 
@@ -806,7 +806,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycleNum
       );
       textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו בהצלחה!" + "\n ניפגש במחזור הבא.";
+      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
 
       break;
 
