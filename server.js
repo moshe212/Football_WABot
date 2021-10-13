@@ -67,6 +67,7 @@ const getData = async () => {
   cycleNum = res_cycle[0];
   const cycleDate1 = moment(res_cycle[1]).format("DD-MM-YYYY");
   cycleDate = cycleDate1.replace("-", ".");
+  console.log("cycleDate", cycleDate, cycleDate.replace("-", "."));
   cycleIndexNum = res_cycle[2];
 
   Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
