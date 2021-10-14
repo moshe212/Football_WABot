@@ -182,7 +182,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         " אז מה אתם אוכלים לי את הראש? תחזרו לכאן כשתרצו למלא ניחושים, ותשתדלו שזה יקרה לפני ה-" +
         "*" +
         cycleDate +
-        ".*" +
+        "*" +
         " יאללה ביי! 😎 ";
       break;
     case 38:
