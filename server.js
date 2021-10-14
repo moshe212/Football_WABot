@@ -88,37 +88,40 @@ const getData = async () => {
   }
   GuessData = await footballFunc.getDataFromSheet("ליגת העל");
   // console.log(UsersIndex);
+  console.log(moment().format());
 };
 
-const job = schedule.scheduleJob("0 0 4 * * *", async () => {
-  const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
-  const res_cycle = await footballFunc.getCycle(Data);
-  cycleNum = res_cycle[0];
-  const cycleDate1 = moment(res_cycle[1]).format("DD-MM-YYYY");
-  const cycleDate2 = cycleDate1.replace("-", ".");
-  cycleDate = cycleDate2.replace("-", ".");
-  console.log("cycleDate", cycleDate, cycleDate.replace("-", "."));
-  cycleIndexNum = res_cycle[2];
+// const job = schedule.scheduleJob("0 0 4 * * *", async () => {
+//   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
+//   const res_cycle = await footballFunc.getCycle(Data);
+//   cycleNum = res_cycle[0];
+//   const cycleDate1 = moment(res_cycle[1]).format("DD-MM-YYYY");
+//   const cycleDate2 = cycleDate1.replace("-", ".");
+//   cycleDate = cycleDate2.replace("-", ".");
+//   console.log("cycleDate", cycleDate, cycleDate.replace("-", "."));
+//   cycleIndexNum = res_cycle[2];
 
-  Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
-  for (let g = 0; g < Games.length; g++) {
-    if (Games[g]._rawData[0] === cycleNum) {
-      const team_1 = Games[g]._rawData[1];
-      const team_2 = Games[g]._rawData[2];
-      GamesList.push([team_1, team_2]);
-    }
-  }
+//   Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+//   for (let g = 0; g < Games.length; g++) {
+//     if (Games[g]._rawData[0] === cycleNum) {
+//       const team_1 = Games[g]._rawData[1];
+//       const team_2 = Games[g]._rawData[2];
+//       GamesList.push([team_1, team_2]);
+//     }
+//   }
 
-  UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
-  for (let l = 0; l < UsersIndex.length; l++) {
-    UsersList.push(UsersIndex[l]._rawData[0]);
-  }
-  GuessData = await footballFunc.getDataFromSheet("ליגת העל");
-  // console.log(UsersIndex);
-  console.log(moment().format());
-});
+//   UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
+//   for (let l = 0; l < UsersIndex.length; l++) {
+//     UsersList.push(UsersIndex[l]._rawData[0]);
+//   }
+//   GuessData = await footballFunc.getDataFromSheet("ליגת העל");
+//   // console.log(UsersIndex);
+//   console.log(moment().format());
+// });
 
-getData();
+const job = schedule.scheduleJob("0 30 7 * * *", getData());
+
+// getData();
 
 app.post("/api/Whatsapp", async (req, res) => {
   console.log("whatsapp okk", req.body);
