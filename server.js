@@ -393,13 +393,8 @@ app.post("/api/Whatsapp", async (req, res) => {
         false,
         cycleNum
       );
-      console.log("textMessage", textMessage);
-      console.log("textMessage1", textMessage[0]);
-      console.log("textMessage2", textMessage[1]);
-      textMessage1 = textMessage[0];
-      textMessage2 = textMessage[1];
 
-      footballFunc.saveData_Full(
+      await footballFunc.saveData_Full(
         user_name,
         UsersIndex,
         null,
@@ -411,6 +406,12 @@ app.post("/api/Whatsapp", async (req, res) => {
         null,
         true
       );
+
+      console.log("textMessage", textMessage);
+      console.log("textMessage1", textMessage[0]);
+      console.log("textMessage2", textMessage[1]);
+      textMessage1 = textMessage[0];
+      textMessage2 = textMessage[1];
 
       break;
 
