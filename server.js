@@ -115,6 +115,7 @@ const job = schedule.scheduleJob("*/5 * * * *", async () => {
   }
   GuessData = await footballFunc.getDataFromSheet("ליגת העל");
   // console.log(UsersIndex);
+  console.log(moment().format());
 });
 
 // getData();
