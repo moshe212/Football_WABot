@@ -394,7 +394,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycleNum
       );
 
-      await footballFunc.saveData_Full(
+      const resSaveIdx = await footballFunc.saveData_Full(
         user_name,
         UsersIndex,
         null,
@@ -407,6 +407,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         true
       );
 
+      console.log("resSaveIdx", resSaveIdx);
       console.log("textMessage", textMessage);
       console.log("textMessage1", textMessage[0]);
       console.log("textMessage2", textMessage[1]);
