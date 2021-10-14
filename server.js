@@ -119,7 +119,7 @@ const getData = async () => {
 //   console.log(moment().format());
 // });
 
-const job = schedule.scheduleJob("0 30 7 * * *", getData());
+const job = schedule.scheduleJob("0 33 7 * * *", getData);
 
 // getData();
 
