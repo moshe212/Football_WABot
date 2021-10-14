@@ -126,8 +126,8 @@ app.post("/api/Whatsapp", async (req, res) => {
         console.log("not includs");
         textMessage1 =
           " אהלן, אני הבוט של *היציע: ליגת העל* " +
-          moment().year() +
-          "\n אינך רשאי להשתמש בבוט. ";
+          // moment().year() +
+          "\nאינך רשאי להשתמש בבוט. ";
         break;
       }
       if (cycleNum !== 0) {
