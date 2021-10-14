@@ -162,7 +162,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         } else {
           textMessage1 =
             "היי, איזה כיף שחזרתם!" +
-            "\n האם ברצונכם לנחש את תוצאות משחקי המחזור ה-" +
+            "\nהאם ברצונכם לנחש את תוצאות משחקי המחזור ה-" +
             cycleNum +
             "?";
           textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
@@ -342,7 +342,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       const str7 = "*מחזור " + cycleNum + ", משחק מספר 7:* ";
       textMessage1 = str7 + "\n" + Team1 + " - " + Team2;
       textMessage2 =
-        "*שימו לב:* אחרי שתנחשו את תוצאת המשחק האחרונה, ייקח לי כמה שניות לעבד את הנתונים ולהציג את ניחושי המחזור המלאים ששלחתם.";
+        "*שימו לב:* אחרי שתנחשו את תוצאת המשחק האחרונה, ייקח לי כמה שניות לעבד את הנתונים ולהציג את ניחושי המחזור המלאים ששלחתם.במידה ולא קיבלתם ממני סיכום של הניחושים, אנא שילחו שוב את הניחוש למשחק האחרון.";
       score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
@@ -490,7 +490,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycleNum
       );
       textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
+      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש במחזור הבא.";
 
       break;
 
