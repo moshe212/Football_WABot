@@ -161,7 +161,7 @@ app.post("/api/Whatsapp", async (req, res) => {
           textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
         } else {
           textMessage1 =
-            " היי, איזה כיף שחזרתם!  " +
+            "היי, איזה כיף שחזרתם! " +
             "\n האם ברצונכם לנחש את תוצאות משחקי המחזור ה-" +
             cycleNum +
             "?";
@@ -182,8 +182,8 @@ app.post("/api/Whatsapp", async (req, res) => {
         " אז מה אתם אוכלים לי את הראש? תחזרו לכאן כשתרצו למלא ניחושים, ותשתדלו שזה יקרה לפני ה-" +
         "*" +
         cycleDate +
-        "*" +
-        ". יאללה ביי! 😎 ";
+        ".*" +
+        " יאללה ביי! 😎 ";
       break;
     case 38:
       textMessage1 =

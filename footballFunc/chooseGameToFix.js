@@ -67,11 +67,9 @@ const chooseGameToFix = async function (GuessData_Saved, message2, cycleNum) {
       GuessData_Saved[6].team1[1] +
       ":" +
       GuessData_Saved[6].team2[1]
-    : "*להלן הניחושים שלכם למחזור ה-*" +
-      "*" +
+    : "*להלן הניחושים שלכם למחזור ה-" +
       cycleNum +
-      "*" +
-      "*:*" +
+      ":*" +
       "\n" +
       GuessData_Saved[0].team1[0] +
       " - " +
