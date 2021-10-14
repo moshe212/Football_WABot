@@ -90,7 +90,7 @@ const getData = async () => {
   // console.log(UsersIndex);
 };
 
-const job = schedule.scheduleJob("0 25 7 * * *", async () => {
+const job = schedule.scheduleJob("0 0 4 * * *", async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
   const res_cycle = await footballFunc.getCycle(Data);
   cycleNum = res_cycle[0];
@@ -118,7 +118,7 @@ const job = schedule.scheduleJob("0 25 7 * * *", async () => {
   console.log(moment().format());
 });
 
-// getData();
+getData();
 
 app.post("/api/Whatsapp", async (req, res) => {
   console.log("whatsapp okk", req.body);
