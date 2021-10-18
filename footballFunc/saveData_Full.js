@@ -23,7 +23,7 @@ const saveData_Full = async function (
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo(); // loads document properties and worksheets
     const sheet = doc.sheetsByTitle[sheetTitle];
-    if (sheetr) {
+    if (sheet) {
       let index = null;
       console.log("user_name", user_name);
       for (let u = 0; u < UsersIndex.length; u++) {
