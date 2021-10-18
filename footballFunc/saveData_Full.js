@@ -1,4 +1,5 @@
 const { GoogleSpreadsheet } = require("google-spreadsheet");
+const moment = require("moment");
 
 const saveData_Full = async function (
   user_name,
@@ -32,6 +33,7 @@ const saveData_Full = async function (
           if (IsFirst) {
             console.log("first", IsFirst);
             UsersIndex[u].is_first_time = 1;
+            UsersIndex[u].last_gusses = moment().format();
             await UsersIndex[u].save();
             return "save first";
           }
