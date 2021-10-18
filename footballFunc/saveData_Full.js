@@ -52,8 +52,8 @@ const saveData_Full = async function (
         await sheet.loadCells("A" + raw_idx + ":CP" + (raw_idx + 2));
         const cell_team1 = sheet.getCellByA1(columnLetter1 + (raw_idx + 2));
         const cell_team2 = sheet.getCellByA1(columnLetter2 + (raw_idx + 2));
-        cell_team1.value = score1;
-        cell_team2.value = score2;
+        cell_team1.value = parseInt(score1);
+        cell_team2.value = parseInt(score2);
 
         const res_save = await sheet.saveUpdatedCells();
         console.log("save");
