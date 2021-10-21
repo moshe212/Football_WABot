@@ -125,7 +125,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (!UsersList.includes(user_name)) {
         console.log("not includs");
         textMessage1 =
-          " אהלן, אני הבוט של *היציע: ליגת העל* " +
+          "אהלן, אני הבוט של *היציע: ליגת העל*" +
           // moment().year() +
           "\nאינך רשאי להשתמש בבוט. ";
         break;
@@ -155,7 +155,7 @@ app.post("/api/Whatsapp", async (req, res) => {
           textMessage1 =
             "היי, אני הבוט של *היציע: ליגת העל.*" +
             // moment().year() +
-            "\n האם ברצונכם למלא את ניחושי המחזור ה " +
+            "\nהאם ברצונכם למלא את ניחושי המחזור ה-" +
             cycleNum +
             "?";
           textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
@@ -170,9 +170,9 @@ app.post("/api/Whatsapp", async (req, res) => {
 
         break;
       } else {
-        textMessage1 = " אהלן, אני הבוט של היציע: ליגת העל " + moment().year();
+        textMessage1 = "היי טוב שחזרתם!";
         textMessage2 =
-          "אנחנו נמצאים באמצע מחזור לכן לא ניתן לשלוח ניחושים כרגע, ניתן לחזור לשלוח ניחושים בתאריך" +
+          "המחזור כבר התחיל, אם רק עכשיו נזכרתם לשלוח ניחושים אז אנחנו בבעיה. אנא פנו למנהל המערכת" +
           cycleDate;
         break;
       }
