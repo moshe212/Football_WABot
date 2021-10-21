@@ -6,7 +6,7 @@ const getCycle = async (data) => {
   let cycleText = "";
   let startDate = "";
   let endDate = "";
-  let cycleIndex = 0;
+  let cycleInde = 0;
   for (let i = 0; i < data.length; i++) {
     startDate = moment(data[i]._rawData[0].replace("/", "-"), "DD-MM-YYYY");
     endDate = moment(data[i]._rawData[1].replace("/", "-"), "DD-MM-YYYY");
