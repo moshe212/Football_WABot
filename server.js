@@ -193,7 +193,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         "*" +
         cycleDate +
         "*" +
-        " יאללה ביי! 😎 ";
+        "בחצות. יאללה ביי! 😎 ";
       break;
     case 38:
       textMessage1 =
@@ -201,7 +201,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         "*" +
         cycleDate +
         "*" +
-        " 😎";
+        " בחצות 😎";
 
       break;
     case 37:
