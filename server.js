@@ -170,7 +170,7 @@ app.post("/api/Whatsapp", async (req, res) => {
 
         break;
       } else {
-        textMessage1 = "היי טוב שחזרתם!";
+        textMessage1 = "היי, אני הבוט של *היציע ליגת העל.*";
         textMessage2 =
           "המחזור כבר התחיל, אם רק עכשיו נזכרתם לשלוח ניחושים אז אנחנו בבעיה. אנא פנו למנהל המערכת" +
           cycleDate;
