@@ -770,7 +770,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage = await footballFunc.chooseGameToFix(
         GuessData_Saved,
         true,
-        cycleNum3
+        cycleNum
       );
       textMessage1 = textMessage[0];
       textMessage2 = textMessage[1];
