@@ -120,7 +120,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   let textMessage = "";
   // let GuessData = [];
   switch (stage) {
-    case 33:
+    case 109:
       console.log("UsersList", UsersList);
       if (!UsersList.includes(user_name)) {
         console.log("not includs");
@@ -130,7 +130,18 @@ app.post("/api/Whatsapp", async (req, res) => {
           "\nאינך רשאי להשתמש בבוט. ";
         break;
       }
-      if (cycleNum !== 0) {
+
+      for (let l = 0; l < UsersIndex.length; l++) {
+        if (user_name === UsersIndex[l]._rawData[0]) {
+          const first = UsersIndex[l]._rawData[2];
+          if (first === "1") {
+            isFirst = false;
+          }
+        }
+      }
+
+      if (isFirst) {
+        UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
         for (let l = 0; l < UsersIndex.length; l++) {
           if (user_name === UsersIndex[l]._rawData[0]) {
             const first = UsersIndex[l]._rawData[2];
@@ -139,40 +150,46 @@ app.post("/api/Whatsapp", async (req, res) => {
             }
           }
         }
+      }
+      if (isFirst) {
+        textMessage1 =
+          "היי, נעים מאוד אני הבוט של *היציע: ליגת העל.*" +
+          // moment().year() +
+          "\nמה ברצונכם לעשות?";
+        textMessage2 =
+          "\n 1️⃣ לניחוש תוצאות משחקי ליגת העל \n2️⃣ לניחוש תוצאות משחקי גביע המדינה";
+      } else {
+        textMessage1 = "מה קורה נשמות? שמח שחזרתם!" + "\nמה ברצונכם לעשות?";
+        textMessage2 =
+          "\n 1️⃣ לניחוש תוצאות משחקי ליגת העל \n2️⃣ לניחוש תוצאות משחקי גביע המדינה";
+      }
 
-        if (isFirst) {
-          UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
-          for (let l = 0; l < UsersIndex.length; l++) {
-            if (user_name === UsersIndex[l]._rawData[0]) {
-              const first = UsersIndex[l]._rawData[2];
-              if (first === "1") {
-                isFirst = false;
-              }
-            }
-          }
-        }
-        if (isFirst) {
-          textMessage1 =
-            "היי, אני הבוט של *היציע: ליגת העל.*" +
-            // moment().year() +
-            "\nהאם ברצונכם למלא את ניחושי המחזור ה-" +
-            cycleNum +
-            "?";
-          textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
-        } else {
-          textMessage1 =
-            "היי, איזה כיף שחזרתם!" +
-            "\nהאם ברצונכם לנחש את תוצאות משחקי המחזור ה-" +
-            cycleNum +
-            "?";
-          textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
-        }
+      break;
+
+    case 33:
+      if (cycleNum !== 0) {
+        textMessage1 =
+          "בחירה מצוינת!" +
+          "\n הדד ליין לשליחת ניחושים ל*מחזור ה-*" +
+          cycleNum +
+          " הוא עד ה-" +
+          "*" +
+          cycleDate +
+          "*" +
+          "בחצות." +
+          "\nשניה אחרי אני סוגר הבסטה, אז אל תאחרו! שנתחיל?";
+        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
 
         break;
       } else {
-        textMessage1 = "היי, אני הבוט של *היציע ליגת העל.*";
+        textMessage1 =
+          "שומעים רגע? הדד ליין לשליחת הניחושים ל*מחזור ה*-" +
+          "*" +
+          cycleNum +
+          "*" +
+          " עבר.";
         textMessage2 =
-          "המחזור כבר התחיל, אם רק עכשיו נזכרתם לשלוח ניחושים אז אנחנו בבעיה. אנא פנו למנהל המערכת";
+          "אם רק עכשיו נזכרתם לשלוח ניחושים אז אנחנו בבעיה. אנא פנו למנהל המערכת";
         break;
       }
 
