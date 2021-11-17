@@ -176,7 +176,7 @@ app.post("/api/Whatsapp", async (req, res) => {
           "*" +
           cycleDate +
           "*" +
-          "בחצות." +
+          " בחצות." +
           "\nשניה אחרי אני סוגר הבסטה, אז אל תאחרו! שנתחיל?";
         textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
 
