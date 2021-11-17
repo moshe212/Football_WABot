@@ -170,9 +170,9 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (cycleNum !== 0) {
         textMessage1 =
           "בחירה מצוינת!" +
-          "\n הדד ליין לשליחת ניחושים ל*מחזור ה-*" +
+          "\nהדד ליין לשליחת ניחושים ל*מחזור ה-" +
           cycleNum +
-          " הוא עד ה-" +
+          "* הוא עד ה-" +
           "*" +
           cycleDate +
           "*" +
