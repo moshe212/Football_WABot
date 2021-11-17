@@ -165,7 +165,14 @@ app.post("/api/Whatsapp", async (req, res) => {
       }
 
       break;
-
+    case 111:
+      textMessage1 =
+        "אז מה אתם אוכלים לי את הראש? תחזרו לכאן כשתרצו למלא ניחושים, ותשתדלו שזה יקרה לפני ה-" +
+        "*" +
+        cycleDate +
+        "*" +
+        " בחצות. יאללה ביי! 😎 ";
+      break;
     case 33:
       if (cycleNum !== 0) {
         textMessage1 =
