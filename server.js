@@ -192,31 +192,14 @@ app.post("/api/Whatsapp", async (req, res) => {
         break;
       }
     case 111:
-      if (cycleNum !== 0) {
-        textMessage1 =
-          "בחירה מצוינת!" +
-          "\nהדד ליין לשליחת ניחושים ל*מחזור ה-" +
-          cycleNum +
-          "* הוא עד ה-" +
-          "*" +
-          cycleDate +
-          "*" +
-          " בחצות." +
-          "\nשניה אחרי אני סוגר הבסטה, אז אל תאחרו! שנתחיל?";
-        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
+      textMessage1 =
+        "אז מה אתם אוכלים לי את הראש? תחזרו לכאן כשתרצו למלא ניחושים, ותשתדלו שזה יקרה לפני ה-" +
+        "*" +
+        cycleDate +
+        "*" +
+        " בחצות. יאללה ביי! 😎 ";
+      break;
 
-        break;
-      } else {
-        textMessage1 =
-          "שומעים רגע? הדד ליין לשליחת הניחושים ל*מחזור ה*-" +
-          "*" +
-          cycleNum +
-          "*" +
-          " עבר.";
-        textMessage2 =
-          "אם רק עכשיו נזכרתם לשלוח ניחושים אז אנחנו בבעיה. אנא פנו למנהל המערכת";
-        break;
-      }
     case 113:
       textMessage1 =
         "אז מה אתם אוכלים לי את הראש? תחזרו לכאן כשתרצו למלא ניחושים, ותשתדלו שזה יקרה לפני ה-" +
