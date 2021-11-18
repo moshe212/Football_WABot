@@ -75,7 +75,7 @@ const getData = async () => {
 
   Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
   for (let g = 0; g < Games.length; g++) {
-    console.log("Games", Games[g], cycleNum);
+    console.log("Games", Games[g]._rawData[0], cycleNum);
     if (Games[g]._rawData[0] === cycleNum) {
       const team_1 = Games[g]._rawData[1];
       const team_2 = Games[g]._rawData[2];
