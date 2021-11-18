@@ -81,7 +81,7 @@ const getData = async () => {
       GamesList.push([team_1, team_2]);
     }
   }
-  console.log("GamesList", GamesList);
+  console.log("GamesList", cycleNum, GamesList);
   UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
   for (let l = 0; l < UsersIndex.length; l++) {
     UsersList.push(UsersIndex[l]._rawData[0]);
