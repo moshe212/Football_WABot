@@ -299,6 +299,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         "",
         "",
         "",
+        "",
         ChoiseUpteam
       );
 
@@ -329,6 +330,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycleIndexNum,
         "גביע המדינה",
         "I",
+        "",
         "",
         "",
         "",
