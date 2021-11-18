@@ -338,6 +338,100 @@ app.post("/api/Whatsapp", async (req, res) => {
       );
 
       break;
+    case 122:
+      console.log(GamesList);
+      Team1 = GamesList[1][0];
+      Team2 = GamesList[1][1];
+
+      const str11 = "*" + cycleNum + ", משחק מספר 2:* ";
+      textMessage1 = str11 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData_Gavia,
+        cycleIndexNum,
+        "גביע המדינה",
+        "T",
+        "U",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 123:
+      console.log(GamesList);
+      Team1 = GamesList[1][0];
+      Team2 = GamesList[1][1];
+
+      const str12 = "*" + cycleNum + ", משחק מספר 2:* ";
+      textMessage1 = str12 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "V",
+        "",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+    case 124:
+      console.log(GamesList);
+      Team1 = GamesList[2][0];
+      Team2 = GamesList[2][1];
+
+      const str13 = "*" + cycleNum + ", משחק מספר 3:* ";
+      textMessage1 = str13 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דק'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דק'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "W",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
+      break;
     case 33:
       if (cycleNum !== 0) {
         textMessage1 =
