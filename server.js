@@ -265,8 +265,8 @@ app.post("/api/Whatsapp", async (req, res) => {
         GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
-        "E",
         "F",
+        "G",
         ScoreTeam1,
         ScoreTeam2
       );
@@ -295,7 +295,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GuessData,
         cycleIndexNum,
         "גביע המדינה",
-        "G",
+        "H",
         "",
         "",
         "",
@@ -328,7 +328,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GuessData,
         cycleIndexNum,
         "גביע המדינה",
-        "H",
+        "I",
         "",
         "",
         "",
