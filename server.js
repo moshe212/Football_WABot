@@ -90,7 +90,7 @@ const getData = async () => {
   }
   GuessData = await footballFunc.getDataFromSheet("ליגת העל");
   GuessData_Gavia = await footballFunc.getDataFromSheet("גביע המדינה");
-  console.log("GuessData_Gavia", GuessData_Gavia);
+  // console.log("GuessData_Gavia", GuessData_Gavia);
   // console.log(UsersIndex);
   console.log(moment().format());
 };
