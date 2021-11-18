@@ -57,6 +57,7 @@ let GamesList = [];
 let cycleIndexNum = 0;
 let UsersIndex = [];
 let GuessData = [];
+GuessData_Gavia = [];
 let UsersList = [];
 let gameNum = 0;
 let score1 = 0;
@@ -88,6 +89,7 @@ const getData = async () => {
     UsersList.push(UsersIndex[l]._rawData[0]);
   }
   GuessData = await footballFunc.getDataFromSheet("ליגת העל");
+  GuessData_Gavia = await footballFunc.getDataFromSheet("גביע המדינה");
   // console.log(UsersIndex);
   console.log(moment().format());
 };
@@ -259,7 +261,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveData_Full(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "E",
