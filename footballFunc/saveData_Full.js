@@ -11,7 +11,8 @@ const saveData_Full = async function (
   columnLetter2,
   score1,
   score2,
-  IsFirst
+  IsFirst,
+  Team
 ) {
   const creds = require("../config/CreditTransaction-d9fe1ef7e128.json");
   // Initialize the sheet - doc ID is the long id in the sheets URL
@@ -51,15 +52,26 @@ const saveData_Full = async function (
         const raw_idx = parseInt(cycleIndexNum) + parseInt(index) - 2;
         console.log("idxs", raw_idx);
         //   await sheet.loadCells("A1:CP" + rawindex);
-        await sheet.loadCells("A" + raw_idx + ":CP" + (raw_idx + 2));
-        const cell_team1 = sheet.getCellByA1(columnLetter1 + (raw_idx + 2));
-        const cell_team2 = sheet.getCellByA1(columnLetter2 + (raw_idx + 2));
-        cell_team1.value = parseInt(score1);
-        cell_team2.value = parseInt(score2);
+        if (!Team) {
+          await sheet.loadCells("A" + raw_idx + ":GF" + (raw_idx + 2));
+          const cell_team1 = sheet.getCellByA1(columnLetter1 + (raw_idx + 2));
+          const cell_team2 = sheet.getCellByA1(columnLetter2 + (raw_idx + 2));
+          cell_team1.value = parseInt(score1);
+          cell_team2.value = parseInt(score2);
 
-        const res_save = await sheet.saveUpdatedCells();
-        console.log("save");
-        return res_save;
+          const res_save = await sheet.saveUpdatedCells();
+          console.log("save");
+          return res_save;
+        } else {
+          await sheet.loadCells("A" + raw_idx + ":GF" + (raw_idx + 2));
+          const cell_up = sheet.getCellByA1(columnLetter1 + (raw_idx + 2));
+          console.log("Team", Team);
+          cell_up.value = Team;
+
+          const res_save = await sheet.saveUpdatedCells();
+          console.log("save");
+          return res_save;
+        }
       } else {
         console.log("not save");
         return "not save";

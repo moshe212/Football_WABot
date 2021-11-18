@@ -117,6 +117,10 @@ app.post("/api/Whatsapp", async (req, res) => {
   let score = "";
   let ScoreTeam1 = 0;
   let ScoreTeam2 = 0;
+  let ChoiseUp = "";
+  let ChoiseUpteam = "";
+  let ChoiseMinut = "";
+  let Minuts = "";
   let GuessData_Saved = [];
   let textMessage = "";
   // let GuessData = [];
@@ -235,6 +239,99 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycleDate +
         "*" +
         " בחצות. יאללה ביי! 😎 ";
+      break;
+    case 114:
+      console.log(GamesList);
+      Team1 = GamesList[0][0];
+      Team2 = GamesList[0][1];
+
+      const str9 = "*" + cycleNum + ", משחק מספר 1:* ";
+      textMessage1 = str9 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "E",
+        "F",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 117:
+      console.log(GamesList);
+      Team1 = GamesList[0][0];
+      Team2 = GamesList[0][1];
+
+      const str10 = "*" + cycleNum + ", משחק מספר 1:* ";
+      textMessage1 = str10 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "G",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+
+    case 120:
+      console.log(GamesList);
+      Team1 = GamesList[1][0];
+      Team2 = GamesList[1][1];
+
+      const str10 = "*" + cycleNum + ", משחק מספר 2:* ";
+      textMessage1 = str10 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דק'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דק'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "H",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
       break;
     case 33:
       if (cycleNum !== 0) {
