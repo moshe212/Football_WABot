@@ -222,7 +222,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[0][0];
       Team2 = GamesList[0][1];
 
-      const str = "*" + cycleNum + ", משחק מספר 1:* ";
+      const str8 = "*" + cycleNum + ", משחק מספר 1:* ";
       textMessage1 = str + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
