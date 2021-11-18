@@ -54,7 +54,13 @@ const getCycle = async (data) => {
     }
   }
   if (cycleText.includes("זמן ניחושים")) {
-    const cycleNum = cycleText.substring(cycleText.length - 2).trim();
+    let cycleNum = "";
+    if (cycleText.includes("גביע המדינה")) {
+      const arr = cycleText.split(" ");
+      cycleNum = arr[4] + " " + arr[5];
+    } else {
+      cycleNum = cycleText.substring(cycleText.length - 2).trim();
+    }
     const endGuessTime = moment(endDate);
     return [cycleNum, endGuessTime, cycleIndex];
   } else {
