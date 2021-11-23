@@ -6,6 +6,7 @@ const chooseGameToFix_Gavia = async function (
   let fullStr = "";
   for (let i = 0; i < GuessData_Saved.length; i++) {
     const str =
+      "\n" +
       GuessData_Saved[i].team1[0] +
       " - " +
       GuessData_Saved[i].team2[0] +
