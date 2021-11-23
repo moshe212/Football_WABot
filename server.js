@@ -310,9 +310,9 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[1][0];
       Team2 = GamesList[1][1];
 
-      const str11 = "*" + cycleNum + ", משחק מספר 2:* ";
-      textMessage1 = str11 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+      // const str11 = "*" + cycleNum + ", משחק מספר 2:* ";
+      // textMessage1 = str11 + "\n" + Team1 + " - " + Team2;
+      // textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
       if (parseInt(ChoiseMinut) === 1) {
@@ -336,6 +336,26 @@ app.post("/api/Whatsapp", async (req, res) => {
         "",
         Minuts
       );
+
+      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "גביע המדינה",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix_Gavia(
+        GuessData_Saved,
+        false,
+        cycleNum
+      );
+
+      console.log("textMessage", textMessage);
+      console.log("textMessage1", textMessage[0]);
+      console.log("textMessage2", textMessage[1]);
+      textMessage1 = textMessage[0];
+      textMessage2 = textMessage[1];
 
       break;
     case 122:
