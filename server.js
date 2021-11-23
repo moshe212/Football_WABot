@@ -1852,6 +1852,14 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage1 = "הניחושים נקלטו. שיהיה בהצלחה";
       break;
     case 177:
+      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "גביע המדינה",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Gavia(
         GuessData_Saved,
         true,
