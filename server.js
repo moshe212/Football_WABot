@@ -1876,7 +1876,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       score1 = req.body.query.message.split(" ")[3].split(":")[1];
       score2 = req.body.query.message.split(" ")[3].split(":")[0];
       teamUp_ToFix_Num = parseInt(req.body.query.message.split(" ")[5]);
-      teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num];
+      teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num - 1];
       minute_toFix =
         req.body.query.message.split(" ")[7] +
         " " +
