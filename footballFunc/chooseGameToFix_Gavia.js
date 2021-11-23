@@ -10,11 +10,11 @@ const chooseGameToFix_Gavia = async function (
       GuessData_Saved[i].team1[0] +
       " - " +
       GuessData_Saved[i].team2[0] +
-      " " +
+      " *" +
       GuessData_Saved[i].team1[1] +
       ":" +
       GuessData_Saved[i].team2[1] +
-      "\n*" +
+      "*\n*" +
       GuessData_Saved[i].teamUp +
       "* עולה, ב-" +
       GuessData_Saved[i].minute +
