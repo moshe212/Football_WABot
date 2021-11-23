@@ -316,9 +316,9 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       ChoiseMinut = req.body.query.message;
       if (parseInt(ChoiseMinut) === 1) {
-        Minuts = "90 דק'";
+        Minuts = "90 דקות'";
       } else if (parseInt(ChoiseMinut) === 2) {
-        Minuts = "120 דק'";
+        Minuts = "120 דקות'";
       } else {
         Minuts = "פנדלים";
       }
@@ -410,9 +410,9 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       ChoiseMinut = req.body.query.message;
       if (parseInt(ChoiseMinut) === 1) {
-        Minuts = "90 דק'";
+        Minuts = "90 דקות'";
       } else if (parseInt(ChoiseMinut) === 2) {
-        Minuts = "120 דק'";
+        Minuts = "120 דקות'";
       } else {
         Minuts = "פנדלים";
       }
@@ -504,9 +504,9 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       ChoiseMinut = req.body.query.message;
       if (parseInt(ChoiseMinut) === 1) {
-        Minuts = "90 דק'";
+        Minuts = "90 דקות'";
       } else if (parseInt(ChoiseMinut) === 2) {
-        Minuts = "120 דק'";
+        Minuts = "120 דקות'";
       } else {
         Minuts = "פנדלים";
       }
@@ -598,9 +598,9 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       ChoiseMinut = req.body.query.message;
       if (parseInt(ChoiseMinut) === 1) {
-        Minuts = "90 דק'";
+        Minuts = "90 דקות'";
       } else if (parseInt(ChoiseMinut) === 2) {
-        Minuts = "120 דק'";
+        Minuts = "120 דקות'";
       } else {
         Minuts = "פנדלים";
       }
@@ -618,6 +618,1334 @@ app.post("/api/Whatsapp", async (req, res) => {
         "",
         Minuts
       );
+
+      break;
+    case 131:
+      console.log(GamesList);
+      Team1 = GamesList[4][0];
+      Team2 = GamesList[4][1];
+
+      const str21 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str21 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData_Gavia,
+        cycleIndexNum,
+        "גביע המדינה",
+        "BJ",
+        "BK",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 132:
+      console.log(GamesList);
+      Team1 = GamesList[4][0];
+      Team2 = GamesList[4][1];
+
+      const str22 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str22 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "BL",
+        "",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+    case 133:
+      console.log(GamesList);
+      Team1 = GamesList[4][0];
+      Team2 = GamesList[4][1];
+
+      const str20 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str20 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "AY",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
+      break;
+    case 134:
+      console.log(GamesList);
+      Team1 = GamesList[4][0];
+      Team2 = GamesList[4][1];
+
+      const str21 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str21 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData_Gavia,
+        cycleIndexNum,
+        "גביע המדינה",
+        "BJ",
+        "BK",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 135:
+      console.log(GamesList);
+      Team1 = GamesList[4][0];
+      Team2 = GamesList[4][1];
+
+      const str22 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str22 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "BL",
+        "",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+    case 136:
+      console.log(GamesList);
+      Team1 = GamesList[4][0];
+      Team2 = GamesList[4][1];
+
+      const str20 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str20 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "AY",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
+      break;
+    case 137:
+      console.log(GamesList);
+      Team1 = GamesList[4][0];
+      Team2 = GamesList[4][1];
+
+      const str21 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str21 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData_Gavia,
+        cycleIndexNum,
+        "גביע המדינה",
+        "BJ",
+        "BK",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 138:
+      console.log(GamesList);
+      Team1 = GamesList[4][0];
+      Team2 = GamesList[4][1];
+
+      const str22 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str22 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "BL",
+        "",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+    case 139:
+      console.log(GamesList);
+      Team1 = GamesList[5][0];
+      Team2 = GamesList[5][1];
+
+      const str23 = "*" + cycleNum + ", משחק מספר 6:* ";
+      textMessage1 = str23 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "BM",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
+      break;
+    case 140:
+      console.log(GamesList);
+      Team1 = GamesList[5][0];
+      Team2 = GamesList[5][1];
+
+      const str24 = "*" + cycleNum + ", משחק מספר 6:* ";
+      textMessage1 = str24 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData_Gavia,
+        cycleIndexNum,
+        "גביע המדינה",
+        "BX",
+        "BY",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 141:
+      console.log(GamesList);
+      Team1 = GamesList[5][0];
+      Team2 = GamesList[5][1];
+
+      const str25 = "*" + cycleNum + ", משחק מספר 6:* ";
+      textMessage1 = str25 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "BZ",
+        "",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+    case 142:
+      console.log(GamesList);
+      Team1 = GamesList[6][0];
+      Team2 = GamesList[6][1];
+
+      const str26 = "*" + cycleNum + ", משחק מספר 7:* ";
+      textMessage1 = str26 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "CA",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
+      break;
+    case 143:
+      console.log(GamesList);
+      Team1 = GamesList[6][0];
+      Team2 = GamesList[6][1];
+
+      const str27 = "*" + cycleNum + ", משחק מספר 7:* ";
+      textMessage1 = str27 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData_Gavia,
+        cycleIndexNum,
+        "גביע המדינה",
+        "CL",
+        "CM",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 144:
+      console.log(GamesList);
+      Team1 = GamesList[6][0];
+      Team2 = GamesList[6][1];
+
+      const str28 = "*" + cycleNum + ", משחק מספר 7:* ";
+      textMessage1 = str28 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "CN",
+        "",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+    case 145:
+      console.log(GamesList);
+      Team1 = GamesList[7][0];
+      Team2 = GamesList[7][1];
+
+      const str29 = "*" + cycleNum + ", משחק מספר 8:* ";
+      textMessage1 = str29 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "CO",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
+      break;
+    case 146:
+      console.log(GamesList);
+      Team1 = GamesList[7][0];
+      Team2 = GamesList[7][1];
+
+      const str30 = "*" + cycleNum + ", משחק מספר 8:* ";
+      textMessage1 = str30 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData_Gavia,
+        cycleIndexNum,
+        "גביע המדינה",
+        "CZ",
+        "DA",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 147:
+      console.log(GamesList);
+      Team1 = GamesList[7][0];
+      Team2 = GamesList[7][1];
+
+      const str31 = "*" + cycleNum + ", משחק מספר 8:* ";
+      textMessage1 = str31 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "DB",
+        "",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+    case 148:
+      console.log(GamesList);
+      Team1 = GamesList[8][0];
+      Team2 = GamesList[8][1];
+
+      const str32 = "*" + cycleNum + ", משחק מספר 9:* ";
+      textMessage1 = str32 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "DC",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
+      break;
+    case 149:
+      console.log(GamesList);
+      Team1 = GamesList[8][0];
+      Team2 = GamesList[8][1];
+
+      const str33 = "*" + cycleNum + ", משחק מספר 9:* ";
+      textMessage1 = str33 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData_Gavia,
+        cycleIndexNum,
+        "גביע המדינה",
+        "DN",
+        "DO",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 150:
+      console.log(GamesList);
+      Team1 = GamesList[8][0];
+      Team2 = GamesList[8][1];
+
+      const str34 = "*" + cycleNum + ", משחק מספר 9:* ";
+      textMessage1 = str34 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "DP",
+        "",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+    case 151:
+      console.log(GamesList);
+      Team1 = GamesList[9][0];
+      Team2 = GamesList[9][1];
+
+      const str35 = "*" + cycleNum + ", משחק מספר 10:* ";
+      textMessage1 = str35 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "DQ",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
+      break;
+    case 152:
+      console.log(GamesList);
+      Team1 = GamesList[9][0];
+      Team2 = GamesList[9][1];
+
+      const str36 = "*" + cycleNum + ", משחק מספר 10:* ";
+      textMessage1 = str36 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData_Gavia,
+        cycleIndexNum,
+        "גביע המדינה",
+        "EB",
+        "EC",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 153:
+      console.log(GamesList);
+      Team1 = GamesList[9][0];
+      Team2 = GamesList[9][1];
+
+      const str37 = "*" + cycleNum + ", משחק מספר 10:* ";
+      textMessage1 = str37 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "ED",
+        "",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+    case 154:
+      console.log(GamesList);
+      Team1 = GamesList[10][0];
+      Team2 = GamesList[10][1];
+
+      const str38 = "*" + cycleNum + ", משחק מספר 11:* ";
+      textMessage1 = str38 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "EE",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
+      break;
+    case 155:
+      console.log(GamesList);
+      Team1 = GamesList[10][0];
+      Team2 = GamesList[10][1];
+
+      const str39 = "*" + cycleNum + ", משחק מספר 11:* ";
+      textMessage1 = str39 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData_Gavia,
+        cycleIndexNum,
+        "גביע המדינה",
+        "EP",
+        "EQ",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 156:
+      console.log(GamesList);
+      Team1 = GamesList[10][0];
+      Team2 = GamesList[10][1];
+
+      const str40 = "*" + cycleNum + ", משחק מספר 11:* ";
+      textMessage1 = str40 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "ER",
+        "",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+    case 157:
+      console.log(GamesList);
+      Team1 = GamesList[11][0];
+      Team2 = GamesList[11][1];
+
+      const str41 = "*" + cycleNum + ", משחק מספר 12:* ";
+      textMessage1 = str41 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "ES",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
+      break;
+    case 158:
+      console.log(GamesList);
+      Team1 = GamesList[11][0];
+      Team2 = GamesList[11][1];
+
+      const str42 = "*" + cycleNum + ", משחק מספר 12:* ";
+      textMessage1 = str42 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData_Gavia,
+        cycleIndexNum,
+        "גביע המדינה",
+        "FD",
+        "FE",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 159:
+      console.log(GamesList);
+      Team1 = GamesList[11][0];
+      Team2 = GamesList[11][1];
+
+      const str43 = "*" + cycleNum + ", משחק מספר 12:* ";
+      textMessage1 = str43 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "FF",
+        "",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+    case 160:
+      console.log(GamesList);
+      Team1 = GamesList[12][0];
+      Team2 = GamesList[12][1];
+
+      const str44 = "*" + cycleNum + ", משחק מספר 13:* ";
+      textMessage1 = str44 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "FG",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
+      break;
+    case 161:
+      console.log(GamesList);
+      Team1 = GamesList[12][0];
+      Team2 = GamesList[12][1];
+
+      const str45 = "*" + cycleNum + ", משחק מספר 13:* ";
+      textMessage1 = str45 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData_Gavia,
+        cycleIndexNum,
+        "גביע המדינה",
+        "FR",
+        "FS",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 162:
+      console.log(GamesList);
+      Team1 = GamesList[12][0];
+      Team2 = GamesList[12][1];
+
+      const str46 = "*" + cycleNum + ", משחק מספר 13:* ";
+      textMessage1 = str46 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "FT",
+        "",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+    case 163:
+      console.log(GamesList);
+      Team1 = GamesList[13][0];
+      Team2 = GamesList[13][1];
+
+      const str47 = "*" + cycleNum + ", משחק מספר 14:* ";
+      textMessage1 = str47 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "FU",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
+      break;
+    case 164:
+      console.log(GamesList);
+      Team1 = GamesList[13][0];
+      Team2 = GamesList[13][1];
+
+      const str48 = "*" + cycleNum + ", משחק מספר 14:* ";
+      textMessage1 = str48 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData_Gavia,
+        cycleIndexNum,
+        "גביע המדינה",
+        "GF",
+        "GG",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 165:
+      console.log(GamesList);
+      Team1 = GamesList[13][0];
+      Team2 = GamesList[13][1];
+
+      const str49 = "*" + cycleNum + ", משחק מספר 14:* ";
+      textMessage1 = str49 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "GH",
+        "",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+    case 166:
+      console.log(GamesList);
+      Team1 = GamesList[14][0];
+      Team2 = GamesList[14][1];
+
+      const str50 = "*" + cycleNum + ", משחק מספר 15:* ";
+      textMessage1 = str50 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "GI",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
+      break;
+    case 167:
+      console.log(GamesList);
+      Team1 = GamesList[14][0];
+      Team2 = GamesList[14][1];
+
+      const str51 = "*" + cycleNum + ", משחק מספר 15:* ";
+      textMessage1 = str51 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData_Gavia,
+        cycleIndexNum,
+        "גביע המדינה",
+        "GT",
+        "GU",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 168:
+      console.log(GamesList);
+      Team1 = GamesList[14][0];
+      Team2 = GamesList[14][1];
+
+      const str52 = "*" + cycleNum + ", משחק מספר 15:* ";
+      textMessage1 = str52 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "GV",
+        "",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+    case 169:
+      console.log(GamesList);
+      Team1 = GamesList[15][0];
+      Team2 = GamesList[15][1];
+
+      const str53 = "*" + cycleNum + ", משחק מספר 16:* ";
+      textMessage1 = str53 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "GW",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
+      break;
+    case 170:
+      console.log(GamesList);
+      Team1 = GamesList[15][0];
+      Team2 = GamesList[15][1];
+
+      const str54 = "*" + cycleNum + ", משחק מספר 16:* ";
+      textMessage1 = str54 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+
+      score = req.body.query.message;
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData_Gavia,
+        cycleIndexNum,
+        "גביע המדינה",
+        "HH",
+        "HI",
+        ScoreTeam1,
+        ScoreTeam2
+      );
+
+      break;
+    case 171:
+      console.log(GamesList);
+      Team1 = GamesList[15][0];
+      Team2 = GamesList[15][1];
+
+      const str55 = "*" + cycleNum + ", משחק מספר 16:* ";
+      textMessage1 = str55 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+
+      ChoiseUp = req.body.query.message;
+      if (parseInt(ChoiseUp) === 1) {
+        ChoiseUpteam = Team1;
+      } else {
+        ChoiseUpteam = Team2;
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "HJ",
+        "",
+        "",
+        "",
+        "",
+        ChoiseUpteam
+      );
+
+      break;
+    case 172:
+      ChoiseMinut = req.body.query.message;
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות'";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות'";
+      } else {
+        Minuts = "פנדלים";
+      }
+
+      footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "HK",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+
+      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "גביע המדינה",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix_Gavia(
+        GuessData_Saved,
+        false,
+        cycleNum
+      );
+
+      console.log("textMessage", textMessage);
+      console.log("textMessage1", textMessage[0]);
+      console.log("textMessage2", textMessage[1]);
+      textMessage1 = textMessage[0];
+      textMessage2 = textMessage[1];
 
       break;
     case 33:
