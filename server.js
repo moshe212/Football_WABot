@@ -326,7 +326,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      footballFunc.saveData_Full(
+      await footballFunc.saveData_Full(
         user_name,
         UsersIndex,
         GuessData,
