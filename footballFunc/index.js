@@ -7,6 +7,7 @@ const { saveFix } = require("./saveFix");
 const { chooseGameToFix } = require("./chooseGameToFix");
 const { getSavedGuss_Gavia } = require("./getSavedGuss_Gavia");
 const { chooseGameToFix_Gavia } = require("./chooseGameToFix_Gavia");
+const { saveFix_Gavia } = require("./saveFix_Gavia");
 
 const footballFunc = {
   getDataFromSheet,
@@ -18,6 +19,7 @@ const footballFunc = {
   chooseGameToFix,
   getSavedGuss_Gavia,
   chooseGameToFix_Gavia,
+  saveFix_Gavia,
 };
 
 module.exports = { footballFunc };

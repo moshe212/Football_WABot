@@ -63,6 +63,9 @@ let gameNum = 0;
 let score1 = 0;
 let score2 = 0;
 let isFirst = true;
+let teamUp_ToFix = "";
+let minute_toFix = "";
+let teamUp_ToFix_Num = "";
 
 const getData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
@@ -1786,6 +1789,132 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("textMessage2", textMessage[1]);
       textMessage1 = textMessage[0];
       textMessage2 = textMessage[1];
+
+      break;
+    case 173:
+      textMessage1 = "הניחושים נקלטו. שיהיה בהצלחה";
+      break;
+    case 174:
+      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "גביע המדינה",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix_Gavia(
+        GuessData_Saved,
+        true,
+        cycleNum
+      );
+      console.log(textMessage);
+      textMessage1 = textMessage[0];
+      textMessage2 = textMessage[1];
+      textMessage3 = textMessage[2];
+
+      break;
+    case 175:
+      gameNum = req.body.query.message.split(" ")[1];
+      score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      teamUp_ToFix_Num = parseInt(req.body.query.message.split(" ")[5]);
+      teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num];
+      minute_toFix =
+        req.body.query.message.split(" ")[7] +
+        " " +
+        req.body.query.message.split(" ")[8];
+      console.log(
+        "answer",
+        score1,
+        score2,
+        gameNum,
+        teamUp_ToFix,
+        minute_toFix
+      );
+
+      footballFunc.saveFix_Gavia(
+        parseInt(gameNum),
+        parseInt(score1),
+        parseInt(score2),
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        teamUp_ToFix,
+        minute_toFix
+      );
+
+      textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
+      textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
+      break;
+    case 176:
+      textMessage1 = "הניחושים נקלטו. שיהיה בהצלחה";
+      break;
+    case 177:
+      textMessage = await footballFunc.chooseGameToFix_Gavia(
+        GuessData_Saved,
+        true,
+        cycleNum
+      );
+      console.log(textMessage);
+      textMessage1 = textMessage[0];
+      textMessage2 = textMessage[1];
+      textMessage3 = textMessage[2];
+
+      break;
+    case 178:
+      gameNum = req.body.query.message.split(" ")[1];
+      score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      teamUp_ToFix_Num = parseInt(req.body.query.message.split(" ")[5]);
+      teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num];
+      minute_toFix =
+        req.body.query.message.split(" ")[7] +
+        " " +
+        req.body.query.message.split(" ")[8];
+      console.log(
+        "answer",
+        score1,
+        score2,
+        gameNum,
+        teamUp_ToFix,
+        minute_toFix
+      );
+
+      footballFunc.saveFix_Gavia(
+        parseInt(gameNum),
+        parseInt(score1),
+        parseInt(score2),
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        teamUp_ToFix,
+        minute_toFix
+      );
+
+      textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
+      textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
+      break;
+    case 179:
+      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "גביע המדינה",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix_Gavia(
+        GuessData_Saved,
+        true,
+        cycleNum
+      );
+      console.log(textMessage);
+      textMessage1 = textMessage[0];
+      textMessage2 = textMessage[1];
+      textMessage3 = textMessage[2];
 
       break;
     // case 167:
