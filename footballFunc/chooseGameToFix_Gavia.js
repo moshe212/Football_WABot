@@ -28,7 +28,7 @@ const chooseGameToFix_Gavia = async function (
     const strfIX =
       "\n" +
       "\n*משחק " +
-      f +
+      (f + 1) +
       "*" +
       "\n" +
       GuessData_Saved[f].team1[0] +
