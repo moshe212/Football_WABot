@@ -686,8 +686,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[4][0];
       Team2 = GamesList[4][1];
 
-      const str20 = "*" + cycleNum + ", משחק מספר 5:* ";
-      textMessage1 = str20 + "\n" + Team1 + " - " + Team2;
+      const str56 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str56 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
@@ -719,8 +719,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[4][0];
       Team2 = GamesList[4][1];
 
-      const str21 = "*" + cycleNum + ", משחק מספר 5:* ";
-      textMessage1 = str21 + "\n" + Team1 + " - " + Team2;
+      const str57 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str57 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
@@ -748,8 +748,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[4][0];
       Team2 = GamesList[4][1];
 
-      const str22 = "*" + cycleNum + ", משחק מספר 5:* ";
-      textMessage1 = str22 + "\n" + Team1 + " - " + Team2;
+      const str58 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str58 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
       textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
 
@@ -780,8 +780,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[4][0];
       Team2 = GamesList[4][1];
 
-      const str20 = "*" + cycleNum + ", משחק מספר 5:* ";
-      textMessage1 = str20 + "\n" + Team1 + " - " + Team2;
+      const str59 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str59 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
@@ -813,8 +813,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[4][0];
       Team2 = GamesList[4][1];
 
-      const str21 = "*" + cycleNum + ", משחק מספר 5:* ";
-      textMessage1 = str21 + "\n" + Team1 + " - " + Team2;
+      const str60 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str60 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
@@ -842,8 +842,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[4][0];
       Team2 = GamesList[4][1];
 
-      const str22 = "*" + cycleNum + ", משחק מספר 5:* ";
-      textMessage1 = str22 + "\n" + Team1 + " - " + Team2;
+      const str61 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str61 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
       textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
 
