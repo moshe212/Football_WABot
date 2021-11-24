@@ -80,7 +80,13 @@ const saveFix_Gavia = async function (
         ScoreTeam2 = score2;
         TeamUp = teamUp;
         Minute =
-          (minute === "90") | (minute === "120") ? minute + " דקות" : minute;
+          minute === "1"
+            ? "90 דקות"
+            : minute === "2"
+            ? "120 דקות"
+            : minute === "3"
+            ? "פנדלים"
+            : "";
         await saveData_Full(
           user_name,
           UsersIndex,
@@ -126,7 +132,13 @@ const saveFix_Gavia = async function (
         ScoreTeam2 = score2;
         TeamUp = teamUp;
         Minute =
-          (minute === "90") | (minute === "120") ? minute + " דקות" : minute;
+          minute === "1"
+            ? "90 דקות"
+            : minute === "2"
+            ? "120 דקות"
+            : minute === "3"
+            ? "פנדלים"
+            : "";
         await saveData_Full(
           user_name,
           UsersIndex,
@@ -171,7 +183,13 @@ const saveFix_Gavia = async function (
         ScoreTeam2 = score2;
         TeamUp = teamUp;
         Minute =
-          (minute === "90") | (minute === "120") ? minute + " דקות" : minute;
+          minute === "1"
+            ? "90 דקות"
+            : minute === "2"
+            ? "120 דקות"
+            : minute === "3"
+            ? "פנדלים"
+            : "";
         await saveData_Full(
           user_name,
           UsersIndex,
@@ -216,7 +234,13 @@ const saveFix_Gavia = async function (
         ScoreTeam2 = score2;
         TeamUp = teamUp;
         Minute =
-          (minute === "90") | (minute === "120") ? minute + " דקות" : minute;
+          minute === "1"
+            ? "90 דקות"
+            : minute === "2"
+            ? "120 דקות"
+            : minute === "3"
+            ? "פנדלים"
+            : "";
         await saveData_Full(
           user_name,
           UsersIndex,
@@ -262,7 +286,13 @@ const saveFix_Gavia = async function (
         ScoreTeam2 = score2;
         TeamUp = teamUp;
         Minute =
-          (minute === "90") | (minute === "120") ? minute + " דקות" : minute;
+          minute === "1"
+            ? "90 דקות"
+            : minute === "2"
+            ? "120 דקות"
+            : minute === "3"
+            ? "פנדלים"
+            : "";
         await saveData_Full(
           user_name,
           UsersIndex,
@@ -308,7 +338,13 @@ const saveFix_Gavia = async function (
         ScoreTeam2 = score2;
         TeamUp = teamUp;
         Minute =
-          (minute === "90") | (minute === "120") ? minute + " דקות" : minute;
+          minute === "1"
+            ? "90 דקות"
+            : minute === "2"
+            ? "120 דקות"
+            : minute === "3"
+            ? "פנדלים"
+            : "";
         await saveData_Full(
           user_name,
           UsersIndex,
@@ -353,7 +389,13 @@ const saveFix_Gavia = async function (
         ScoreTeam2 = score2;
         TeamUp = teamUp;
         Minute =
-          (minute === "90") | (minute === "120") ? minute + " דקות" : minute;
+          minute === "1"
+            ? "90 דקות"
+            : minute === "2"
+            ? "120 דקות"
+            : minute === "3"
+            ? "פנדלים"
+            : "";
         await saveData_Full(
           user_name,
           UsersIndex,
@@ -398,7 +440,13 @@ const saveFix_Gavia = async function (
         ScoreTeam2 = score2;
         TeamUp = teamUp;
         Minute =
-          (minute === "90") | (minute === "120") ? minute + " דקות" : minute;
+          minute === "1"
+            ? "90 דקות"
+            : minute === "2"
+            ? "120 דקות"
+            : minute === "3"
+            ? "פנדלים"
+            : "";
         await saveData_Full(
           user_name,
           UsersIndex,
@@ -443,7 +491,13 @@ const saveFix_Gavia = async function (
         ScoreTeam2 = score2;
         TeamUp = teamUp;
         Minute =
-          (minute === "90") | (minute === "120") ? minute + " דקות" : minute;
+          minute === "1"
+            ? "90 דקות"
+            : minute === "2"
+            ? "120 דקות"
+            : minute === "3"
+            ? "פנדלים"
+            : "";
         await saveData_Full(
           user_name,
           UsersIndex,
@@ -488,7 +542,13 @@ const saveFix_Gavia = async function (
         ScoreTeam2 = score2;
         TeamUp = teamUp;
         Minute =
-          (minute === "90") | (minute === "120") ? minute + " דקות" : minute;
+          minute === "1"
+            ? "90 דקות"
+            : minute === "2"
+            ? "120 דקות"
+            : minute === "3"
+            ? "פנדלים"
+            : "";
         await saveData_Full(
           user_name,
           UsersIndex,
@@ -533,7 +593,13 @@ const saveFix_Gavia = async function (
         ScoreTeam2 = score2;
         TeamUp = teamUp;
         Minute =
-          (minute === "90") | (minute === "120") ? minute + " דקות" : minute;
+          minute === "1"
+            ? "90 דקות"
+            : minute === "2"
+            ? "120 דקות"
+            : minute === "3"
+            ? "פנדלים"
+            : "";
         await saveData_Full(
           user_name,
           UsersIndex,
@@ -578,7 +644,13 @@ const saveFix_Gavia = async function (
         ScoreTeam2 = score2;
         TeamUp = teamUp;
         Minute =
-          (minute === "90") | (minute === "120") ? minute + " דקות" : minute;
+          minute === "1"
+            ? "90 דקות"
+            : minute === "2"
+            ? "120 דקות"
+            : minute === "3"
+            ? "פנדלים"
+            : "";
         await saveData_Full(
           user_name,
           UsersIndex,
@@ -623,7 +695,13 @@ const saveFix_Gavia = async function (
         ScoreTeam2 = score2;
         TeamUp = teamUp;
         Minute =
-          (minute === "90") | (minute === "120") ? minute + " דקות" : minute;
+          minute === "1"
+            ? "90 דקות"
+            : minute === "2"
+            ? "120 דקות"
+            : minute === "3"
+            ? "פנדלים"
+            : "";
         await saveData_Full(
           user_name,
           UsersIndex,
@@ -668,7 +746,13 @@ const saveFix_Gavia = async function (
         ScoreTeam2 = score2;
         TeamUp = teamUp;
         Minute =
-          (minute === "90") | (minute === "120") ? minute + " דקות" : minute;
+          minute === "1"
+            ? "90 דקות"
+            : minute === "2"
+            ? "120 דקות"
+            : minute === "3"
+            ? "פנדלים"
+            : "";
         await saveData_Full(
           user_name,
           UsersIndex,
@@ -713,7 +797,13 @@ const saveFix_Gavia = async function (
         ScoreTeam2 = score2;
         TeamUp = teamUp;
         Minute =
-          (minute === "90") | (minute === "120") ? minute + " דקות" : minute;
+          minute === "1"
+            ? "90 דקות"
+            : minute === "2"
+            ? "120 דקות"
+            : minute === "3"
+            ? "פנדלים"
+            : "";
         await saveData_Full(
           user_name,
           UsersIndex,
