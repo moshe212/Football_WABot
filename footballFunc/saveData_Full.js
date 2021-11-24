@@ -53,7 +53,12 @@ const saveData_Full = async function (
         console.log("idxs", raw_idx);
         //   await sheet.loadCells("A1:CP" + rawindex);
         if (!Team) {
-          await sheet.loadCells("A" + raw_idx + ":GF" + (raw_idx + 2));
+          if (sheetTitle === "גביע המדינה") {
+            await sheet.loadCells("A" + raw_idx + ":IO" + (raw_idx + 2));
+          } else {
+            await sheet.loadCells("A" + raw_idx + ":GF" + (raw_idx + 2));
+          }
+
           const cell_team1 = sheet.getCellByA1(columnLetter1 + (raw_idx + 2));
           const cell_team2 = sheet.getCellByA1(columnLetter2 + (raw_idx + 2));
           cell_team1.value = parseInt(score1);
@@ -63,7 +68,11 @@ const saveData_Full = async function (
           console.log("save");
           return res_save;
         } else {
-          await sheet.loadCells("A" + raw_idx + ":GF" + (raw_idx + 2));
+          if (sheetTitle === "גביע המדינה") {
+            await sheet.loadCells("A" + raw_idx + ":IO" + (raw_idx + 2));
+          } else {
+            await sheet.loadCells("A" + raw_idx + ":GF" + (raw_idx + 2));
+          }
           const cell_up = sheet.getCellByA1(columnLetter1 + (raw_idx + 2));
           console.log("Team", Team);
           cell_up.value = Team;
