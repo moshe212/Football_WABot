@@ -310,13 +310,6 @@ app.post("/api/Whatsapp", async (req, res) => {
 
     case 120:
       console.log(GamesList);
-      Team1 = GamesList[1][0];
-      Team2 = GamesList[1][1];
-
-      // const str11 = "*" + cycleNum + ", משחק מספר 2:* ";
-      // textMessage1 = str11 + "\n" + Team1 + " - " + Team2;
-      // textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-
       ChoiseMinut = req.body.query.message;
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
@@ -326,41 +319,62 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      await footballFunc.saveData_Full(
-        user_name,
-        UsersIndex,
-        GuessData,
-        cycleIndexNum,
-        "גביע המדינה",
-        "I",
-        "",
-        "",
-        "",
-        "",
-        Minuts
-      );
+      if (GamesList.length < 2) {
+        await footballFunc.saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          "גביע המדינה",
+          "I",
+          "",
+          "",
+          "",
+          "",
+          Minuts
+        );
+        GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+          user_name,
+          UsersIndex,
+          cycleIndexNum,
+          "גביע המדינה",
+          GamesList
+        );
+        console.log("GuessData_Saved", GuessData_Saved);
+        textMessage = await footballFunc.chooseGameToFix_Gavia(
+          GuessData_Saved,
+          false,
+          cycleNum
+        );
 
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
-        user_name,
-        UsersIndex,
-        cycleIndexNum,
-        "גביע המדינה",
-        GamesList
-      );
-      console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
-        GuessData_Saved,
-        false,
-        cycleNum
-      );
+        textMessage1 = textMessage[0];
+        textMessage2 = textMessage[1];
 
-      console.log("textMessage", textMessage);
-      console.log("textMessage1", textMessage[0]);
-      console.log("textMessage2", textMessage[1]);
-      textMessage1 = textMessage[0];
-      textMessage2 = textMessage[1];
+        break;
+      } else {
+        Team1 = GamesList[1][0];
+        Team2 = GamesList[1][1];
 
-      break;
+        const str11 = "*" + cycleNum + ", משחק מספר 2:* ";
+        textMessage1 = str11 + "\n" + Team1 + " - " + Team2;
+        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+        footballFunc.saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          "גביע המדינה",
+          "I",
+          "",
+          "",
+          "",
+          "",
+          Minuts
+        );
+        break;
+      }
+
     case 122:
       console.log(GamesList);
       Team1 = GamesList[1][0];
@@ -424,13 +438,6 @@ app.post("/api/Whatsapp", async (req, res) => {
       break;
     case 124:
       console.log(GamesList);
-      Team1 = GamesList[2][0];
-      Team2 = GamesList[2][1];
-
-      const str14 = "*" + cycleNum + ", משחק מספר 3:* ";
-      textMessage1 = str14 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-
       ChoiseMinut = req.body.query.message;
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
@@ -439,22 +446,63 @@ app.post("/api/Whatsapp", async (req, res) => {
       } else {
         Minuts = "פנדלים";
       }
+      if (GamesList.length < 3) {
+        await footballFunc.saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          "גביע המדינה",
+          "Y",
+          "",
+          "",
+          "",
+          "",
+          Minuts
+        );
+        GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+          user_name,
+          UsersIndex,
+          cycleIndexNum,
+          "גביע המדינה",
+          GamesList
+        );
+        console.log("GuessData_Saved", GuessData_Saved);
+        textMessage = await footballFunc.chooseGameToFix_Gavia(
+          GuessData_Saved,
+          false,
+          cycleNum
+        );
 
-      footballFunc.saveData_Full(
-        user_name,
-        UsersIndex,
-        GuessData,
-        cycleIndexNum,
-        "גביע המדינה",
-        "Y",
-        "",
-        "",
-        "",
-        "",
-        Minuts
-      );
+        textMessage1 = textMessage[0];
+        textMessage2 = textMessage[1];
 
-      break;
+        break;
+      } else {
+        Team1 = GamesList[2][0];
+        Team2 = GamesList[2][1];
+
+        const str14 = "*" + cycleNum + ", משחק מספר 3:* ";
+        textMessage1 = str14 + "\n" + Team1 + " - " + Team2;
+        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+        footballFunc.saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          "גביע המדינה",
+          "Y",
+          "",
+          "",
+          "",
+          "",
+          Minuts
+        );
+
+        break;
+      }
+
     case 125:
       console.log(GamesList);
       Team1 = GamesList[2][0];
@@ -612,13 +660,6 @@ app.post("/api/Whatsapp", async (req, res) => {
       break;
     case 130:
       console.log(GamesList);
-      Team1 = GamesList[4][0];
-      Team2 = GamesList[4][1];
-
-      const str20 = "*" + cycleNum + ", משחק מספר 5:* ";
-      textMessage1 = str20 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-
       ChoiseMinut = req.body.query.message;
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
@@ -627,22 +668,63 @@ app.post("/api/Whatsapp", async (req, res) => {
       } else {
         Minuts = "פנדלים";
       }
+      if (GamesList.length < 5) {
+        await footballFunc.saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          "גביע המדינה",
+          "BE",
+          "",
+          "",
+          "",
+          "",
+          Minuts
+        );
+        GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+          user_name,
+          UsersIndex,
+          cycleIndexNum,
+          "גביע המדינה",
+          GamesList
+        );
+        console.log("GuessData_Saved", GuessData_Saved);
+        textMessage = await footballFunc.chooseGameToFix_Gavia(
+          GuessData_Saved,
+          false,
+          cycleNum
+        );
 
-      footballFunc.saveData_Full(
-        user_name,
-        UsersIndex,
-        GuessData,
-        cycleIndexNum,
-        "גביע המדינה",
-        "BE",
-        "",
-        "",
-        "",
-        "",
-        Minuts
-      );
+        textMessage1 = textMessage[0];
+        textMessage2 = textMessage[1];
 
-      break;
+        break;
+      } else {
+        Team1 = GamesList[4][0];
+        Team2 = GamesList[4][1];
+
+        const str20 = "*" + cycleNum + ", משחק מספר 5:* ";
+        textMessage1 = str20 + "\n" + Team1 + " - " + Team2;
+        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+        footballFunc.saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          "גביע המדינה",
+          "BE",
+          "",
+          "",
+          "",
+          "",
+          Minuts
+        );
+
+        break;
+      }
+
     case 131:
       console.log(GamesList);
       Team1 = GamesList[4][0];
@@ -988,13 +1070,6 @@ app.post("/api/Whatsapp", async (req, res) => {
       break;
     case 142:
       console.log(GamesList);
-      Team1 = GamesList[8][0];
-      Team2 = GamesList[8][1];
-
-      const str26 = "*" + cycleNum + ", משחק מספר 9:* ";
-      textMessage1 = str26 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-
       ChoiseMinut = req.body.query.message;
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
@@ -1003,22 +1078,63 @@ app.post("/api/Whatsapp", async (req, res) => {
       } else {
         Minuts = "פנדלים";
       }
+      if (GamesList.length < 9) {
+        await footballFunc.saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          "גביע המדינה",
+          "DQ",
+          "",
+          "",
+          "",
+          "",
+          Minuts
+        );
+        GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+          user_name,
+          UsersIndex,
+          cycleIndexNum,
+          "גביע המדינה",
+          GamesList
+        );
+        console.log("GuessData_Saved", GuessData_Saved);
+        textMessage = await footballFunc.chooseGameToFix_Gavia(
+          GuessData_Saved,
+          false,
+          cycleNum
+        );
 
-      footballFunc.saveData_Full(
-        user_name,
-        UsersIndex,
-        GuessData,
-        cycleIndexNum,
-        "גביע המדינה",
-        "DQ",
-        "",
-        "",
-        "",
-        "",
-        Minuts
-      );
+        textMessage1 = textMessage[0];
+        textMessage2 = textMessage[1];
 
-      break;
+        break;
+      } else {
+        Team1 = GamesList[8][0];
+        Team2 = GamesList[8][1];
+
+        const str26 = "*" + cycleNum + ", משחק מספר 9:* ";
+        textMessage1 = str26 + "\n" + Team1 + " - " + Team2;
+        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+        footballFunc.saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          "גביע המדינה",
+          "DQ",
+          "",
+          "",
+          "",
+          "",
+          Minuts
+        );
+
+        break;
+      }
+
     case 143:
       console.log(GamesList);
       Team1 = GamesList[8][0];
@@ -1822,8 +1938,10 @@ app.post("/api/Whatsapp", async (req, res) => {
       teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num];
       minute_toFix =
         req.body.query.message.split(" ")[7] +
-        " " +
-        req.body.query.message.split(" ")[8];
+          req.body.query.message.split(" ").length >
+        7
+          ? " " + req.body.query.message.split(" ")[8]
+          : "";
       console.log(
         "answer",
         score1,
@@ -1879,8 +1997,10 @@ app.post("/api/Whatsapp", async (req, res) => {
       teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num - 1];
       minute_toFix =
         req.body.query.message.split(" ")[7] +
-        " " +
-        req.body.query.message.split(" ")[8];
+          req.body.query.message.split(" ").length >
+        7
+          ? " " + req.body.query.message.split(" ")[8]
+          : "";
       console.log(
         "answer",
         score1,
@@ -1925,10 +2045,150 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = textMessage[2];
 
       break;
-    case 182:
-      console.log(req.body.query.message);
+    case 180:
+      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "גביע המדינה",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix_Gavia(
+        GuessData_Saved,
+        false,
+        cycleNum
+      );
+      console.log(textMessage);
+      textMessage1 = textMessage[0];
+      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
       break;
+    case 183:
+      gameNum = req.body.query.message.split(" ")[1];
+      score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      teamUp_ToFix_Num = parseInt(req.body.query.message.split(" ")[5]);
+      teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num - 1];
+      minute_toFix =
+        req.body.query.message.split(" ")[7] +
+          req.body.query.message.split(" ").length >
+        7
+          ? " " + req.body.query.message.split(" ")[8]
+          : "";
+      console.log(
+        "answer",
+        score1,
+        score2,
+        gameNum,
+        teamUp_ToFix,
+        minute_toFix
+      );
 
+      footballFunc.saveFix_Gavia(
+        parseInt(gameNum),
+        parseInt(score1),
+        parseInt(score2),
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        teamUp_ToFix,
+        minute_toFix
+      );
+
+      textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
+      textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
+      break;
+    case 184:
+      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "גביע המדינה",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix_Gavia(
+        GuessData_Saved,
+        true,
+        cycleNum
+      );
+      console.log(textMessage);
+      textMessage1 = textMessage[0];
+      textMessage2 = textMessage[1];
+      textMessage3 = textMessage[2];
+
+      break;
+    case 185:
+      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "גביע המדינה",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix_Gavia(
+        GuessData_Saved,
+        false,
+        cycleNum
+      );
+      console.log(textMessage);
+      textMessage1 = textMessage[0];
+      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
+      break;
+    case 186:
+      gameNum = req.body.query.message.split(" ")[1];
+      score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      teamUp_ToFix_Num = parseInt(req.body.query.message.split(" ")[5]);
+      teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num - 1];
+      minute_toFix =
+        req.body.query.message.split(" ")[7] +
+          req.body.query.message.split(" ").length >
+        7
+          ? " " + req.body.query.message.split(" ")[8]
+          : "";
+      console.log(
+        "answer",
+        score1,
+        score2,
+        gameNum,
+        teamUp_ToFix,
+        minute_toFix
+      );
+
+      footballFunc.saveFix_Gavia(
+        parseInt(gameNum),
+        parseInt(score1),
+        parseInt(score2),
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        teamUp_ToFix,
+        minute_toFix
+      );
+
+      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "גביע המדינה",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix_Gavia(
+        GuessData_Saved,
+        false,
+        cycleNum
+      );
+      console.log(textMessage);
+      textMessage1 = textMessage[0];
+      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
+      // textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
+      // textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
+      break;
     case 33:
       if (cycleNum !== 0) {
         textMessage1 =
