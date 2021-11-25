@@ -248,12 +248,17 @@ app.post("/api/Whatsapp", async (req, res) => {
       }
     case 112:
       console.log(GamesList);
-      Team1 = GamesList[0][0];
-      Team2 = GamesList[0][1];
+      if (cycleText.includes("גביע המדינה")) {
+        Team1 = GamesList[0][0];
+        Team2 = GamesList[0][1];
 
-      const str8 = "*" + cycleNum + ", משחק מספר 1:* ";
-      textMessage1 = str8 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+        const str8 = "*" + cycleNum + ", משחק מספר 1:* ";
+        textMessage1 = str8 + "\n" + Team1 + " - " + Team2;
+        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+      } else {
+        textMessage1 = "השתחלתם ללופ של ניחושי גביע המדינה למרות שאי אפשר..";
+        textMessage1 = "אנא פנו למנהל המערכת או בחרו 3️⃣ לחזרה לתפריט הקודם..";
+      }
 
       break;
     case 113:
