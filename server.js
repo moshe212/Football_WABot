@@ -50,7 +50,8 @@ function connectToDB() {
   return connection;
 }
 
-let cycleNum = 0;
+let cycleNum = "0";
+let cycleText = "";
 let cycleDate = "";
 let Games = [];
 let GamesList = [];
@@ -71,6 +72,7 @@ const getData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
   const res_cycle = await footballFunc.getCycle(Data);
   cycleNum = res_cycle[0];
+  cycleText = res_cycle[3];
   const cycleDate1 = moment(res_cycle[1]).format("DD-MM-YYYY");
   const cycleDate2 = cycleDate1.replace("-", ".");
   cycleDate = cycleDate2.replace("-", ".");
@@ -177,10 +179,10 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 110:
-      if (cycleNum !== 0) {
+      if (cycleNum !== "0" && cycleText.includes("מחזור")) {
         textMessage1 =
           "בחירה מצוינת!" +
-          "\nהדד ליין לשליחת ניחושים לשלב*" +
+          "\nהדד ליין לשליחת ניחושים למחזור *" +
           cycleNum +
           "* הוא עד ה-" +
           "*" +
@@ -192,18 +194,27 @@ app.post("/api/Whatsapp", async (req, res) => {
 
         break;
       } else {
-        textMessage1 =
-          "שומעים רגע? הדד ליין לשליחת הניחושים לשלב*" +
-          "*" +
-          cycleNum +
-          "*" +
-          " עבר.";
-        textMessage2 =
-          "אם רק עכשיו נזכרתם לשלוח ניחושים אז אנחנו בבעיה. אנא פנו למנהל המערכת";
-        break;
+        if (cycleText.includes("מחזור")) {
+          textMessage1 =
+            "שומעים רגע? הדד ליין לשליחת הניחושים למחזור *" +
+            "*" +
+            cycleNum +
+            "*" +
+            " עבר.";
+          textMessage2 =
+            "אם רק עכשיו נזכרתם לשלוח ניחושים אז אנחנו בבעיה. אנא פנו למנהל המערכת";
+          break;
+        } else {
+          textMessage1 =
+            "שומעים רגע? כרגע לא ניתן לשלוח ניחושים לליגת העל." +
+            "\nיכול להיות שניתן לשלוח ניחושים לגביע המדינה..";
+          textMessage2 =
+            "אנא פנו למנהל המערכת או נסו לבחור באפשרות גביע המדינה ותראו מה אני אגיד..";
+          break;
+        }
       }
     case 111:
-      if (cycleNum !== 0) {
+      if (cycleNum !== "0" && cycleText.includes("גביע המדינה")) {
         textMessage1 =
           "בחירה מצוינת!" +
           "\nהדד ליין לשליחת ניחושים לשלב *" +
@@ -218,15 +229,24 @@ app.post("/api/Whatsapp", async (req, res) => {
 
         break;
       } else {
-        textMessage1 =
-          "שומעים רגע? הדד ליין לשליחת הניחושים לשלב" +
-          "*" +
-          cycleNum +
-          "*" +
-          " עבר.";
-        textMessage2 =
-          "אם רק עכשיו נזכרתם לשלוח ניחושים אז אנחנו בבעיה. אנא פנו למנהל המערכת";
-        break;
+        if (cycleText.includes("גביע המדינה")) {
+          textMessage1 =
+            "שומעים רגע? הדד ליין לשליחת הניחושים לשלב" +
+            "*" +
+            cycleNum +
+            "*" +
+            " עבר.";
+          textMessage2 =
+            "אם רק עכשיו נזכרתם לשלוח ניחושים אז אנחנו בבעיה. אנא פנו למנהל המערכת";
+          break;
+        } else {
+          textMessage1 =
+            "שומעים רגע? כרגע לא ניתן לשלוח ניחושים לגביע המדינה." +
+            "\nיכול להיות שניתן לשלוח ניחושים לליגת העל..";
+          textMessage2 =
+            "אנא פנו למנהל המערכת או נסו לבחור באפשרות ליגת העל ותראו מה אני אגיד..";
+          break;
+        }
       }
     case 112:
       console.log(GamesList);
@@ -2288,7 +2308,7 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 33:
-      if (cycleNum !== 0) {
+      if (cycleNum !== "0") {
         textMessage1 =
           "בחירה מצוינת!" +
           "\nהדד ליין לשליחת ניחושים ל*מחזור ה-" +

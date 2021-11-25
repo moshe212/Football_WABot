@@ -62,11 +62,11 @@ const getCycle = async (data) => {
       cycleNum = cycleText.substring(cycleText.length - 2).trim();
     }
     const endGuessTime = moment(endDate);
-    return [cycleNum, endGuessTime, cycleIndex];
+    return [cycleNum, endGuessTime, cycleIndex, cycleText];
   } else {
     const endGuessTime = moment(endDate);
     // .add(1, "days");
-    return [0, endGuessTime, cycleIndex];
+    return ["0", endGuessTime, cycleIndex, cycleText];
   }
 };
 
