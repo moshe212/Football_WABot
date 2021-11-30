@@ -280,8 +280,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -431,8 +431,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -559,8 +559,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -653,8 +653,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -781,8 +781,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -875,8 +875,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -969,8 +969,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -1063,8 +1063,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -1191,8 +1191,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -1285,8 +1285,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -1379,8 +1379,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -1473,8 +1473,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -1567,8 +1567,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -1661,8 +1661,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -1755,8 +1755,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -1849,8 +1849,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam2 = score.split(":")[1];
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
@@ -2688,7 +2688,7 @@ app.post("/api/Whatsapp", async (req, res) => {
 
     case 64:
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam1 = score.split(":")[0];
       ScoreTeam2 = score.split(":")[0];
       // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
 
