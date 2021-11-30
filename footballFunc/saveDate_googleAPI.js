@@ -55,7 +55,7 @@ const saveDate_googleAPI = async function (
       //   await sheet.loadCells("A1:CP" + rawindex);
       if (!Team) {
         Range_Cell =
-          "sheetTitle" +
+          sheetTitle +
           "!" +
           columnLetter1 +
           (raw_idx + 2) +
