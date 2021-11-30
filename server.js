@@ -342,71 +342,71 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      // if (GamesList.length < 2) {
-      await footballFunc.saveData_Full(
-        user_name,
-        UsersIndex,
-        GuessData,
-        cycleIndexNum,
-        "גביע המדינה",
-        "I",
-        "",
-        "",
-        "",
-        "",
-        Minuts
-      );
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData,
-        cycleIndexNum
-      );
+      if (GamesList.length < 2) {
+        await footballFunc.saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          "גביע המדינה",
+          "I",
+          "",
+          "",
+          "",
+          "",
+          Minuts
+        );
+        // ----------Start fix auto----------------
+        await footballFunc.fixAuto_Main(
+          GamesList,
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum
+        );
 
-      // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
-        user_name,
-        UsersIndex,
-        cycleIndexNum,
-        "גביע המדינה",
-        GamesList
-      );
-      console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
-        GuessData_Saved,
-        false,
-        cycleNum
-      );
+        // ----------End fix auto----------------
+        GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+          user_name,
+          UsersIndex,
+          cycleIndexNum,
+          "גביע המדינה",
+          GamesList
+        );
+        console.log("GuessData_Saved", GuessData_Saved);
+        textMessage = await footballFunc.chooseGameToFix_Gavia(
+          GuessData_Saved,
+          false,
+          cycleNum
+        );
 
-      textMessage1 = textMessage[0];
-      textMessage2 = textMessage[1];
+        textMessage1 = textMessage[0];
+        textMessage2 = textMessage[1];
 
-      break;
-    // } else {
-    //   Team1 = GamesList[1][0];
-    //   Team2 = GamesList[1][1];
+        break;
+      } else {
+        Team1 = GamesList[1][0];
+        Team2 = GamesList[1][1];
 
-    //   const str11 = "*" + cycleNum + ", משחק מספר 2:* ";
-    //   textMessage1 = str11 + "\n" + Team1 + " - " + Team2;
-    //   textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+        const str11 = "*" + cycleNum + ", משחק מספר 2:* ";
+        textMessage1 = str11 + "\n" + Team1 + " - " + Team2;
+        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
-    //   footballFunc.saveData_Full(
-    //     user_name,
-    //     UsersIndex,
-    //     GuessData,
-    //     cycleIndexNum,
-    //     "גביע המדינה",
-    //     "I",
-    //     "",
-    //     "",
-    //     "",
-    //     "",
-    //     Minuts
-    //   );
-    //   break;
-    // }
+        footballFunc.saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          "גביע המדינה",
+          "I",
+          "",
+          "",
+          "",
+          "",
+          Minuts
+        );
+        break;
+      }
 
     case 122:
       console.log(GamesList);
@@ -1862,8 +1862,10 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       const str49 = "*" + cycleNum + ", משחק מספר 16:* ";
       textMessage1 = str49 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "איך יסתיים המשחק?";
-      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      textMessage2 =
+        "איך יסתיים המשחק?" + "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      textMessage3 =
+        "*שימו לב:* אחרי שתנחשו את תוצאת המשחק האחרונה, ייקח לי כמה דקות לעבד את הנתונים ולהציג את ניחושי השלב המלאים ששלחתם. במידה ולא קיבלתם ממני סיכום של הניחושים לאחר 5 דקות, אנא שילחו שוב את הניחוש לשאלה האחרונה.";
 
       ChoiseUp = req.body.query.message;
       if (parseInt(ChoiseUp) === 1) {
@@ -2061,6 +2063,16 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
       break;
     case 179:
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
+
+      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
         user_name,
         UsersIndex,
@@ -2081,6 +2093,16 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 180:
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
+
+      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
         user_name,
         UsersIndex,
@@ -2131,6 +2153,16 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
       break;
     case 184:
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
+
+      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
         user_name,
         UsersIndex,
@@ -2151,6 +2183,16 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 185:
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
+
+      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
         user_name,
         UsersIndex,
@@ -2185,7 +2227,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         minute_toFix
       );
 
-      footballFunc.saveFix_Gavia(
+      await footballFunc.saveFix_Gavia(
         parseInt(gameNum),
         parseInt(score1),
         parseInt(score2),
@@ -2197,6 +2239,16 @@ app.post("/api/Whatsapp", async (req, res) => {
         minute_toFix
       );
 
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
+
+      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
         user_name,
         UsersIndex,
@@ -2217,6 +2269,16 @@ app.post("/api/Whatsapp", async (req, res) => {
       // textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
       break;
     case 187:
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
+
+      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
         user_name,
         UsersIndex,
@@ -2235,6 +2297,16 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
       break;
     case 188:
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
+
+      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
         user_name,
         UsersIndex,
@@ -2255,6 +2327,16 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 189:
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
+
+      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
         user_name,
         UsersIndex,
@@ -2273,6 +2355,16 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
       break;
     case 190:
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
+
+      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
         user_name,
         UsersIndex,
@@ -2293,6 +2385,16 @@ app.post("/api/Whatsapp", async (req, res) => {
 
       break;
     case 191:
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
+
+      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
         user_name,
         UsersIndex,
@@ -2311,6 +2413,16 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
       break;
     case 192:
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
+
+      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
         user_name,
         UsersIndex,
