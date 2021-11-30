@@ -342,61 +342,71 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      if (GamesList.length < 2) {
-        await footballFunc.saveData_Full(
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "גביע המדינה",
-          "I",
-          "",
-          "",
-          "",
-          "",
-          Minuts
-        );
-        GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
-          user_name,
-          UsersIndex,
-          cycleIndexNum,
-          "גביע המדינה",
-          GamesList
-        );
-        console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFix_Gavia(
-          GuessData_Saved,
-          false,
-          cycleNum
-        );
+      // if (GamesList.length < 2) {
+      await footballFunc.saveData_Full(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "I",
+        "",
+        "",
+        "",
+        "",
+        Minuts
+      );
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
 
-        textMessage1 = textMessage[0];
-        textMessage2 = textMessage[1];
+      // ----------End fix auto----------------
+      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "גביע המדינה",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix_Gavia(
+        GuessData_Saved,
+        false,
+        cycleNum
+      );
 
-        break;
-      } else {
-        Team1 = GamesList[1][0];
-        Team2 = GamesList[1][1];
+      textMessage1 = textMessage[0];
+      textMessage2 = textMessage[1];
 
-        const str11 = "*" + cycleNum + ", משחק מספר 2:* ";
-        textMessage1 = str11 + "\n" + Team1 + " - " + Team2;
-        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+      break;
+    // } else {
+    //   Team1 = GamesList[1][0];
+    //   Team2 = GamesList[1][1];
 
-        footballFunc.saveData_Full(
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "גביע המדינה",
-          "I",
-          "",
-          "",
-          "",
-          "",
-          Minuts
-        );
-        break;
-      }
+    //   const str11 = "*" + cycleNum + ", משחק מספר 2:* ";
+    //   textMessage1 = str11 + "\n" + Team1 + " - " + Team2;
+    //   textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+    //   footballFunc.saveData_Full(
+    //     user_name,
+    //     UsersIndex,
+    //     GuessData,
+    //     cycleIndexNum,
+    //     "גביע המדינה",
+    //     "I",
+    //     "",
+    //     "",
+    //     "",
+    //     "",
+    //     Minuts
+    //   );
+    //   break;
+    // }
 
     case 122:
       console.log(GamesList);
@@ -1989,6 +1999,16 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage1 = "הניחושים נקלטו. שיהיה בהצלחה";
       break;
     case 177:
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
+
+      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
         user_name,
         UsersIndex,
