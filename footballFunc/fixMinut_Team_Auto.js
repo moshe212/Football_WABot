@@ -21,20 +21,20 @@ const fixMinut_Team_Auto = async function (
     // GuessData,
     cycleIndexNum
   );
-  const TeamUp = teamUp;
+  const TeamUp = teamUp + "*";
   const Minute =
     minute === "1"
-      ? "90 דקות"
+      ? "90 דקות*"
       : minute === "2"
-      ? "120 דקות"
+      ? "120 דקות*"
       : minute === "3"
-      ? "פנדלים"
+      ? "פנדלים*"
       : "";
   try {
     switch (gameNum) {
       case 1:
         console.log("case 1 fixAuto");
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
@@ -68,7 +68,7 @@ const fixMinut_Team_Auto = async function (
       case 2:
         console.log("case 2");
 
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
@@ -101,7 +101,7 @@ const fixMinut_Team_Auto = async function (
         break;
 
       case 3:
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
@@ -134,7 +134,7 @@ const fixMinut_Team_Auto = async function (
         break;
 
       case 4:
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
@@ -167,7 +167,7 @@ const fixMinut_Team_Auto = async function (
         break;
 
       case 5:
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
@@ -200,7 +200,7 @@ const fixMinut_Team_Auto = async function (
         break;
 
       case 6:
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
@@ -233,7 +233,7 @@ const fixMinut_Team_Auto = async function (
         break;
 
       case 7:
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
@@ -265,7 +265,7 @@ const fixMinut_Team_Auto = async function (
 
         break;
       case 8:
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
@@ -297,7 +297,7 @@ const fixMinut_Team_Auto = async function (
 
         break;
       case 9:
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
@@ -329,7 +329,7 @@ const fixMinut_Team_Auto = async function (
 
         break;
       case 10:
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
@@ -361,7 +361,7 @@ const fixMinut_Team_Auto = async function (
 
         break;
       case 11:
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
@@ -393,7 +393,7 @@ const fixMinut_Team_Auto = async function (
 
         break;
       case 12:
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
@@ -425,7 +425,7 @@ const fixMinut_Team_Auto = async function (
 
         break;
       case 13:
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
@@ -457,7 +457,7 @@ const fixMinut_Team_Auto = async function (
 
         break;
       case 14:
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
@@ -489,7 +489,7 @@ const fixMinut_Team_Auto = async function (
 
         break;
       case 15:
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
@@ -521,7 +521,7 @@ const fixMinut_Team_Auto = async function (
 
         break;
       case 16:
-        if (TeamUp !== "") {
+        if (teamUp !== "") {
           await saveData_Full(
             user_name,
             UsersIndex,
