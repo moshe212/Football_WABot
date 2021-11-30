@@ -44,8 +44,8 @@ const getSavedGuss_Gavia = async function (
           const Team2 = GamesList[g][1];
           switch (g) {
             case 0:
-              score1 = SavedGuess[5];
-              score2 = SavedGuess[6];
+              score1 = SavedGuess[6];
+              score2 = SavedGuess[5];
               teamUp = SavedGuess[7];
               minute = SavedGuess[8];
               scoresObj = {
@@ -58,8 +58,8 @@ const getSavedGuss_Gavia = async function (
               //   console.log(Arr);
               break;
             case 1:
-              score1 = SavedGuess[21];
-              score2 = SavedGuess[22];
+              score1 = SavedGuess[22];
+              score2 = SavedGuess[21];
               teamUp = SavedGuess[23];
               minute = SavedGuess[24];
               scoresObj = {
@@ -71,8 +71,8 @@ const getSavedGuss_Gavia = async function (
               Arr.push(scoresObj);
               break;
             case 2:
-              score1 = SavedGuess[37];
-              score2 = SavedGuess[38];
+              score1 = SavedGuess[38];
+              score2 = SavedGuess[37];
               teamUp = SavedGuess[39];
               minute = SavedGuess[40];
               scoresObj = {
@@ -84,8 +84,8 @@ const getSavedGuss_Gavia = async function (
               Arr.push(scoresObj);
               break;
             case 3:
-              score1 = SavedGuess[53];
-              score2 = SavedGuess[54];
+              score1 = SavedGuess[54];
+              score2 = SavedGuess[53];
               teamUp = SavedGuess[55];
               minute = SavedGuess[56];
               scoresObj = {
@@ -97,8 +97,8 @@ const getSavedGuss_Gavia = async function (
               Arr.push(scoresObj);
               break;
             case 4:
-              score1 = SavedGuess[69];
-              score2 = SavedGuess[70];
+              score1 = SavedGuess[70];
+              score2 = SavedGuess[69];
               teamUp = SavedGuess[71];
               minute = SavedGuess[72];
               scoresObj = {
@@ -110,8 +110,8 @@ const getSavedGuss_Gavia = async function (
               Arr.push(scoresObj);
               break;
             case 5:
-              score1 = SavedGuess[85];
-              score2 = SavedGuess[86];
+              score1 = SavedGuess[86];
+              score2 = SavedGuess[85];
               teamUp = SavedGuess[87];
               minute = SavedGuess[88];
               scoresObj = {
@@ -123,8 +123,8 @@ const getSavedGuss_Gavia = async function (
               Arr.push(scoresObj);
               break;
             case 6:
-              score1 = SavedGuess[101];
-              score2 = SavedGuess[102];
+              score1 = SavedGuess[102];
+              score2 = SavedGuess[101];
               teamUp = SavedGuess[103];
               minute = SavedGuess[104];
               scoresObj = {
@@ -136,8 +136,8 @@ const getSavedGuss_Gavia = async function (
               Arr.push(scoresObj);
               break;
             case 7:
-              score1 = SavedGuess[117];
-              score2 = SavedGuess[118];
+              score1 = SavedGuess[118];
+              score2 = SavedGuess[117];
               teamUp = SavedGuess[119];
               minute = SavedGuess[120];
               scoresObj = {
@@ -149,8 +149,8 @@ const getSavedGuss_Gavia = async function (
               Arr.push(scoresObj);
               break;
             case 8:
-              score1 = SavedGuess[133];
-              score2 = SavedGuess[134];
+              score1 = SavedGuess[134];
+              score2 = SavedGuess[133];
               teamUp = SavedGuess[135];
               minute = SavedGuess[136];
               scoresObj = {
@@ -162,8 +162,8 @@ const getSavedGuss_Gavia = async function (
               Arr.push(scoresObj);
               break;
             case 9:
-              score1 = SavedGuess[149];
-              score2 = SavedGuess[150];
+              score1 = SavedGuess[150];
+              score2 = SavedGuess[149];
               teamUp = SavedGuess[151];
               minute = SavedGuess[152];
               scoresObj = {
@@ -175,8 +175,8 @@ const getSavedGuss_Gavia = async function (
               Arr.push(scoresObj);
               break;
             case 10:
-              score1 = SavedGuess[165];
-              score2 = SavedGuess[166];
+              score1 = SavedGuess[166];
+              score2 = SavedGuess[165];
               teamUp = SavedGuess[167];
               minute = SavedGuess[168];
               scoresObj = {
@@ -188,8 +188,8 @@ const getSavedGuss_Gavia = async function (
               Arr.push(scoresObj);
               break;
             case 11:
-              score1 = SavedGuess[181];
-              score2 = SavedGuess[182];
+              score1 = SavedGuess[182];
+              score2 = SavedGuess[181];
               teamUp = SavedGuess[183];
               minute = SavedGuess[184];
               scoresObj = {
@@ -201,8 +201,8 @@ const getSavedGuss_Gavia = async function (
               Arr.push(scoresObj);
               break;
             case 12:
-              score1 = SavedGuess[197];
-              score2 = SavedGuess[198];
+              score1 = SavedGuess[198];
+              score2 = SavedGuess[197];
               teamUp = SavedGuess[199];
               minute = SavedGuess[200];
               scoresObj = {
@@ -214,8 +214,8 @@ const getSavedGuss_Gavia = async function (
               Arr.push(scoresObj);
               break;
             case 13:
-              score1 = SavedGuess[213];
-              score2 = SavedGuess[214];
+              score1 = SavedGuess[214];
+              score2 = SavedGuess[213];
               teamUp = SavedGuess[215];
               minute = SavedGuess[216];
               scoresObj = {
@@ -227,8 +227,8 @@ const getSavedGuss_Gavia = async function (
               Arr.push(scoresObj);
               break;
             case 14:
-              score1 = SavedGuess[229];
-              score2 = SavedGuess[230];
+              score1 = SavedGuess[230];
+              score2 = SavedGuess[229];
               teamUp = SavedGuess[231];
               minute = SavedGuess[232];
               scoresObj = {
@@ -240,8 +240,8 @@ const getSavedGuss_Gavia = async function (
               Arr.push(scoresObj);
               break;
             case 15:
-              score1 = SavedGuess[245];
-              score2 = SavedGuess[246];
+              score1 = SavedGuess[246];
+              score2 = SavedGuess[245];
               teamUp = SavedGuess[247];
               minute = SavedGuess[248];
               scoresObj = {
