@@ -327,7 +327,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -355,7 +355,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       }
 
       if (GamesList.length < 2) {
-        await footballFunc.saveData_Full(
+        await footballFunc.saveDate_googleAPI(
           user_name,
           UsersIndex,
           GuessData,
@@ -404,7 +404,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         textMessage1 = str11 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
-        footballFunc.saveData_Full(
+        footballFunc.saveDate_googleAPI(
           user_name,
           UsersIndex,
           GuessData,
@@ -436,7 +436,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -466,7 +466,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -492,7 +492,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
       if (GamesList.length < 3) {
-        await footballFunc.saveData_Full(
+        await footballFunc.saveDate_googleAPI(
           user_name,
           UsersIndex,
           GuessData,
@@ -531,7 +531,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         textMessage1 = str14 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
-        footballFunc.saveData_Full(
+        footballFunc.saveDate_googleAPI(
           user_name,
           UsersIndex,
           GuessData,
@@ -564,7 +564,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -594,7 +594,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -627,7 +627,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -658,7 +658,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -688,7 +688,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -714,7 +714,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
       if (GamesList.length < 5) {
-        await footballFunc.saveData_Full(
+        await footballFunc.saveDate_googleAPI(
           user_name,
           UsersIndex,
           GuessData,
@@ -753,7 +753,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         textMessage1 = str20 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
-        footballFunc.saveData_Full(
+        footballFunc.saveDate_googleAPI(
           user_name,
           UsersIndex,
           GuessData,
@@ -786,7 +786,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -816,7 +816,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -849,7 +849,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -880,7 +880,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -910,7 +910,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -943,7 +943,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -974,7 +974,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1004,7 +1004,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1037,7 +1037,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1068,7 +1068,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1098,7 +1098,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1124,7 +1124,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
       if (GamesList.length < 9) {
-        await footballFunc.saveData_Full(
+        await footballFunc.saveDate_googleAPI(
           user_name,
           UsersIndex,
           GuessData,
@@ -1163,7 +1163,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         textMessage1 = str26 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
-        footballFunc.saveData_Full(
+        footballFunc.saveDate_googleAPI(
           user_name,
           UsersIndex,
           GuessData,
@@ -1196,7 +1196,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1226,7 +1226,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1259,7 +1259,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1290,7 +1290,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1320,7 +1320,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1353,7 +1353,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1384,7 +1384,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1414,7 +1414,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1447,7 +1447,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1478,7 +1478,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1508,7 +1508,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1541,7 +1541,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1572,7 +1572,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1602,7 +1602,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1635,7 +1635,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1666,7 +1666,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1696,7 +1696,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1729,7 +1729,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1760,7 +1760,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1790,7 +1790,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1823,7 +1823,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1854,7 +1854,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1886,7 +1886,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -1919,7 +1919,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "פנדלים";
       }
 
-      await footballFunc.saveData_Full(
+      await footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -2543,7 +2543,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -2569,7 +2569,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       ScoreTeam2 = score.split(":")[0];
       // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -2595,7 +2595,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       ScoreTeam2 = score.split(":")[0];
       // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -2620,7 +2620,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       ScoreTeam2 = score.split(":")[0];
       // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -2645,7 +2645,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       ScoreTeam2 = score.split(":")[0];
       // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -2672,7 +2672,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       ScoreTeam2 = score.split(":")[0];
       // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
 
-      footballFunc.saveData_Full(
+      footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -2692,7 +2692,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       ScoreTeam2 = score.split(":")[0];
       // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
 
-      await footballFunc.saveData_Full(
+      await footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         GuessData,
@@ -2718,7 +2718,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         cycleNum
       );
 
-      const resSaveIdx = await footballFunc.saveData_Full(
+      const resSaveIdx = await footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
         null,
