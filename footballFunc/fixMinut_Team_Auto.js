@@ -1,4 +1,5 @@
 const { saveData_Full } = require("./saveData_Full");
+const { saveDate_googleAPI } = require("./saveDate_googleAPI");
 
 const fixMinut_Team_Auto = async function (
   gameNum,
@@ -35,7 +36,7 @@ const fixMinut_Team_Auto = async function (
       case 1:
         console.log("case 1 fixAuto");
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -49,7 +50,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -69,7 +70,7 @@ const fixMinut_Team_Auto = async function (
         console.log("case 2");
 
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -83,7 +84,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -102,7 +103,7 @@ const fixMinut_Team_Auto = async function (
 
       case 3:
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -116,7 +117,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -135,7 +136,7 @@ const fixMinut_Team_Auto = async function (
 
       case 4:
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -149,7 +150,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -168,7 +169,7 @@ const fixMinut_Team_Auto = async function (
 
       case 5:
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -182,7 +183,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -201,7 +202,7 @@ const fixMinut_Team_Auto = async function (
 
       case 6:
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -215,7 +216,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -234,7 +235,7 @@ const fixMinut_Team_Auto = async function (
 
       case 7:
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -248,7 +249,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -266,7 +267,7 @@ const fixMinut_Team_Auto = async function (
         break;
       case 8:
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -280,7 +281,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -298,7 +299,7 @@ const fixMinut_Team_Auto = async function (
         break;
       case 9:
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -312,7 +313,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -330,7 +331,7 @@ const fixMinut_Team_Auto = async function (
         break;
       case 10:
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -344,7 +345,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -362,7 +363,7 @@ const fixMinut_Team_Auto = async function (
         break;
       case 11:
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -376,7 +377,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -394,7 +395,7 @@ const fixMinut_Team_Auto = async function (
         break;
       case 12:
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -408,7 +409,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -426,7 +427,7 @@ const fixMinut_Team_Auto = async function (
         break;
       case 13:
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -440,7 +441,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -458,7 +459,7 @@ const fixMinut_Team_Auto = async function (
         break;
       case 14:
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -472,7 +473,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -490,7 +491,7 @@ const fixMinut_Team_Auto = async function (
         break;
       case 15:
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -504,7 +505,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -522,7 +523,7 @@ const fixMinut_Team_Auto = async function (
         break;
       case 16:
         if (teamUp !== "") {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
@@ -536,7 +537,7 @@ const fixMinut_Team_Auto = async function (
             TeamUp
           );
         } else {
-          await saveData_Full(
+          await saveDate_googleAPI(
             user_name,
             UsersIndex,
             GuessData,
