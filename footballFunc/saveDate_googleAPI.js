@@ -64,7 +64,7 @@ const saveDate_googleAPI = async function (
           (raw_idx + 2);
         console.log("Range_Cell", Range_Cell);
         //write data into the google sheets
-        const res_save = await googleSheetsInstance.spreadsheets.values.append({
+        const res_save = await googleSheetsInstance.spreadsheets.values.update({
           auth, //auth object
           spreadsheetId, //spreadsheet id
           range: Range_Cell, //"Sheet1!A:B" sheet name and range of cells
@@ -86,7 +86,7 @@ const saveDate_googleAPI = async function (
           columnLetter1;
         console.log("Team", Team);
         console.log("Range_Cell", Range_Cell);
-        const res_save = await googleSheetsInstance.spreadsheets.values.append({
+        const res_save = await googleSheetsInstance.spreadsheets.values.update({
           auth, //auth object
           spreadsheetId, //spreadsheet id
           range: Range_Cell, //"Sheet1!A:B" sheet name and range of cells
