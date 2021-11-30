@@ -14,9 +14,8 @@ const saveDate_googleAPI = async function (
   IsFirst,
   Team
 ) {
-  const creds = require("../config/CreditTransaction-d9fe1ef7e128.json");
   const auth = new google.auth.GoogleAuth({
-    keyFile: creds, //the key file
+    keyFile: "../config/CreditTransaction-d9fe1ef7e128.json", //the key file
     //url to spreadsheets API
     scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
