@@ -27,7 +27,7 @@ const saveDate_googleAPI = async function (
     auth: authClientObject,
   });
   const spreadsheetId = "1J3iFj9uM3TEC3y__u02PFnq5M5YKSezXP6TVYOEGMto";
-  const Range_Cell = "";
+  let Range_Cell = "";
   try {
     let index = null;
     console.log("user_name_g", user_name);
