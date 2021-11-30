@@ -1920,7 +1920,16 @@ app.post("/api/Whatsapp", async (req, res) => {
         "",
         Minuts
       );
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum
+      );
 
+      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
         user_name,
         UsersIndex,
