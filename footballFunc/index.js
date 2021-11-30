@@ -10,6 +10,7 @@ const { chooseGameToFix_Gavia } = require("./chooseGameToFix_Gavia");
 const { saveFix_Gavia } = require("./saveFix_Gavia");
 const { fixMinut_Team_Auto } = require("./fixMinut_Team_Auto");
 const { fixAuto_Main } = require("./fixAuto_Main");
+const { saveDate_googleAPI } = require("./saveDate_googleAPI");
 
 const footballFunc = {
   getDataFromSheet,
@@ -24,6 +25,7 @@ const footballFunc = {
   saveFix_Gavia,
   fixMinut_Team_Auto,
   fixAuto_Main,
+  saveDate_googleAPI,
 };
 
 module.exports = { footballFunc };
