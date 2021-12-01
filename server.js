@@ -298,18 +298,6 @@ app.post("/api/Whatsapp", async (req, res) => {
         ScoreTeam2
       );
 
-      // footballFunc.saveData_Full(
-      //   user_name,
-      //   UsersIndex,
-      //   GuessData_Gavia,
-      //   cycleIndexNum,
-      //   "גביע המדינה",
-      //   "F",
-      //   "G",
-      //   ScoreTeam1,
-      //   ScoreTeam2
-      // );
-
       break;
     case 117:
       console.log(GamesList);
@@ -322,8 +310,8 @@ app.post("/api/Whatsapp", async (req, res) => {
         GuessData,
         cycleIndexNum,
         "גביע המדינה",
-        F,
-        I
+        "F",
+        "I"
       );
       console.log("GameRow", GameRow);
       const str10 = "*" + cycleNum + ", משחק מספר 1:* ";
