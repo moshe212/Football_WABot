@@ -317,6 +317,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       const str10 = "*" + cycleNum + ", משחק מספר 1:* ";
       textMessage1 = str10 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
+      console.log(GameRow.data[0], GameRow.data[1]);
       if (GameRow.data[0] != GameRow.data[1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
