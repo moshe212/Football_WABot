@@ -67,7 +67,7 @@ let isFirst = true;
 let teamUp_ToFix = "";
 let minute_toFix = "";
 let teamUp_ToFix_Num = "";
-let GameRow = "";
+let GameRow;
 
 const getData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
@@ -313,7 +313,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         "F",
         "I"
       );
-      console.log("GameRow", JSON.parse(GameRow).data);
+      console.log("GameRow", GameRow.data);
       const str10 = "*" + cycleNum + ", משחק מספר 1:* ";
       textMessage1 = str10 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
