@@ -34,7 +34,8 @@ const fixAuto_Main = async function (
     } else if (
       parseInt(GuessData_Saved[c].team1[1]) >
         parseInt(GuessData_Saved[c].team2[1]) &&
-      GuessData_Saved[c].teamUp != GuessData_Saved[c].team1[0]
+      GuessData_Saved[c].teamUp.replace("*", "") !=
+        GuessData_Saved[c].team1[0].replace("*", "")
     ) {
       await fixMinut_Team_Auto(
         c + 1,
@@ -50,14 +51,15 @@ const fixAuto_Main = async function (
     } else if (
       parseInt(GuessData_Saved[c].team1[1]) <
         parseInt(GuessData_Saved[c].team2[1]) &&
-      GuessData_Saved[c].teamUp != GuessData_Saved[c].team2[0]
+      GuessData_Saved[c].teamUp.replace("*", "") !=
+        GuessData_Saved[c].team2[0].replace("*", "")
     ) {
       console.log(
         "GuessData_Saved[c]",
         parseInt(GuessData_Saved[c].team1[1]),
         parseInt(GuessData_Saved[c].team2[1]),
-        GuessData_Saved[c].teamUp,
-        GuessData_Saved[c].team2[0]
+        GuessData_Saved[c].teamUp.replace("*", ""),
+        GuessData_Saved[c].team2[0].replace("*", "")
       );
       await fixMinut_Team_Auto(
         c + 1,
