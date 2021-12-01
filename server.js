@@ -458,11 +458,26 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[1][0];
       Team2 = GamesList[1][1];
-
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "V",
+        "Y"
+      );
+      console.log("GameRow", GameRow.data);
       const str13 = "*" + cycleNum + ", משחק מספר 2:* ";
       textMessage1 = str13 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
-      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      }
 
       ChoiseUp = req.body.query.message;
       if (parseInt(ChoiseUp) === 1) {
@@ -586,11 +601,26 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[2][0];
       Team2 = GamesList[2][1];
-
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "AL",
+        "AO"
+      );
+      console.log("GameRow", GameRow.data);
       const str16 = "*" + cycleNum + ", משחק מספר 3:* ";
       textMessage1 = str16 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
-      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      }
 
       ChoiseUp = req.body.query.message;
       if (parseInt(ChoiseUp) === 1) {
@@ -680,11 +710,26 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[3][0];
       Team2 = GamesList[3][1];
-
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "BB",
+        "BE"
+      );
+      console.log("GameRow", GameRow.data);
       const str19 = "*" + cycleNum + ", משחק מספר 4:* ";
       textMessage1 = str19 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
-      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      }
 
       ChoiseUp = req.body.query.message;
       if (parseInt(ChoiseUp) === 1) {
@@ -808,11 +853,26 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[4][0];
       Team2 = GamesList[4][1];
-
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "BR",
+        "BU"
+      );
+      console.log("GameRow", GameRow.data);
       const str22 = "*" + cycleNum + ", משחק מספר 5:* ";
       textMessage1 = str22 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
-      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      }
 
       ChoiseUp = req.body.query.message;
       if (parseInt(ChoiseUp) === 1) {
@@ -902,11 +962,26 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[5][0];
       Team2 = GamesList[5][1];
-
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "CH",
+        "CK"
+      );
+      console.log("GameRow", GameRow.data);
       const str58 = "*" + cycleNum + ", משחק מספר 6:* ";
       textMessage1 = str58 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
-      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      }
 
       ChoiseUp = req.body.query.message;
       if (parseInt(ChoiseUp) === 1) {
@@ -996,11 +1071,26 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[6][0];
       Team2 = GamesList[6][1];
-
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "CX",
+        "DA"
+      );
+      console.log("GameRow", GameRow.data);
       const str61 = "*" + cycleNum + ", משחק מספר 7:* ";
       textMessage1 = str61 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
-      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      }
 
       ChoiseUp = req.body.query.message;
       if (parseInt(ChoiseUp) === 1) {
@@ -1090,11 +1180,26 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[7][0];
       Team2 = GamesList[7][1];
-
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "DN",
+        "DQ"
+      );
+      console.log("GameRow", GameRow.data);
       const str25 = "*" + cycleNum + ", משחק מספר 8:* ";
       textMessage1 = str25 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
-      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      }
 
       ChoiseUp = req.body.query.message;
       if (parseInt(ChoiseUp) === 1) {
@@ -1218,11 +1323,26 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[8][0];
       Team2 = GamesList[8][1];
-
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "ED",
+        "EG"
+      );
+      console.log("GameRow", GameRow.data);
       const str28 = "*" + cycleNum + ", משחק מספר 9:* ";
       textMessage1 = str28 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
-      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      }
 
       ChoiseUp = req.body.query.message;
       if (parseInt(ChoiseUp) === 1) {
@@ -1312,11 +1432,26 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[9][0];
       Team2 = GamesList[9][1];
-
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "ET",
+        "EW"
+      );
+      console.log("GameRow", GameRow.data);
       const str31 = "*" + cycleNum + ", משחק מספר 10:* ";
       textMessage1 = str31 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
-      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      }
 
       ChoiseUp = req.body.query.message;
       if (parseInt(ChoiseUp) === 1) {
@@ -1406,11 +1541,26 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[10][0];
       Team2 = GamesList[10][1];
-
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "FJ",
+        "FM"
+      );
+      console.log("GameRow", GameRow.data);
       const str34 = "*" + cycleNum + ", משחק מספר 11:* ";
       textMessage1 = str34 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
-      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      }
 
       ChoiseUp = req.body.query.message;
       if (parseInt(ChoiseUp) === 1) {
@@ -1500,11 +1650,26 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[11][0];
       Team2 = GamesList[11][1];
-
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "FZ",
+        "GC"
+      );
+      console.log("GameRow", GameRow.data);
       const str37 = "*" + cycleNum + ", משחק מספר 12:* ";
       textMessage1 = str37 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
-      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      }
 
       ChoiseUp = req.body.query.message;
       if (parseInt(ChoiseUp) === 1) {
@@ -1594,11 +1759,26 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[12][0];
       Team2 = GamesList[12][1];
-
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "GP",
+        "GS"
+      );
+      console.log("GameRow", GameRow.data);
       const str40 = "*" + cycleNum + ", משחק מספר 13:* ";
       textMessage1 = str40 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
-      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      }
 
       ChoiseUp = req.body.query.message;
       if (parseInt(ChoiseUp) === 1) {
@@ -1688,11 +1868,26 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[13][0];
       Team2 = GamesList[13][1];
-
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "HF",
+        "HI"
+      );
+      console.log("GameRow", GameRow.data);
       const str43 = "*" + cycleNum + ", משחק מספר 14:* ";
       textMessage1 = str43 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
-      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      }
 
       ChoiseUp = req.body.query.message;
       if (parseInt(ChoiseUp) === 1) {
@@ -1782,11 +1977,26 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[14][0];
       Team2 = GamesList[14][1];
-
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "HV",
+        "HY"
+      );
+      console.log("GameRow", GameRow.data);
       const str46 = "*" + cycleNum + ", משחק מספר 15:* ";
       textMessage1 = str46 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
-      textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      }
 
       ChoiseUp = req.body.query.message;
       if (parseInt(ChoiseUp) === 1) {
@@ -1876,11 +2086,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       console.log(GamesList);
       Team1 = GamesList[15][0];
       Team2 = GamesList[15][1];
-
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "IL",
+        "IO"
+      );
+      console.log("GameRow", GameRow.data);
       const str49 = "*" + cycleNum + ", משחק מספר 16:* ";
       textMessage1 = str49 + "\n" + Team1 + " - " + Team2;
-      textMessage2 =
-        "איך יסתיים המשחק?" + "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage2 = "איך יסתיים המשחק?" + "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage2 =
+          "איך יסתיים המשחק?" + "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+      }
+
       textMessage3 =
         "*שימו לב:* אחרי שתנחשו את תוצאת המשחק האחרונה, ייקח לי כמה דקות לעבד את הנתונים ולהציג את ניחושי השלב המלאים ששלחתם. במידה ולא קיבלתם ממני סיכום של הניחושים לאחר 5 דקות, אנא שילחו שוב את הניחוש לשאלה האחרונה.";
 
