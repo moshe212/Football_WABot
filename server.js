@@ -313,7 +313,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         "F",
         "I"
       );
-      console.log("GameRow", GameRow);
+      console.log("GameRow", JSONparse(GameRow).data);
       const str10 = "*" + cycleNum + ", משחק מספר 1:* ";
       textMessage1 = str10 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
