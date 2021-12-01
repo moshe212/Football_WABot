@@ -52,6 +52,13 @@ const fixAuto_Main = async function (
         parseInt(GuessData_Saved[c].team2[1]) &&
       GuessData_Saved[c].teamUp != GuessData_Saved[c].team2[0]
     ) {
+      console.log(
+        "GuessData_Saved[c]",
+        parseInt(GuessData_Saved[c].team1[1]),
+        parseInt(GuessData_Saved[c].team2[1]),
+        GuessData_Saved[c].teamUp,
+        GuessData_Saved[c].team2[0]
+      );
       await fixMinut_Team_Auto(
         c + 1,
         "",
