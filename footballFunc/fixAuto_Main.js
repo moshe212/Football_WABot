@@ -18,7 +18,7 @@ const fixAuto_Main = async function (
   for (let c = 0; c < GuessData_Saved.length; c++) {
     if (
       GuessData_Saved[c].team1[1] === GuessData_Saved[c].team2[1] &&
-      GuessData_Saved[c].minute != "פנדלים"
+      GuessData_Saved[c].minute.replace("*", "") != "פנדלים"
     ) {
       await fixMinut_Team_Auto(
         c + 1,

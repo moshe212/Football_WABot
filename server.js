@@ -367,7 +367,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
@@ -533,7 +533,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
@@ -696,7 +696,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
@@ -811,7 +811,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
@@ -974,7 +974,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
@@ -1096,7 +1096,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
@@ -1218,7 +1218,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
@@ -1333,7 +1333,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
@@ -1496,7 +1496,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
@@ -1618,7 +1618,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
@@ -1740,7 +1740,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
@@ -1862,7 +1862,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
@@ -1984,7 +1984,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
@@ -2106,7 +2106,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
@@ -2228,7 +2228,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
@@ -2351,7 +2351,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         Minuts = "120 דקות";
       } else {
         if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "";
+          Minuts = "90 דקות*";
         } else {
           Minuts = "פנדלים";
         }
