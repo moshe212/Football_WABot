@@ -351,12 +351,26 @@ app.post("/api/Whatsapp", async (req, res) => {
     case 120:
       console.log(GamesList);
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "F",
+        "I"
+      );
+
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
 
       if (GamesList.length < 2) {
@@ -504,12 +518,25 @@ app.post("/api/Whatsapp", async (req, res) => {
     case 124:
       console.log(GamesList);
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "V",
+        "Y"
+      );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
       if (GamesList.length < 3) {
         await footballFunc.saveDate_googleAPI(
@@ -654,12 +681,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "AL",
+        "AO"
+      );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
 
       footballFunc.saveDate_googleAPI(
@@ -756,12 +796,25 @@ app.post("/api/Whatsapp", async (req, res) => {
     case 130:
       console.log(GamesList);
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "BB",
+        "BE"
+      );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
       if (GamesList.length < 5) {
         await footballFunc.saveDate_googleAPI(
@@ -906,12 +959,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "BR",
+        "BU"
+      );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
 
       footballFunc.saveDate_googleAPI(
@@ -1015,12 +1081,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "CH",
+        "CK"
+      );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
 
       footballFunc.saveDate_googleAPI(
@@ -1124,12 +1203,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "CX",
+        "DA"
+      );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
 
       footballFunc.saveDate_googleAPI(
@@ -1226,12 +1318,25 @@ app.post("/api/Whatsapp", async (req, res) => {
     case 142:
       console.log(GamesList);
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "DN",
+        "DQ"
+      );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
       if (GamesList.length < 9) {
         await footballFunc.saveDate_googleAPI(
@@ -1376,12 +1481,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "ED",
+        "EG"
+      );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
 
       footballFunc.saveDate_googleAPI(
@@ -1485,12 +1603,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "ET",
+        "EW"
+      );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
 
       footballFunc.saveDate_googleAPI(
@@ -1594,12 +1725,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "FJ",
+        "FM"
+      );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
 
       footballFunc.saveDate_googleAPI(
@@ -1703,12 +1847,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "FZ",
+        "GC"
+      );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
 
       footballFunc.saveDate_googleAPI(
@@ -1812,12 +1969,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "GP",
+        "GS"
+      );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
 
       footballFunc.saveDate_googleAPI(
@@ -1921,12 +2091,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "HF",
+        "HI"
+      );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
 
       footballFunc.saveDate_googleAPI(
@@ -2030,12 +2213,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "HV",
+        "HY"
+      );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
 
       footballFunc.saveDate_googleAPI(
@@ -2140,12 +2336,25 @@ app.post("/api/Whatsapp", async (req, res) => {
       // textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData,
+        cycleIndexNum,
+        "גביע המדינה",
+        "IL",
+        "IO"
+      );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
       } else if (parseInt(ChoiseMinut) === 2) {
         Minuts = "120 דקות";
       } else {
-        Minuts = "פנדלים";
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "";
+        } else {
+          Minuts = "פנדלים";
+        }
       }
 
       await footballFunc.saveDate_googleAPI(
