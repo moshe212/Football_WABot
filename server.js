@@ -322,7 +322,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+        textMessage3 = "\n3️⃣ פנדלים";
       }
 
       ChoiseUp = req.body.query.message;
@@ -490,7 +490,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+        textMessage3 = "\n3️⃣ פנדלים";
       }
 
       ChoiseUp = req.body.query.message;
@@ -646,7 +646,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+        textMessage3 = "\n3️⃣ פנדלים";
       }
 
       ChoiseUp = req.body.query.message;
@@ -768,7 +768,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+        textMessage3 = "\n3️⃣ פנדלים";
       }
 
       ChoiseUp = req.body.query.message;
@@ -924,7 +924,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+        textMessage3 = "\n3️⃣ פנדלים";
       }
 
       ChoiseUp = req.body.query.message;
@@ -1046,7 +1046,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+        textMessage3 = "\n3️⃣ פנדלים";
       }
 
       ChoiseUp = req.body.query.message;
@@ -1168,7 +1168,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+        textMessage3 = "\n3️⃣ פנדלים";
       }
 
       ChoiseUp = req.body.query.message;
@@ -1290,7 +1290,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+        textMessage3 = "\n3️⃣ פנדלים";
       }
 
       ChoiseUp = req.body.query.message;
@@ -1446,7 +1446,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+        textMessage3 = "\n3️⃣ פנדלים";
       }
 
       ChoiseUp = req.body.query.message;
@@ -1568,7 +1568,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+        textMessage3 = "\n3️⃣ פנדלים";
       }
 
       ChoiseUp = req.body.query.message;
@@ -1690,7 +1690,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+        textMessage3 = "\n3️⃣ פנדלים";
       }
 
       ChoiseUp = req.body.query.message;
@@ -1812,7 +1812,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+        textMessage3 = "\n3️⃣ פנדלים";
       }
 
       ChoiseUp = req.body.query.message;
@@ -1934,7 +1934,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+        textMessage3 = "\n3️⃣ פנדלים";
       }
 
       ChoiseUp = req.body.query.message;
@@ -2056,7 +2056,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+        textMessage3 = "\n3️⃣ פנדלים";
       }
 
       ChoiseUp = req.body.query.message;
@@ -2178,7 +2178,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
       } else {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
+        textMessage3 = "\n3️⃣ פנדלים";
       }
 
       ChoiseUp = req.body.query.message;
