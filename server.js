@@ -3126,7 +3126,7 @@ app.post("/api/Whatsapp", async (req, res) => {
 
     case 64:
       score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[0];
+      ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
 
