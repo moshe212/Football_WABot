@@ -17,8 +17,9 @@ const chooseGameToFix_Gavia = async function (
       "*\n*" +
       GuessData_Saved[i].teamUp +
       "* עולה, ב-" +
-      "*";
-    GuessData_Saved[i].minute + "*\n";
+      "*" +
+      GuessData_Saved[i].minute +
+      "*\n";
 
     fullStr = fullStr + str;
   }
@@ -41,8 +42,9 @@ const chooseGameToFix_Gavia = async function (
       "*\n*" +
       GuessData_Saved[f].teamUp +
       "* עולה, ב-" +
-      "*";
-    GuessData_Saved[f].minute + "*\n";
+      "*" +
+      GuessData_Saved[f].minute +
+      "*\n";
 
     fullStrfIX = fullStrfIX + strfIX;
   }
