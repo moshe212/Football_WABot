@@ -197,7 +197,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       } else {
         if (cycleText.includes("מחזור")) {
           textMessage1 =
-            "שומעים רגע? הדד ליין לשליחת הניחושים למחזור *" +
+            "שומעים רגע? הדד ליין לשליחת הניחושים למחזור " +
             "*" +
             cycleNum +
             "*" +
@@ -2920,8 +2920,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         break;
       } else {
         textMessage1 =
-          "שומעים רגע? הדד ליין לשליחת הניחושים ל*מחזור ה*-" +
-          "*" +
+          "שומעים רגע? הדד ליין לשליחת הניחושים ל*מחזור ה-" +
           cycleNum +
           "*" +
           " עבר.";
