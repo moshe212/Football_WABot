@@ -26,10 +26,11 @@ const getGameGuss = async function (
   try {
     let index = null;
     console.log("user_name_g", user_name);
-    console.log("UsersIndex", UsersIndex);
+    // console.log("UsersIndex", UsersIndex);
     for (let u = 0; u < UsersIndex.length; u++) {
       if (user_name === UsersIndex[u]._rawData[0]) {
         index = UsersIndex[u]._rawData[1];
+        console.log("index", index);
       }
     }
 
