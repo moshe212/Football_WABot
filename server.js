@@ -356,7 +356,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "F",
@@ -394,7 +394,7 @@ app.post("/api/Whatsapp", async (req, res) => {
           GamesList,
           user_name,
           UsersIndex,
-          GuessData,
+          GuessData_Gavia,
           cycleIndexNum
         );
 
@@ -428,7 +428,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         footballFunc.saveDate_googleAPI(
           user_name,
           UsersIndex,
-          GuessData,
+          GuessData_Gavia,
           cycleIndexNum,
           "גביע המדינה",
           "I",
@@ -477,7 +477,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "V",
@@ -505,7 +505,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "X",
@@ -523,7 +523,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "V",
@@ -544,7 +544,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         await footballFunc.saveDate_googleAPI(
           user_name,
           UsersIndex,
-          GuessData,
+          GuessData_Gavia,
           cycleIndexNum,
           "גביע המדינה",
           "Y",
@@ -583,7 +583,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         footballFunc.saveDate_googleAPI(
           user_name,
           UsersIndex,
-          GuessData,
+          GuessData_Gavia,
           cycleIndexNum,
           "גביע המדינה",
           "Y",
@@ -633,7 +633,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "AL",
@@ -661,7 +661,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "AN",
@@ -686,7 +686,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "AL",
@@ -707,7 +707,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "AO",
@@ -755,7 +755,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "BB",
@@ -783,7 +783,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "BD",
@@ -801,7 +801,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "BB",
@@ -822,7 +822,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         await footballFunc.saveDate_googleAPI(
           user_name,
           UsersIndex,
-          GuessData,
+          GuessData_Gavia,
           cycleIndexNum,
           "גביע המדינה",
           "BE",
@@ -861,7 +861,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         footballFunc.saveDate_googleAPI(
           user_name,
           UsersIndex,
-          GuessData,
+          GuessData_Gavia,
           cycleIndexNum,
           "גביע המדינה",
           "BE",
@@ -911,7 +911,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "BR",
@@ -939,7 +939,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "BT",
@@ -964,7 +964,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "BR",
@@ -985,7 +985,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "BU",
@@ -1033,7 +1033,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "CH",
@@ -1061,7 +1061,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "CJ",
@@ -1086,7 +1086,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "CH",
@@ -1107,7 +1107,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "CK",
@@ -1155,7 +1155,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "CX",
@@ -1183,7 +1183,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "CZ",
@@ -1208,7 +1208,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "CX",
@@ -1229,7 +1229,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "DA",
@@ -1277,7 +1277,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "DN",
@@ -1305,7 +1305,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "DP",
@@ -1323,7 +1323,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "DN",
@@ -1344,7 +1344,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         await footballFunc.saveDate_googleAPI(
           user_name,
           UsersIndex,
-          GuessData,
+          GuessData_Gavia,
           cycleIndexNum,
           "גביע המדינה",
           "DQ",
@@ -1383,7 +1383,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         footballFunc.saveDate_googleAPI(
           user_name,
           UsersIndex,
-          GuessData,
+          GuessData_Gavia,
           cycleIndexNum,
           "גביע המדינה",
           "DQ",
@@ -1433,7 +1433,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "ED",
@@ -1461,7 +1461,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "EF",
@@ -1486,7 +1486,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "ED",
@@ -1507,7 +1507,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "EG",
@@ -1555,7 +1555,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "ET",
@@ -1583,7 +1583,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "EV",
@@ -1608,7 +1608,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "ET",
@@ -1629,7 +1629,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "EW",
@@ -1677,7 +1677,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "FJ",
@@ -1705,7 +1705,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "FL",
@@ -1730,7 +1730,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "FJ",
@@ -1751,7 +1751,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "FM",
@@ -1799,7 +1799,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "FZ",
@@ -1827,7 +1827,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "GB",
@@ -1852,7 +1852,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "FZ",
@@ -1873,7 +1873,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "GC",
@@ -1921,7 +1921,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "GP",
@@ -1949,7 +1949,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "GR",
@@ -1974,7 +1974,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "GP",
@@ -1995,7 +1995,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "GS",
@@ -2043,7 +2043,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "HF",
@@ -2071,7 +2071,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "HH",
@@ -2096,7 +2096,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "HF",
@@ -2117,7 +2117,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "HI",
@@ -2165,7 +2165,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "HV",
@@ -2193,7 +2193,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "HX",
@@ -2218,7 +2218,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "HV",
@@ -2239,7 +2239,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "HY",
@@ -2287,7 +2287,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "IL",
@@ -2316,7 +2316,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "IN",
@@ -2341,7 +2341,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "IL",
@@ -2362,7 +2362,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       await footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "IO",
@@ -2377,7 +2377,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList,
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum
       );
 
@@ -2449,7 +2449,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         parseInt(score2),
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         teamUp_ToFix,
         minute_toFix
@@ -2467,7 +2467,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList,
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum
       );
 
@@ -2514,7 +2514,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         parseInt(score2),
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         teamUp_ToFix,
         minute_toFix
@@ -2529,7 +2529,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList,
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum
       );
 
@@ -2559,7 +2559,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList,
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum
       );
 
@@ -2604,7 +2604,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         parseInt(score2),
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         teamUp_ToFix,
         minute_toFix
@@ -2619,7 +2619,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList,
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum
       );
 
@@ -2649,7 +2649,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList,
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum
       );
 
@@ -2694,7 +2694,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         parseInt(score2),
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         teamUp_ToFix,
         minute_toFix
@@ -2705,7 +2705,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList,
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum
       );
 
@@ -2735,7 +2735,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList,
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum
       );
 
@@ -2763,7 +2763,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList,
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum
       );
 
@@ -2793,7 +2793,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList,
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum
       );
 
@@ -2821,7 +2821,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList,
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum
       );
 
@@ -2851,7 +2851,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList,
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum
       );
 
@@ -2879,7 +2879,7 @@ app.post("/api/Whatsapp", async (req, res) => {
         GamesList,
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum
       );
 
