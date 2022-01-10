@@ -309,7 +309,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "F",
@@ -337,7 +337,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       footballFunc.saveDate_googleAPI(
         user_name,
         UsersIndex,
-        GuessData,
+        GuessData_Gavia,
         cycleIndexNum,
         "גביע המדינה",
         "H",
