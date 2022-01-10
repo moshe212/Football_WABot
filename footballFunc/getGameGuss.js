@@ -33,8 +33,8 @@ const getGameGuss = async function (
         console.log("index", index);
       }
     }
-    consol.log(parseInt(cycleIndexNum));
-    consol.log(parseInt(index) - 2);
+    console.log(parseInt(cycleIndexNum));
+    console.log(parseInt(index) - 2);
     console.log(
       GuessData[parseInt(cycleIndexNum) + parseInt(index) - 2]._rawData[1]
     );
