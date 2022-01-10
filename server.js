@@ -306,7 +306,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       Team1 = GamesList[0][0];
       Team2 = GamesList[0][1];
 
-      GameRow = await footballFunc.getGameGuss(
+      GameRow = await footballFunc.getGameGuss_Gavia(
         user_name,
         UsersIndex,
         GuessData,
