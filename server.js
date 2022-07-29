@@ -79,7 +79,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   let textMessage3 = "empty";
 
   if (stage === 109 || stage === 113) {
-    const firstMessages = botRollsFunctions.FirstSort({
+    const firstMessages = await botRollsFunctions.FirstSort({
       stage,
       UsersList,
       user_name,
@@ -110,7 +110,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     stage === 110 ||
     (stage > 248 && stage < 253)
   ) {
-    const LigatAlMessages = botRollsFunctions.LigatAl({
+    const LigatAlMessages = await botRollsFunctions.LigatAl({
       cycleNum,
       cycleText,
       cycleDate,
