@@ -11,10 +11,7 @@ const schedule = require("node-schedule");
 const moment = require("moment");
 
 const { footballFunc } = require("./footballFunc");
-const GviaHamedina = require("./botRollsFunctions/GviaHamedina");
-const LigatAl = require("./botRollsFunctions/LigatAl");
-const Mondial = require("./botRollsFunctions/Mondial");
-const FirstSort = require("./botRollsFunctions/FirstSort");
+const { botRollsFunctions } = require("./botRollsFunctions");
 
 dotenv.config();
 app.use(bodyParser.json());
@@ -82,7 +79,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   let textMessage3 = "empty";
 
   if (stage === 109 || stage === 113) {
-    const firstMessages = FirstSort({
+    const firstMessages = botRollsFunctions.FirstSort({
       stage,
       UsersList,
       user_name,
@@ -94,7 +91,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage2 = firstMessages[1];
     textMessage3 = firstMessages[2];
   } else if ((stage > 113 && stage < 193) || stage === 111 || stage === 112) {
-    const GaviaMessages = await GviaHamedina({
+    const GaviaMessages = await botRollsFunctions.GviaHamedina({
       cycleNum,
       GamesList,
       cycleIndexNum,
@@ -113,7 +110,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     stage === 110 ||
     (stage > 248 && stage < 253)
   ) {
-    const LigatAlMessages = LigatAl({
+    const LigatAlMessages = botRollsFunctions.LigatAl({
       cycleNum,
       cycleText,
       cycleDate,
