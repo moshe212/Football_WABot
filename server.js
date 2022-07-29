@@ -81,58 +81,57 @@ app.post("/api/Whatsapp", async (req, res) => {
   let textMessage2 = "empty";
   let textMessage3 = "empty";
 
-  switch (stage) {
-    case stage === "109" || stage === "113":
-      const firstMessages = FirstSort({
-        stage,
-        UsersList,
-        user_name,
-        UsersIndex,
-        cycleDate,
-      });
+  if (stage === 109 || stage === 113) {
+    const firstMessages = FirstSort({
+      stage,
+      UsersList,
+      user_name,
+      UsersIndex,
+      cycleDate,
+    });
 
-      textMessage1 = firstMessages[0];
-      textMessage2 = firstMessages[1];
-      textMessage3 = firstMessages[2];
+    textMessage1 = firstMessages[0];
+    textMessage2 = firstMessages[1];
+    textMessage3 = firstMessages[2];
+  } else if ((stage > 113 && stage < 193) || stage === 111 || stage === 112) {
+    const GaviaMessages = await GviaHamedina({
+      cycleNum,
+      GamesList,
+      cycleIndexNum,
+      UsersIndex,
+      GuessData,
+      GuessData_Gavia,
+      user_name,
+      stage,
+    });
 
-    case (stage > 113 && stage < 193) || stage === 111 || stage === 112:
-      const GaviaMessages = await GviaHamedina({
-        cycleNum,
-        GamesList,
-        cycleIndexNum,
-        UsersIndex,
-        GuessData,
-        GuessData_Gavia,
-        user_name,
-        stage,
-      });
+    textMessage1 = GaviaMessages[0];
+    textMessage2 = GaviaMessages[1];
+    textMessage3 = GaviaMessages[2];
+  } else if (
+    (stage > 32 && stage < 100) ||
+    stage === 110 ||
+    (stage > 248 && stage < 253)
+  ) {
+    const LigatAlMessages = LigatAl({
+      cycleNum,
+      cycleText,
+      cycleDate,
+      GamesList,
+      cycleIndexNum,
+      UsersIndex,
+      GuessData,
+      user_name,
+      stage,
+    });
 
-      textMessage1 = GaviaMessages[0];
-      textMessage2 = GaviaMessages[1];
-      textMessage3 = GaviaMessages[2];
-
-    case (stage > 32 && stage < 100) ||
-      stage === 110 ||
-      (stage > 248 && stage < 253):
-      const LigatAlMessages = LigatAl({
-        cycleNum,
-        cycleText,
-        cycleDate,
-        GamesList,
-        cycleIndexNum,
-        UsersIndex,
-        GuessData,
-        user_name,
-        stage,
-      });
-
-      textMessage1 = LigatAlMessages[0];
-      textMessage2 = LigatAlMessages[1];
-      textMessage3 = LigatAlMessages[2];
-
-    default:
-      console.log(`Sorry, we are out of range.`);
+    textMessage1 = LigatAlMessages[0];
+    textMessage2 = LigatAlMessages[1];
+    textMessage3 = LigatAlMessages[2];
+  } else {
+    console.log(`Sorry, we are out of range.`);
   }
+
   const jsonFile =
     textMessage3 !== "empty"
       ? {
