@@ -82,7 +82,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   let textMessage3 = "empty";
 
   switch (stage) {
-    case stage === 109 || stage === 113:
+    case stage === "109" || stage === "113":
       const firstMessages = FirstSort({
         stage,
         UsersList,
