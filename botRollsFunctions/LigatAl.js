@@ -11,10 +11,10 @@ const LigatAl = async function ({
   user_name,
   stage,
   score,
+  gameNum,
+  score1,
+  score2,
 }) {
-  let gameNum = 0;
-  let score1 = 0;
-  let score2 = 0;
   let textMessage1 = "empty";
   let textMessage2 = "empty";
   let textMessage3 = "empty";
@@ -379,9 +379,9 @@ const LigatAl = async function ({
       break;
 
     case 69:
-      gameNum = req.body.query.message.split(" ")[1];
-      score1 = req.body.query.message.split(" ")[3].split(":")[1];
-      score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      // gameNum = req.body.query.message.split(" ")[1];
+      // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      // score2 = req.body.query.message.split(" ")[3].split(":")[0];
       console.log("answer", score1, score2, gameNum);
 
       footballFunc.saveFix(
@@ -438,9 +438,9 @@ const LigatAl = async function ({
       break;
 
     case 72:
-      gameNum = req.body.query.message.split(" ")[1];
-      score1 = req.body.query.message.split(" ")[3].split(":")[1];
-      score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      // gameNum = req.body.query.message.split(" ")[1];
+      // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      // score2 = req.body.query.message.split(" ")[3].split(":")[0];
       console.log("answer", score1, score2, gameNum);
 
       footballFunc.saveFix(
@@ -496,9 +496,9 @@ const LigatAl = async function ({
       break;
 
     case 79:
-      gameNum = req.body.query.message.split(" ")[1];
-      score1 = req.body.query.message.split(" ")[3].split(":")[1];
-      score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      // gameNum = req.body.query.message.split(" ")[1];
+      // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      // score2 = req.body.query.message.split(" ")[3].split(":")[0];
       console.log("answer", score1, score2, gameNum);
 
       footballFunc.saveFix(
@@ -554,9 +554,9 @@ const LigatAl = async function ({
       break;
 
     case 84:
-      gameNum = req.body.query.message.split(" ")[1];
-      score1 = req.body.query.message.split(" ")[3].split(":")[1];
-      score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      // gameNum = req.body.query.message.split(" ")[1];
+      // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      // score2 = req.body.query.message.split(" ")[3].split(":")[0];
       console.log("answer", score1, score2, gameNum);
 
       footballFunc.saveFix(
@@ -612,9 +612,9 @@ const LigatAl = async function ({
       break;
 
     case 89:
-      gameNum = req.body.query.message.split(" ")[1];
-      score1 = req.body.query.message.split(" ")[3].split(":")[1];
-      score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      // gameNum = req.body.query.message.split(" ")[1];
+      // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      // score2 = req.body.query.message.split(" ")[3].split(":")[0];
       console.log("answer", score1, score2, gameNum);
 
       footballFunc.saveFix(
@@ -670,9 +670,9 @@ const LigatAl = async function ({
       break;
 
     case 94:
-      gameNum = req.body.query.message.split(" ")[1];
-      score1 = req.body.query.message.split(" ")[3].split(":")[1];
-      score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      // gameNum = req.body.query.message.split(" ")[1];
+      // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      // score2 = req.body.query.message.split(" ")[3].split(":")[0];
       console.log("answer", score1, score2, gameNum);
 
       footballFunc.saveFix(
@@ -728,9 +728,9 @@ const LigatAl = async function ({
       break;
 
     case 99:
-      gameNum = req.body.query.message.split(" ")[1];
-      score1 = req.body.query.message.split(" ")[3].split(":")[1];
-      score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      // gameNum = req.body.query.message.split(" ")[1];
+      // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      // score2 = req.body.query.message.split(" ")[3].split(":")[0];
       console.log("answer", score1, score2, gameNum);
 
       await footballFunc.saveFix(

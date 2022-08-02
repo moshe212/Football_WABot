@@ -11,9 +11,6 @@ const GviaHamedina = async function ({
   stage,
   score,
 }) {
-  let gameNum = 0;
-  let score1 = 0;
-  let score2 = 0;
   let teamUp_ToFix = "";
   let minute_toFix = "";
   let teamUp_ToFix_Num = "";
@@ -2239,9 +2236,9 @@ const GviaHamedina = async function ({
 
       break;
     case 175:
-      gameNum = req.body.query.message.split(" ")[1];
-      score1 = req.body.query.message.split(" ")[3].split(":")[1];
-      score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      // gameNum = req.body.query.message.split(" ")[1];
+      // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      // score2 = req.body.query.message.split(" ")[3].split(":")[0];
       teamUp_ToFix_Num = parseInt(req.body.query.message.split(" ")[5]);
       teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num];
       minute_toFix = req.body.query.message.split(" ")[7];
@@ -2304,9 +2301,9 @@ const GviaHamedina = async function ({
 
       break;
     case 178:
-      gameNum = req.body.query.message.split(" ")[1];
-      score1 = req.body.query.message.split(" ")[3].split(":")[1];
-      score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      // gameNum = req.body.query.message.split(" ")[1];
+      // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      // score2 = req.body.query.message.split(" ")[3].split(":")[0];
       teamUp_ToFix_Num = parseInt(req.body.query.message.split(" ")[5]);
       teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num - 1];
       minute_toFix = req.body.query.message.split(" ")[7];
@@ -2394,9 +2391,9 @@ const GviaHamedina = async function ({
       textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
       break;
     case 183:
-      gameNum = req.body.query.message.split(" ")[1];
-      score1 = req.body.query.message.split(" ")[3].split(":")[1];
-      score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      // gameNum = req.body.query.message.split(" ")[1];
+      // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      // score2 = req.body.query.message.split(" ")[3].split(":")[0];
       teamUp_ToFix_Num = parseInt(req.body.query.message.split(" ")[5]);
       teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num - 1];
       minute_toFix = req.body.query.message.split(" ")[7];
@@ -2484,9 +2481,9 @@ const GviaHamedina = async function ({
       textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
       break;
     case 186:
-      gameNum = req.body.query.message.split(" ")[1];
-      score1 = req.body.query.message.split(" ")[3].split(":")[1];
-      score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      // gameNum = req.body.query.message.split(" ")[1];
+      // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      // score2 = req.body.query.message.split(" ")[3].split(":")[0];
       teamUp_ToFix_Num = parseInt(req.body.query.message.split(" ")[5]);
       teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num - 1];
       minute_toFix = req.body.query.message.split(" ")[7];
