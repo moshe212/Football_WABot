@@ -10,6 +10,7 @@ const LigatAl = async function ({
   GuessData,
   user_name,
   stage,
+  score,
 }) {
   let gameNum = 0;
   let score1 = 0;
@@ -19,7 +20,6 @@ const LigatAl = async function ({
   let textMessage3 = "empty";
   let Team1 = "";
   let Team2 = "";
-  let score = "";
   let ScoreTeam1 = 0;
   let ScoreTeam2 = 0;
   let GuessData_Saved = [];
@@ -154,7 +154,7 @@ const LigatAl = async function ({
       const str2 = "*מחזור " + cycleNum + ", משחק מספר 2:* ";
       textMessage1 = str2 + "\n" + Team1 + " - " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -181,7 +181,7 @@ const LigatAl = async function ({
       const str3 = "*מחזור " + cycleNum + ", משחק מספר 3:* ";
       textMessage1 = str3 + "\n" + Team1 + " - " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
@@ -207,7 +207,7 @@ const LigatAl = async function ({
       const str4 = "*מחזור " + cycleNum + ", משחק מספר 4:* ";
       textMessage1 = str4 + "\n" + Team1 + " - " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
@@ -232,7 +232,7 @@ const LigatAl = async function ({
 
       const str5 = "*מחזור " + cycleNum + ", משחק מספר 5:* ";
       textMessage1 = str5 + "\n" + Team1 + " - " + Team2;
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
@@ -257,7 +257,7 @@ const LigatAl = async function ({
 
       const str6 = "*מחזור " + cycleNum + ", משחק מספר 6:* ";
       textMessage1 = str6 + "\n" + Team1 + " - " + Team2;
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
@@ -284,7 +284,7 @@ const LigatAl = async function ({
       textMessage1 = str7 + "\n" + Team1 + " - " + Team2;
       textMessage2 =
         "*שימו לב:* אחרי שתנחשו את תוצאת המשחק האחרונה, ייקח לי כמה שניות לעבד את הנתונים ולהציג את ניחושי המחזור המלאים ששלחתם. במידה ולא קיבלתם ממני סיכום של הניחושים לאחר 2 דקות, אנא שילחו שוב את הניחוש למשחק האחרון.";
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       // GuessData = await footballFunc.getDataFromSheet("ליגת העל");
@@ -304,7 +304,7 @@ const LigatAl = async function ({
       break;
 
     case 64:
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       // GuessData = await footballFunc.getDataFromSheet("ליגת העל");

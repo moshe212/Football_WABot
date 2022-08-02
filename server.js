@@ -77,6 +77,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   let textMessage1 = "empty";
   let textMessage2 = "empty";
   let textMessage3 = "empty";
+  const score = req.body.query.message;
 
   if (stage === 109 || stage === 113 || stage === 253) {
     const firstMessages = await botRollsFunctions.FirstSort({
@@ -100,6 +101,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GuessData_Gavia,
       user_name,
       stage,
+      score,
     });
 
     textMessage1 = GaviaMessages[0];
@@ -120,6 +122,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       GuessData,
       user_name,
       stage,
+      score,
     });
 
     textMessage1 = LigatAlMessages[0];

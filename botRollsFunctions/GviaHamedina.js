@@ -9,6 +9,7 @@ const GviaHamedina = async function ({
   GuessData_Gavia,
   user_name,
   stage,
+  score,
 }) {
   let gameNum = 0;
   let score1 = 0;
@@ -24,7 +25,6 @@ const GviaHamedina = async function ({
   let textMessage3 = "empty";
   let Team1 = "";
   let Team2 = "";
-  let score = "";
   let ChoiseUp = "";
   let ChoiseUpteam = "";
   let ChoiseMinut = "";
@@ -94,7 +94,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -263,7 +263,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -419,7 +419,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -541,7 +541,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -697,7 +697,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -819,7 +819,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -941,7 +941,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -1063,7 +1063,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -1219,7 +1219,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -1341,7 +1341,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -1463,7 +1463,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -1585,7 +1585,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -1707,7 +1707,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -1829,7 +1829,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -1951,7 +1951,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -2073,7 +2073,7 @@ const GviaHamedina = async function ({
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      score = req.body.query.message;
+      // score = req.body.query.message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
