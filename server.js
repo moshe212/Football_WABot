@@ -81,10 +81,10 @@ app.post("/api/Whatsapp", async (req, res) => {
   const gameNum = req.body.query.message.split(" ")
     ? req.body.query.message.split(" ")[1]
     : "";
-  const score1 = req.body.query.message.split(" ")
+  const score1 = req.body.query.message.split(" ")[3]
     ? req.body.query.message.split(" ")[3].split(":")[1]
     : "";
-  const score2 = req.body.query.message.split(" ")
+  const score2 = req.body.query.message.split(" ")[3]
     ? req.body.query.message.split(" ")[3].split(":")[0]
     : "";
 
