@@ -14,6 +14,7 @@ const FirstSort = async function ({
 
   switch (stage) {
     case 109:
+    case 253:
       console.log("UsersList", UsersList);
       if (!UsersList.includes(user_name)) {
         console.log("not includs");

@@ -78,7 +78,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   let textMessage2 = "empty";
   let textMessage3 = "empty";
 
-  if (stage === 109 || stage === 113) {
+  if (stage === 109 || stage === 113 || stage === 253) {
     const firstMessages = await botRollsFunctions.FirstSort({
       stage,
       UsersList,
