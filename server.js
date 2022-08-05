@@ -33,7 +33,7 @@ let UsersIndex = [];
 let GuessData = [];
 GuessData_Gavia = [];
 let UsersList = [];
-
+let AchievementsOfSeasonData = [];
 const getData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
   const res_cycle = await footballFunc.getCycle(Data);
@@ -62,6 +62,8 @@ const getData = async () => {
   }
   GuessData = await footballFunc.getDataFromSheet("ליגת העל");
   GuessData_Gavia = await footballFunc.getDataFromSheet("גביע המדינה");
+  AchievementsOfSeasonData = await footballFunc.getDataFromSheet("הישגים");
+  console.log({ AchievementsOfSeasonData });
 };
 
 const job = schedule.scheduleJob("0 0 4 * * *", getData);
@@ -74,6 +76,11 @@ app.post("/api/Whatsapp", async (req, res) => {
   console.log("cycleNum", cycleNum, cycleDate);
   const stage = req.body.query.ruleId;
   console.log(stage);
+
+  // footballFunc.getAchievementsOfSeason(user_name, AchievementsOfSeasonData,
+  //   UsersIndex,
+  //   sheetTitle)
+
   let textMessage1 = "empty";
   let textMessage2 = "empty";
   let textMessage3 = "empty";
