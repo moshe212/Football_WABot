@@ -14,6 +14,7 @@ const LigatAl = async function ({
   gameNum,
   score1,
   score2,
+  AchievementsOfSeasonData,
 }) {
   let textMessage1 = "empty";
   let textMessage2 = "empty";
@@ -69,7 +70,52 @@ const LigatAl = async function ({
       }
 
     case 250:
-      textMessage1 = "כתבנו בקרוב, אז למה לבזבז לנו משאבים: 😊";
+      const achievementsOfSeason = footballFunc.getAchievementsOfSeason(
+        user_name,
+        AchievementsOfSeasonData,
+        UsersIndex
+      );
+
+      textMessage1 =
+        "להלן הישגי העונה שניחשתם:" +
+        `\n *האלופה:* ${achievementsOfSeason[2].data}` +
+        `\n *הסגנית:* ${achievementsOfSeason[5].data}` +
+        `\n *הטוטו:* ${achievementsOfSeason[8].data}` +
+        `\n *אירופיאיות:* ${achievementsOfSeason[11].data}` +
+        `\n *אלופת החורף:* ${achievementsOfSeason[14].data}` +
+        `\n *המלך:* ${achievementsOfSeason[17].data}` +
+        `\n *הנסיך:* ${achievementsOfSeason[20].data}` +
+        `\n *השף:* ${achievementsOfSeason[23].data}` +
+        `\n *הסו שף:* ${achievementsOfSeason[26].data}` +
+        `\n *לא נביא:* ${achievementsOfSeason[29].data}` +
+        `\n *הנה הוא מגיע:* ${achievementsOfSeason[32].data}` +
+        `\n *יאללה הביתה:* ${achievementsOfSeason[35].data}` +
+        `\n *יאללה הביתה 2:* ${achievementsOfSeason[40].data}` +
+        `\n *והיא עולה 1:* ${achievementsOfSeason[45].data}` +
+        `\n *והיא עולה 2:* ${achievementsOfSeason[50].data}` +
+        `\n *ואלו שמות: מקום 1* ${achievementsOfSeason[50].data}` +
+        `\n *ואלו שמות: מקום 2:* ${achievementsOfSeason[51].data}` +
+        `\n *ואלו שמות: מקום 3:* ${achievementsOfSeason[52].data}` +
+        `\n *ואלו שמות: מקום 4:* ${achievementsOfSeason[53].data}` +
+        `\n *ואלו שמות: מקום 5:* ${achievementsOfSeason[54].data}` +
+        `\n *ואלו שמות: מקום 6:* ${achievementsOfSeason[55].data}` +
+        `\n *מאוורר:* ${achievementsOfSeason[59].data}` +
+        `\n *טורנדו:* ${achievementsOfSeason[62].data}` +
+        `\n *מקום 1:* ${achievementsOfSeason[63].data}` +
+        `\n *מקום 2:* ${achievementsOfSeason[64].data}` +
+        `\n *מקום 3:* ${achievementsOfSeason[65].data}` +
+        `\n *מקום 4:* ${achievementsOfSeason[66].data}` +
+        `\n *מקום 5:* ${achievementsOfSeason[67].data}` +
+        `\n *מקום 6:* ${achievementsOfSeason[68].data}` +
+        `\n *מקום 7:* ${achievementsOfSeason[71].data}` +
+        `\n *מקום 8:* ${achievementsOfSeason[72].data}` +
+        `\n *מקום 9:* ${achievementsOfSeason[73].data}` +
+        `\n *מקום 10:* ${achievementsOfSeason[74].data}` +
+        `\n *מקום 11:* ${achievementsOfSeason[75].data}` +
+        `\n *מקום 12:* ${achievementsOfSeason[76].data}` +
+        `\n *מקום 13:* ${achievementsOfSeason[77].data}` +
+        `\n *מקום 14:* ${achievementsOfSeason[78].data}`;
+
       break;
 
     case 251:
