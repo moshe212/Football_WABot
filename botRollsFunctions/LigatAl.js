@@ -30,7 +30,7 @@ const LigatAl = async function ({
     case 110:
       if (cycleNum !== "0" && cycleText.includes("מחזור")) {
         textMessage1 =
-          "ברוכים הבאים למשחק *היציע:ליגת העל* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי המחזור \n2️⃣ - להישגי העונה שלכם \n3️⃣ - לקבוצת ה-Whatsapp הרשמית \n4️⃣ - לטבלאות (בקרוב) \n5️⃣ - לחזרה לתפריט הראשי";
+          "ברוכים הבאים למשחק *היציע: ליגת העל* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי המחזור \n2️⃣ - להישגי העונה שלכם \n3️⃣ - לקבוצת ה-Whatsapp הרשמית \n4️⃣ - לטבלאות (בקרוב) \n5️⃣ - לחזרה לתפריט הראשי";
 
         break;
       }
@@ -38,7 +38,7 @@ const LigatAl = async function ({
       if (cycleNum !== "0" && cycleText.includes("מחזור")) {
         textMessage1 =
           "בחירה מצוינת!" +
-          "\nהדד ליין לשליחת ניחושים למחזור *" +
+          "\nהדד ליין לשליחת ניחושים למחזור ה- *" +
           cycleNum +
           "* הוא עד ה-" +
           "*" +
@@ -120,11 +120,13 @@ const LigatAl = async function ({
 
     case 251:
       textMessage1 =
-        "הלינק לקבוצה הוא: \n https://chat.whatsapp.com/CZyFCQqAvHYJkD8QC2VQPb";
+        "הלינק לקבוצת הווטסאפ הרשמית של *היציע: ליגת העל* הוא:" +
+        "\n https://chat.whatsapp.com/CZyFCQqAvHYJkD8QC2VQPb";
+
       break;
 
     case 252:
-      textMessage1 = "כתבנו בקרוב, אז למה לבזבז לנו משאבים: 😊";
+      textMessage1 = "כתבנו בקרוב, אז למה לבזבז לנו משאבים 😊";
       break;
 
     case 33:
