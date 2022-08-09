@@ -93,28 +93,28 @@ const LigatAl = async function ({
         `\n *יאללה הביתה 2:* ${achievementsOfSeason[40].data}` +
         `\n *והיא עולה 1:* ${achievementsOfSeason[45].data}` +
         `\n *והיא עולה 2:* ${achievementsOfSeason[50].data}` +
-        `\n *ואלו שמות: מקום 1* ${achievementsOfSeason[50].data}` +
-        `\n *ואלו שמות: מקום 2:* ${achievementsOfSeason[51].data}` +
-        `\n *ואלו שמות: מקום 3:* ${achievementsOfSeason[52].data}` +
-        `\n *ואלו שמות: מקום 4:* ${achievementsOfSeason[53].data}` +
-        `\n *ואלו שמות: מקום 5:* ${achievementsOfSeason[54].data}` +
-        `\n *ואלו שמות: מקום 6:* ${achievementsOfSeason[55].data}` +
-        `\n *מאוורר:* ${achievementsOfSeason[59].data}` +
-        `\n *טורנדו:* ${achievementsOfSeason[62].data}` +
-        `\n *מקום 1:* ${achievementsOfSeason[63].data}` +
-        `\n *מקום 2:* ${achievementsOfSeason[64].data}` +
-        `\n *מקום 3:* ${achievementsOfSeason[65].data}` +
-        `\n *מקום 4:* ${achievementsOfSeason[66].data}` +
-        `\n *מקום 5:* ${achievementsOfSeason[67].data}` +
-        `\n *מקום 6:* ${achievementsOfSeason[68].data}` +
-        `\n *מקום 7:* ${achievementsOfSeason[71].data}` +
-        `\n *מקום 8:* ${achievementsOfSeason[72].data}` +
-        `\n *מקום 9:* ${achievementsOfSeason[73].data}` +
-        `\n *מקום 10:* ${achievementsOfSeason[74].data}` +
-        `\n *מקום 11:* ${achievementsOfSeason[75].data}` +
-        `\n *מקום 12:* ${achievementsOfSeason[76].data}` +
-        `\n *מקום 13:* ${achievementsOfSeason[77].data}` +
-        `\n *מקום 14:* ${achievementsOfSeason[78].data}`;
+        `\n *ואלו שמות: מקום 1:* ${achievementsOfSeason[52].data}` +
+        `\n *ואלו שמות: מקום 2:* ${achievementsOfSeason[53].data}` +
+        `\n *ואלו שמות: מקום 3:* ${achievementsOfSeason[54].data}` +
+        `\n *ואלו שמות: מקום 4:* ${achievementsOfSeason[55].data}` +
+        `\n *ואלו שמות: מקום 5:* ${achievementsOfSeason[56].data}` +
+        `\n *ואלו שמות: מקום 6:* ${achievementsOfSeason[57].data}` +
+        `\n *מאוורר:* ${achievementsOfSeason[60].data}` +
+        `\n *טורנדו:* ${achievementsOfSeason[63].data}` +
+        `\n *מקום 1:* ${achievementsOfSeason[64].data}` +
+        `\n *מקום 2:* ${achievementsOfSeason[65].data}` +
+        `\n *מקום 3:* ${achievementsOfSeason[66].data}` +
+        `\n *מקום 4:* ${achievementsOfSeason[67].data}` +
+        `\n *מקום 5:* ${achievementsOfSeason[68].data}` +
+        `\n *מקום 6:* ${achievementsOfSeason[69].data}` +
+        `\n *מקום 7:* ${achievementsOfSeason[72].data}` +
+        `\n *מקום 8:* ${achievementsOfSeason[73].data}` +
+        `\n *מקום 9:* ${achievementsOfSeason[74].data}` +
+        `\n *מקום 10:* ${achievementsOfSeason[75].data}` +
+        `\n *מקום 11:* ${achievementsOfSeason[76].data}` +
+        `\n *מקום 12:* ${achievementsOfSeason[77].data}` +
+        `\n *מקום 13:* ${achievementsOfSeason[78].data}` +
+        `\n *מקום 14:* ${achievementsOfSeason[79].data}`;
 
       break;
 
