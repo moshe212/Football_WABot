@@ -77,10 +77,6 @@ app.post("/api/Whatsapp", async (req, res) => {
   const stage = req.body.query.ruleId;
   console.log(stage);
 
-  // footballFunc.getAchievementsOfSeason(user_name, AchievementsOfSeasonData,
-  //   UsersIndex,
-  //   sheetTitle)
-
   let textMessage1 = "empty";
   let textMessage2 = "empty";
   let textMessage3 = "empty";

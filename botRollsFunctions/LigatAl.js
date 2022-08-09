@@ -70,12 +70,12 @@ const LigatAl = async function ({
       }
 
     case 250:
-      const achievementsOfSeason = footballFunc.getAchievementsOfSeason(
+      const achievementsOfSeason = await footballFunc.getAchievementsOfSeason(
         user_name,
         AchievementsOfSeasonData,
         UsersIndex
       );
-
+      console.log(achievementsOfSeason);
       textMessage1 =
         "להלן הישגי העונה שניחשתם:" +
         `\n *האלופה:* ${achievementsOfSeason[2].data}` +

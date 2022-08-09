@@ -25,7 +25,7 @@ const getAchievementsOfSeason = async function (
         data: rowData[i],
       });
     }
-    console.log({ allAchievementsOfSeasonOfUser });
+    // console.log(allAchievementsOfSeasonOfUser);
 
     return allAchievementsOfSeasonOfUser;
   } catch (e) {
