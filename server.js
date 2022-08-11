@@ -34,6 +34,7 @@ let GuessData = [];
 GuessData_Gavia = [];
 let UsersList = [];
 let AchievementsOfSeasonData = [];
+let tablesData = [];
 const getData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
   const res_cycle = await footballFunc.getCycle(Data);
@@ -64,6 +65,15 @@ const getData = async () => {
   GuessData_Gavia = await footballFunc.getDataFromSheet("גביע המדינה");
   console.log({ GuessData_Gavia });
   AchievementsOfSeasonData = await footballFunc.getDataFromSheet("הישגים");
+  tablesData = await footballFunc.getTablesData();
+  let obj = {};
+  for (let i = 0; i < tablesData.length; i++) {
+    obj = { ...obj, ...tablesData[i] };
+  }
+  console.log(obj.clalitTable);
+  console.log(obj.roundOne);
+  // console.log({ tablesData });
+  // console.log(tablesData.clalitTable);
 };
 
 const job = schedule.scheduleJob("0 0 4 * * *", getData);

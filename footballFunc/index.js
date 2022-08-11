@@ -13,6 +13,8 @@ const { fixAuto_Main } = require("./fixAuto_Main");
 const { saveDate_googleAPI } = require("./saveDate_googleAPI");
 const { getGameGuss } = require("./getGameGuss");
 const { getAchievementsOfSeason } = require("./getAchievementsOfSeason");
+const { getTablesData } = require("./getTablesData");
+const { getImage } = require("./getImage");
 
 const footballFunc = {
   getDataFromSheet,
@@ -30,6 +32,8 @@ const footballFunc = {
   saveDate_googleAPI,
   getGameGuss,
   getAchievementsOfSeason,
+  getTablesData,
+  getImage,
 };
 
 module.exports = { footballFunc };
