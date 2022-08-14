@@ -1,4 +1,5 @@
 const { footballFunc } = require("../footballFunc");
+const markdownTable = require("markdown-table");
 
 const LigatAl = async function ({
   cycleNum,
@@ -119,15 +120,16 @@ const LigatAl = async function ({
       break;
 
     case 251:
+      const tbl = markdownTable([
+        ["Branch", "Commit"],
+        ["main", "0123456789abcdef"],
+        ["staging", "fedcba9876543210"],
+      ]);
+
       textMessage1 =
         "הלינק לקבוצת הווטסאפ הרשמית של *היציע: ליגת העל* הוא:" +
         "\n https://chat.whatsapp.com/CZyFCQqAvHYJkD8QC2VQPb";
-      textMessage2 =
-        "____1____|_____2____|_____3___  |" +
-        "\nנסיון       |  נסיון       |גהעכ        |" +
-        "\n_________|__________ |__________ |" +
-        "\nנסיון       |  נסיון       |גהעכ        |" +
-        "\n_________|__________ |__________ |";
+      textMessage2 = tbl;
       break;
 
     case 252:

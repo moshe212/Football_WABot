@@ -1,17 +1,77 @@
+// import http from "http";
+// import express from "express";
+// import bodyParser from "body-parser";
+// import cors from "cors";
+// import dotenv from "dotenv";
+// import schedule from "node-schedule";
+// import moment from "moment";
+
 const http = require("http");
 const https = require("https");
 const express = require("express");
 const fs = require("fs");
-const app = express();
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
-const server = http.createServer(app);
 const schedule = require("node-schedule");
 const moment = require("moment");
+const app = express();
+const server = http.createServer(app);
 
 const { footballFunc } = require("./footballFunc");
 const { botRollsFunctions } = require("./botRollsFunctions");
+
+// const tablemark = require("tablemark");
+const removeMarkdown = require("markdown-to-text");
+const json2md = require("json2md");
+// const markdownTable = require("markdown-table-cjs");
+
+// console.log(
+//   json2md([
+//     { h1: "JSON To Markdown" },
+//     { blockquote: "A JSON to Markdown converter." },
+//     {
+//       img: [
+//         { title: "Some image", source: "https://example.com/some-image.png" },
+//         {
+//           title: "Another image",
+//           source: "https://example.com/some-image1.png",
+//         },
+//         {
+//           title: "Yet another image",
+//           source: "https://example.com/some-image2.png",
+//         },
+//       ],
+//     },
+//     { h2: "Features" },
+//     {
+//       ul: [
+//         "Easy to use",
+//         "You can programmatically generate Markdown content",
+//         "...",
+//       ],
+//     },
+//     { h2: "How to contribute" },
+//     { ol: ["Fork the project", "Create your branch", "Raise a pull request"] },
+//     { h2: "Code blocks" },
+//     { p: "Below you can see a code block example." },
+//     {
+//       code: {
+//         language: "js",
+//         content: ["function sum (a, b) {", "   return a + b", "}", "sum(1, 2)"],
+//       },
+//     },
+//   ])
+// );
+
+// const tableMdString = json2md([
+//   { name: "Bob", age: 21, isCool: false },
+//   { name: "Sarah", age: 22, isCool: true },
+//   { name: "Lee", age: 23, isCool: true },
+// ]);
+// console.log(tableMdString);
+// const text = removeMarkdown(tableMdString);
+// consol.log({ text });
 
 dotenv.config();
 app.use(bodyParser.json());
