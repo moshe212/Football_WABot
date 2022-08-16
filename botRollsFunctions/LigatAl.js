@@ -136,13 +136,13 @@ const LigatAl = async function ({
         console.log(space);
         let padding = "";
         if (space > 0) {
-          padding = " ";
+          padding = "-";
         } else if (space >= 1) {
-          padding = "  ";
+          padding = "--";
         } else if (space >= 2) {
-          padding = "   ";
+          padding = "---";
         } else if (space >= 3) {
-          padding = "    ";
+          padding = "----";
         }
 
         const space0 = (3 - tableObj.roundOne[i][0].trim().length) / 2;
