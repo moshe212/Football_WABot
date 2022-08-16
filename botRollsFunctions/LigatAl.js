@@ -163,7 +163,7 @@ const LigatAl = async function ({
             return s.length;
           } else {
             const space = (13 - s.length) / 2;
-
+            console.log("space", space);
             if (space > 0) {
               return 1;
             } else if (space > 1) {
