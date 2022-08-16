@@ -95,6 +95,7 @@ GuessData_Gavia = [];
 let UsersList = [];
 let AchievementsOfSeasonData = [];
 let tablesData = [];
+let tableObj = {};
 const getData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
   const res_cycle = await footballFunc.getCycle(Data);
@@ -126,7 +127,7 @@ const getData = async () => {
   console.log({ GuessData_Gavia });
   AchievementsOfSeasonData = await footballFunc.getDataFromSheet("הישגים");
   tablesData = await footballFunc.getTablesData();
-  let tableObj = {};
+
   for (let i = 0; i < tablesData.length; i++) {
     tableObj = { ...tableObj, ...tablesData[i] };
   }
