@@ -189,38 +189,38 @@ const LigatAl = async function ({
         let end = "";
         switch (endSpace) {
           case 21:
-            end = "                             ";
+            end = "-----------------------------";
           case 20:
-            end = "                            ";
+            end = "----------------------------";
             break;
           case 19:
-            end = "                           ";
+            end = "---------------------------";
             break;
           case 18:
-            end = "                          ";
+            end = "--------------------------";
             break;
           case 17:
-            end = "                         ";
+            end = "-------------------------";
             break;
           case 16:
-            end = "                        ";
+            end = "------------------------";
             break;
           case 15:
-            end = "                       ";
+            end = "-----------------------";
             break;
           case 14:
-            end = "                      ";
+            end = "----------------------";
             break;
           case 13:
-            end = "                     ";
+            end = "---------------------";
             break;
           case 12:
-            end = "                    ";
+            end = "--------------------";
             break;
         }
         const row =
           `\n|${padding0}${tableObj.roundOne[i][0]}${padding0}|` +
-          `  {tableObj.roundOne[i][1]}  |` +
+          `  ${tableObj.roundOne[i][1]}  |` +
           `${end}${tableObj.roundOne[i][2].trim()}|`;
 
         tableString = tableString + row;
