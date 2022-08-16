@@ -219,6 +219,8 @@ const LigatAl = async function ({
           case 12:
             end = "--------------------";
             break;
+          default:
+            end = "--------------------";
         }
         const row =
           `\n|${padding0}${tableObj.roundOne[i][0]}${padding0}|` +
