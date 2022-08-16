@@ -164,13 +164,13 @@ const LigatAl = async function ({
           } else {
             const space = (13 - s.length) / 2;
 
-            if (space === 1) {
+            if (space > 0) {
               return 1;
-            } else if (space === 2) {
+            } else if (space > 1) {
               return 2;
-            } else if (space === 3) {
+            } else if (space > 2) {
               return 3;
-            } else if (space === 4) {
+            } else if (space > 3) {
               return 4;
             }
           }
