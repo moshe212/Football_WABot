@@ -129,9 +129,27 @@ const LigatAl = async function ({
       break;
 
     case 252:
-      const space = (13 - tableObj.roundOne[0][1].length) / 2;
-      let padding = " ";
+      const table = [[" מיקום ", " המנחש ", " ניקוד "]];
+      for (let i = 0; i < tableObj.roundOne.length; i++) {
+        const space = (13 - tableObj.roundOne[i][1].length) / 2;
+        let padding = " ";
+        if (space === 1) {
+          padding = " ";
+        } else if (space === 2) {
+          padding = "  ";
+        } else if (space === 3) {
+          padding = "   ";
+        } else if (space === 4) {
+          padding = "   ";
+        }
+        const row = [
+          tableObj.roundOne[i][0],
+          `${padding}${tableObj.roundOne[i][1]}${padding}`,
+          tableObj.roundOne[i][2],
+        ];
 
+        table.push(row);
+      }
       const tbl = markdownTable(
         [
           ["80.", "אלעד שטראוכלר", "2000"],
@@ -171,9 +189,13 @@ const LigatAl = async function ({
         {
           align: ["c", "c", "c"],
           stringLength: (s) => {
-            if (isPositiveInteger(s)) 3;
-            else if (s.includes(".")) 4;
-            else 13;
+            if (isPositiveInteger(s)) {
+              return 3;
+            } else if (s.includes(".")) {
+              return 4;
+            } else {
+              return 13;
+            }
           },
         }
       );
