@@ -120,20 +120,25 @@ const LigatAl = async function ({
       break;
 
     case 251:
-      const tbl = markdownTable([
-        ["Branch", "Commit"],
-        ["main", "0123456789abcdef"],
-        ["staging", "fedcba9876543210"],
-      ]);
-
       textMessage1 =
         "הלינק לקבוצת הווטסאפ הרשמית של *היציע: ליגת העל* הוא:" +
         "\n https://chat.whatsapp.com/CZyFCQqAvHYJkD8QC2VQPb";
-      textMessage2 = tbl;
+
       break;
 
     case 252:
+      const tbl = markdownTable([
+        ["מיקום", "שם מנחש", "ניקוד"],
+        ["80", "אלעד שטראוכלר", "2,000"],
+        ["60", "אדם איטח", "500"],
+        ["25", "אלעד אביב", "50"],
+        ["1", "אור פרקש", "2,000"],
+        ["80", "אלעד שטראוכלר", "2,000"],
+        ["80", "אלעד שטראוכלר", "2,000"],
+        ["80", "אלעד שטראוכלר", "2,000"],
+      ]);
       textMessage1 = "כתבנו בקרוב, אז למה לבזבז לנו משאבים 😊";
+      textMessage2 = tbl;
       break;
 
     case 33:
