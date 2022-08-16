@@ -177,6 +177,7 @@ const LigatAl = async function ({
           },
         }
       );
+      console.log(tbl);
       textMessage1 = "כתבנו בקרוב, אז למה לבזבז לנו משאבים 😊";
       textMessage2 = tbl;
       break;
