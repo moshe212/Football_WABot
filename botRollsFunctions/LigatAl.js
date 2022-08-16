@@ -177,10 +177,51 @@ const LigatAl = async function ({
         //   `  ${tableObj.roundOne[i][2].trim()}  `,
         // ];
 
+        // const row =
+        //   `\n|${padding0}${tableObj.roundOne[i][0]}${padding0}|` +
+        //   `${padding}${tableObj.roundOne[i][1]}${padding}|` +
+        //   `  ${tableObj.roundOne[i][2].trim()}  |`;
+
+        const startRowLength =
+          `|${padding0}${tableObj.roundOne[i][0]}${padding0}|` +
+          `  ${tableObj.roundOne[i][1]}  |`.length;
+        const endSpace = 51 - startRowLength;
+        let end = "";
+        switch (endSpace) {
+          case 21:
+            end = "                             ";
+          case 20:
+            end = "                            ";
+            break;
+          case 19:
+            end = "                           ";
+            break;
+          case 18:
+            end = "                          ";
+            break;
+          case 17:
+            end = "                         ";
+            break;
+          case 16:
+            end = "                        ";
+            break;
+          case 15:
+            end = "                       ";
+            break;
+          case 14:
+            end = "                      ";
+            break;
+          case 13:
+            end = "                     ";
+            break;
+          case 12:
+            end = "                    ";
+            break;
+        }
         const row =
           `\n|${padding0}${tableObj.roundOne[i][0]}${padding0}|` +
-          `${padding}${tableObj.roundOne[i][1]}${padding}|` +
-          `  ${tableObj.roundOne[i][2].trim()}  |`;
+          `  {tableObj.roundOne[i][1]}  |` +
+          `${end}${tableObj.roundOne[i][2].trim()}|`;
 
         tableString = tableString + row;
         // table.push(row);
