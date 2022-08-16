@@ -137,11 +137,11 @@ const LigatAl = async function ({
         let padding = "";
         if (space > 0) {
           padding = " ";
-        } else if (space > 1) {
+        } else if (space >= 1) {
           padding = "  ";
-        } else if (space > 2) {
+        } else if (space >= 2) {
           padding = "   ";
-        } else if (space > 3) {
+        } else if (space >= 3) {
           padding = "    ";
         }
 
@@ -165,8 +165,8 @@ const LigatAl = async function ({
 
         const row =
           `\n|${padding0}${tableObj.roundOne[i][0]}${padding0}|` +
-          `|${padding}${tableObj.roundOne[i][1]}${padding}|` +
-          `|  ${tableObj.roundOne[i][2].trim()}  |`;
+          `${padding}${tableObj.roundOne[i][1]}${padding}|` +
+          `  ${tableObj.roundOne[i][2].trim()}  |`;
 
         tableString = tableString + row;
         // table.push(row);
