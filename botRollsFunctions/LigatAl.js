@@ -129,7 +129,7 @@ const LigatAl = async function ({
       break;
 
     case 252:
-      const table = [[" מיקום ", " המנחש ", " ניקוד "]];
+      const table = [["מיקום", " המנחש ", " ניקוד "]];
       for (let i = 0; i < tableObj.roundOne.length; i++) {
         const space = (13 - tableObj.roundOne[i][1].length) / 2;
         let padding = " ";
@@ -150,55 +150,19 @@ const LigatAl = async function ({
 
         table.push(row);
       }
-      const tbl = markdownTable(
-        [
-          ["80.", "אלעד שטראוכלר", "2000"],
-          // [" מיקום ", " המנחש ", " ניקוד "],
-          [
-            tableObj.roundOne[0][0],
-            tableObj.roundOne[0][1],
-            tableObj.roundOne[0][2],
-          ],
-          [
-            tableObj.roundOne[1][0],
-            tableObj.roundOne[1][1],
-            tableObj.roundOne[1][2],
-          ],
-          [
-            tableObj.roundOne[2][0],
-            tableObj.roundOne[2][1],
-            tableObj.roundOne[2][2],
-          ],
-          [
-            tableObj.roundOne[3][0],
-            tableObj.roundOne[3][1],
-            tableObj.roundOne[3][2],
-          ],
-          [
-            tableObj.roundOne[4][0],
-            tableObj.roundOne[4][1],
-            tableObj.roundOne[4][2],
-          ],
-          [
-            tableObj.roundOne[5][0],
-            tableObj.roundOne[5][1],
-            tableObj.roundOne[5][2],
-          ],
-          ["80.", "אלעד שטראוכלר", "2000"],
-        ],
-        {
-          align: ["c", "c", "c"],
-          stringLength: (s) => {
-            if (isPositiveInteger(s)) {
-              return 3;
-            } else if (s.includes(".")) {
-              return 4;
-            } else {
-              return 13;
-            }
-          },
-        }
-      );
+      console.log(table);
+      const tbl = markdownTable(table, {
+        align: ["c", "c", "c"],
+        stringLength: (s) => {
+          if (isPositiveInteger(s)) {
+            return 3;
+          } else if (s.includes(".")) {
+            return 4;
+          } else {
+            return 13;
+          }
+        },
+      });
       console.log(tbl);
       textMessage1 = "כתבנו בקרוב, אז למה לבזבז לנו משאבים 😊";
       textMessage2 = tbl;
