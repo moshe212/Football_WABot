@@ -129,6 +129,7 @@ const LigatAl = async function ({
       break;
 
     case 252:
+      let tableString = "";
       const table = [["מיקום", " המנחש ", " ניקוד "]];
       for (let i = 0; i < tableObj.roundOne.length; i++) {
         const space = (13 - tableObj.roundOne[i][1].trim().length) / 2;
@@ -156,15 +157,22 @@ const LigatAl = async function ({
           padding0 = "    ";
         }
 
-        const row = [
-          `${padding0}${tableObj.roundOne[i][0]}${padding0}`,
-          `${padding}${tableObj.roundOne[i][1]}${padding}`,
-          `  ${tableObj.roundOne[i][2].trim()}  `,
-        ];
+        // const row = [
+        //   `${padding0}${tableObj.roundOne[i][0]}${padding0}`,
+        //   `${padding}${tableObj.roundOne[i][1]}${padding}`,
+        //   `  ${tableObj.roundOne[i][2].trim()}  `,
+        // ];
 
-        table.push(row);
+        const row =
+          `\n${padding0}${tableObj.roundOne[i][0]}${padding0}` +
+          `\n${padding}${tableObj.roundOne[i][1]}${padding}` +
+          `\n${tableObj.roundOne[i][2].trim()}  `;
+
+        tableString = tableString + row;
+        // table.push(row);
       }
-      console.log(table);
+      // console.log(table);
+      console.log(tableString);
       const tbl = markdownTable(table, {
         align: ["c", "c", "c"],
         // stringLength: (s) => {
@@ -189,9 +197,9 @@ const LigatAl = async function ({
         //   }
         // },
       });
-      console.log(tbl);
+      // console.log(tbl);
       textMessage1 = "כתבנו בקרוב, אז למה לבזבז לנו משאבים 😊";
-      textMessage2 = tbl;
+      textMessage2 = tableString;
       break;
 
     case 33:
