@@ -164,9 +164,9 @@ const LigatAl = async function ({
         // ];
 
         const row =
-          `\n${padding0}${tableObj.roundOne[i][0]}${padding0}` +
-          `${padding}${tableObj.roundOne[i][1]}${padding}` +
-          `  ${tableObj.roundOne[i][2].trim()}  `;
+          `\n|${padding0}${tableObj.roundOne[i][0]}${padding0}|` +
+          `|${padding}${tableObj.roundOne[i][1]}${padding}|` +
+          `|  ${tableObj.roundOne[i][2].trim()}  |`;
 
         tableString = tableString + row;
         // table.push(row);
