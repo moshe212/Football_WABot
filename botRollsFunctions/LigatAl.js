@@ -131,20 +131,21 @@ const LigatAl = async function ({
     case 252:
       const table = [["מיקום", " המנחש ", " ניקוד "]];
       for (let i = 0; i < tableObj.roundOne.length; i++) {
-        const space = (13 - tableObj.roundOne[i][1].length) / 2;
-        let padding = " ";
-        if (space === 1) {
-          padding = " ";
-        } else if (space === 2) {
-          padding = "  ";
-        } else if (space === 3) {
-          padding = "   ";
-        } else if (space === 4) {
-          padding = "   ";
-        }
+        // const space = (13 - tableObj.roundOne[i][1].length) / 2;
+        // let padding = " ";
+        // if (space === 1) {
+        //   padding = " ";
+        // } else if (space === 2) {
+        //   padding = "  ";
+        // } else if (space === 3) {
+        //   padding = "   ";
+        // } else if (space === 4) {
+        //   padding = "   ";
+        // }
         const row = [
           tableObj.roundOne[i][0],
-          `${padding}${tableObj.roundOne[i][1]}${padding}`,
+          tableObj.roundOne[i][1],
+          // `${padding}${tableObj.roundOne[i][1]}${padding}`,
           tableObj.roundOne[i][2],
         ];
 
@@ -155,11 +156,23 @@ const LigatAl = async function ({
         align: ["c", "c", "c"],
         stringLength: (s) => {
           if (isPositiveInteger(s)) {
-            return 3;
+            return 1;
           } else if (s.includes(".")) {
-            return 4;
+            // if(s.length===3){return 3}
+            // else if(s.length===2){return 3}
+            return s.length;
           } else {
-            return 13;
+            const space = (13 - s.length) / 2;
+
+            if (space === 1) {
+              return 1;
+            } else if (space === 2) {
+              return 2;
+            } else if (space === 3) {
+              return 3;
+            } else if (space === 4) {
+              return 4;
+            }
           }
         },
       });
