@@ -134,7 +134,7 @@ const LigatAl = async function ({
       for (let i = 0; i < tableObj.roundOne.length; i++) {
         const space = (13 - tableObj.roundOne[i][1].trim().length) / 2;
         const length = tableObj.roundOne[i][1].trim().length;
-        console.log(space);
+        console.log(length);
         let padding = "";
         switch (length) {
           case 11:
