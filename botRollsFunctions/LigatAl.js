@@ -131,7 +131,8 @@ const LigatAl = async function ({
     case 252:
       const tbl = markdownTable(
         [
-          [" מיקום ", " המנחש ", " ניקוד "],
+          ["80.", "אלעד שטראוכלר", "2000"],
+          // [" מיקום ", " המנחש ", " ניקוד "],
           [
             tableObj.roundOne[0][0],
             tableObj.roundOne[0][1],
@@ -162,9 +163,10 @@ const LigatAl = async function ({
             tableObj.roundOne[5][1],
             tableObj.roundOne[5][2],
           ],
-          ["80.", "אלעד שטראוכלר", "2,000"],
+          ["80.", "אלעד שטראוכלר", "2000"],
         ],
         {
+          align: ["c", "c", "c"],
           stringLength: (s) => {
             if (isPositiveInteger(s)) {
               console.log("isPositiveInteger", s);
