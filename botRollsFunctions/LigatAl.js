@@ -129,13 +129,16 @@ const LigatAl = async function ({
       break;
 
     case 252:
+      const space = (13 - tableObj.roundOne[0][1].length) / 2;
+      let padding = " ";
+
       const tbl = markdownTable(
         [
           ["80.", "אלעד שטראוכלר", "2000"],
           // [" מיקום ", " המנחש ", " ניקוד "],
           [
             tableObj.roundOne[0][0],
-            tableObj.roundOne[0][1],
+            `${padding}${tableObj.roundOne[0][1]}${padding}`,
             tableObj.roundOne[0][2],
           ],
           [
@@ -169,7 +172,7 @@ const LigatAl = async function ({
           align: ["c", "c", "c"],
           stringLength: (s) => {
             if (isPositiveInteger(s)) 3;
-            else if (s.includes(".")) 2;
+            else if (s.includes(".")) 4;
             else 13;
           },
         }
