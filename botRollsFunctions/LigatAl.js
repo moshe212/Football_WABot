@@ -164,7 +164,15 @@ const LigatAl = async function ({
           ],
           ["80", "אלעד שטראוכלר", "2,000"],
         ],
-        { stringLength: stringWidth }
+        {
+          stringLength: (s) => {
+            if (isInteger(s)) {
+              return 5;
+            } else if (s.includes(".")) {
+              return 3;
+            } else return 13;
+          },
+        }
       );
       textMessage1 = "כתבנו בקרוב, אז למה לבזבז לנו משאבים 😊";
       textMessage2 = tbl;
