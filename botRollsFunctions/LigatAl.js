@@ -131,7 +131,7 @@ const LigatAl = async function ({
     case 252:
       const table = [["מיקום", " המנחש ", " ניקוד "]];
       for (let i = 0; i < tableObj.roundOne.length; i++) {
-        const space = (13 - tableObj.roundOne[i][1].length) / 2;
+        const space = (13 - tableObj.roundOne[i][1].trim().length) / 2;
         let padding = " ";
         if (space > 0) {
           padding = " ";
