@@ -156,7 +156,7 @@ const LigatAl = async function ({
           // [" מיקום ", " המנחש ", " ניקוד "],
           [
             tableObj.roundOne[0][0],
-            `${padding}${tableObj.roundOne[0][1]}${padding}`,
+            tableObj.roundOne[0][1],
             tableObj.roundOne[0][2],
           ],
           [
