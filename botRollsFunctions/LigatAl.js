@@ -141,16 +141,22 @@ const LigatAl = async function ({
             padding = "-";
           case 10:
             padding = "!-";
+            break;
           case 9:
             padding = "--";
+            break;
           case 8:
             padding = "!--";
+            break;
           case 7:
             padding = "---";
+            break;
           case 6:
             padding = "!---";
+            break;
           case 5:
             padding = "----";
+            break;
         }
 
         const space0 = (3 - tableObj.roundOne[i][0].trim().length) / 2;
