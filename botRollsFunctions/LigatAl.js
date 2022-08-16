@@ -168,16 +168,9 @@ const LigatAl = async function ({
         {
           align: ["c", "c", "c"],
           stringLength: (s) => {
-            if (isPositiveInteger(s)) {
-              console.log("isPositiveInteger", s);
-              3;
-            } else if (s.includes(".")) {
-              console.log("includes", s);
-              1;
-            } else {
-              console.log("13", s);
-              8;
-            }
+            if (isPositiveInteger(s)) 3;
+            else if (s.includes(".")) 1;
+            else 8;
           },
         }
       );
