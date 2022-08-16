@@ -132,9 +132,9 @@ const LigatAl = async function ({
       const table = [["מיקום", " המנחש ", " ניקוד "]];
       for (let i = 0; i < tableObj.roundOne.length; i++) {
         const space = (13 - tableObj.roundOne[i][1].trim().length) / 2;
-        let padding = " ";
+        let padding = "";
         if (space > 0) {
-          padding = "";
+          padding = " ";
         } else if (space > 1) {
           padding = "  ";
         } else if (space > 2) {
@@ -147,11 +147,11 @@ const LigatAl = async function ({
         let padding0 = "";
         if (space0 > 0) {
           padding0 = " ";
-        } else if (space > 1) {
+        } else if (space0 > 1) {
           padding0 = "  ";
-        } else if (space > 2) {
+        } else if (space0 > 2) {
           padding0 = "   ";
-        } else if (space > 3) {
+        } else if (space0 > 3) {
           padding0 = "    ";
         }
 
