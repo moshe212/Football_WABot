@@ -182,9 +182,10 @@ const LigatAl = async function ({
         //   `${padding}${tableObj.roundOne[i][1]}${padding}|` +
         //   `  ${tableObj.roundOne[i][2].trim()}  |`;
 
-        const startRowLength =
+        const startRowLength = (
           `|${padding0}${tableObj.roundOne[i][0]}${padding0}|` +
-          `  ${tableObj.roundOne[i][1]}  |`.length;
+          `  ${tableObj.roundOne[i][1]}  |`
+        ).length;
         console.log(startRowLength);
         const endSpace = 51 - startRowLength;
         console.log(endSpace);
