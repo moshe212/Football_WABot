@@ -158,7 +158,7 @@ const LigatAl = async function ({
         const row = [
           `${padding0}${tableObj.roundOne[i][0]}${padding0}`,
           `${padding}${tableObj.roundOne[i][1]}${padding}`,
-          `" "${tableObj.roundOne[i][2].trim()}" "`,
+          `  ${tableObj.roundOne[i][2].trim()}  `,
         ];
 
         table.push(row);
