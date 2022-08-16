@@ -126,12 +126,12 @@ const getData = async () => {
   console.log({ GuessData_Gavia });
   AchievementsOfSeasonData = await footballFunc.getDataFromSheet("הישגים");
   tablesData = await footballFunc.getTablesData();
-  let obj = {};
+  let tableObj = {};
   for (let i = 0; i < tablesData.length; i++) {
-    obj = { ...obj, ...tablesData[i] };
+    tableObj = { ...tableObj, ...tablesData[i] };
   }
-  console.log(obj.clalitTable);
-  console.log(obj.roundOne);
+  console.log(tableObj.clalitTable);
+  // console.log(tableObj.roundOne);
   // console.log({ tablesData });
   // console.log(tablesData.clalitTable);
 };
@@ -212,6 +212,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       score1,
       score2,
       AchievementsOfSeasonData,
+      tableObj,
     });
 
     textMessage1 = LigatAlMessages[0];

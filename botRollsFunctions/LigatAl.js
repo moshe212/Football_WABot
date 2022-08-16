@@ -16,6 +16,7 @@ const LigatAl = async function ({
   score1,
   score2,
   AchievementsOfSeasonData,
+  tableObj,
 }) {
   let textMessage1 = "empty";
   let textMessage2 = "empty";
@@ -127,16 +128,19 @@ const LigatAl = async function ({
       break;
 
     case 252:
-      const tbl = markdownTable([
-        ["מיקום", "שם מנחש", "ניקוד"],
-        ["80", "אלעד שטראוכלר", "2,000"],
-        ["60", "אדם איטח", "500"],
-        ["25", "אלעד אביב", "50"],
-        ["1", "אור פרקש", "2,000"],
-        ["80", "אלעד שטראוכלר", "2,000"],
-        ["80", "אלעד שטראוכלר", "2,000"],
-        ["80", "אלעד שטראוכלר", "2,000"],
-      ]);
+      const tbl = markdownTable(
+        [
+          ["מיקום", "שם מנחש", "ניקוד"],
+          ["80", "אלעד שטראוכלר", "2,000"],
+          ["60", "אדם איטח", "500"],
+          ["25", "אלעד אביב", "50"],
+          ["1", "אור פרקש", "2,000"],
+          ["80", "אלעד שטראוכלר", "2,000"],
+          ["80", "אלעד שטראוכלר", "2,000"],
+          ["80", "אלעד שטראוכלר", "2,000"],
+        ],
+        { align: ["l", "c", "r"] }
+      );
       textMessage1 = "כתבנו בקרוב, אז למה לבזבז לנו משאבים 😊";
       textMessage2 = tbl;
       break;
