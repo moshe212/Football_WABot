@@ -134,17 +134,17 @@ const LigatAl = async function ({
         const space = (13 - tableObj.roundOne[i][1].trim().length) / 2;
         let padding = " ";
         if (space > 0) {
-          padding = " ";
+          padding = "";
         } else if (space > 1) {
           padding = "  ";
         } else if (space > 2) {
           padding = "   ";
         } else if (space > 3) {
-          padding = "   ";
+          padding = "    ";
         }
 
         const space0 = (3 - tableObj.roundOne[i][0].trim().length) / 2;
-        let padding0 = " ";
+        let padding0 = "";
         if (space0 > 0) {
           padding0 = " ";
         } else if (space > 1) {
@@ -152,7 +152,7 @@ const LigatAl = async function ({
         } else if (space > 2) {
           padding0 = "   ";
         } else if (space > 3) {
-          padding0 = "   ";
+          padding0 = "    ";
         }
 
         const row = [
