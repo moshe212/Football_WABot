@@ -167,19 +167,18 @@ const LigatAl = async function ({
         ],
         {
           align: ["c", "c", "c"],
-          stringLength: 5,
-          // {
-          //   if (isPositiveInteger(s)) {
-          //     console.log("isPositiveInteger", s);
-          //     return 3;
-          //   } else if (s.includes(".")) {
-          //     console.log("includes", s);
-          //     return 1;
-          //   } else {
-          //     console.log("13", s);
-          //     return 8;
-          //   }
-          // },
+          stringLength: (s) => {
+            if (isPositiveInteger(s)) {
+              console.log("isPositiveInteger", s);
+              3;
+            } else if (s.includes(".")) {
+              console.log("includes", s);
+              1;
+            } else {
+              console.log("13", s);
+              8;
+            }
+          },
         }
       );
       textMessage1 = "כתבנו בקרוב, אז למה לבזבז לנו משאבים 😊";
