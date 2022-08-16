@@ -143,7 +143,7 @@ const LigatAl = async function ({
           padding = "   ";
         }
 
-        const space0 = (3 - tableObj.roundOne[i][0].length) / 2;
+        const space0 = (3 - tableObj.roundOne[i][0].trim().length) / 2;
         let padding0 = " ";
         if (space0 > 0) {
           padding0 = " ";
