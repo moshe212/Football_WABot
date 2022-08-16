@@ -17,7 +17,7 @@ const getTablesData = async function () {
 
   const letersArray = [
     ["clalitTable", "A", "E"],
-    ["roundOne", "G", "J"],
+    ["roundOne", "G", "I"],
     ["roundTow", "L", "O"],
     ["playoffTable", "Q", "T"],
     ["gamesTable", "V", "Y"],
@@ -42,7 +42,7 @@ const getTablesData = async function () {
           .get({
             auth, //auth object
             spreadsheetId, //spreadsheet id
-            range: `טבלאות כלליות!${coupel[1]}5:${coupel[2]}64`, //"Sheet1!A:B" sheet name and range of cells
+            range: `טבלאות כלליות!${coupel[1]}5:${coupel[2]}83`, //"Sheet1!A:B" sheet name and range of cells
             valueRenderOption: "FORMATTED_VALUE",
           })
           .then((dataTable) => {

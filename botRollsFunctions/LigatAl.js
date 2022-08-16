@@ -1,5 +1,6 @@
 const { footballFunc } = require("../footballFunc");
 const markdownTable = require("markdown-table");
+const stringWidth = require("string-width");
 
 const LigatAl = async function ({
   cycleNum,
@@ -130,16 +131,40 @@ const LigatAl = async function ({
     case 252:
       const tbl = markdownTable(
         [
-          ["מיקום", "שם מנחש", "ניקוד"],
-          ["80", "אלעד שטראוכלר", "2,000"],
-          ["60", "אדם איטח", "500"],
-          ["25", "אלעד אביב", "50"],
-          ["1", "אור פרקש", "2,000"],
-          ["80", "אלעד שטראוכלר", "2,000"],
-          ["80", "אלעד שטראוכלר", "2,000"],
+          ["מיקום", "המנחש", "ניקוד"],
+          [
+            tableObj.roundOne[0][0],
+            tableObj.roundOne[0][1],
+            tableObj.roundOne[0][2],
+          ],
+          [
+            tableObj.roundOne[1][0],
+            tableObj.roundOne[1][1],
+            tableObj.roundOne[1][2],
+          ],
+          [
+            tableObj.roundOne[2][0],
+            tableObj.roundOne[2][1],
+            tableObj.roundOne[2][2],
+          ],
+          [
+            tableObj.roundOne[3][0],
+            tableObj.roundOne[3][1],
+            tableObj.roundOne[3][2],
+          ],
+          [
+            tableObj.roundOne[4][0],
+            tableObj.roundOne[4][1],
+            tableObj.roundOne[4][2],
+          ],
+          [
+            tableObj.roundOne[5][0],
+            tableObj.roundOne[5][1],
+            tableObj.roundOne[5][2],
+          ],
           ["80", "אלעד שטראוכלר", "2,000"],
         ],
-        { align: ["l", "c", "r"] }
+        { stringLength: stringWidth }
       );
       textMessage1 = "כתבנו בקרוב, אז למה לבזבז לנו משאבים 😊";
       textMessage2 = tbl;
