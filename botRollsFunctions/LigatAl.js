@@ -135,12 +135,6 @@ const LigatAl = async function ({
       const tableName = "roundOne";
       const isClalitTable = tableName === "clalitTable";
 
-      let tableString = "";
-      for (let i = 1; i < tableObj[tableName].length; i++) {
-        const row = await getRow(isClalitTable);
-        tableString = tableString + row;
-      }
-
       const getRow = async (i) => {
         console.log(tableName);
         console.log("tbl", tableObj[tableName]);
@@ -178,6 +172,12 @@ const LigatAl = async function ({
 
         return row;
       };
+
+      let tableString = "";
+      for (let i = 1; i < tableObj[tableName].length; i++) {
+        const row = await getRow(isClalitTable);
+        tableString = tableString + row;
+      }
 
       textMessage1 = "כתבנו בקרוב, אז למה לבזבז לנו משאבים 😊";
       textMessage2 = tableString;
