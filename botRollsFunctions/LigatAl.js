@@ -18,6 +18,7 @@ const LigatAl = async function ({
   score2,
   AchievementsOfSeasonData,
   tableObj,
+  tableName,
 }) {
   let textMessage1 = "empty";
   let textMessage2 = "empty";
@@ -28,6 +29,7 @@ const LigatAl = async function ({
   let ScoreTeam2 = 0;
   let GuessData_Saved = [];
   let textMessage = "";
+  let tableString = "";
 
   switch (stage) {
     case 110:
@@ -84,40 +86,43 @@ const LigatAl = async function ({
         `\n *האלופה:* ${achievementsOfSeason[2].data}` +
         `\n *הסגנית:* ${achievementsOfSeason[5].data}` +
         `\n *הטוטו:* ${achievementsOfSeason[8].data}` +
-        `\n *אירופיאיות:* ${achievementsOfSeason[11].data}` +
-        `\n *אלופת החורף:* ${achievementsOfSeason[14].data}` +
-        `\n *המלך:* ${achievementsOfSeason[17].data}` +
-        `\n *הנסיך:* ${achievementsOfSeason[20].data}` +
-        `\n *השף:* ${achievementsOfSeason[23].data}` +
-        `\n *הסו שף:* ${achievementsOfSeason[26].data}` +
-        `\n *לא נביא:* ${achievementsOfSeason[29].data}` +
-        `\n *הנה הוא מגיע:* ${achievementsOfSeason[32].data}` +
-        `\n *יאללה הביתה:* ${achievementsOfSeason[35].data}` +
-        `\n *יאללה הביתה 2:* ${achievementsOfSeason[40].data}` +
-        `\n *והיא עולה 1:* ${achievementsOfSeason[45].data}` +
-        `\n *והיא עולה 2:* ${achievementsOfSeason[50].data}` +
-        `\n *ואלו שמות: מקום 1:* ${achievementsOfSeason[55].data}` +
-        `\n *ואלו שמות: מקום 2:* ${achievementsOfSeason[56].data}` +
-        `\n *ואלו שמות: מקום 3:* ${achievementsOfSeason[57].data}` +
-        `\n *ואלו שמות: מקום 4:* ${achievementsOfSeason[58].data}` +
-        `\n *ואלו שמות: מקום 5:* ${achievementsOfSeason[59].data}` +
-        `\n *ואלו שמות: מקום 6:* ${achievementsOfSeason[60].data}` +
-        `\n *מאוורר:* ${achievementsOfSeason[63].data}` +
-        `\n *טורנדו:* ${achievementsOfSeason[66].data}` +
-        `\n *מקום 1:* ${achievementsOfSeason[67].data}` +
-        `\n *מקום 2:* ${achievementsOfSeason[68].data}` +
-        `\n *מקום 3:* ${achievementsOfSeason[69].data}` +
-        `\n *מקום 4:* ${achievementsOfSeason[70].data}` +
-        `\n *מקום 5:* ${achievementsOfSeason[71].data}` +
-        `\n *מקום 6:* ${achievementsOfSeason[72].data}` +
-        `\n *מקום 7:* ${achievementsOfSeason[75].data}` +
-        `\n *מקום 8:* ${achievementsOfSeason[76].data}` +
-        `\n *מקום 9:* ${achievementsOfSeason[77].data}` +
-        `\n *מקום 10:* ${achievementsOfSeason[78].data}` +
-        `\n *מקום 11:* ${achievementsOfSeason[79].data}` +
-        `\n *מקום 12:* ${achievementsOfSeason[80].data}` +
-        `\n *מקום 13:* ${achievementsOfSeason[81].data}` +
-        `\n *מקום 14:* ${achievementsOfSeason[82].data}`;
+        `\n *1אירופיאיות:* ${achievementsOfSeason[11].data}` +
+        `\n *2אירופיאיות:* ${achievementsOfSeason[14].data}` +
+        `\n *3אירופיאיות:* ${achievementsOfSeason[17].data}` +
+        `\n *4אירופיאיות:* ${achievementsOfSeason[20].data}` +
+        `\n *אלופת החורף:* ${achievementsOfSeason[23].data}` +
+        `\n *המלך:* ${achievementsOfSeason[26].data}` +
+        `\n *הנסיך:* ${achievementsOfSeason[29].data}` +
+        `\n *השף:* ${achievementsOfSeason[32].data}` +
+        `\n *הסו שף:* ${achievementsOfSeason[35].data}` +
+        `\n *לא נביא:* ${achievementsOfSeason[38].data}` +
+        `\n *הנה הוא מגיע:* ${achievementsOfSeason[41].data}` +
+        `\n *יאללה הביתה 1:* ${achievementsOfSeason[44].data}` +
+        `\n *יאללה הביתה 2:* ${achievementsOfSeason[49].data}` +
+        `\n *והיא עולה 1:* ${achievementsOfSeason[54].data}` +
+        `\n *והיא עולה 2:* ${achievementsOfSeason[59].data}` +
+        `\n *ואלו שמות: מקום 1:* ${achievementsOfSeason[64].data}` +
+        `\n *ואלו שמות: מקום 2:* ${achievementsOfSeason[65].data}` +
+        `\n *ואלו שמות: מקום 3:* ${achievementsOfSeason[66].data}` +
+        `\n *ואלו שמות: מקום 4:* ${achievementsOfSeason[67].data}` +
+        `\n *ואלו שמות: מקום 5:* ${achievementsOfSeason[68].data}` +
+        `\n *ואלו שמות: מקום 6:* ${achievementsOfSeason[69].data}` +
+        `\n *מאוורר:* ${achievementsOfSeason[72].data}` +
+        `\n *טורנדו:* ${achievementsOfSeason[75].data}` +
+        `\n *מקום 1:* ${achievementsOfSeason[76].data}` +
+        `\n *מקום 2:* ${achievementsOfSeason[77].data}` +
+        `\n *מקום 3:* ${achievementsOfSeason[78].data}` +
+        `\n *מקום 4:* ${achievementsOfSeason[79].data}` +
+        `\n *מקום 5:* ${achievementsOfSeason[80].data}` +
+        `\n *מקום 6:* ${achievementsOfSeason[81].data}` +
+        `\n *מקום 7:* ${achievementsOfSeason[84].data}` +
+        `\n *מקום 8:* ${achievementsOfSeason[85].data}` +
+        `\n *מקום 9:* ${achievementsOfSeason[86].data}` +
+        `\n *מקום 10:* ${achievementsOfSeason[87].data}` +
+        `\n *מקום 11:* ${achievementsOfSeason[88].data}` +
+        `\n *מקום 12:* ${achievementsOfSeason[89].data}` +
+        `\n *מקום 13:* ${achievementsOfSeason[90].data}` +
+        `\n *מקום 14:* ${achievementsOfSeason[91].data}`;
 
       break;
 
@@ -129,154 +134,27 @@ const LigatAl = async function ({
       break;
 
     case 252:
-      let tableString = "";
-      const table = [["מיקום", " המנחש ", " ניקוד "]];
-      for (let i = 0; i < tableObj.roundOne.length; i++) {
-        const space = (13 - tableObj.roundOne[i][1].trim().length) / 2;
-        const length = tableObj.roundOne[i][1].trim().length;
-        // console.log(tableObj.roundOne[i][1].trim(), length);
-        let padding = "";
-        switch (length) {
-          case 11:
-            padding = "-";
-          case 10:
-            padding = "!-";
-            break;
-          case 9:
-            padding = "--";
-            break;
-          case 8:
-            padding = "!--";
-            break;
-          case 7:
-            padding = "---";
-            break;
-          case 6:
-            padding = "!---";
-            break;
-          case 5:
-            padding = "----";
-            break;
-        }
-
-        const space0 = (3 - tableObj.roundOne[i][0].trim().length) / 2;
-        let padding0 = "";
-        if (space0 > 0) {
-          padding0 = " ";
-        } else if (space0 > 1) {
-          padding0 = "  ";
-        } else if (space0 > 2) {
-          padding0 = "   ";
-        } else if (space0 > 3) {
-          padding0 = "    ";
-        }
-
-        // const row = [
-        //   `${padding0}${tableObj.roundOne[i][0]}${padding0}`,
-        //   `${padding}${tableObj.roundOne[i][1]}${padding}`,
-        //   `  ${tableObj.roundOne[i][2].trim()}  `,
-        // ];
-
-        // const row =
-        //   `\n|${padding0}${tableObj.roundOne[i][0]}${padding0}|` +
-        //   `${padding}${tableObj.roundOne[i][1]}${padding}|` +
-        //   `  ${tableObj.roundOne[i][2].trim()}  |`;
-
-        const startRowLength = (
-          `|${padding0}${tableObj.roundOne[i][0]}${padding0}|` +
-          `  ${tableObj.roundOne[i][1]}  |`
-        ).length;
-        console.log(startRowLength);
-        const endSpace = 51 - startRowLength;
-        console.log(endSpace);
-        let end = "";
-        switch (endSpace) {
-          case 33:
-            end = "--------------------";
-            break;
-          case 32:
-            end = "---------------------";
-            break;
-          case 31:
-            end = "----------------------";
-            break;
-          case 30:
-            end = "-----------------------";
-            break;
-          case 29:
-            end = "------------------------";
-            break;
-          case 28:
-            end = "-------------------------";
-            break;
-          case 27:
-            end = "---------------------------";
-            break;
-          case 26:
-            end = "----------------------------";
-            break;
-          case 25:
-            end = "------------------------------";
-            break;
-          case 24:
-            end = "-------------------------------";
-            break;
-          case 23:
-            end = "--------------------------------";
-            break;
-          case 22:
-            end = "----------------------------------";
-            break;
-          case 21:
-            end = "-----------------------------------";
-            break;
-          case 20:
-            end = "------------------------------------";
-            break;
-          case 19:
-            end = "-------------------------------------";
-            break;
-          case 18:
-            end = "--------------------------------------";
-            break;
-          default:
-            end = "--------------------";
-        }
+      for (let i = 0; i < tableObj[tableName].length; i++) {
+        // console.log(tableObj[tableName][i][1].trim(), length);
+        const isClalitTable = tableName === "clalitTable";
+        const start1 = isClalitTable
+          ? tableObj[tableName][0][3]
+          : tableObj[tableName][0][2];
+        const start2 = isClalitTable
+          ? tableObj[tableName][0][4]
+          : tableObj[tableName][0][3];
         const row =
-          `\n|${padding0}${tableObj.roundOne[i][0]}${padding0}|` +
-          `  ${tableObj.roundOne[i][1]}  ` +
-          `${end}|${tableObj.roundOne[i][2].trim()}|`;
+          `\n \n${tableObj[tableName][i][0]}` + isClalitTable
+            ? `${tableObj[tableName][i][2]}`
+            : `${tableObj[tableName][i][1]}` + isClalitTable
+            ? `\n${start1}: ${tableObj[tableName][i][3]}`
+            : `\n${start2}: ${tableObj[tableName][i][2]}` + isClalitTable
+            ? `\n${start1}: ${tableObj[tableName][i][4]}`
+            : `\n${start2}: ${tableObj[tableName][i][3]}`;
 
         tableString = tableString + row;
-        // table.push(row);
       }
-      // console.log(table);
-      console.log(tableString);
-      const tbl = markdownTable(table, {
-        align: ["c", "c", "c"],
-        // stringLength: (s) => {
-        //   if (isPositiveInteger(s)) {
-        //     return 1;
-        //   } else if (s.includes(".")) {
-        //     // if(s.length===3){return 3}
-        //     // else if(s.length===2){return 3}
-        //     return s.length;
-        //   } else {
-        //     const space = (13 - s.length) / 2;
-        //     console.log("space", space);
-        //     if (space > 0) {
-        //       return 1;
-        //     } else if (space > 1) {
-        //       return 2;
-        //     } else if (space > 2) {
-        //       return 3;
-        //     } else if (space > 3) {
-        //       return 4;
-        //     }
-        //   }
-        // },
-      });
-      // console.log(tbl);
+
       textMessage1 = "כתבנו בקרוב, אז למה לבזבז לנו משאבים 😊";
       textMessage2 = tableString;
       break;

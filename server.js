@@ -132,7 +132,7 @@ const getData = async () => {
     tableObj = { ...tableObj, ...tablesData[i] };
   }
   console.log(tableObj.clalitTable);
-  // console.log(tableObj.roundOne);
+  console.log(tableObj.roundOne);
   // console.log({ tablesData });
   // console.log(tablesData.clalitTable);
 };
@@ -214,6 +214,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       score2,
       AchievementsOfSeasonData,
       tableObj,
+      tableName: "roundOne",
     });
 
     textMessage1 = LigatAlMessages[0];

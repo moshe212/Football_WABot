@@ -17,7 +17,7 @@ const getTablesData = async function () {
 
   const letersArray = [
     ["clalitTable", "A", "E"],
-    ["roundOne", "G", "I"],
+    ["roundOne", "G", "J"],
     ["roundTow", "L", "O"],
     ["playoffTable", "Q", "T"],
     ["gamesTable", "V", "Y"],
@@ -26,13 +26,12 @@ const getTablesData = async function () {
     ["hirushimotTable", "AK", "AN"],
     ["srakTable", "AP", "AS"],
     ["hesegimTable", "AU", "AX"],
-    ["diamondTable", "AZ", "BC"],
-    ["goldTAble", "BE", "BH"],
-    ["silverTable", "BJ", "BM"],
-    ["bronzeTable", "CA", "CE"],
-    ["seasonTable", "CG", "CK"],
-    ["gameOfSeasonTable", "CM", "CQ"],
-    ["finalGaviaTable", "CS", "CW"],
+    ["seasonTable", "AZ", "BC"],
+    ["gameOfSeasonTable", "BE", "BH"],
+    ["diamondTable", "BV", "BY"],
+    ["goldTAble", "CA", "CD"],
+    ["silverTable", "CF", "CI"],
+    ["bronzeTable", "CK", "CN"],
   ];
 
   const tables = Promise.all(
@@ -42,7 +41,7 @@ const getTablesData = async function () {
           .get({
             auth, //auth object
             spreadsheetId, //spreadsheet id
-            range: `טבלאות כלליות!${coupel[1]}5:${coupel[2]}83`, //"Sheet1!A:B" sheet name and range of cells
+            range: `טבלאות כלליות!${coupel[1]}4:${coupel[2]}83`, //"Sheet1!A:B" sheet name and range of cells
             valueRenderOption: "FORMATTED_VALUE",
           })
           .then((dataTable) => {
