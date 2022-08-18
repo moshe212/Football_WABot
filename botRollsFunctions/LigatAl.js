@@ -155,9 +155,9 @@ const LigatAl = async function ({
           : `${tableObj[tableName][i][1]}`;
         const start1Text = isClalitTable
           ? `\n${start1}: ${tableObj[tableName][i][3]}`
-          : `\n${start2}: ${tableObj[tableName][i][2]}`;
+          : `\n${start1}: ${tableObj[tableName][i][2]}`;
         const start2Text = isClalitTable
-          ? `\n${start1}: ${tableObj[tableName][i][4]}`
+          ? `\n${start2}: ${tableObj[tableName][i][4]}`
           : `\n${start2}: ${tableObj[tableName][i][3]}`;
 
         console.log(number);
