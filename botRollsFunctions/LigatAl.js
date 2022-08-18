@@ -175,7 +175,7 @@ const LigatAl = async function ({
 
       let tableString = "";
       for (let i = 1; i < tableObj[tableName].length; i++) {
-        const row = await getRow(isClalitTable);
+        const row = await getRow(i);
         tableString = tableString + row;
       }
 
