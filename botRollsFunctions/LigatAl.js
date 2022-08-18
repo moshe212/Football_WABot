@@ -28,7 +28,6 @@ const LigatAl = async function ({
   let ScoreTeam2 = 0;
   let GuessData_Saved = [];
   let textMessage = "";
-  let tableString = "";
 
   switch (stage) {
     case 110:
@@ -135,7 +134,8 @@ const LigatAl = async function ({
     case 252:
       const tableName = "roundOne";
       const isClalitTable = tableName === "clalitTable";
-
+      let tableString = "";
+      const getRows = async (tableName) => {};
       console.log(tableName);
       console.log("tbl", tableObj[tableName]);
       console.log("isClalitTable", isClalitTable);
