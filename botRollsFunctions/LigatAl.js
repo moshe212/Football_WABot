@@ -142,8 +142,12 @@ const LigatAl = async function ({
         ? tableObj[tableName][0][4]
         : tableObj[tableName][0][3];
 
+      console.log(tableName);
+      // console.log("tbl", tableObj[tableName]);
+      console.log("isClalitTable", isClalitTable);
+      console.log("start1", start1);
+      console.log("start2", start2);
       for (let i = 1; i < tableObj[tableName].length; i++) {
-        console.log("tbl", tableObj[tableName]);
         // console.log(tableObj[tableName][i][1].trim(), length);
 
         const row =
