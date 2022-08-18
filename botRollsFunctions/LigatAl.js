@@ -86,10 +86,10 @@ const LigatAl = async function ({
         `\n *האלופה:* ${achievementsOfSeason[2].data}` +
         `\n *הסגנית:* ${achievementsOfSeason[5].data}` +
         `\n *הטוטו:* ${achievementsOfSeason[8].data}` +
-        `\n *1אירופיאיות:* ${achievementsOfSeason[11].data}` +
-        `\n *2אירופיאיות:* ${achievementsOfSeason[14].data}` +
-        `\n *3אירופיאיות:* ${achievementsOfSeason[17].data}` +
-        `\n *4אירופיאיות:* ${achievementsOfSeason[20].data}` +
+        `\n *אירופיאיות1:* ${achievementsOfSeason[11].data}` +
+        `\n *אירופיאיות2:* ${achievementsOfSeason[14].data}` +
+        `\n *אירופיאיות3:* ${achievementsOfSeason[17].data}` +
+        `\n *אירופיאיות4:* ${achievementsOfSeason[20].data}` +
         `\n *אלופת החורף:* ${achievementsOfSeason[23].data}` +
         `\n *המלך:* ${achievementsOfSeason[26].data}` +
         `\n *הנסיך:* ${achievementsOfSeason[29].data}` +
@@ -135,6 +135,7 @@ const LigatAl = async function ({
 
     case 252:
       for (let i = 0; i < tableObj[tableName].length; i++) {
+        console.log("tbl", tableObj[tableName]);
         // console.log(tableObj[tableName][i][1].trim(), length);
         const isClalitTable = tableName === "clalitTable";
         const start1 = isClalitTable
