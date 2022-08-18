@@ -135,20 +135,19 @@ const LigatAl = async function ({
     case 252:
       const tableName = "roundOne";
       const isClalitTable = tableName === "clalitTable";
-      const start1 = isClalitTable
-        ? tableObj[tableName][0][3]
-        : tableObj[tableName][0][2];
-      const start2 = isClalitTable
-        ? tableObj[tableName][0][4]
-        : tableObj[tableName][0][3];
 
       console.log(tableName);
       console.log("tbl", tableObj[tableName]);
       console.log("isClalitTable", isClalitTable);
-      console.log("start1", start1);
-      console.log("start2", start2);
+
       for (let i = 1; i < tableObj[tableName].length; i++) {
         // console.log(tableObj[tableName][i][1].trim(), length);
+        const start1 = isClalitTable
+          ? tableObj[tableName][0][3]
+          : tableObj[tableName][0][2];
+        const start2 = isClalitTable
+          ? tableObj[tableName][0][4]
+          : tableObj[tableName][0][3];
         const number = `${tableObj[tableName][i][0]}`;
         const name = isClalitTable
           ? `${tableObj[tableName][i][2]}`
@@ -160,6 +159,8 @@ const LigatAl = async function ({
           ? `\n${start2}: ${tableObj[tableName][i][4]}`
           : `\n${start2}: ${tableObj[tableName][i][3]}`;
 
+        console.log("start1", start1);
+        console.log("start2", start2);
         console.log(number);
         console.log(name);
         console.log(start1Text);
