@@ -134,16 +134,18 @@ const LigatAl = async function ({
       break;
 
     case 252:
+      const isClalitTable = tableName === "clalitTable";
+      const start1 = isClalitTable
+        ? tableObj[tableName][0][3]
+        : tableObj[tableName][0][2];
+      const start2 = isClalitTable
+        ? tableObj[tableName][0][4]
+        : tableObj[tableName][0][3];
+
       for (let i = 1; i < tableObj[tableName].length; i++) {
         console.log("tbl", tableObj[tableName]);
         // console.log(tableObj[tableName][i][1].trim(), length);
-        const isClalitTable = tableName === "clalitTable";
-        const start1 = isClalitTable
-          ? tableObj[tableName][0][3]
-          : tableObj[tableName][0][2];
-        const start2 = isClalitTable
-          ? tableObj[tableName][0][4]
-          : tableObj[tableName][0][3];
+
         const row =
           `\n \n${tableObj[tableName][i][0]}` + isClalitTable
             ? `${tableObj[tableName][i][2]}`
