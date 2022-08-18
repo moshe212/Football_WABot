@@ -167,7 +167,8 @@ const LigatAl = async function ({
         const row =
           `\n${number}${name}` +
           `\n${start1}:${start1Text}` +
-          `\n${start2}:${start2Text}`;
+          `\n${start2}:${start2Text}` +
+          `\n`;
 
         tableString = tableString + row;
       }
