@@ -18,7 +18,6 @@ const LigatAl = async function ({
   score2,
   AchievementsOfSeasonData,
   tableObj,
-  tableName,
 }) {
   let textMessage1 = "empty";
   let textMessage2 = "empty";
@@ -134,6 +133,7 @@ const LigatAl = async function ({
       break;
 
     case 252:
+      const tableName = "roundOne";
       const isClalitTable = tableName === "clalitTable";
       const start1 = isClalitTable
         ? tableObj[tableName][0][3]

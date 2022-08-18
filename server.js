@@ -214,7 +214,6 @@ app.post("/api/Whatsapp", async (req, res) => {
       score2,
       AchievementsOfSeasonData,
       tableObj,
-      tableName: "roundOne",
     });
 
     textMessage1 = LigatAlMessages[0];
