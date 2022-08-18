@@ -143,7 +143,7 @@ const LigatAl = async function ({
         : tableObj[tableName][0][3];
 
       console.log(tableName);
-      // console.log("tbl", tableObj[tableName]);
+      console.log("tbl", tableObj[tableName]);
       console.log("isClalitTable", isClalitTable);
       console.log("start1", start1);
       console.log("start2", start2);
