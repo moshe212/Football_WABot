@@ -134,7 +134,7 @@ const LigatAl = async function ({
       break;
 
     case 252:
-      for (let i = 0; i < tableObj[tableName].length; i++) {
+      for (let i = 1; i < tableObj[tableName].length; i++) {
         console.log("tbl", tableObj[tableName]);
         // console.log(tableObj[tableName][i][1].trim(), length);
         const isClalitTable = tableName === "clalitTable";
