@@ -28,6 +28,7 @@ const getTableAnswer = async (tableName, tableObj) => {
     console.log(name);
     console.log(start1Text);
     console.log(start2Text);
+    console.log("check");
     const row =
       `\n${number}${name}` +
       `\n${start1}:${start1Text}` +
