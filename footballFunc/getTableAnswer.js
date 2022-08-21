@@ -16,11 +16,11 @@ const getTableAnswer = async (tableName, tableObj) => {
       ? `${tableObj[tableName][i][2]}`
       : `${tableObj[tableName][i][1]}`;
     const start1Text = isClalitTable
-      ? `\n${start1}: ${tableObj[tableName][i][3]}`
-      : `\n${start1}: ${tableObj[tableName][i][2]}`;
+      ? `${start1}: ${tableObj[tableName][i][3]}`
+      : `${start1}: ${tableObj[tableName][i][2]}`;
     const start2Text = isClalitTable
-      ? `\n${start2}: ${tableObj[tableName][i][4]}`
-      : `\n${start2}: ${tableObj[tableName][i][3]}`;
+      ? `${start2}: ${tableObj[tableName][i][4]}`
+      : `${start2}: ${tableObj[tableName][i][3]}`;
 
     console.log("start1", start1);
     console.log("start2", start2);
@@ -30,7 +30,7 @@ const getTableAnswer = async (tableName, tableObj) => {
     console.log(start2Text);
     console.log("check");
     const row =
-      `\n${number}${name}` + `\n${start1Text}` + `\n${start2Text}` + `\n`;
+      `\n${number}. ${name}` + `\n${start1Text}` + `\n${start2Text}` + `\n`;
 
     tableString = tableString + row;
   }
