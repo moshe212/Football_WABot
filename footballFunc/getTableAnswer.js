@@ -30,10 +30,7 @@ const getTableAnswer = async (tableName, tableObj) => {
     console.log(start2Text);
     console.log("check");
     const row =
-      `\n${number}${name}` +
-      `\n${start1}:${start1Text}` +
-      `\n${start2}:${start2Text}` +
-      `\n`;
+      `\n${number}${name}` + `\n${start1Text}` + `\n${start2Text}` + `\n`;
 
     tableString = tableString + row;
   }
