@@ -64,6 +64,7 @@ const LigatAl = async function ({
               " עבר.";
             textMessage2 =
               "אם רק עכשיו נזכרתם לשלוח ניחושים אז אנחנו בבעיה. אנא פנו למנהל המערכת";
+            textMessage3 = "לחזרה לתפריט הקודם הקישו 0️⃣";
             break;
           } else {
             textMessage1 =
