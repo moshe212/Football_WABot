@@ -33,7 +33,7 @@ const LigatAl = async function ({
   } else {
     switch (stage) {
       case 110:
-        if (cycleNum !== "0" && cycleText.includes("מחזור")) {
+        if (cycleText.includes("מחזור")) {
           textMessage1 =
             "ברוכים הבאים למשחק *היציע: ליגת העל* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי המחזור \n2️⃣ - להישגי העונה שלכם \n3️⃣ - לקבוצת ה-Whatsapp הרשמית \n4️⃣ - לטבלאות (בקרוב) \n5️⃣ - לחזרה לתפריט הראשי";
 
