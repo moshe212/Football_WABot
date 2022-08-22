@@ -28,7 +28,10 @@ const LigatAl = async function ({
   let textMessage = "";
 
   if ((stage > 266 && stage < 293) || stage === 252) {
-    const tableTextMassage = await getTableTextMassages({ stage, tableObj });
+    const tableTextMassage = await footballFunc.getTableTextMassages({
+      stage,
+      tableObj,
+    });
     textMessage1 = tableTextMassage;
   } else {
     switch (stage) {
