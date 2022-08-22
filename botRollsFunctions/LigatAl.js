@@ -27,7 +27,7 @@ const LigatAl = async function ({
   let GuessData_Saved = [];
   let textMessage = "";
 
-  if (stage > 266 && stage < 293) {
+  if ((stage > 266 && stage < 293) || stage === 252) {
     const tableTextMassage = await getTableTextMassages({ stage, tableObj });
     textMessage1 = tableTextMassage;
   } else {
