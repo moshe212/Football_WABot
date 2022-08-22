@@ -196,7 +196,8 @@ app.post("/api/Whatsapp", async (req, res) => {
   } else if (
     (stage > 32 && stage < 100) ||
     stage === 110 ||
-    (stage > 248 && stage < 253)
+    (stage > 248 && stage < 253) ||
+    (stage > 266 && stage < 293)
   ) {
     const LigatAlMessages = await botRollsFunctions.LigatAl({
       cycleNum,

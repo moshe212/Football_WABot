@@ -16,6 +16,7 @@ const { getAchievementsOfSeason } = require("./getAchievementsOfSeason");
 const { getTablesData } = require("./getTablesData");
 const { getImage } = require("./getImage");
 const { getTableAnswer } = require("./getTableAnswer");
+const { getTableTextMassages } = require("./getTableTextMassages");
 
 const footballFunc = {
   getDataFromSheet,
@@ -36,6 +37,7 @@ const footballFunc = {
   getTablesData,
   getImage,
   getTableAnswer,
+  getTableTextMassages,
 };
 
 module.exports = { footballFunc };

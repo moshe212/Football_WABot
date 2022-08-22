@@ -9,8 +9,6 @@ const getTableAnswer = async (tableName, tableObj) => {
 
   let tableString = "";
   for (let i = 1; i < tableObj[tableName].length; i++) {
-    // console.log(tableObj[tableName][i][1].trim(), length);
-
     const number = `${tableObj[tableName][i][0]}`;
     const name = isClalitTable
       ? `${tableObj[tableName][i][2]}`
@@ -22,13 +20,6 @@ const getTableAnswer = async (tableName, tableObj) => {
       ? `${start2}: ${tableObj[tableName][i][4]}`
       : `${start2}: ${tableObj[tableName][i][3]}`;
 
-    console.log("start1", start1);
-    console.log("start2", start2);
-    console.log(number);
-    console.log(name);
-    console.log(start1Text);
-    console.log(start2Text);
-    console.log("check");
     const row =
       `\n${number}. ${name}` + `\n${start1Text}` + `\n${start2Text}` + `\n`;
 
