@@ -1,3 +1,5 @@
+const { footballFunc } = require("./footballFunc");
+
 const getTableTextMassages = async function ({ stage, tableObj }) {
   let tableName = "";
   let tableString = "";
