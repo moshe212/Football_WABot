@@ -41,7 +41,7 @@ const getTablesData = async function () {
           .get({
             auth, //auth object
             spreadsheetId, //spreadsheet id
-            range: `טבלאות כלליות!${coupel[1]}4:${coupel[2]}83`, //"Sheet1!A:B" sheet name and range of cells
+            range: `טבלאות כלליות!${coupel[1]}4:${coupel[2]}84`, //"Sheet1!A:B" sheet name and range of cells
             valueRenderOption: "FORMATTED_VALUE",
           })
           .then((dataTable) => {
