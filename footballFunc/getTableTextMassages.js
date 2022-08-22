@@ -1,4 +1,4 @@
-const { footballFunc } = require("../footballFunc");
+const getTableAnswer = require("./getTableAnswer");
 
 const getTableTextMassages = async function ({ stage, tableObj }) {
   let tableName = "";
@@ -21,14 +21,14 @@ const getTableTextMassages = async function ({ stage, tableObj }) {
 
     case 267:
       tableName = "clalitTable";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
 
     case 268:
       tableName = "clalitTable"; //weekTable ??
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
@@ -75,21 +75,21 @@ const getTableTextMassages = async function ({ stage, tableObj }) {
 
     case 274:
       tableName = "roundOne";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
 
     case 275:
       tableName = "roundTow";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
 
     case 276:
       tableName = "playoffTable";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
@@ -97,91 +97,91 @@ const getTableTextMassages = async function ({ stage, tableObj }) {
     //games tables
     case 278:
       tableName = "gamesTable";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
 
     case 279:
       tableName = "bumsTable";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
 
     case 280:
       tableName = "bombotTable";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
 
     case 281:
       tableName = "hirushimotTable";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
 
     case 282:
       tableName = "srakTable";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
 
     case 283:
       tableName = "hesegimTable";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
 
     case 285:
       tableName = "diamondTable";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
 
     case 286:
       tableName = "goldTAble";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
 
     case 287:
       tableName = "silverTable";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
 
     case 288:
       tableName = "bronzeTable";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
 
     case 290:
       tableName = "seasonTable";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
 
     case 291:
       tableName = "gameOfSeasonTable";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
 
     case 292:
       tableName = "bronzeTable";
-      tableString = await footballFunc.getTableAnswer(tableName, tableObj);
+      tableString = await getTableAnswer(tableName, tableObj);
 
       textMessage1 = tableString;
       break;
