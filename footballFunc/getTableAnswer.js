@@ -1,4 +1,4 @@
-const getTableAnswer = async (tableName, tableObj) => {
+const getTableAnswer = async function (tableName, tableObj) {
   const isClalitTable = tableName === "clalitTable";
   const start1 = isClalitTable
     ? tableObj[tableName][0][3]
