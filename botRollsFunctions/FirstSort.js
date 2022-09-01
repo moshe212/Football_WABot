@@ -35,7 +35,10 @@ const FirstSort = async function ({
       }
 
       if (isFirst) {
-        UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
+        UsersIndex = await footballFunc.getDataFromSheet(
+          "אינדקס משתמשים",
+          "LigatAl"
+        );
         for (let l = 0; l < UsersIndex.length; l++) {
           if (user_name === UsersIndex[l]._rawData[0]) {
             const first = UsersIndex[l]._rawData[2];

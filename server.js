@@ -97,7 +97,7 @@ let AchievementsOfSeasonData = [];
 let tablesData = [];
 let tableObj = {};
 const getData = async () => {
-  const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
+  const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים", "LigatAl");
   const res_cycle = await footballFunc.getCycle(Data);
   cycleNum = res_cycle[0];
   cycleText = res_cycle[3];
@@ -107,7 +107,10 @@ const getData = async () => {
   // console.log("cycleDate", cycleDate, cycleDate.replace("-", "."));
   cycleIndexNum = res_cycle[2];
 
-  Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+  Games = await footballFunc.getDataFromSheet(
+    "רשימת משחקים לפי מחזור",
+    "LigatAl"
+  );
   for (let g = 0; g < Games.length; g++) {
     // console.log("Games", Games[g]._rawData[0], cycleNum);
     if (Games[g]._rawData[0] === cycleNum) {
@@ -118,28 +121,99 @@ const getData = async () => {
     }
   }
   // console.log("GamesList", cycleNum, GamesList);
-  UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
+  UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים", "LigatAl");
   for (let l = 0; l < UsersIndex.length; l++) {
     UsersList.push(UsersIndex[l]._rawData[0]);
   }
-  GuessData = await footballFunc.getDataFromSheet("ליגת העל");
-  GuessData_Gavia = await footballFunc.getDataFromSheet("גביע המדינה");
-  console.log({ GuessData_Gavia });
-  AchievementsOfSeasonData = await footballFunc.getDataFromSheet("הישגים");
+  GuessData = await footballFunc.getDataFromSheet("ליגת העל", "LigatAl");
+  // GuessData_Gavia = await footballFunc.getDataFromSheet(
+  //   "גביע המדינה",
+  //   "LigatAl"
+  // );
+  // console.log({ GuessData_Gavia });
+  AchievementsOfSeasonData = await footballFunc.getDataFromSheet(
+    "הישגים",
+    "LigatAl"
+  );
   tablesData = await footballFunc.getTablesData();
 
   for (let i = 0; i < tablesData.length; i++) {
     tableObj = { ...tableObj, ...tablesData[i] };
   }
-  console.log(tableObj.clalitTable);
-  console.log(tableObj.roundOne);
+  // console.log(tableObj.clalitTable);
+  // console.log(tableObj.roundOne);
   // console.log({ tablesData });
   // console.log(tablesData.clalitTable);
 };
 
-const job = schedule.scheduleJob("0 0 4 * * *", getData);
+let alufotCycleNum = "0";
+let alufotCycleText = "";
+let alufotCycleDate = "";
+let alufotGames = [];
+let alufotGamesList = [];
+let alufotCycleIndexNum = 0;
+let alufotUsersIndex = [];
+let alufotGuessData = [];
+let alufotUsersList = [];
+let alufotAchievementsOfSeasonData = [];
+let alufotTablesData = [];
+let alufotTableObj = {};
+const getAlufotData = async () => {
+  const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים", "Alufot");
+  const res_cycle = await footballFunc.getCycle(Data);
+  alufotCycleNum = res_cycle[0];
+  alufotCycleText = res_cycle[3];
+  const cycleDate1 = moment(res_cycle[1]).format("DD-MM-YYYY");
+  const cycleDate2 = cycleDate1.replace("-", ".");
+  alufotCycleDate = cycleDate2.replace("-", ".");
+  // console.log("cycleDate", cycleDate, cycleDate.replace("-", "."));
+  alufotCycleIndexNum = res_cycle[2];
+
+  alufotGames = await footballFunc.getDataFromSheet(
+    "רשימת משחקים לפי מחזור",
+    "Alufot"
+  );
+  for (let g = 0; g < alufotGames.length; g++) {
+    // console.log("Games", Games[g]._rawData[0], cycleNum);
+    if (alufotGames[g]._rawData[0] === alufotCycleNum) {
+      // console.log("Games[g]", Games[g]);
+      const team_1 = alufotGames[g]._rawData[1];
+      const team_2 = alufotGames[g]._rawData[2];
+      alufotGamesList.push([team_1, team_2]);
+    }
+  }
+  // console.log("GamesList", cycleNum, GamesList);
+  alufotUsersIndex = await footballFunc.getDataFromSheet(
+    "אינדקס משתמשים",
+    "Alufot"
+  );
+  for (let l = 0; l < alufotUsersIndex.length; l++) {
+    alufotUsersList.push(alufotUsersIndex[l]._rawData[0]);
+  }
+  alufotGuessData = await footballFunc.getDataFromSheet("שלב הבתים", "Alufot");
+
+  // alufotAchievementsOfSeasonData = await footballFunc.getDataFromSheet(
+  //   "הישגים",
+  //   "Alufot"
+  // );
+  // alufotTablesData = await footballFunc.getTablesData();
+
+  // for (let i = 0; i < alufotTablesData.length; i++) {
+  //   alufotTableObj = { ...alufotTableObj, ...alufotTablesData[i] };
+  // }
+  // console.log(alufotTableObj.clalitTable);
+  // console.log(alufotTableObj.roundOne);
+  // console.log({ tablesData });
+  // console.log(tablesData.clalitTable);
+
+  // console.log({ alufotGames });
+};
+
+const job1 = schedule.scheduleJob("0 0 4 * * *", getData);
+const job2 = schedule.scheduleJob("0 0 4 * * *", getAlufotData);
 
 getData();
+getAlufotData();
 
 app.post("/api/Whatsapp", async (req, res) => {
   const user_name = req.body.query.sender;
@@ -220,6 +294,28 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage1 = LigatAlMessages[0];
     textMessage2 = LigatAlMessages[1];
     textMessage3 = LigatAlMessages[2];
+  } else if (stage === 256 || (stage > 295) & (stage < 392)) {
+    const LigatAlufotMessages = await botRollsFunctions.LigatAlufot({
+      alufotCycleNum,
+      alufotCycleText,
+      alufotCycleDate,
+      alufotGamesList,
+      alufotCycleIndexNum,
+      alufotUsersIndex,
+      alufotGuessData,
+      user_name,
+      stage,
+      score,
+      gameNum,
+      score1,
+      score2,
+      alufotAchievementsOfSeasonData,
+      alufotTableObj,
+    });
+
+    textMessage1 = LigatAlufotMessages[0];
+    textMessage2 = LigatAlufotMessages[1];
+    textMessage3 = LigatAlufotMessages[2];
   } else {
     console.log(`Sorry, we are out of range.`);
   }

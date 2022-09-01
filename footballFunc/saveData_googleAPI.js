@@ -1,7 +1,7 @@
 const { google } = require("googleapis");
 const moment = require("moment");
 
-const saveDate_googleAPI = async function (
+const saveData_googleAPI = async function (
   user_name,
   UsersIndex,
   GuessData,
@@ -12,7 +12,8 @@ const saveDate_googleAPI = async function (
   score1,
   score2,
   IsFirst,
-  Team
+  Team,
+  fileName
 ) {
   const auth = new google.auth.GoogleAuth({
     keyFile: "config/CreditTransaction-d9fe1ef7e128.json", //the key file
@@ -26,7 +27,12 @@ const saveDate_googleAPI = async function (
     version: "v4",
     auth: authClientObject,
   });
-  const spreadsheetId = "1J3iFj9uM3TEC3y__u02PFnq5M5YKSezXP6TVYOEGMto";
+  const spreadsheetId =
+    fileName === "LigatAl"
+      ? "1J3iFj9uM3TEC3y__u02PFnq5M5YKSezXP6TVYOEGMto"
+      : fileName === "Alufot"
+      ? "1a8XbSk7anY4S0SvyJawCqrYYcae4WUN3C-NUO7_K-ys"
+      : "";
   let Range_Cell = "";
   try {
     let index = null;
@@ -107,4 +113,4 @@ const saveDate_googleAPI = async function (
   }
 };
 
-module.exports = { saveDate_googleAPI };
+module.exports = { saveData_googleAPI };

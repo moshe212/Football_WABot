@@ -10,13 +10,14 @@ const { chooseGameToFix_Gavia } = require("./chooseGameToFix_Gavia");
 const { saveFix_Gavia } = require("./saveFix_Gavia");
 const { fixMinut_Team_Auto } = require("./fixMinut_Team_Auto");
 const { fixAuto_Main } = require("./fixAuto_Main");
-const { saveDate_googleAPI } = require("./saveDate_googleAPI");
+const { saveData_googleAPI } = require("./saveData_googleAPI");
 const { getGameGuss } = require("./getGameGuss");
 const { getAchievementsOfSeason } = require("./getAchievementsOfSeason");
 const { getTablesData } = require("./getTablesData");
 const { getImage } = require("./getImage");
 const { getTableAnswer } = require("./getTableAnswer");
 const { getTableTextMassages } = require("./getTableTextMassages");
+const { chooseGameToFixAlufot } = require("./chooseGameToFixAlufot");
 
 const footballFunc = {
   getDataFromSheet,
@@ -31,13 +32,14 @@ const footballFunc = {
   saveFix_Gavia,
   fixMinut_Team_Auto,
   fixAuto_Main,
-  saveDate_googleAPI,
+  saveData_googleAPI,
   getGameGuss,
   getAchievementsOfSeason,
   getTablesData,
   getImage,
   getTableAnswer,
   getTableTextMassages,
+  chooseGameToFixAlufot,
 };
 
 module.exports = { footballFunc };

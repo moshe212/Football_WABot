@@ -50,7 +50,10 @@ const saveFix_Gavia = async function (
           "F",
           "G",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -63,7 +66,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -76,7 +80,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
 
         break;
@@ -102,7 +107,10 @@ const saveFix_Gavia = async function (
           "V",
           "W",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -115,7 +123,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -128,7 +137,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
 
         break;
@@ -154,7 +164,10 @@ const saveFix_Gavia = async function (
           "AL",
           "AM",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -167,7 +180,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -180,7 +194,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
         break;
 
@@ -205,7 +220,10 @@ const saveFix_Gavia = async function (
           "BB",
           "BC",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -218,7 +236,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -231,7 +250,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
         break;
 
@@ -256,7 +276,10 @@ const saveFix_Gavia = async function (
           "BR",
           "BS",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -269,7 +292,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -282,7 +306,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
 
         break;
@@ -308,7 +333,10 @@ const saveFix_Gavia = async function (
           "CH",
           "CI",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -321,7 +349,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -334,7 +363,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
 
         break;
@@ -360,7 +390,10 @@ const saveFix_Gavia = async function (
           "CX",
           "CY",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -373,7 +406,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -386,7 +420,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
 
         break;
@@ -411,7 +446,10 @@ const saveFix_Gavia = async function (
           "DN",
           "DO",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -424,7 +462,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -437,7 +476,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
 
         break;
@@ -462,7 +502,10 @@ const saveFix_Gavia = async function (
           "ED",
           "EE",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -475,7 +518,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -488,7 +532,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
 
         break;
@@ -513,7 +558,10 @@ const saveFix_Gavia = async function (
           "ET",
           "EU",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -526,7 +574,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -539,7 +588,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
 
         break;
@@ -564,7 +614,10 @@ const saveFix_Gavia = async function (
           "FJ",
           "FK",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -577,7 +630,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -590,7 +644,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
 
         break;
@@ -615,7 +670,10 @@ const saveFix_Gavia = async function (
           "FZ",
           "GA",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -628,7 +686,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -641,7 +700,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
 
         break;
@@ -666,7 +726,10 @@ const saveFix_Gavia = async function (
           "GP",
           "GQ",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -679,7 +742,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -692,7 +756,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
 
         break;
@@ -717,7 +782,10 @@ const saveFix_Gavia = async function (
           "HF",
           "HG",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -730,7 +798,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -743,7 +812,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
 
         break;
@@ -768,7 +838,10 @@ const saveFix_Gavia = async function (
           "HV",
           "HW",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -781,7 +854,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -794,7 +868,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
 
         break;
@@ -819,7 +894,10 @@ const saveFix_Gavia = async function (
           "IL",
           "IM",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -832,7 +910,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          TeamUp
+          TeamUp,
+          "GaviaMedina"
         );
         await saveData_Full(
           user_name,
@@ -845,7 +924,8 @@ const saveFix_Gavia = async function (
           "",
           "",
           "",
-          Minute
+          Minute,
+          "GaviaMedina"
         );
 
         break;

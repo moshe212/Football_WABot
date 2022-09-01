@@ -1,5 +1,5 @@
 const getData = async () => {
-  const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים");
+  const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים", "LigatAl");
   const res_cycle = await footballFunc.getCycle(Data);
   cycleNum = res_cycle[0];
   cycleText = res_cycle[3];
@@ -9,7 +9,10 @@ const getData = async () => {
   console.log("cycleDate", cycleDate, cycleDate.replace("-", "."));
   cycleIndexNum = res_cycle[2];
 
-  Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
+  Games = await footballFunc.getDataFromSheet(
+    "רשימת משחקים לפי מחזור",
+    "LigatAl"
+  );
   for (let g = 0; g < Games.length; g++) {
     console.log("Games", Games[g]._rawData[0], cycleNum);
     if (Games[g]._rawData[0] === cycleNum) {
@@ -20,12 +23,15 @@ const getData = async () => {
     }
   }
   console.log("GamesList", cycleNum, GamesList);
-  UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים");
+  UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים", "LigatAl");
   for (let l = 0; l < UsersIndex.length; l++) {
     UsersList.push(UsersIndex[l]._rawData[0]);
   }
-  GuessData = await footballFunc.getDataFromSheet("ליגת העל");
-  GuessData_Gavia = await footballFunc.getDataFromSheet("גביע המדינה");
+  GuessData = await footballFunc.getDataFromSheet("ליגת העל", "LigatAl");
+  GuessData_Gavia = await footballFunc.getDataFromSheet(
+    "גביע המדינה",
+    "LigatAl"
+  );
 };
 
 module.exports = { getData };

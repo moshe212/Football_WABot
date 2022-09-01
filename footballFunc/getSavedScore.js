@@ -5,13 +5,18 @@ const getSavedScore = async function (
   UsersIndex,
   cycleIndexNum,
   sheetTitle,
-  GamesList
+  GamesList,
+  fileName
 ) {
   const creds = require("../config/CreditTransaction-d9fe1ef7e128.json");
   // Initialize the sheet - doc ID is the long id in the sheets URL
-  const doc = new GoogleSpreadsheet(
-    "1J3iFj9uM3TEC3y__u02PFnq5M5YKSezXP6TVYOEGMto"
-  );
+  const id =
+    fileName === "LigatAl"
+      ? "1J3iFj9uM3TEC3y__u02PFnq5M5YKSezXP6TVYOEGMto"
+      : fileName === "Alufot"
+      ? "1a8XbSk7anY4S0SvyJawCqrYYcae4WUN3C-NUO7_K-ys"
+      : "";
+  const doc = new GoogleSpreadsheet(id);
 
   try {
     await doc.useServiceAccountAuth(creds);

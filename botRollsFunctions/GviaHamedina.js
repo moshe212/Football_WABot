@@ -97,7 +97,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -106,7 +106,8 @@ const GviaHamedina = async function ({
         "F",
         "G",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -143,7 +144,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -154,7 +155,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -185,7 +187,7 @@ const GviaHamedina = async function ({
       }
 
       if (GamesList.length < 2) {
-        await footballFunc.saveDate_googleAPI(
+        await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
           GuessData,
@@ -196,7 +198,8 @@ const GviaHamedina = async function ({
           "",
           "",
           "",
-          Minuts
+          Minuts,
+          "LigatAl"
         );
         // ----------Start fix auto----------------
         await footballFunc.fixAuto_Main(
@@ -234,7 +237,7 @@ const GviaHamedina = async function ({
         textMessage1 = str11 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
-        footballFunc.saveDate_googleAPI(
+        footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
           GuessData_Gavia,
@@ -245,7 +248,8 @@ const GviaHamedina = async function ({
           "",
           "",
           "",
-          Minuts
+          Minuts,
+          "LigatAl"
         );
         break;
       }
@@ -266,7 +270,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -275,7 +279,8 @@ const GviaHamedina = async function ({
         "V",
         "W",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -311,7 +316,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -322,7 +327,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -350,7 +356,7 @@ const GviaHamedina = async function ({
         }
       }
       if (GamesList.length < 3) {
-        await footballFunc.saveDate_googleAPI(
+        await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
           GuessData_Gavia,
@@ -361,7 +367,8 @@ const GviaHamedina = async function ({
           "",
           "",
           "",
-          Minuts
+          Minuts,
+          "LigatAl"
         );
         GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
           user_name,
@@ -389,7 +396,7 @@ const GviaHamedina = async function ({
         textMessage1 = str14 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
-        footballFunc.saveDate_googleAPI(
+        footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
           GuessData_Gavia,
@@ -400,7 +407,8 @@ const GviaHamedina = async function ({
           "",
           "",
           "",
-          Minuts
+          Minuts,
+          "LigatAl"
         );
 
         break;
@@ -422,7 +430,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -431,7 +439,8 @@ const GviaHamedina = async function ({
         "AL",
         "AM",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -467,7 +476,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -478,7 +487,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -513,7 +523,7 @@ const GviaHamedina = async function ({
         }
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -524,7 +534,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        Minuts
+        Minuts,
+        "LigatAl"
       );
 
       break;
@@ -544,7 +555,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -553,7 +564,8 @@ const GviaHamedina = async function ({
         "BB",
         "BC",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -589,7 +601,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -600,7 +612,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -628,7 +641,7 @@ const GviaHamedina = async function ({
         }
       }
       if (GamesList.length < 5) {
-        await footballFunc.saveDate_googleAPI(
+        await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
           GuessData_Gavia,
@@ -639,7 +652,8 @@ const GviaHamedina = async function ({
           "",
           "",
           "",
-          Minuts
+          Minuts,
+          "LigatAl"
         );
         GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
           user_name,
@@ -667,7 +681,7 @@ const GviaHamedina = async function ({
         textMessage1 = str20 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
-        footballFunc.saveDate_googleAPI(
+        footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
           GuessData_Gavia,
@@ -678,7 +692,8 @@ const GviaHamedina = async function ({
           "",
           "",
           "",
-          Minuts
+          Minuts,
+          "LigatAl"
         );
 
         break;
@@ -700,7 +715,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -709,7 +724,8 @@ const GviaHamedina = async function ({
         "BR",
         "BS",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -745,7 +761,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -756,7 +772,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -791,7 +808,7 @@ const GviaHamedina = async function ({
         }
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -802,7 +819,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        Minuts
+        Minuts,
+        "LigatAl"
       );
 
       break;
@@ -822,7 +840,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -831,7 +849,8 @@ const GviaHamedina = async function ({
         "CH",
         "CI",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -867,7 +886,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -878,7 +897,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -913,7 +933,7 @@ const GviaHamedina = async function ({
         }
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -924,7 +944,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        Minuts
+        Minuts,
+        "LigatAl"
       );
 
       break;
@@ -944,7 +965,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -953,7 +974,8 @@ const GviaHamedina = async function ({
         "CX",
         "CY",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -989,7 +1011,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1000,7 +1022,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -1035,7 +1058,7 @@ const GviaHamedina = async function ({
         }
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1046,7 +1069,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        Minuts
+        Minuts,
+        "LigatAl"
       );
 
       break;
@@ -1066,7 +1090,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1075,7 +1099,8 @@ const GviaHamedina = async function ({
         "DN",
         "DO",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -1111,7 +1136,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1122,7 +1147,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -1150,7 +1176,7 @@ const GviaHamedina = async function ({
         }
       }
       if (GamesList.length < 9) {
-        await footballFunc.saveDate_googleAPI(
+        await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
           GuessData_Gavia,
@@ -1161,7 +1187,8 @@ const GviaHamedina = async function ({
           "",
           "",
           "",
-          Minuts
+          Minuts,
+          "LigatAl"
         );
         GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
           user_name,
@@ -1189,7 +1216,7 @@ const GviaHamedina = async function ({
         textMessage1 = str26 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
-        footballFunc.saveDate_googleAPI(
+        footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
           GuessData_Gavia,
@@ -1200,7 +1227,8 @@ const GviaHamedina = async function ({
           "",
           "",
           "",
-          Minuts
+          Minuts,
+          "LigatAl"
         );
 
         break;
@@ -1222,7 +1250,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1231,7 +1259,8 @@ const GviaHamedina = async function ({
         "ED",
         "EE",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -1267,7 +1296,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1278,7 +1307,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -1313,7 +1343,7 @@ const GviaHamedina = async function ({
         }
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1324,7 +1354,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        Minuts
+        Minuts,
+        "LigatAl"
       );
 
       break;
@@ -1344,7 +1375,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1353,7 +1384,8 @@ const GviaHamedina = async function ({
         "ET",
         "EU",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -1389,7 +1421,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1400,7 +1432,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -1435,7 +1468,7 @@ const GviaHamedina = async function ({
         }
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1446,7 +1479,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        Minuts
+        Minuts,
+        "LigatAl"
       );
 
       break;
@@ -1466,7 +1500,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1475,7 +1509,8 @@ const GviaHamedina = async function ({
         "FJ",
         "FK",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -1511,7 +1546,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1522,7 +1557,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -1557,7 +1593,7 @@ const GviaHamedina = async function ({
         }
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1568,7 +1604,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        Minuts
+        Minuts,
+        "LigatAl"
       );
 
       break;
@@ -1588,7 +1625,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1597,7 +1634,8 @@ const GviaHamedina = async function ({
         "FZ",
         "GA",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -1633,7 +1671,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1644,7 +1682,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -1679,7 +1718,7 @@ const GviaHamedina = async function ({
         }
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1690,7 +1729,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        Minuts
+        Minuts,
+        "LigatAl"
       );
 
       break;
@@ -1710,7 +1750,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1719,7 +1759,8 @@ const GviaHamedina = async function ({
         "GP",
         "GQ",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -1755,7 +1796,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1766,7 +1807,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -1801,7 +1843,7 @@ const GviaHamedina = async function ({
         }
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1812,7 +1854,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        Minuts
+        Minuts,
+        "LigatAl"
       );
 
       break;
@@ -1832,7 +1875,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1841,7 +1884,8 @@ const GviaHamedina = async function ({
         "HF",
         "HG",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -1877,7 +1921,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1888,7 +1932,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -1923,7 +1968,7 @@ const GviaHamedina = async function ({
         }
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1934,7 +1979,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        Minuts
+        Minuts,
+        "LigatAl"
       );
 
       break;
@@ -1954,7 +2000,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -1963,7 +2009,8 @@ const GviaHamedina = async function ({
         "HV",
         "HW",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -1999,7 +2046,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -2010,7 +2057,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -2045,7 +2093,7 @@ const GviaHamedina = async function ({
         }
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -2056,7 +2104,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        Minuts
+        Minuts,
+        "LigatAl"
       );
 
       break;
@@ -2076,7 +2125,7 @@ const GviaHamedina = async function ({
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -2085,7 +2134,8 @@ const GviaHamedina = async function ({
         "IL",
         "IM",
         ScoreTeam1,
-        ScoreTeam2
+        ScoreTeam2,
+        "LigatAl"
       );
 
       break;
@@ -2122,7 +2172,7 @@ const GviaHamedina = async function ({
         ChoiseUpteam = Team2;
       }
 
-      footballFunc.saveDate_googleAPI(
+      footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -2133,7 +2183,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        ChoiseUpteam
+        ChoiseUpteam,
+        "LigatAl"
       );
 
       break;
@@ -2168,7 +2219,7 @@ const GviaHamedina = async function ({
         }
       }
 
-      await footballFunc.saveDate_googleAPI(
+      await footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_Gavia,
@@ -2179,7 +2230,8 @@ const GviaHamedina = async function ({
         "",
         "",
         "",
-        Minuts
+        Minuts,
+        "LigatAl"
       );
       // ----------Start fix auto----------------
       await footballFunc.fixAuto_Main(

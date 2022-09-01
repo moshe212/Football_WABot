@@ -7,7 +7,9 @@ const saveFix = async function (
   user_name,
   UsersIndex,
   GuessData,
-  cycleIndexNum
+  cycleIndexNum,
+  fileName,
+  sheetTitle
 ) {
   console.log(
     "fix",
@@ -33,11 +35,14 @@ const saveFix = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "ליגת העל",
+          sheetTitle,
           "D",
           "E",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          fileName
         );
 
         break;
@@ -51,11 +56,14 @@ const saveFix = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "ליגת העל",
+          sheetTitle,
           "P",
           "Q",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          fileName
         );
 
         break;
@@ -69,11 +77,14 @@ const saveFix = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "ליגת העל",
+          sheetTitle,
           "AB",
           "AC",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          fileName
         );
 
         break;
@@ -87,11 +98,14 @@ const saveFix = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "ליגת העל",
+          sheetTitle,
           "AN",
           "AO",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          fileName
         );
 
         break;
@@ -105,11 +119,14 @@ const saveFix = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "ליגת העל",
+          sheetTitle,
           "AZ",
           "BA",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          fileName
         );
 
         break;
@@ -123,11 +140,14 @@ const saveFix = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "ליגת העל",
+          sheetTitle,
           "BL",
           "BM",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          fileName
         );
 
         break;
@@ -141,11 +161,203 @@ const saveFix = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "ליגת העל",
+          sheetTitle,
           "BX",
           "BY",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          fileName
+        );
+
+        break;
+      case 8:
+        console.log("case 8");
+        ScoreTeam1 = score1;
+        ScoreTeam2 = score2;
+
+        await saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          sheetTitle,
+          "CJ",
+          "CK",
+          ScoreTeam1,
+          ScoreTeam2,
+          "",
+          "",
+          fileName
+        );
+
+        break;
+      case 9:
+        console.log("case 9");
+        ScoreTeam1 = score1;
+        ScoreTeam2 = score2;
+
+        await saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          sheetTitle,
+          "CV",
+          "CW",
+          ScoreTeam1,
+          ScoreTeam2,
+          "",
+          "",
+          fileName
+        );
+
+        break;
+      case 10:
+        console.log("case 10");
+        ScoreTeam1 = score1;
+        ScoreTeam2 = score2;
+
+        await saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          sheetTitle,
+          "DH",
+          "DI",
+          ScoreTeam1,
+          ScoreTeam2,
+          "",
+          "",
+          fileName
+        );
+
+        break;
+      case 11:
+        console.log("case 11");
+        ScoreTeam1 = score1;
+        ScoreTeam2 = score2;
+
+        await saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          sheetTitle,
+          "DT",
+          "DU",
+          ScoreTeam1,
+          ScoreTeam2,
+          "",
+          "",
+          fileName
+        );
+
+        break;
+      case 12:
+        console.log("case 12");
+        ScoreTeam1 = score1;
+        ScoreTeam2 = score2;
+
+        await saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          sheetTitle,
+          "EF",
+          "EG",
+          ScoreTeam1,
+          ScoreTeam2,
+          "",
+          "",
+          fileName
+        );
+
+        break;
+      case 13:
+        console.log("case 13");
+        ScoreTeam1 = score1;
+        ScoreTeam2 = score2;
+
+        await saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          sheetTitle,
+          "ER",
+          "ES",
+          ScoreTeam1,
+          ScoreTeam2,
+          "",
+          "",
+          fileName
+        );
+
+        break;
+      case 14:
+        console.log("case 14");
+        ScoreTeam1 = score1;
+        ScoreTeam2 = score2;
+
+        await saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          sheetTitle,
+          "FD",
+          "FE",
+          ScoreTeam1,
+          ScoreTeam2,
+          "",
+          "",
+          fileName
+        );
+
+        break;
+      case 15:
+        console.log("case 15");
+        ScoreTeam1 = score1;
+        ScoreTeam2 = score2;
+
+        await saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          sheetTitle,
+          "FP",
+          "FQ",
+          ScoreTeam1,
+          ScoreTeam2,
+          "",
+          "",
+          fileName
+        );
+
+        break;
+      case 16:
+        console.log("case 16");
+        ScoreTeam1 = score1;
+        ScoreTeam2 = score2;
+
+        await saveData_Full(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          sheetTitle,
+          "GB",
+          "GC",
+          ScoreTeam1,
+          ScoreTeam2,
+          "",
+          "",
+          fileName
         );
 
         break;

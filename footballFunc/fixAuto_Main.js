@@ -29,7 +29,8 @@ const fixAuto_Main = async function (
         GuessData,
         cycleIndexNum,
         "",
-        "3"
+        "3",
+        "GaviaMedina"
       );
     } else if (
       parseInt(GuessData_Saved[c].team1[1]) >
@@ -46,7 +47,8 @@ const fixAuto_Main = async function (
         GuessData,
         cycleIndexNum,
         GuessData_Saved[c].team1[0],
-        ""
+        "",
+        "GaviaMedina"
       );
     } else if (
       parseInt(GuessData_Saved[c].team1[1]) <
@@ -70,7 +72,8 @@ const fixAuto_Main = async function (
         GuessData,
         cycleIndexNum,
         GuessData_Saved[c].team2[0],
-        ""
+        "",
+        "GaviaMedina"
       );
     }
   }
