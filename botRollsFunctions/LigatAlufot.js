@@ -1,6 +1,6 @@
 const { footballFunc } = require("../footballFunc");
 
-const LigatAlufot = async function ({
+const LigatAlufot = async function (
   cycleNum,
   cycleText,
   cycleDate,
@@ -15,8 +15,8 @@ const LigatAlufot = async function ({
   score1,
   score2,
   AchievementsOfSeasonData,
-  tableObj,
-}) {
+  tableObj
+) {
   let textMessage1 = "empty";
   let textMessage2 = "empty";
   let textMessage3 = "empty";

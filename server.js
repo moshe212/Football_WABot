@@ -301,7 +301,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage2 = LigatAlMessages[1];
     textMessage3 = LigatAlMessages[2];
   } else if (stage === 256 || (stage > 295) & (stage < 392)) {
-    const LigatAlufotMessages = await botRollsFunctions.LigatAlufot({
+    const LigatAlufotMessages = await botRollsFunctions.LigatAlufot(
       alufotCycleNum,
       alufotCycleText,
       alufotCycleDate,
@@ -316,8 +316,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       score1,
       score2,
       alufotAchievementsOfSeasonData,
-      alufotTableObj,
-    });
+      alufotTableObj
+    );
 
     textMessage1 = LigatAlufotMessages[0];
     textMessage2 = LigatAlufotMessages[1];
