@@ -219,7 +219,12 @@ app.post("/api/Whatsapp", async (req, res) => {
   const user_name = req.body.query.sender;
   console.log("username", user_name);
   console.log("cycleNum", cycleNum, cycleDate);
-  console.log("alufotCycleNum", alufotCycleNum, alufotCycleDate);
+  console.log(
+    "alufotCycleNum",
+    alufotCycleNum,
+    alufotCycleDate,
+    alufotCycleText
+  );
   const stage = req.body.query.ruleId;
   console.log(stage);
 
