@@ -191,7 +191,11 @@ const getAlufotData = async () => {
     alufotUsersList.push(alufotUsersIndex[l]._rawData[0]);
   }
   alufotGuessData = await footballFunc.getDataFromSheet("שלב הבתים", "Alufot");
-
+  GuessData_ShlavHanokout = await footballFunc.getDataFromSheet(
+    "שלב הנוקאאוט",
+    "Alufot"
+  );
+  console.log({ GuessData_ShlavHanokout });
   // alufotAchievementsOfSeasonData = await footballFunc.getDataFromSheet(
   //   "הישגים",
   //   "Alufot"
@@ -300,7 +304,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage1 = LigatAlMessages[0];
     textMessage2 = LigatAlMessages[1];
     textMessage3 = LigatAlMessages[2];
-  } else if (stage === 256 || (stage > 295) & (stage < 392)) {
+  } else if (stage === 256 || (stage > 295 && stage < 413)) {
     const LigatAlufotMessages = await botRollsFunctions.LigatAlufot(
       alufotCycleNum,
       alufotCycleText,
@@ -316,7 +320,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       score1,
       score2,
       alufotAchievementsOfSeasonData,
-      alufotTableObj
+      alufotTableObj,
+      GuessData_ShlavHanokout
     );
 
     textMessage1 = LigatAlufotMessages[0];

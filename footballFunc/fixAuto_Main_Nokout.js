@@ -1,18 +1,18 @@
 const { fixMinut_Team_Auto } = require("./fixMinut_Team_Auto");
-const { getSavedGuss_Gavia } = require("./getSavedGuss_Gavia");
+const { getSavedGuss_Nokout } = require("./getSavedGuss_Nokout");
 
-const fixAuto_Main = async function (
+const fixAuto_Main_Nokout = async function (
   GamesList,
   user_name,
   UsersIndex,
   GuessData,
   cycleIndexNum
 ) {
-  const GuessData_Saved = await getSavedGuss_Gavia(
+  const GuessData_Saved = await getSavedGuss_Nokout(
     user_name,
     UsersIndex,
     cycleIndexNum,
-    "גביע המדינה",
+    "שלב הנוקאאוט",
     GamesList
   );
   for (let c = 0; c < GuessData_Saved.length; c++) {
@@ -30,8 +30,8 @@ const fixAuto_Main = async function (
         cycleIndexNum,
         "",
         "3",
-        "GaviaMedina",
-        "גביע המדינה"
+        "Alufot",
+        "שלב הנוקאאוט"
       );
     } else if (
       parseInt(GuessData_Saved[c].team1[1]) >
@@ -49,8 +49,8 @@ const fixAuto_Main = async function (
         cycleIndexNum,
         GuessData_Saved[c].team1[0],
         "",
-        "GaviaMedina",
-        "גביע המדינה"
+        "Alufot",
+        "שלב הנוקאאוט"
       );
     } else if (
       parseInt(GuessData_Saved[c].team1[1]) <
@@ -75,11 +75,11 @@ const fixAuto_Main = async function (
         cycleIndexNum,
         GuessData_Saved[c].team2[0],
         "",
-        "GaviaMedina",
-        "גביע המדינה"
+        "Alufot",
+        "שלב הנוקאאוט"
       );
     }
   }
 };
 
-module.exports = { fixAuto_Main };
+module.exports = { fixAuto_Main_Nokout };

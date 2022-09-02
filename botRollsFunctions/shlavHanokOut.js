@@ -1,16 +1,16 @@
 const { footballFunc } = require("../footballFunc");
 
-const GviaHamedina = async function ({
+const shlavHanokOut = async function (
   cycleNum,
   GamesList,
   cycleIndexNum,
   UsersIndex,
   GuessData,
-  GuessData_Gavia,
+  GuessData_ShlavHanokout,
   user_name,
   stage,
-  score,
-}) {
+  score
+) {
   let teamUp_ToFix = "";
   let minute_toFix = "";
   let teamUp_ToFix_Num = "";
@@ -30,11 +30,11 @@ const GviaHamedina = async function ({
   let textMessage = "";
 
   switch (stage) {
-    case 111:
-      if (cycleNum !== "0" && cycleText.includes("גביע המדינה")) {
+    case 297:
+      if (cycleNum !== "0" && cycleText.includes("שלב הנוקאאוט")) {
         textMessage1 =
           "בחירה מצוינת!" +
-          "\nהדד ליין לשליחת ניחושים לגביע המדינה, שלב *" +
+          "\nהדד ליין לשליחת ניחושים לשלב הנוקאאוט, שלב *" +
           cycleNum +
           "* הוא עד ה-" +
           "*" +
@@ -48,7 +48,7 @@ const GviaHamedina = async function ({
 
         break;
       } else {
-        if (cycleText.includes("גביע המדינה")) {
+        if (cycleText.includes("שלב הנוקאאוט")) {
           textMessage1 =
             "שומעים רגע? הדד ליין לשליחת הניחושים לשלב" +
             "*" +
@@ -60,34 +60,34 @@ const GviaHamedina = async function ({
           break;
         } else {
           textMessage1 =
-            "שומעים רגע? כרגע לא ניתן לשלוח ניחושים לגביע המדינה." +
-            "\nיכול להיות שניתן לשלוח ניחושים לליגת העל..";
+            "שומעים רגע? כרגע לא ניתן לשלוח ניחושים לשלב הנוקאאוט.";
           textMessage2 = "אנא פנו למנהל המערכת או בחרו 3️⃣ לחזרה לתפריט הקודם..";
           break;
         }
       }
-    case 112:
+    case 395:
       console.log(GamesList);
-      if (cycleText.includes("גביע המדינה")) {
+      if (cycleText.includes("שלב הנוקאאוט")) {
         Team1 = GamesList[0][0];
         Team2 = GamesList[0][1];
 
-        const str8 = "*" + cycleNum + ", משחק מספר 1:* ";
-        textMessage1 = str8 + "\n" + Team1 + " - " + Team2;
+        const str1 = "*" + cycleNum + ", משחק מספר 1:* ";
+        textMessage1 = str1 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-      } else {
-        textMessage1 = "השתחלתם ללופ של ניחושי גביע המדינה למרות שאי אפשר..";
-        textMessage1 = "אנא פנו למנהל המערכת או בחרו 3️⃣ לחזרה לתפריט הקודם..";
       }
+      //  else {
+      //   textMessage1 = "השתחלתם ללופ של ניחושי גביע המדינה למרות שאי אפשר..";
+      //   textMessage1 = "אנא פנו למנהל המערכת או בחרו 3️⃣ לחזרה לתפריט הקודם..";
+      // }
 
       break;
-    case 114:
+    case 398:
       console.log(GamesList);
       Team1 = GamesList[0][0];
       Team2 = GamesList[0][1];
 
-      const str9 = "*" + cycleNum + ", משחק מספר 1:* ";
-      textMessage1 = str9 + "\n" + Team1 + " - " + Team2;
+      const str2 = "*" + cycleNum + ", משחק מספר 1:* ";
+      textMessage1 = str2 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
@@ -100,18 +100,20 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "F",
         "G",
         ScoreTeam1,
         ScoreTeam2,
-        "LigatAl"
+        "",
+        "",
+        "Alufot"
       );
 
       break;
-    case 117:
+    case 401:
       console.log(GamesList);
       Team1 = GamesList[0][0];
       Team2 = GamesList[0][1];
@@ -119,16 +121,16 @@ const GviaHamedina = async function ({
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "F",
         "I",
-        "LigatAl"
+        "Alufot"
       );
       console.log("GameRow", GameRow.data);
-      const str10 = "*" + cycleNum + ", משחק מספר 1:* ";
-      textMessage1 = str10 + "\n" + Team1 + " - " + Team2;
+      const str3 = "*" + cycleNum + ", משחק מספר 1:* ";
+      textMessage1 = str3 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
       console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
       // console.log(GameRow.data[0][0], GameRow.data[0][1]);
@@ -148,32 +150,32 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "H",
         "",
         "",
         "",
         "",
         ChoiseUpteam,
-        "LigatAl"
+        "Alufot"
       );
 
       break;
 
-    case 120:
+    case 403:
       console.log(GamesList);
       ChoiseMinut = req.body.query.message;
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "F",
         "I",
-        "LigatAl"
+        "Alufot"
       );
 
       if (parseInt(ChoiseMinut) === 1) {
@@ -194,34 +196,34 @@ const GviaHamedina = async function ({
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "גביע המדינה",
+          "שלב הנוקאאוט",
           "I",
           "",
           "",
           "",
           "",
           Minuts,
-          "LigatAl"
+          "Alufot"
         );
         // ----------Start fix auto----------------
-        await footballFunc.fixAuto_Main(
+        await footballFunc.fixAuto_Main_Nokout(
           GamesList,
           user_name,
           UsersIndex,
-          GuessData_Gavia,
+          GuessData_ShlavHanokout,
           cycleIndexNum
         );
 
         // ----------End fix auto----------------
-        GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+        GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
           user_name,
           UsersIndex,
           cycleIndexNum,
-          "גביע המדינה",
+          "שלב הנוקאאוט",
           GamesList
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFix_Gavia(
+        textMessage = await footballFunc.chooseGameToFix_Nokout(
           GuessData_Saved,
           false,
           cycleNum
@@ -235,34 +237,34 @@ const GviaHamedina = async function ({
         Team1 = GamesList[1][0];
         Team2 = GamesList[1][1];
 
-        const str11 = "*" + cycleNum + ", משחק מספר 2:* ";
-        textMessage1 = str11 + "\n" + Team1 + " - " + Team2;
+        const str4 = "*" + cycleNum + ", משחק מספר 2:* ";
+        textMessage1 = str4 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
         footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
-          GuessData_Gavia,
+          GuessData_ShlavHanokout,
           cycleIndexNum,
-          "גביע המדינה",
+          "שלב הנוקאאוט",
           "I",
           "",
           "",
           "",
           "",
           Minuts,
-          "LigatAl"
+          "Alufot"
         );
         break;
       }
 
-    case 122:
+    case 405:
       console.log(GamesList);
       Team1 = GamesList[1][0];
       Team2 = GamesList[1][1];
 
-      const str12 = "*" + cycleNum + ", משחק מספר 2:* ";
-      textMessage1 = str12 + "\n" + Team1 + " - " + Team2;
+      const str5 = "*" + cycleNum + ", משחק מספר 2:* ";
+      textMessage1 = str5 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
@@ -275,34 +277,36 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "V",
         "W",
         ScoreTeam1,
         ScoreTeam2,
-        "LigatAl"
+        "",
+        "",
+        "Alufot"
       );
 
       break;
-    case 123:
+    case 407:
       console.log(GamesList);
       Team1 = GamesList[1][0];
       Team2 = GamesList[1][1];
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "V",
         "Y",
-        "LigatAl"
+        "Alufot"
       );
       console.log("GameRow", GameRow.data);
-      const str13 = "*" + cycleNum + ", משחק מספר 2:* ";
-      textMessage1 = str13 + "\n" + Team1 + " - " + Team2;
+      const str6 = "*" + cycleNum + ", משחק מספר 2:* ";
+      textMessage1 = str6 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
       console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
       // console.log(GameRow.data[0][0], GameRow.data[0][1]);
@@ -322,31 +326,31 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "X",
         "",
         "",
         "",
         "",
         ChoiseUpteam,
-        "LigatAl"
+        "Alufot"
       );
 
       break;
-    case 124:
+    case 409:
       console.log(GamesList);
       ChoiseMinut = req.body.query.message;
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "V",
         "Y",
-        "LigatAl"
+        "Alufot"
       );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
@@ -363,26 +367,26 @@ const GviaHamedina = async function ({
         await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
-          GuessData_Gavia,
+          GuessData_ShlavHanokout,
           cycleIndexNum,
-          "גביע המדינה",
+          "שלב הנוקאאוט",
           "Y",
           "",
           "",
           "",
           "",
           Minuts,
-          "LigatAl"
+          "Alufot"
         );
-        GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+        GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
           user_name,
           UsersIndex,
           cycleIndexNum,
-          "גביע המדינה",
+          "שלב הנוקאאוט",
           GamesList
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFix_Gavia(
+        textMessage = await footballFunc.chooseGameToFix_Nokout(
           GuessData_Saved,
           false,
           cycleNum
@@ -396,35 +400,35 @@ const GviaHamedina = async function ({
         Team1 = GamesList[2][0];
         Team2 = GamesList[2][1];
 
-        const str14 = "*" + cycleNum + ", משחק מספר 3:* ";
-        textMessage1 = str14 + "\n" + Team1 + " - " + Team2;
+        const str7 = "*" + cycleNum + ", משחק מספר 3:* ";
+        textMessage1 = str7 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
         footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
-          GuessData_Gavia,
+          GuessData_ShlavHanokout,
           cycleIndexNum,
-          "גביע המדינה",
+          "שלב הנוקאאוט",
           "Y",
           "",
           "",
           "",
           "",
           Minuts,
-          "LigatAl"
+          "Alufot"
         );
 
         break;
       }
 
-    case 125:
+    case 411:
       console.log(GamesList);
       Team1 = GamesList[2][0];
       Team2 = GamesList[2][1];
 
-      const str15 = "*" + cycleNum + ", משחק מספר 3:* ";
-      textMessage1 = str15 + "\n" + Team1 + " - " + Team2;
+      const str8 = "*" + cycleNum + ", משחק מספר 3:* ";
+      textMessage1 = str8 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
@@ -437,34 +441,36 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "AL",
         "AM",
         ScoreTeam1,
         ScoreTeam2,
-        "LigatAl"
+        "",
+        "",
+        "Alufot"
       );
 
       break;
-    case 126:
+    case 413:
       console.log(GamesList);
       Team1 = GamesList[2][0];
       Team2 = GamesList[2][1];
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "AL",
         "AO",
-        "LigatAl"
+        "Alufot"
       );
       console.log("GameRow", GameRow.data);
-      const str16 = "*" + cycleNum + ", משחק מספר 3:* ";
-      textMessage1 = str16 + "\n" + Team1 + " - " + Team2;
+      const str9 = "*" + cycleNum + ", משחק מספר 3:* ";
+      textMessage1 = str9 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
       console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
       // console.log(GameRow.data[0][0], GameRow.data[0][1]);
@@ -484,16 +490,16 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "AN",
         "",
         "",
         "",
         "",
         ChoiseUpteam,
-        "LigatAl"
+        "Alufot"
       );
 
       break;
@@ -502,20 +508,20 @@ const GviaHamedina = async function ({
       Team1 = GamesList[3][0];
       Team2 = GamesList[3][1];
 
-      const str17 = "*" + cycleNum + ", משחק מספר 4:* ";
-      textMessage1 = str17 + "\n" + Team1 + " - " + Team2;
+      const str10 = "*" + cycleNum + ", משחק מספר 4:* ";
+      textMessage1 = str10 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "AL",
         "AO",
-        "LigatAl"
+        "Alufot"
       );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
@@ -532,16 +538,16 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "AO",
         "",
         "",
         "",
         "",
         Minuts,
-        "LigatAl"
+        "Alufot"
       );
 
       break;
@@ -550,8 +556,8 @@ const GviaHamedina = async function ({
       Team1 = GamesList[3][0];
       Team2 = GamesList[3][1];
 
-      const str18 = "*" + cycleNum + ", משחק מספר 4:* ";
-      textMessage1 = str18 + "\n" + Team1 + " - " + Team2;
+      const str11 = "*" + cycleNum + ", משחק מספר 4:* ";
+      textMessage1 = str11 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
@@ -564,14 +570,16 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "BB",
         "BC",
         ScoreTeam1,
         ScoreTeam2,
-        "LigatAl"
+        "",
+        "",
+        "Alufot"
       );
 
       break;
@@ -582,16 +590,16 @@ const GviaHamedina = async function ({
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "BB",
         "BE",
-        "LigatAl"
+        "Alufot"
       );
       console.log("GameRow", GameRow.data);
-      const str19 = "*" + cycleNum + ", משחק מספר 4:* ";
-      textMessage1 = str19 + "\n" + Team1 + " - " + Team2;
+      const str12 = "*" + cycleNum + ", משחק מספר 4:* ";
+      textMessage1 = str12 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
       console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
       // console.log(GameRow.data[0][0], GameRow.data[0][1]);
@@ -611,16 +619,16 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "BD",
         "",
         "",
         "",
         "",
         ChoiseUpteam,
-        "LigatAl"
+        "Alufot"
       );
 
       break;
@@ -630,12 +638,12 @@ const GviaHamedina = async function ({
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "BB",
         "BE",
-        "LigatAl"
+        "Alufot"
       );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
@@ -652,26 +660,26 @@ const GviaHamedina = async function ({
         await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
-          GuessData_Gavia,
+          GuessData_ShlavHanokout,
           cycleIndexNum,
-          "גביע המדינה",
+          "שלב הנוקאאוט",
           "BE",
           "",
           "",
           "",
           "",
           Minuts,
-          "LigatAl"
+          "Alufot"
         );
-        GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+        GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
           user_name,
           UsersIndex,
           cycleIndexNum,
-          "גביע המדינה",
+          "שלב הנוקאאוט",
           GamesList
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFix_Gavia(
+        textMessage = await footballFunc.chooseGameToFix_Nokout(
           GuessData_Saved,
           false,
           cycleNum
@@ -685,23 +693,23 @@ const GviaHamedina = async function ({
         Team1 = GamesList[4][0];
         Team2 = GamesList[4][1];
 
-        const str20 = "*" + cycleNum + ", משחק מספר 5:* ";
-        textMessage1 = str20 + "\n" + Team1 + " - " + Team2;
+        const str13 = "*" + cycleNum + ", משחק מספר 5:* ";
+        textMessage1 = str13 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
         footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
-          GuessData_Gavia,
+          GuessData_ShlavHanokout,
           cycleIndexNum,
-          "גביע המדינה",
+          "שלב הנוקאאוט",
           "BE",
           "",
           "",
           "",
           "",
           Minuts,
-          "LigatAl"
+          "Alufot"
         );
 
         break;
@@ -712,8 +720,8 @@ const GviaHamedina = async function ({
       Team1 = GamesList[4][0];
       Team2 = GamesList[4][1];
 
-      const str21 = "*" + cycleNum + ", משחק מספר 5:* ";
-      textMessage1 = str21 + "\n" + Team1 + " - " + Team2;
+      const str14 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str14 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
@@ -726,14 +734,16 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "BR",
         "BS",
         ScoreTeam1,
         ScoreTeam2,
-        "LigatAl"
+        "",
+        "",
+        "Alufot"
       );
 
       break;
@@ -744,16 +754,16 @@ const GviaHamedina = async function ({
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "BR",
         "BU",
-        "LigatAl"
+        "Alufot"
       );
       console.log("GameRow", GameRow.data);
-      const str22 = "*" + cycleNum + ", משחק מספר 5:* ";
-      textMessage1 = str22 + "\n" + Team1 + " - " + Team2;
+      const str15 = "*" + cycleNum + ", משחק מספר 5:* ";
+      textMessage1 = str15 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
       console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
       // console.log(GameRow.data[0][0], GameRow.data[0][1]);
@@ -773,16 +783,16 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "BT",
         "",
         "",
         "",
         "",
         ChoiseUpteam,
-        "LigatAl"
+        "Alufot"
       );
 
       break;
@@ -791,20 +801,20 @@ const GviaHamedina = async function ({
       Team1 = GamesList[5][0];
       Team2 = GamesList[5][1];
 
-      const str56 = "*" + cycleNum + ", משחק מספר 6:* ";
-      textMessage1 = str56 + "\n" + Team1 + " - " + Team2;
+      const str16 = "*" + cycleNum + ", משחק מספר 6:* ";
+      textMessage1 = str16 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "BR",
         "BU",
-        "LigatAl"
+        "Alufot"
       );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
@@ -821,16 +831,16 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "BU",
         "",
         "",
         "",
         "",
         Minuts,
-        "LigatAl"
+        "Alufot"
       );
 
       break;
@@ -839,8 +849,8 @@ const GviaHamedina = async function ({
       Team1 = GamesList[5][0];
       Team2 = GamesList[5][1];
 
-      const str57 = "*" + cycleNum + ", משחק מספר 6:* ";
-      textMessage1 = str57 + "\n" + Team1 + " - " + Team2;
+      const str17 = "*" + cycleNum + ", משחק מספר 6:* ";
+      textMessage1 = str17 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
@@ -853,14 +863,16 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "CH",
         "CI",
         ScoreTeam1,
         ScoreTeam2,
-        "LigatAl"
+        "",
+        "",
+        "Alufot"
       );
 
       break;
@@ -871,16 +883,16 @@ const GviaHamedina = async function ({
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "CH",
         "CK",
-        "LigatAl"
+        "Alufot"
       );
       console.log("GameRow", GameRow.data);
-      const str58 = "*" + cycleNum + ", משחק מספר 6:* ";
-      textMessage1 = str58 + "\n" + Team1 + " - " + Team2;
+      const str18 = "*" + cycleNum + ", משחק מספר 6:* ";
+      textMessage1 = str18 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
       console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
       // console.log(GameRow.data[0][0], GameRow.data[0][1]);
@@ -900,16 +912,16 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "CJ",
         "",
         "",
         "",
         "",
         ChoiseUpteam,
-        "LigatAl"
+        "Alufot"
       );
 
       break;
@@ -918,20 +930,20 @@ const GviaHamedina = async function ({
       Team1 = GamesList[6][0];
       Team2 = GamesList[6][1];
 
-      const str59 = "*" + cycleNum + ", משחק מספר 7:* ";
-      textMessage1 = str59 + "\n" + Team1 + " - " + Team2;
+      const str19 = "*" + cycleNum + ", משחק מספר 7:* ";
+      textMessage1 = str19 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "CH",
         "CK",
-        "LigatAl"
+        "Alufot"
       );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
@@ -948,16 +960,16 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "CK",
         "",
         "",
         "",
         "",
         Minuts,
-        "LigatAl"
+        "Alufot"
       );
 
       break;
@@ -966,8 +978,8 @@ const GviaHamedina = async function ({
       Team1 = GamesList[6][0];
       Team2 = GamesList[6][1];
 
-      const str60 = "*" + cycleNum + ", משחק מספר 7:* ";
-      textMessage1 = str60 + "\n" + Team1 + " - " + Team2;
+      const str20 = "*" + cycleNum + ", משחק מספר 7:* ";
+      textMessage1 = str20 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
@@ -980,14 +992,16 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "CX",
         "CY",
         ScoreTeam1,
         ScoreTeam2,
-        "LigatAl"
+        "",
+        "",
+        "Alufot"
       );
 
       break;
@@ -998,16 +1012,16 @@ const GviaHamedina = async function ({
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "CX",
         "DA",
-        "LigatAl"
+        "Alufot"
       );
       console.log("GameRow", GameRow.data);
-      const str61 = "*" + cycleNum + ", משחק מספר 7:* ";
-      textMessage1 = str61 + "\n" + Team1 + " - " + Team2;
+      const str21 = "*" + cycleNum + ", משחק מספר 7:* ";
+      textMessage1 = str21 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
       console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
       // console.log(GameRow.data[0][0], GameRow.data[0][1]);
@@ -1027,16 +1041,16 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "CZ",
         "",
         "",
         "",
         "",
         ChoiseUpteam,
-        "LigatAl"
+        "Alufot"
       );
 
       break;
@@ -1045,20 +1059,20 @@ const GviaHamedina = async function ({
       Team1 = GamesList[7][0];
       Team2 = GamesList[7][1];
 
-      const str23 = "*" + cycleNum + ", משחק מספר 8:* ";
-      textMessage1 = str23 + "\n" + Team1 + " - " + Team2;
+      const str22 = "*" + cycleNum + ", משחק מספר 8:* ";
+      textMessage1 = str22 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       ChoiseMinut = req.body.query.message;
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "CX",
         "DA",
-        "LigatAl"
+        "Alufot"
       );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
@@ -1075,16 +1089,16 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "DA",
         "",
         "",
         "",
         "",
         Minuts,
-        "LigatAl"
+        "Alufot"
       );
 
       break;
@@ -1093,8 +1107,8 @@ const GviaHamedina = async function ({
       Team1 = GamesList[7][0];
       Team2 = GamesList[7][1];
 
-      const str24 = "*" + cycleNum + ", משחק מספר 8:* ";
-      textMessage1 = str24 + "\n" + Team1 + " - " + Team2;
+      const str23 = "*" + cycleNum + ", משחק מספר 8:* ";
+      textMessage1 = str23 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
@@ -1107,14 +1121,16 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "DN",
         "DO",
         ScoreTeam1,
         ScoreTeam2,
-        "LigatAl"
+        "",
+        "",
+        "Alufot"
       );
 
       break;
@@ -1125,16 +1141,16 @@ const GviaHamedina = async function ({
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "DN",
         "DQ",
-        "LigatAl"
+        "Alufot"
       );
       console.log("GameRow", GameRow.data);
-      const str25 = "*" + cycleNum + ", משחק מספר 8:* ";
-      textMessage1 = str25 + "\n" + Team1 + " - " + Team2;
+      const str24 = "*" + cycleNum + ", משחק מספר 8:* ";
+      textMessage1 = str24 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
       console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
       // console.log(GameRow.data[0][0], GameRow.data[0][1]);
@@ -1154,16 +1170,16 @@ const GviaHamedina = async function ({
       footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "DP",
         "",
         "",
         "",
         "",
         ChoiseUpteam,
-        "LigatAl"
+        "Alufot"
       );
 
       break;
@@ -1173,12 +1189,12 @@ const GviaHamedina = async function ({
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "DN",
         "DQ",
-        "LigatAl"
+        "Alufot"
       );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
@@ -1195,26 +1211,26 @@ const GviaHamedina = async function ({
         await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
-          GuessData_Gavia,
+          GuessData_ShlavHanokout,
           cycleIndexNum,
-          "גביע המדינה",
+          "שלב הנוקאאוט",
           "DQ",
           "",
           "",
           "",
           "",
           Minuts,
-          "LigatAl"
+          "Alufot"
         );
-        GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+        GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
           user_name,
           UsersIndex,
           cycleIndexNum,
-          "גביע המדינה",
+          "שלב הנוקאאוט",
           GamesList
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFix_Gavia(
+        textMessage = await footballFunc.chooseGameToFix_Nokout(
           GuessData_Saved,
           false,
           cycleNum
@@ -1224,1001 +1240,8 @@ const GviaHamedina = async function ({
         textMessage2 = textMessage[1];
 
         break;
-      } else {
-        Team1 = GamesList[8][0];
-        Team2 = GamesList[8][1];
-
-        const str26 = "*" + cycleNum + ", משחק מספר 9:* ";
-        textMessage1 = str26 + "\n" + Team1 + " - " + Team2;
-        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-
-        footballFunc.saveData_googleAPI(
-          user_name,
-          UsersIndex,
-          GuessData_Gavia,
-          cycleIndexNum,
-          "גביע המדינה",
-          "DQ",
-          "",
-          "",
-          "",
-          "",
-          Minuts,
-          "LigatAl"
-        );
-
-        break;
       }
 
-    case 143:
-      console.log(GamesList);
-      Team1 = GamesList[8][0];
-      Team2 = GamesList[8][1];
-
-      const str27 = "*" + cycleNum + ", משחק מספר 9:* ";
-      textMessage1 = str27 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
-      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
-
-      // score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
-      console.log("ScoreTeam1", ScoreTeam1);
-      console.log("ScoreTeam2", ScoreTeam2);
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "ED",
-        "EE",
-        ScoreTeam1,
-        ScoreTeam2,
-        "LigatAl"
-      );
-
-      break;
-    case 144:
-      console.log(GamesList);
-      Team1 = GamesList[8][0];
-      Team2 = GamesList[8][1];
-      GameRow = await footballFunc.getGameGuss(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "ED",
-        "EG",
-        "LigatAl"
-      );
-      console.log("GameRow", GameRow.data);
-      const str28 = "*" + cycleNum + ", משחק מספר 9:* ";
-      textMessage1 = str28 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "איך יסתיים המשחק?";
-      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
-      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
-      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
-      } else {
-        textMessage3 = "\n3️⃣ פנדלים";
-      }
-
-      ChoiseUp = req.body.query.message;
-      if (parseInt(ChoiseUp) === 1) {
-        ChoiseUpteam = Team1;
-      } else {
-        ChoiseUpteam = Team2;
-      }
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "EF",
-        "",
-        "",
-        "",
-        "",
-        ChoiseUpteam,
-        "LigatAl"
-      );
-
-      break;
-    case 145:
-      console.log(GamesList);
-      Team1 = GamesList[9][0];
-      Team2 = GamesList[9][1];
-
-      const str29 = "*" + cycleNum + ", משחק מספר 10:* ";
-      textMessage1 = str29 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-
-      ChoiseMinut = req.body.query.message;
-      GameRow = await footballFunc.getGameGuss(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "ED",
-        "EG",
-        "LigatAl"
-      );
-      if (parseInt(ChoiseMinut) === 1) {
-        Minuts = "90 דקות";
-      } else if (parseInt(ChoiseMinut) === 2) {
-        Minuts = "120 דקות";
-      } else {
-        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "90 דקות*";
-        } else {
-          Minuts = "פנדלים";
-        }
-      }
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "EG",
-        "",
-        "",
-        "",
-        "",
-        Minuts,
-        "LigatAl"
-      );
-
-      break;
-    case 146:
-      console.log(GamesList);
-      Team1 = GamesList[9][0];
-      Team2 = GamesList[9][1];
-
-      const str30 = "*" + cycleNum + ", משחק מספר 10:* ";
-      textMessage1 = str30 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
-      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
-
-      // score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
-      console.log("ScoreTeam1", ScoreTeam1);
-      console.log("ScoreTeam2", ScoreTeam2);
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "ET",
-        "EU",
-        ScoreTeam1,
-        ScoreTeam2,
-        "LigatAl"
-      );
-
-      break;
-    case 147:
-      console.log(GamesList);
-      Team1 = GamesList[9][0];
-      Team2 = GamesList[9][1];
-      GameRow = await footballFunc.getGameGuss(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "ET",
-        "EW",
-        "LigatAl"
-      );
-      console.log("GameRow", GameRow.data);
-      const str31 = "*" + cycleNum + ", משחק מספר 10:* ";
-      textMessage1 = str31 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "איך יסתיים המשחק?";
-      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
-      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
-      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
-      } else {
-        textMessage3 = "\n3️⃣ פנדלים";
-      }
-
-      ChoiseUp = req.body.query.message;
-      if (parseInt(ChoiseUp) === 1) {
-        ChoiseUpteam = Team1;
-      } else {
-        ChoiseUpteam = Team2;
-      }
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "EV",
-        "",
-        "",
-        "",
-        "",
-        ChoiseUpteam,
-        "LigatAl"
-      );
-
-      break;
-    case 148:
-      console.log(GamesList);
-      Team1 = GamesList[10][0];
-      Team2 = GamesList[10][1];
-
-      const str32 = "*" + cycleNum + ", משחק מספר 11:* ";
-      textMessage1 = str32 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-
-      ChoiseMinut = req.body.query.message;
-      GameRow = await footballFunc.getGameGuss(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "ET",
-        "EW",
-        "LigatAl"
-      );
-      if (parseInt(ChoiseMinut) === 1) {
-        Minuts = "90 דקות";
-      } else if (parseInt(ChoiseMinut) === 2) {
-        Minuts = "120 דקות";
-      } else {
-        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "90 דקות*";
-        } else {
-          Minuts = "פנדלים";
-        }
-      }
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "EW",
-        "",
-        "",
-        "",
-        "",
-        Minuts,
-        "LigatAl"
-      );
-
-      break;
-    case 149:
-      console.log(GamesList);
-      Team1 = GamesList[10][0];
-      Team2 = GamesList[10][1];
-
-      const str33 = "*" + cycleNum + ", משחק מספר 11:* ";
-      textMessage1 = str33 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
-      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
-
-      // score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
-      console.log("ScoreTeam1", ScoreTeam1);
-      console.log("ScoreTeam2", ScoreTeam2);
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "FJ",
-        "FK",
-        ScoreTeam1,
-        ScoreTeam2,
-        "LigatAl"
-      );
-
-      break;
-    case 150:
-      console.log(GamesList);
-      Team1 = GamesList[10][0];
-      Team2 = GamesList[10][1];
-      GameRow = await footballFunc.getGameGuss(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "FJ",
-        "FM",
-        "LigatAl"
-      );
-      console.log("GameRow", GameRow.data);
-      const str34 = "*" + cycleNum + ", משחק מספר 11:* ";
-      textMessage1 = str34 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "איך יסתיים המשחק?";
-      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
-      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
-      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
-      } else {
-        textMessage3 = "\n3️⃣ פנדלים";
-      }
-
-      ChoiseUp = req.body.query.message;
-      if (parseInt(ChoiseUp) === 1) {
-        ChoiseUpteam = Team1;
-      } else {
-        ChoiseUpteam = Team2;
-      }
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "FL",
-        "",
-        "",
-        "",
-        "",
-        ChoiseUpteam,
-        "LigatAl"
-      );
-
-      break;
-    case 151:
-      console.log(GamesList);
-      Team1 = GamesList[11][0];
-      Team2 = GamesList[11][1];
-
-      const str35 = "*" + cycleNum + ", משחק מספר 12:* ";
-      textMessage1 = str35 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-
-      ChoiseMinut = req.body.query.message;
-      GameRow = await footballFunc.getGameGuss(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "FJ",
-        "FM",
-        "LigatAl"
-      );
-      if (parseInt(ChoiseMinut) === 1) {
-        Minuts = "90 דקות";
-      } else if (parseInt(ChoiseMinut) === 2) {
-        Minuts = "120 דקות";
-      } else {
-        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "90 דקות*";
-        } else {
-          Minuts = "פנדלים";
-        }
-      }
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "FM",
-        "",
-        "",
-        "",
-        "",
-        Minuts,
-        "LigatAl"
-      );
-
-      break;
-    case 152:
-      console.log(GamesList);
-      Team1 = GamesList[11][0];
-      Team2 = GamesList[11][1];
-
-      const str36 = "*" + cycleNum + ", משחק מספר 12:* ";
-      textMessage1 = str36 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
-      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
-
-      // score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
-      console.log("ScoreTeam1", ScoreTeam1);
-      console.log("ScoreTeam2", ScoreTeam2);
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "FZ",
-        "GA",
-        ScoreTeam1,
-        ScoreTeam2,
-        "LigatAl"
-      );
-
-      break;
-    case 153:
-      console.log(GamesList);
-      Team1 = GamesList[11][0];
-      Team2 = GamesList[11][1];
-      GameRow = await footballFunc.getGameGuss(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "FZ",
-        "GC",
-        "LigatAl"
-      );
-      console.log("GameRow", GameRow.data);
-      const str37 = "*" + cycleNum + ", משחק מספר 12:* ";
-      textMessage1 = str37 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "איך יסתיים המשחק?";
-      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
-      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
-      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
-      } else {
-        textMessage3 = "\n3️⃣ פנדלים";
-      }
-
-      ChoiseUp = req.body.query.message;
-      if (parseInt(ChoiseUp) === 1) {
-        ChoiseUpteam = Team1;
-      } else {
-        ChoiseUpteam = Team2;
-      }
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "GB",
-        "",
-        "",
-        "",
-        "",
-        ChoiseUpteam,
-        "LigatAl"
-      );
-
-      break;
-    case 154:
-      console.log(GamesList);
-      Team1 = GamesList[12][0];
-      Team2 = GamesList[12][1];
-
-      const str38 = "*" + cycleNum + ", משחק מספר 13:* ";
-      textMessage1 = str38 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-
-      ChoiseMinut = req.body.query.message;
-      GameRow = await footballFunc.getGameGuss(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "FZ",
-        "GC",
-        "LigatAl"
-      );
-      if (parseInt(ChoiseMinut) === 1) {
-        Minuts = "90 דקות";
-      } else if (parseInt(ChoiseMinut) === 2) {
-        Minuts = "120 דקות";
-      } else {
-        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "90 דקות*";
-        } else {
-          Minuts = "פנדלים";
-        }
-      }
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "GC",
-        "",
-        "",
-        "",
-        "",
-        Minuts,
-        "LigatAl"
-      );
-
-      break;
-    case 155:
-      console.log(GamesList);
-      Team1 = GamesList[12][0];
-      Team2 = GamesList[12][1];
-
-      const str39 = "*" + cycleNum + ", משחק מספר 13:* ";
-      textMessage1 = str39 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
-      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
-
-      // score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
-      console.log("ScoreTeam1", ScoreTeam1);
-      console.log("ScoreTeam2", ScoreTeam2);
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "GP",
-        "GQ",
-        ScoreTeam1,
-        ScoreTeam2,
-        "LigatAl"
-      );
-
-      break;
-    case 156:
-      console.log(GamesList);
-      Team1 = GamesList[12][0];
-      Team2 = GamesList[12][1];
-      GameRow = await footballFunc.getGameGuss(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "GP",
-        "GS",
-        "LigatAl"
-      );
-      console.log("GameRow", GameRow.data);
-      const str40 = "*" + cycleNum + ", משחק מספר 13:* ";
-      textMessage1 = str40 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "איך יסתיים המשחק?";
-      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
-      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
-      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
-      } else {
-        textMessage3 = "\n3️⃣ פנדלים";
-      }
-
-      ChoiseUp = req.body.query.message;
-      if (parseInt(ChoiseUp) === 1) {
-        ChoiseUpteam = Team1;
-      } else {
-        ChoiseUpteam = Team2;
-      }
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "GR",
-        "",
-        "",
-        "",
-        "",
-        ChoiseUpteam,
-        "LigatAl"
-      );
-
-      break;
-    case 157:
-      console.log(GamesList);
-      Team1 = GamesList[13][0];
-      Team2 = GamesList[13][1];
-
-      const str41 = "*" + cycleNum + ", משחק מספר 14:* ";
-      textMessage1 = str41 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-
-      ChoiseMinut = req.body.query.message;
-      GameRow = await footballFunc.getGameGuss(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "GP",
-        "GS",
-        "LigatAl"
-      );
-      if (parseInt(ChoiseMinut) === 1) {
-        Minuts = "90 דקות";
-      } else if (parseInt(ChoiseMinut) === 2) {
-        Minuts = "120 דקות";
-      } else {
-        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "90 דקות*";
-        } else {
-          Minuts = "פנדלים";
-        }
-      }
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "GS",
-        "",
-        "",
-        "",
-        "",
-        Minuts,
-        "LigatAl"
-      );
-
-      break;
-    case 158:
-      console.log(GamesList);
-      Team1 = GamesList[13][0];
-      Team2 = GamesList[13][1];
-
-      const str42 = "*" + cycleNum + ", משחק מספר 14:* ";
-      textMessage1 = str42 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
-      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
-
-      // score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
-      console.log("ScoreTeam1", ScoreTeam1);
-      console.log("ScoreTeam2", ScoreTeam2);
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "HF",
-        "HG",
-        ScoreTeam1,
-        ScoreTeam2,
-        "LigatAl"
-      );
-
-      break;
-    case 159:
-      console.log(GamesList);
-      Team1 = GamesList[13][0];
-      Team2 = GamesList[13][1];
-      GameRow = await footballFunc.getGameGuss(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "HF",
-        "HI",
-        "LigatAl"
-      );
-      console.log("GameRow", GameRow.data);
-      const str43 = "*" + cycleNum + ", משחק מספר 14:* ";
-      textMessage1 = str43 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "איך יסתיים המשחק?";
-      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
-      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
-      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
-      } else {
-        textMessage3 = "\n3️⃣ פנדלים";
-      }
-
-      ChoiseUp = req.body.query.message;
-      if (parseInt(ChoiseUp) === 1) {
-        ChoiseUpteam = Team1;
-      } else {
-        ChoiseUpteam = Team2;
-      }
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "HH",
-        "",
-        "",
-        "",
-        "",
-        ChoiseUpteam,
-        "LigatAl"
-      );
-
-      break;
-    case 160:
-      console.log(GamesList);
-      Team1 = GamesList[14][0];
-      Team2 = GamesList[14][1];
-
-      const str44 = "*" + cycleNum + ", משחק מספר 15:* ";
-      textMessage1 = str44 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-
-      ChoiseMinut = req.body.query.message;
-      GameRow = await footballFunc.getGameGuss(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "HF",
-        "HI",
-        "LigatAl"
-      );
-      if (parseInt(ChoiseMinut) === 1) {
-        Minuts = "90 דקות";
-      } else if (parseInt(ChoiseMinut) === 2) {
-        Minuts = "120 דקות";
-      } else {
-        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "90 דקות*";
-        } else {
-          Minuts = "פנדלים";
-        }
-      }
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "HI",
-        "",
-        "",
-        "",
-        "",
-        Minuts,
-        "LigatAl"
-      );
-
-      break;
-    case 161:
-      console.log(GamesList);
-      Team1 = GamesList[14][0];
-      Team2 = GamesList[14][1];
-
-      const str45 = "*" + cycleNum + ", משחק מספר 15:* ";
-      textMessage1 = str45 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
-      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
-
-      // score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
-      console.log("ScoreTeam1", ScoreTeam1);
-      console.log("ScoreTeam2", ScoreTeam2);
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "HV",
-        "HW",
-        ScoreTeam1,
-        ScoreTeam2,
-        "LigatAl"
-      );
-
-      break;
-    case 162:
-      console.log(GamesList);
-      Team1 = GamesList[14][0];
-      Team2 = GamesList[14][1];
-      GameRow = await footballFunc.getGameGuss(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "HV",
-        "HY",
-        "LigatAl"
-      );
-      console.log("GameRow", GameRow.data);
-      const str46 = "*" + cycleNum + ", משחק מספר 15:* ";
-      textMessage1 = str46 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "איך יסתיים המשחק?";
-      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
-      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
-      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
-      } else {
-        textMessage3 = "\n3️⃣ פנדלים";
-      }
-
-      ChoiseUp = req.body.query.message;
-      if (parseInt(ChoiseUp) === 1) {
-        ChoiseUpteam = Team1;
-      } else {
-        ChoiseUpteam = Team2;
-      }
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "HX",
-        "",
-        "",
-        "",
-        "",
-        ChoiseUpteam,
-        "LigatAl"
-      );
-
-      break;
-    case 163:
-      console.log(GamesList);
-      Team1 = GamesList[15][0];
-      Team2 = GamesList[15][1];
-
-      const str47 = "*" + cycleNum + ", משחק מספר 16:* ";
-      textMessage1 = str47 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-
-      ChoiseMinut = req.body.query.message;
-      GameRow = await footballFunc.getGameGuss(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "HV",
-        "HY",
-        "LigatAl"
-      );
-      if (parseInt(ChoiseMinut) === 1) {
-        Minuts = "90 דקות";
-      } else if (parseInt(ChoiseMinut) === 2) {
-        Minuts = "120 דקות";
-      } else {
-        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          Minuts = "90 דקות*";
-        } else {
-          Minuts = "פנדלים";
-        }
-      }
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "HY",
-        "",
-        "",
-        "",
-        "",
-        Minuts,
-        "LigatAl"
-      );
-
-      break;
-    case 164:
-      console.log(GamesList);
-      Team1 = GamesList[15][0];
-      Team2 = GamesList[15][1];
-
-      const str48 = "*" + cycleNum + ", משחק מספר 16:* ";
-      textMessage1 = str48 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
-      textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
-
-      // score = req.body.query.message;
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
-      console.log("ScoreTeam1", ScoreTeam1);
-      console.log("ScoreTeam2", ScoreTeam2);
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "IL",
-        "IM",
-        ScoreTeam1,
-        ScoreTeam2,
-        "LigatAl"
-      );
-
-      break;
-    case 165:
-      console.log(GamesList);
-      Team1 = GamesList[15][0];
-      Team2 = GamesList[15][1];
-      GameRow = await footballFunc.getGameGuss(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "IL",
-        "IO",
-        "LigatAl"
-      );
-      console.log("GameRow", GameRow.data);
-      const str49 = "*" + cycleNum + ", משחק מספר 16:* ";
-      textMessage1 = str49 + "\n" + Team1 + " - " + Team2;
-      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-        textMessage2 = "איך יסתיים המשחק?" + "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
-      } else {
-        textMessage2 =
-          "איך יסתיים המשחק?" + "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
-      }
-
-      textMessage3 =
-        "*שימו לב:* אחרי שתנחשו את תוצאת המשחק האחרונה, ייקח לי כמה דקות לעבד את הנתונים ולהציג את ניחושי השלב המלאים ששלחתם. במידה ולא קיבלתם ממני סיכום של הניחושים לאחר 5 דקות, אנא שילחו שוב את הניחוש לשאלה האחרונה.";
-
-      ChoiseUp = req.body.query.message;
-      if (parseInt(ChoiseUp) === 1) {
-        ChoiseUpteam = Team1;
-      } else {
-        ChoiseUpteam = Team2;
-      }
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_Gavia,
-        cycleIndexNum,
-        "גביע המדינה",
-        "IN",
-        "",
-        "",
-        "",
-        "",
-        ChoiseUpteam,
-        "LigatAl"
-      );
-
-      break;
     case 166:
       console.log(GamesList);
       // Team1 = GamesList[14][0];
@@ -2232,12 +1255,12 @@ const GviaHamedina = async function ({
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "IL",
         "IO",
-        "LigatAl"
+        "Alufot"
       );
       if (parseInt(ChoiseMinut) === 1) {
         Minuts = "90 דקות";
@@ -2254,36 +1277,36 @@ const GviaHamedina = async function ({
       await footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         "IO",
         "",
         "",
         "",
         "",
         Minuts,
-        "LigatAl"
+        "Alufot"
       );
       // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main(
+      await footballFunc.fixAuto_Main_Nokout(
         GamesList,
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum
       );
 
       // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
         cycleNum
@@ -2300,15 +1323,15 @@ const GviaHamedina = async function ({
       textMessage1 = "הניחושים נקלטו. שיהיה בהצלחה";
       break;
     case 174:
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         true,
         cycleNum
@@ -2342,7 +1365,7 @@ const GviaHamedina = async function ({
         parseInt(score2),
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
         teamUp_ToFix,
         minute_toFix
@@ -2356,24 +1379,24 @@ const GviaHamedina = async function ({
       break;
     case 177:
       // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main(
+      await footballFunc.fixAuto_Main_Nokout(
         GamesList,
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum
       );
 
       // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         true,
         cycleNum
@@ -2407,7 +1430,7 @@ const GviaHamedina = async function ({
         parseInt(score2),
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
         teamUp_ToFix,
         minute_toFix
@@ -2418,24 +1441,24 @@ const GviaHamedina = async function ({
       break;
     case 179:
       // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main(
+      await footballFunc.fixAuto_Main_Nokout(
         GamesList,
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum
       );
 
       // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         true,
         cycleNum
@@ -2448,24 +1471,24 @@ const GviaHamedina = async function ({
       break;
     case 180:
       // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main(
+      await footballFunc.fixAuto_Main_Nokout(
         GamesList,
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum
       );
 
       // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
         cycleNum
@@ -2497,7 +1520,7 @@ const GviaHamedina = async function ({
         parseInt(score2),
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
         teamUp_ToFix,
         minute_toFix
@@ -2508,24 +1531,24 @@ const GviaHamedina = async function ({
       break;
     case 184:
       // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main(
+      await footballFunc.fixAuto_Main_Nokout(
         GamesList,
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum
       );
 
       // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         true,
         cycleNum
@@ -2538,24 +1561,24 @@ const GviaHamedina = async function ({
       break;
     case 185:
       // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main(
+      await footballFunc.fixAuto_Main_Nokout(
         GamesList,
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum
       );
 
       // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
         cycleNum
@@ -2587,31 +1610,31 @@ const GviaHamedina = async function ({
         parseInt(score2),
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum,
         teamUp_ToFix,
         minute_toFix
       );
 
       // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main(
+      await footballFunc.fixAuto_Main_Nokout(
         GamesList,
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum
       );
 
       // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
         cycleNum
@@ -2624,24 +1647,24 @@ const GviaHamedina = async function ({
       break;
     case 187:
       // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main(
+      await footballFunc.fixAuto_Main_Nokout(
         GamesList,
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum
       );
 
       // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
         cycleNum
@@ -2652,24 +1675,24 @@ const GviaHamedina = async function ({
       break;
     case 188:
       // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main(
+      await footballFunc.fixAuto_Main_Nokout(
         GamesList,
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum
       );
 
       // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         true,
         cycleNum
@@ -2682,24 +1705,24 @@ const GviaHamedina = async function ({
       break;
     case 189:
       // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main(
+      await footballFunc.fixAuto_Main_Nokout(
         GamesList,
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum
       );
 
       // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
         cycleNum
@@ -2710,24 +1733,24 @@ const GviaHamedina = async function ({
       break;
     case 190:
       // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main(
+      await footballFunc.fixAuto_Main_Nokout(
         GamesList,
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum
       );
 
       // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         true,
         cycleNum
@@ -2740,24 +1763,24 @@ const GviaHamedina = async function ({
       break;
     case 191:
       // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main(
+      await footballFunc.fixAuto_Main_Nokout(
         GamesList,
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum
       );
 
       // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
         cycleNum
@@ -2768,24 +1791,24 @@ const GviaHamedina = async function ({
       break;
     case 192:
       // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main(
+      await footballFunc.fixAuto_Main_Nokout(
         GamesList,
         user_name,
         UsersIndex,
-        GuessData_Gavia,
+        GuessData_ShlavHanokout,
         cycleIndexNum
       );
 
       // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Gavia(
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
         cycleIndexNum,
-        "גביע המדינה",
+        "שלב הנוקאאוט",
         GamesList
       );
       console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Gavia(
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         true,
         cycleNum
@@ -2801,4 +1824,4 @@ const GviaHamedina = async function ({
   return [textMessage1, textMessage2, textMessage3];
 };
 
-module.exports = { GviaHamedina };
+module.exports = { shlavHanokOut };

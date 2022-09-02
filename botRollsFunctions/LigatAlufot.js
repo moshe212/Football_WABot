@@ -1,4 +1,5 @@
 const { footballFunc } = require("../footballFunc");
+const { botRollsFunctions } = require("../botRollsFunctions");
 
 const LigatAlufot = async function (
   cycleNum,
@@ -15,7 +16,8 @@ const LigatAlufot = async function (
   score1,
   score2,
   AchievementsOfSeasonData,
-  tableObj
+  tableObj,
+  GuessData_ShlavHanokout
 ) {
   let textMessage1 = "empty";
   let textMessage2 = "empty";
@@ -33,12 +35,28 @@ const LigatAlufot = async function (
     //   tableObj,
     // });
     // textMessage1 = tableTextMassage;
+  } else if (stage > 296 && stage < 413) {
+    const shlavHanokOutMessages = await botRollsFunctions.shlavHanokOut(
+      cycleNum,
+      GamesList,
+      cycleIndexNum,
+      UsersIndex,
+      GuessData,
+      GuessData_ShlavHanokout,
+      user_name,
+      stage,
+      score
+    );
+
+    textMessage1 = shlavHanokOutMessages[0];
+    textMessage2 = shlavHanokOutMessages[1];
+    textMessage3 = shlavHanokOutMessages[2];
   } else {
     switch (stage) {
       case 256:
         if (cycleText.includes("מחזור")) {
           textMessage1 =
-            "ברוכים הבאים למשחק *היציע: ליגת האלופות* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי המחזור \n2️⃣ - להישגי העונה שלכם \n3️⃣ - לקבוצת ה-Whatsapp הרשמית \n4️⃣ - לטבלאות \n5️⃣ - לחזרה לתפריט הראשי";
+            "ברוכים הבאים למשחק *היציע: ליגת האלופות* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי המחזור \n2️⃣ - לניחושי שלב הנוקאאוט\n3️⃣ - להישגי העונה שלכם \n4️⃣ - לקבוצת ה-Whatsapp הרשמית \n5️⃣ - לטבלאות\n6️⃣ - לחזרה לתפריט הראשי";
 
           break;
         }
@@ -79,7 +97,7 @@ const LigatAlufot = async function (
           }
         }
 
-      //   case 297:
+      //   case 298:
       //     const achievementsOfSeason = await footballFunc.getAchievementsOfSeason(
       //       user_name,
       //       AchievementsOfSeasonData,
@@ -131,7 +149,7 @@ const LigatAlufot = async function (
 
       //     break;
 
-      case 298:
+      case 299:
         textMessage1 =
           "הלינק לקבוצת הווטסאפ הרשמית של *היציע: ליגת העל* הוא:" +
           "\n https://chat.whatsapp.com/CZyFCQqAvHYJkD8QC2VQPb";

@@ -3,6 +3,7 @@ const { GviaHamedina } = require("./GviaHamedina");
 const { LigatAl } = require("./LigatAl");
 const { Mondial } = require("./Mondial");
 const { LigatAlufot } = require("./LigatAlufot");
+const { shlavHanokOut } = require("./shlavHanokOut");
 
 const botRollsFunctions = {
   FirstSort,
@@ -10,6 +11,7 @@ const botRollsFunctions = {
   LigatAl,
   Mondial,
   LigatAlufot,
+  shlavHanokOut,
 };
 
 module.exports = { botRollsFunctions };

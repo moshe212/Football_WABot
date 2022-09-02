@@ -7,7 +7,8 @@ const getGameGuss = async function (
   cycleIndexNum,
   sheetTitle,
   columnLetter1,
-  columnLetter2
+  columnLetter2,
+  fileName
 ) {
   const auth = new google.auth.GoogleAuth({
     keyFile: "config/CreditTransaction-d9fe1ef7e128.json", //the key file
@@ -21,7 +22,12 @@ const getGameGuss = async function (
     version: "v4",
     auth: authClientObject,
   });
-  const spreadsheetId = "1J3iFj9uM3TEC3y__u02PFnq5M5YKSezXP6TVYOEGMto";
+  const spreadsheetId =
+    fileName === "LigatAl"
+      ? "1J3iFj9uM3TEC3y__u02PFnq5M5YKSezXP6TVYOEGMto"
+      : fileName === "Alufot"
+      ? "1a8XbSk7anY4S0SvyJawCqrYYcae4WUN3C-NUO7_K-ys"
+      : "";
   let Range_Cell = "";
   try {
     let index = null;

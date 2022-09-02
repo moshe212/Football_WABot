@@ -18,6 +18,9 @@ const { getImage } = require("./getImage");
 const { getTableAnswer } = require("./getTableAnswer");
 const { getTableTextMassages } = require("./getTableTextMassages");
 const { chooseGameToFixAlufot } = require("./chooseGameToFixAlufot");
+const { fixAuto_Main_Nokout } = require("./fixAuto_Main_Nokout");
+const { getSavedGuss_Nokout } = require("./getSavedGuss_Nokout");
+const { chooseGameToFix_Nokout } = require("./chooseGameToFix_Nokout");
 
 const footballFunc = {
   getDataFromSheet,
@@ -40,6 +43,9 @@ const footballFunc = {
   getTableAnswer,
   getTableTextMassages,
   chooseGameToFixAlufot,
+  fixAuto_Main_Nokout,
+  getSavedGuss_Nokout,
+  chooseGameToFix_Nokout,
 };
 
 module.exports = { footballFunc };

@@ -58,6 +58,10 @@ const getCycle = async (data) => {
     if (cycleText.includes("גביע המדינה")) {
       const arr = cycleText.split(" ");
       cycleNum = arr[4] + " " + arr[5];
+    } else if (cycleText.includes("שלב הנוקאאוט")) {
+      conaole.log("נוקאאוט", cycleText);
+      const arr = cycleText.split(" ");
+      cycleNum = (arr[4] + " " + arr[5] + " " + arr[6]).trim();
     } else {
       cycleNum = cycleText.substring(cycleText.length - 2).trim();
     }
