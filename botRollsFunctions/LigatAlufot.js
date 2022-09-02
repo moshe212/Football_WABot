@@ -247,6 +247,8 @@ const LigatAlufot = async function (
           "E",
           ScoreTeam1,
           ScoreTeam2,
+          "",
+          "",
           "Alufot"
         );
 
@@ -274,6 +276,8 @@ const LigatAlufot = async function (
           "Q",
           ScoreTeam1,
           ScoreTeam2,
+          "",
+          "",
           "Alufot"
         );
 
@@ -301,6 +305,8 @@ const LigatAlufot = async function (
           "AC",
           ScoreTeam1,
           ScoreTeam2,
+          "",
+          "",
           "Alufot"
         );
 
@@ -327,6 +333,8 @@ const LigatAlufot = async function (
           "AO",
           ScoreTeam1,
           ScoreTeam2,
+          "",
+          "",
           "Alufot"
         );
 
@@ -353,6 +361,8 @@ const LigatAlufot = async function (
           "BA",
           ScoreTeam1,
           ScoreTeam2,
+          "",
+          "",
           "Alufot"
         );
 
@@ -380,6 +390,8 @@ const LigatAlufot = async function (
           "BM",
           ScoreTeam1,
           ScoreTeam2,
+          "",
+          "",
           "Alufot"
         );
 
@@ -408,6 +420,8 @@ const LigatAlufot = async function (
           "BY",
           ScoreTeam1,
           ScoreTeam2,
+          "",
+          "",
           "Alufot"
         );
 
@@ -435,6 +449,8 @@ const LigatAlufot = async function (
           "CK",
           ScoreTeam1,
           ScoreTeam2,
+          "",
+          "",
           "Alufot"
         );
 
@@ -462,6 +478,8 @@ const LigatAlufot = async function (
           "CW",
           ScoreTeam1,
           ScoreTeam2,
+          "",
+          "",
           "Alufot"
         );
 
@@ -489,6 +507,8 @@ const LigatAlufot = async function (
           "DI",
           ScoreTeam1,
           ScoreTeam2,
+          "",
+          "",
           "Alufot"
         );
 
@@ -516,6 +536,8 @@ const LigatAlufot = async function (
           "DU",
           ScoreTeam1,
           ScoreTeam2,
+          "",
+          "",
           "Alufot"
         );
 
@@ -543,6 +565,8 @@ const LigatAlufot = async function (
           "EG",
           ScoreTeam1,
           ScoreTeam2,
+          "",
+          "",
           "Alufot"
         );
 
@@ -570,6 +594,8 @@ const LigatAlufot = async function (
           "ES",
           ScoreTeam1,
           ScoreTeam2,
+          "",
+          "",
           "Alufot"
         );
 
@@ -597,6 +623,8 @@ const LigatAlufot = async function (
           "FE",
           ScoreTeam1,
           ScoreTeam2,
+          "",
+          "",
           "Alufot"
         );
 
@@ -624,7 +652,10 @@ const LigatAlufot = async function (
           "FP",
           "FQ",
           ScoreTeam1,
-          ScoreTeam2
+          ScoreTeam2,
+          "",
+          "",
+          "Alufot"
         );
 
         break;
@@ -646,6 +677,8 @@ const LigatAlufot = async function (
           "GC",
           ScoreTeam1,
           ScoreTeam2,
+          "",
+          "",
           "Alufot"
         );
 
