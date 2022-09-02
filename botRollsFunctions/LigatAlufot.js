@@ -30,6 +30,8 @@ const LigatAlufot = async function (
   let GuessData_Saved = [];
   let textMessage = "";
 
+  console.log({ GuessData });
+
   if ((stage > 266 && stage < 293) || stage === 252) {
     // const tableTextMassage = await footballFunc.getTableTextMassages({
     //   stage,
@@ -369,6 +371,7 @@ const LigatAlufot = async function (
         break;
       case 319:
         console.log(GamesList);
+
         Team1 = GamesList[6][0];
         Team2 = GamesList[6][1];
 
