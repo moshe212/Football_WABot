@@ -195,7 +195,8 @@ const getAlufotData = async () => {
     "שלב הנוקאאוט",
     "Alufot"
   );
-  console.log({ GuessData_ShlavHanokout });
+  // console.log({ GuessData_ShlavHanokout });
+  console.log({ alufotGuessData });
   // alufotAchievementsOfSeasonData = await footballFunc.getDataFromSheet(
   //   "הישגים",
   //   "Alufot"
