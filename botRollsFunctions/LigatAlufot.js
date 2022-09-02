@@ -1,5 +1,6 @@
 const { footballFunc } = require("../footballFunc");
 const { botRollsFunctions } = require("../botRollsFunctions");
+const { shlavHanokOut } = require("./shlavHanokOut");
 
 const LigatAlufot = async function (
   cycleNum,
