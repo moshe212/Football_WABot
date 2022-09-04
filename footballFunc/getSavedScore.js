@@ -111,6 +111,87 @@ const getSavedScore = async function (
               };
               Arr.push(scoresObj);
               break;
+            case 7:
+              score1 = SavedGuess[88];
+              score2 = SavedGuess[87];
+              scoresObj = {
+                team1: [Team1, score1],
+                team2: [Team2, score2],
+              };
+              Arr.push(scoresObj);
+              break;
+            case 8:
+              score1 = SavedGuess[100];
+              score2 = SavedGuess[99];
+              scoresObj = {
+                team1: [Team1, score1],
+                team2: [Team2, score2],
+              };
+              Arr.push(scoresObj);
+              break;
+            case 9:
+              score1 = SavedGuess[112];
+              score2 = SavedGuess[111];
+              scoresObj = {
+                team1: [Team1, score1],
+                team2: [Team2, score2],
+              };
+              Arr.push(scoresObj);
+              break;
+            case 10:
+              score1 = SavedGuess[124];
+              score2 = SavedGuess[123];
+              scoresObj = {
+                team1: [Team1, score1],
+                team2: [Team2, score2],
+              };
+              Arr.push(scoresObj);
+              break;
+            case 11:
+              score1 = SavedGuess[136];
+              score2 = SavedGuess[135];
+              scoresObj = {
+                team1: [Team1, score1],
+                team2: [Team2, score2],
+              };
+              Arr.push(scoresObj);
+              break;
+            case 12:
+              score1 = SavedGuess[148];
+              score2 = SavedGuess[147];
+              scoresObj = {
+                team1: [Team1, score1],
+                team2: [Team2, score2],
+              };
+              Arr.push(scoresObj);
+              break;
+            case 13:
+              score1 = SavedGuess[160];
+              score2 = SavedGuess[159];
+              scoresObj = {
+                team1: [Team1, score1],
+                team2: [Team2, score2],
+              };
+              Arr.push(scoresObj);
+              break;
+            case 14:
+              score1 = SavedGuess[172];
+              score2 = SavedGuess[171];
+              scoresObj = {
+                team1: [Team1, score1],
+                team2: [Team2, score2],
+              };
+              Arr.push(scoresObj);
+              break;
+            case 15:
+              score1 = SavedGuess[184];
+              score2 = SavedGuess[183];
+              scoresObj = {
+                team1: [Team1, score1],
+                team2: [Team2, score2],
+              };
+              Arr.push(scoresObj);
+              break;
           }
         }
         // console.log(Arr);
