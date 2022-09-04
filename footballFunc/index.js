@@ -21,6 +21,7 @@ const { chooseGameToFixAlufot } = require("./chooseGameToFixAlufot");
 const { fixAuto_Main_Nokout } = require("./fixAuto_Main_Nokout");
 const { getSavedGuss_Nokout } = require("./getSavedGuss_Nokout");
 const { chooseGameToFix_Nokout } = require("./chooseGameToFix_Nokout");
+const { saveFix_Nokout } = require("./saveFix_Nokout");
 
 const footballFunc = {
   getDataFromSheet,
@@ -46,6 +47,7 @@ const footballFunc = {
   fixAuto_Main_Nokout,
   getSavedGuss_Nokout,
   chooseGameToFix_Nokout,
+  saveFix_Nokout,
 };
 
 module.exports = { footballFunc };
