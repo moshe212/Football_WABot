@@ -59,7 +59,7 @@ const getCycle = async (data) => {
       const arr = cycleText.split(" ");
       cycleNum = arr[4] + " " + arr[5];
     } else if (cycleText.includes("שלב הנוקאאוט")) {
-      conaole.log("נוקאאוט", cycleText);
+      console.log("נוקאאוט", cycleText);
       const arr = cycleText.split(" ");
       cycleNum = (arr[4] + " " + arr[5] + " " + arr[6]).trim();
     } else {

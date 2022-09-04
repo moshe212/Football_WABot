@@ -161,6 +161,7 @@ let alufotTableObj = {};
 const getAlufotData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים", "Alufot");
   const res_cycle = await footballFunc.getCycle(Data);
+  console.log({ res_cycle });
   alufotCycleNum = res_cycle[0];
   alufotCycleText = res_cycle[3];
   const cycleDate1 = moment(res_cycle[1]).format("DD-MM-YYYY");

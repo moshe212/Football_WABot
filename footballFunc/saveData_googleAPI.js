@@ -50,6 +50,7 @@ const saveData_googleAPI = async function (
         }
       }
     }
+    console.log("0", cycleIndexNum, index);
     console.log("1", parseInt(cycleIndexNum), parseInt(index) - 2);
     console.log("2", GuessData[parseInt(cycleIndexNum) + parseInt(index) - 2]);
     if (
