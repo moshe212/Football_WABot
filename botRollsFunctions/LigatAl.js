@@ -418,7 +418,7 @@ const LigatAl = async function ({
           GamesList,
           "LigatAl"
         );
-        console.log("GuessData_Saved", GuessData_Saved);
+
         textMessage = await footballFunc.chooseGameToFix(
           GuessData_Saved,
           false,
@@ -458,7 +458,7 @@ const LigatAl = async function ({
           GamesList,
           "LigatAl"
         );
-        console.log("GuessData_Saved", GuessData_Saved);
+
         textMessage = await footballFunc.chooseGameToFix(
           GuessData_Saved,
           true,
@@ -502,7 +502,7 @@ const LigatAl = async function ({
           GamesList,
           "LigatAl"
         );
-        console.log("GuessData_Saved", GuessData_Saved);
+
         textMessage = await footballFunc.chooseGameToFix(
           GuessData_Saved,
           true,
@@ -523,7 +523,7 @@ const LigatAl = async function ({
           GamesList,
           "LigatAl"
         );
-        console.log("GuessData_Saved", GuessData_Saved);
+
         textMessage = await footballFunc.chooseGameToFix(
           GuessData_Saved,
           false,
@@ -565,7 +565,7 @@ const LigatAl = async function ({
           GamesList,
           "LigatAl"
         );
-        console.log("GuessData_Saved", GuessData_Saved);
+
         textMessage = await footballFunc.chooseGameToFix(
           GuessData_Saved,
           true,
@@ -585,7 +585,7 @@ const LigatAl = async function ({
           GamesList,
           "LigatAl"
         );
-        console.log("GuessData_Saved", GuessData_Saved);
+
         textMessage = await footballFunc.chooseGameToFix(
           GuessData_Saved,
           false,
@@ -627,7 +627,7 @@ const LigatAl = async function ({
           GamesList,
           "LigatAl"
         );
-        console.log("GuessData_Saved", GuessData_Saved);
+
         textMessage = await footballFunc.chooseGameToFix(
           GuessData_Saved,
           true,
@@ -647,7 +647,7 @@ const LigatAl = async function ({
           GamesList,
           "LigatAl"
         );
-        console.log("GuessData_Saved", GuessData_Saved);
+
         textMessage = await footballFunc.chooseGameToFix(
           GuessData_Saved,
           false,
@@ -689,7 +689,7 @@ const LigatAl = async function ({
           GamesList,
           "LigatAl"
         );
-        console.log("GuessData_Saved", GuessData_Saved);
+
         textMessage = await footballFunc.chooseGameToFix(
           GuessData_Saved,
           true,
@@ -709,7 +709,7 @@ const LigatAl = async function ({
           GamesList,
           "LigatAl"
         );
-        console.log("GuessData_Saved", GuessData_Saved);
+
         textMessage = await footballFunc.chooseGameToFix(
           GuessData_Saved,
           false,
@@ -751,7 +751,7 @@ const LigatAl = async function ({
           GamesList,
           "LigatAl"
         );
-        console.log("GuessData_Saved", GuessData_Saved);
+
         textMessage = await footballFunc.chooseGameToFix(
           GuessData_Saved,
           true,
@@ -771,7 +771,7 @@ const LigatAl = async function ({
           GamesList,
           "LigatAl"
         );
-        console.log("GuessData_Saved", GuessData_Saved);
+
         textMessage = await footballFunc.chooseGameToFix(
           GuessData_Saved,
           false,
@@ -813,7 +813,7 @@ const LigatAl = async function ({
           GamesList,
           "LigatAl"
         );
-        console.log("GuessData_Saved", GuessData_Saved);
+
         textMessage = await footballFunc.chooseGameToFix(
           GuessData_Saved,
           true,
@@ -833,7 +833,7 @@ const LigatAl = async function ({
           GamesList,
           "LigatAl"
         );
-        console.log("GuessData_Saved", GuessData_Saved);
+
         textMessage = await footballFunc.chooseGameToFix(
           GuessData_Saved,
           false,
@@ -870,7 +870,7 @@ const LigatAl = async function ({
           GamesList,
           "LigatAl"
         );
-        console.log("GuessData_Saved", GuessData_Saved);
+
         textMessage = await footballFunc.chooseGameToFix(
           GuessData_Saved,
           false,
