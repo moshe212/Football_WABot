@@ -310,7 +310,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage1 = LigatAlMessages[0];
     textMessage2 = LigatAlMessages[1];
     textMessage3 = LigatAlMessages[2];
-  } else if (stage === 256 || (stage > 295 && stage < 413)) {
+  } else if (stage === 256 || (stage > 295 && stage < 476)) {
     const LigatAlufotMessages = await botRollsFunctions.LigatAlufot(
       message,
       alufotCycleNum,
