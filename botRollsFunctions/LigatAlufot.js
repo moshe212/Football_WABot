@@ -3,6 +3,7 @@ const { botRollsFunctions } = require("../botRollsFunctions");
 const { shlavHanokOut } = require("./shlavHanokOut");
 
 const LigatAlufot = async function (
+  message,
   cycleNum,
   cycleText,
   cycleDate,
@@ -40,6 +41,7 @@ const LigatAlufot = async function (
     // textMessage1 = tableTextMassage;
   } else if (stage === 297 || (stage > 394 && stage < 413)) {
     const shlavHanokOutMessages = await shlavHanokOut(
+      message,
       cycleDate,
       cycleText,
       cycleNum,

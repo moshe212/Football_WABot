@@ -1,6 +1,7 @@
 const { footballFunc } = require("../footballFunc");
 
 const shlavHanokOut = async function (
+  message,
   cycleDate,
   cycleText,
   cycleNum,
@@ -93,7 +94,7 @@ const shlavHanokOut = async function (
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      // score = req.body.query.message;
+      // score = message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -142,7 +143,7 @@ const shlavHanokOut = async function (
         textMessage3 = "\n3️⃣ פנדלים";
       }
 
-      ChoiseUp = req.body.query.message;
+      ChoiseUp = message;
       if (parseInt(ChoiseUp) === 1) {
         ChoiseUpteam = Team1;
       } else {
@@ -168,7 +169,7 @@ const shlavHanokOut = async function (
 
     case 403:
       console.log(GamesList);
-      ChoiseMinut = req.body.query.message;
+      ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
@@ -270,7 +271,7 @@ const shlavHanokOut = async function (
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      // score = req.body.query.message;
+      // score = message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -318,7 +319,7 @@ const shlavHanokOut = async function (
         textMessage3 = "\n3️⃣ פנדלים";
       }
 
-      ChoiseUp = req.body.query.message;
+      ChoiseUp = message;
       if (parseInt(ChoiseUp) === 1) {
         ChoiseUpteam = Team1;
       } else {
@@ -343,7 +344,7 @@ const shlavHanokOut = async function (
       break;
     case 409:
       console.log(GamesList);
-      ChoiseMinut = req.body.query.message;
+      ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
@@ -434,7 +435,7 @@ const shlavHanokOut = async function (
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      // score = req.body.query.message;
+      // score = message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -482,7 +483,7 @@ const shlavHanokOut = async function (
         textMessage3 = "\n3️⃣ פנדלים";
       }
 
-      ChoiseUp = req.body.query.message;
+      ChoiseUp = message;
       if (parseInt(ChoiseUp) === 1) {
         ChoiseUpteam = Team1;
       } else {
@@ -514,7 +515,7 @@ const shlavHanokOut = async function (
       textMessage1 = str10 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
-      ChoiseMinut = req.body.query.message;
+      ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
@@ -563,7 +564,7 @@ const shlavHanokOut = async function (
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      // score = req.body.query.message;
+      // score = message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -611,7 +612,7 @@ const shlavHanokOut = async function (
         textMessage3 = "\n3️⃣ פנדלים";
       }
 
-      ChoiseUp = req.body.query.message;
+      ChoiseUp = message;
       if (parseInt(ChoiseUp) === 1) {
         ChoiseUpteam = Team1;
       } else {
@@ -636,7 +637,7 @@ const shlavHanokOut = async function (
       break;
     case 130:
       console.log(GamesList);
-      ChoiseMinut = req.body.query.message;
+      ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
@@ -727,7 +728,7 @@ const shlavHanokOut = async function (
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      // score = req.body.query.message;
+      // score = message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -775,7 +776,7 @@ const shlavHanokOut = async function (
         textMessage3 = "\n3️⃣ פנדלים";
       }
 
-      ChoiseUp = req.body.query.message;
+      ChoiseUp = message;
       if (parseInt(ChoiseUp) === 1) {
         ChoiseUpteam = Team1;
       } else {
@@ -807,7 +808,7 @@ const shlavHanokOut = async function (
       textMessage1 = str16 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
-      ChoiseMinut = req.body.query.message;
+      ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
@@ -856,7 +857,7 @@ const shlavHanokOut = async function (
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      // score = req.body.query.message;
+      // score = message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -904,7 +905,7 @@ const shlavHanokOut = async function (
         textMessage3 = "\n3️⃣ פנדלים";
       }
 
-      ChoiseUp = req.body.query.message;
+      ChoiseUp = message;
       if (parseInt(ChoiseUp) === 1) {
         ChoiseUpteam = Team1;
       } else {
@@ -936,7 +937,7 @@ const shlavHanokOut = async function (
       textMessage1 = str19 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
-      ChoiseMinut = req.body.query.message;
+      ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
@@ -985,7 +986,7 @@ const shlavHanokOut = async function (
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      // score = req.body.query.message;
+      // score = message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -1033,7 +1034,7 @@ const shlavHanokOut = async function (
         textMessage3 = "\n3️⃣ פנדלים";
       }
 
-      ChoiseUp = req.body.query.message;
+      ChoiseUp = message;
       if (parseInt(ChoiseUp) === 1) {
         ChoiseUpteam = Team1;
       } else {
@@ -1065,7 +1066,7 @@ const shlavHanokOut = async function (
       textMessage1 = str22 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
-      ChoiseMinut = req.body.query.message;
+      ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
@@ -1114,7 +1115,7 @@ const shlavHanokOut = async function (
       textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
-      // score = req.body.query.message;
+      // score = message;
       ScoreTeam1 = score.split(":")[1];
       ScoreTeam2 = score.split(":")[0];
       console.log("ScoreTeam1", ScoreTeam1);
@@ -1162,7 +1163,7 @@ const shlavHanokOut = async function (
         textMessage3 = "\n3️⃣ פנדלים";
       }
 
-      ChoiseUp = req.body.query.message;
+      ChoiseUp = message;
       if (parseInt(ChoiseUp) === 1) {
         ChoiseUpteam = Team1;
       } else {
@@ -1187,7 +1188,7 @@ const shlavHanokOut = async function (
       break;
     case 142:
       console.log(GamesList);
-      ChoiseMinut = req.body.query.message;
+      ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
@@ -1253,7 +1254,7 @@ const shlavHanokOut = async function (
       // textMessage1 = str50 + "\n" + Team1 + " - " + Team2;
       // textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
-      ChoiseMinut = req.body.query.message;
+      ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
         user_name,
         UsersIndex,
@@ -1345,12 +1346,12 @@ const shlavHanokOut = async function (
 
       break;
     case 175:
-      // gameNum = req.body.query.message.split(" ")[1];
-      // score1 = req.body.query.message.split(" ")[3].split(":")[1];
-      // score2 = req.body.query.message.split(" ")[3].split(":")[0];
-      teamUp_ToFix_Num = parseInt(req.body.query.message.split(" ")[5]);
+      // gameNum = message.split(" ")[1];
+      // score1 = message.split(" ")[3].split(":")[1];
+      // score2 = message.split(" ")[3].split(":")[0];
+      teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
       teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num];
-      minute_toFix = req.body.query.message.split(" ")[7];
+      minute_toFix = message.split(" ")[7];
 
       console.log(
         "answer",
@@ -1410,12 +1411,12 @@ const shlavHanokOut = async function (
 
       break;
     case 178:
-      // gameNum = req.body.query.message.split(" ")[1];
-      // score1 = req.body.query.message.split(" ")[3].split(":")[1];
-      // score2 = req.body.query.message.split(" ")[3].split(":")[0];
-      teamUp_ToFix_Num = parseInt(req.body.query.message.split(" ")[5]);
+      // gameNum = message.split(" ")[1];
+      // score1 = message.split(" ")[3].split(":")[1];
+      // score2 = message.split(" ")[3].split(":")[0];
+      teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
       teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num - 1];
-      minute_toFix = req.body.query.message.split(" ")[7];
+      minute_toFix = message.split(" ")[7];
 
       console.log(
         "answer",
@@ -1500,12 +1501,12 @@ const shlavHanokOut = async function (
       textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
       break;
     case 183:
-      // gameNum = req.body.query.message.split(" ")[1];
-      // score1 = req.body.query.message.split(" ")[3].split(":")[1];
-      // score2 = req.body.query.message.split(" ")[3].split(":")[0];
-      teamUp_ToFix_Num = parseInt(req.body.query.message.split(" ")[5]);
+      // gameNum = message.split(" ")[1];
+      // score1 = message.split(" ")[3].split(":")[1];
+      // score2 = message.split(" ")[3].split(":")[0];
+      teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
       teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num - 1];
-      minute_toFix = req.body.query.message.split(" ")[7];
+      minute_toFix = message.split(" ")[7];
 
       console.log(
         "answer",
@@ -1590,12 +1591,12 @@ const shlavHanokOut = async function (
       textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
       break;
     case 186:
-      // gameNum = req.body.query.message.split(" ")[1];
-      // score1 = req.body.query.message.split(" ")[3].split(":")[1];
-      // score2 = req.body.query.message.split(" ")[3].split(":")[0];
-      teamUp_ToFix_Num = parseInt(req.body.query.message.split(" ")[5]);
+      // gameNum = message.split(" ")[1];
+      // score1 = message.split(" ")[3].split(":")[1];
+      // score2 = message.split(" ")[3].split(":")[0];
+      teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
       teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num - 1];
-      minute_toFix = req.body.query.message.split(" ")[7];
+      minute_toFix = message.split(" ")[7];
 
       console.log(
         "answer",

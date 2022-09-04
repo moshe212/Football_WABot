@@ -238,6 +238,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   let textMessage2 = "empty";
   let textMessage3 = "empty";
   const score = req.body.query.message;
+  const message = req.body.query.message;
   const gameNum = req.body.query.message.split(" ")
     ? req.body.query.message.split(" ")[1]
     : "";
@@ -308,6 +309,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage3 = LigatAlMessages[2];
   } else if (stage === 256 || (stage > 295 && stage < 413)) {
     const LigatAlufotMessages = await botRollsFunctions.LigatAlufot(
+      message,
       alufotCycleNum,
       alufotCycleText,
       alufotCycleDate,
