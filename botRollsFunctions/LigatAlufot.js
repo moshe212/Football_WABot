@@ -40,6 +40,7 @@ const LigatAlufot = async function (
     // textMessage1 = tableTextMassage;
   } else if (stage === 297 || (stage > 394 && stage < 413)) {
     const shlavHanokOutMessages = await shlavHanokOut(
+      cycleText,
       cycleNum,
       GamesList,
       cycleIndexNum,

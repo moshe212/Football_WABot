@@ -1,6 +1,7 @@
 const { footballFunc } = require("../footballFunc");
 
 const shlavHanokOut = async function (
+  cycleText,
   cycleNum,
   GamesList,
   cycleIndexNum,
