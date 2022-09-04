@@ -58,7 +58,7 @@ const LigatAlufot = async function (
   } else {
     switch (stage) {
       case 256:
-        if (cycleText.includes("מחזור")) {
+        if (cycleText.includes("מחזור") || cycleText.includes("שלב הנוקאאוט")) {
           textMessage1 =
             "ברוכים הבאים למשחק *היציע: ליגת האלופות* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי המחזור \n2️⃣ - לניחושי שלב הנוקאאוט\n3️⃣ - להישגי העונה שלכם \n4️⃣ - לקבוצת ה-Whatsapp הרשמית \n5️⃣ - לטבלאות\n6️⃣ - לחזרה לתפריט הראשי";
 
