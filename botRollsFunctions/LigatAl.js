@@ -16,6 +16,7 @@ const LigatAl = async function ({
   score2,
   AchievementsOfSeasonData,
   tableObj,
+  UsersList,
 }) {
   let textMessage1 = "empty";
   let textMessage2 = "empty";
@@ -37,8 +38,18 @@ const LigatAl = async function ({
     switch (stage) {
       case 110:
         if (cycleText.includes("מחזור")) {
-          textMessage1 =
-            "ברוכים הבאים למשחק *היציע: ליגת העל* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי המחזור \n2️⃣ - להישגי העונה שלכם \n3️⃣ - לקבוצת ה-Whatsapp הרשמית \n4️⃣ - לטבלאות \n5️⃣ - לחזרה לתפריט הראשי";
+          const firstMessages = await footballFunc.firstSort(
+            stage,
+            UsersList,
+            user_name,
+            UsersIndex,
+            cycleDate,
+            "LigatAl"
+          );
+
+          textMessage1 = firstMessages[0];
+          textMessage2 = firstMessages[1];
+          textMessage3 = firstMessages[2];
 
           break;
         }

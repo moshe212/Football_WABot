@@ -19,7 +19,8 @@ const LigatAlufot = async function (
   score2,
   AchievementsOfSeasonData,
   tableObj,
-  GuessData_ShlavHanokout
+  GuessData_ShlavHanokout,
+  UsersList
 ) {
   let textMessage1 = "empty";
   let textMessage2 = "empty";
@@ -39,7 +40,7 @@ const LigatAlufot = async function (
     //   tableObj,
     // });
     // textMessage1 = tableTextMassage;
-  } else if (stage === 297 || (stage > 394 && stage < 413)) {
+  } else if (stage === 297 || (stage > 394 && stage < 476)) {
     const shlavHanokOutMessages = await shlavHanokOut(
       message,
       cycleDate,
@@ -62,8 +63,18 @@ const LigatAlufot = async function (
     switch (stage) {
       case 256:
         if (cycleText.includes("מחזור") || cycleText.includes("שלב הנוקאאוט")) {
-          textMessage1 =
-            "ברוכים הבאים למשחק *היציע: ליגת האלופות* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי המחזור \n2️⃣ - לניחושי שלב הנוקאאוט\n3️⃣ - להישגי העונה שלכם \n4️⃣ - לקבוצת ה-Whatsapp הרשמית \n5️⃣ - לטבלאות\n6️⃣ - לחזרה לתפריט הראשי";
+          const firstMessages = await footballFunc.firstSort(
+            stage,
+            UsersList,
+            user_name,
+            UsersIndex,
+            cycleDate,
+            "Alufot"
+          );
+
+          textMessage1 = firstMessages[0];
+          textMessage2 = firstMessages[1];
+          textMessage3 = firstMessages[2];
 
           break;
         }

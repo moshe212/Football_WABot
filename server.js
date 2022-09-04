@@ -249,18 +249,20 @@ app.post("/api/Whatsapp", async (req, res) => {
     ? req.body.query.message.split(" ")[3].split(":")[0]
     : "";
 
-  if (stage === 109 || stage === 113 || stage === 253) {
-    const firstMessages = await botRollsFunctions.FirstSort({
-      stage,
-      UsersList,
-      user_name,
-      UsersIndex,
-      cycleDate,
-    });
-
-    textMessage1 = firstMessages[0];
-    textMessage2 = firstMessages[1];
-    textMessage3 = firstMessages[2];
+  if (stage === 109) {
+    textMessage1 =
+      "היי, נעים מאוד אני הבוט של *היציע. מוזמנים לקרוא לי בוטי.*" +
+      // moment().year() +
+      "\nמה ברצונכם לעשות?";
+    textMessage2 =
+      "\n1️⃣ - למשחק *היציע: ליגת העל* \n2️⃣ - למשחק *היציע: גביע המדינה* \n3️⃣ - למשחק *היציע: ליגת האלופות* \n4️⃣ - למשחק *היציע: מונדיאל*  \n5️⃣ - למשחק *היציע: יורו* \n6️⃣ - למשחק *היציע: בחירות* \n7️⃣ - למשחק *היציע: אולימפיאדה*";
+  } else if (stage === 113) {
+    textMessage1 =
+      "אז מה אתם אוכלים לי את הראש? תחזרו לכאן כשתרצו למלא ניחושים, ותשתדלו שזה יקרה לפני ה-" +
+      "*" +
+      cycleDate +
+      "*" +
+      " בחצות. יאללה ביי! 😎 ";
   } else if ((stage > 113 && stage < 193) || stage === 111 || stage === 112) {
     const GaviaMessages = await botRollsFunctions.GviaHamedina({
       cycleNum,
@@ -302,6 +304,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       score2,
       AchievementsOfSeasonData,
       tableObj,
+      UsersList,
     });
 
     textMessage1 = LigatAlMessages[0];
@@ -325,7 +328,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       score2,
       alufotAchievementsOfSeasonData,
       alufotTableObj,
-      GuessData_ShlavHanokout
+      GuessData_ShlavHanokout,
+      alufotUsersList
     );
 
     textMessage1 = LigatAlufotMessages[0];
