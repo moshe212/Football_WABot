@@ -21,58 +21,6 @@ const server = http.createServer(app);
 const { footballFunc } = require("./footballFunc");
 const { botRollsFunctions } = require("./botRollsFunctions");
 
-// const tablemark = require("tablemark");
-const removeMarkdown = require("markdown-to-text");
-const json2md = require("json2md");
-// const markdownTable = require("markdown-table-cjs");
-
-// console.log(
-//   json2md([
-//     { h1: "JSON To Markdown" },
-//     { blockquote: "A JSON to Markdown converter." },
-//     {
-//       img: [
-//         { title: "Some image", source: "https://example.com/some-image.png" },
-//         {
-//           title: "Another image",
-//           source: "https://example.com/some-image1.png",
-//         },
-//         {
-//           title: "Yet another image",
-//           source: "https://example.com/some-image2.png",
-//         },
-//       ],
-//     },
-//     { h2: "Features" },
-//     {
-//       ul: [
-//         "Easy to use",
-//         "You can programmatically generate Markdown content",
-//         "...",
-//       ],
-//     },
-//     { h2: "How to contribute" },
-//     { ol: ["Fork the project", "Create your branch", "Raise a pull request"] },
-//     { h2: "Code blocks" },
-//     { p: "Below you can see a code block example." },
-//     {
-//       code: {
-//         language: "js",
-//         content: ["function sum (a, b) {", "   return a + b", "}", "sum(1, 2)"],
-//       },
-//     },
-//   ])
-// );
-
-// const tableMdString = json2md([
-//   { name: "Bob", age: 21, isCool: false },
-//   { name: "Sarah", age: 22, isCool: true },
-//   { name: "Lee", age: 23, isCool: true },
-// ]);
-// console.log(tableMdString);
-// const text = removeMarkdown(tableMdString);
-// consol.log({ text });
-
 dotenv.config();
 app.use(bodyParser.json());
 
@@ -104,7 +52,7 @@ const getData = async () => {
   const cycleDate1 = moment(res_cycle[1]).format("DD-MM-YYYY");
   const cycleDate2 = cycleDate1.replace("-", ".");
   cycleDate = cycleDate2.replace("-", ".");
-  // console.log("cycleDate", cycleDate, cycleDate.replace("-", "."));
+
   cycleIndexNum = res_cycle[2];
 
   Games = await footballFunc.getDataFromSheet(
@@ -112,15 +60,13 @@ const getData = async () => {
     "LigatAl"
   );
   for (let g = 0; g < Games.length; g++) {
-    // console.log("Games", Games[g]._rawData[0], cycleNum);
     if (Games[g]._rawData[0] === cycleNum) {
-      // console.log("Games[g]", Games[g]);
       const team_1 = Games[g]._rawData[1];
       const team_2 = Games[g]._rawData[2];
       GamesList.push([team_1, team_2]);
     }
   }
-  // console.log("GamesList", cycleNum, GamesList);
+
   UsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים", "LigatAl");
   for (let l = 0; l < UsersIndex.length; l++) {
     UsersList.push(UsersIndex[l]._rawData[0]);
@@ -130,7 +76,7 @@ const getData = async () => {
   //   "גביע המדינה",
   //   "LigatAl"
   // );
-  // console.log({ GuessData_Gavia });
+
   AchievementsOfSeasonData = await footballFunc.getDataFromSheet(
     "הישגים",
     "LigatAl"
@@ -140,10 +86,6 @@ const getData = async () => {
   for (let i = 0; i < tablesData.length; i++) {
     tableObj = { ...tableObj, ...tablesData[i] };
   }
-  // console.log(tableObj.clalitTable);
-  // console.log(tableObj.roundOne);
-  // console.log({ tablesData });
-  // console.log(tablesData.clalitTable);
 };
 
 let alufotCycleNum = "0";
@@ -161,13 +103,12 @@ let alufotTableObj = {};
 const getAlufotData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים", "Alufot");
   const res_cycle = await footballFunc.getCycle(Data);
-  console.log({ res_cycle });
   alufotCycleNum = res_cycle[0];
   alufotCycleText = res_cycle[3];
   const cycleDate1 = moment(res_cycle[1]).format("DD-MM-YYYY");
   const cycleDate2 = cycleDate1.replace("-", ".");
   alufotCycleDate = cycleDate2.replace("-", ".");
-  // console.log("cycleDate", cycleDate, cycleDate.replace("-", "."));
+
   alufotCycleIndexNum = res_cycle[2];
 
   alufotGames = await footballFunc.getDataFromSheet(
@@ -175,15 +116,13 @@ const getAlufotData = async () => {
     "Alufot"
   );
   for (let g = 0; g < alufotGames.length; g++) {
-    // console.log("Games", Games[g]._rawData[0], cycleNum);
     if (alufotGames[g]._rawData[0] === alufotCycleNum) {
-      // console.log("Games[g]", Games[g]);
       const team_1 = alufotGames[g]._rawData[1];
       const team_2 = alufotGames[g]._rawData[2];
       alufotGamesList.push([team_1, team_2]);
     }
   }
-  // console.log("GamesList", cycleNum, GamesList);
+
   alufotUsersIndex = await footballFunc.getDataFromSheet(
     "אינדקס משתמשים",
     "Alufot"
@@ -196,8 +135,7 @@ const getAlufotData = async () => {
     "שלב הנוקאאוט",
     "Alufot"
   );
-  // console.log({ GuessData_ShlavHanokout });
-  // console.log({ alufotGuessData });
+
   // alufotAchievementsOfSeasonData = await footballFunc.getDataFromSheet(
   //   "הישגים",
   //   "Alufot"
@@ -207,12 +145,6 @@ const getAlufotData = async () => {
   // for (let i = 0; i < alufotTablesData.length; i++) {
   //   alufotTableObj = { ...alufotTableObj, ...alufotTablesData[i] };
   // }
-  // console.log(alufotTableObj.clalitTable);
-  // console.log(alufotTableObj.roundOne);
-  // console.log({ tablesData });
-  // console.log(tablesData.clalitTable);
-
-  // console.log({ alufotGames });
 };
 
 const job1 = schedule.scheduleJob("0 0 4 * * *", getData);
