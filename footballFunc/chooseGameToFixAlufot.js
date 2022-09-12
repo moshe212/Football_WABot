@@ -236,6 +236,14 @@ const chooseGameToFixAlufot = async function (
       ":" +
       GuessData_Saved[9].team2[1] +
       "\n" +
+      GuessData_Saved[10].team1[0] +
+      " - " +
+      GuessData_Saved[10].team2[0] +
+      " " +
+      GuessData_Saved[10].team1[1] +
+      ":" +
+      GuessData_Saved[10].team2[1] +
+      "\n" +
       GuessData_Saved[11].team1[0] +
       " - " +
       GuessData_Saved[11].team2[0] +

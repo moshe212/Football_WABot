@@ -760,6 +760,7 @@ const LigatAlufot = async function (
         break;
 
       case 355:
+      case 478:
         // gameNum = req.body.query.message.split(" ")[1];
         // score1 = req.body.query.message.split(" ")[3].split(":")[1];
         // score2 = req.body.query.message.split(" ")[3].split(":")[0];
