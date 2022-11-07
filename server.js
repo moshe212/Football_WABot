@@ -116,6 +116,8 @@ const getAlufotData = async () => {
     "Alufot"
   );
   for (let g = 0; g < alufotGames.length; g++) {
+    console.log("alufotGames[g]._rawData[0]", alufotGames[g]._rawData[0]);
+    console.log("alufotCycleNum", alufotCycleNum);
     if (alufotGames[g]._rawData[0] === alufotCycleNum) {
       const team_1 = alufotGames[g]._rawData[1];
       const team_2 = alufotGames[g]._rawData[2];
