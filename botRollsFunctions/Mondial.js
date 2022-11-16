@@ -171,7 +171,11 @@ const Mondial = async function (
           "\n https://chat.whatsapp.com/CZyFCQqAvHYJkD8QC2VQPb";
 
         break;
+      case 578:
+        textMessage1 =
+          "הלינק לקובץ *היציע: LIVE* הוא:" + "\n https://bit.ly/LigatAl_Live";
 
+        break;
       //   case 33:
       //     if (cycleNum !== "0") {
       //       textMessage1 =
