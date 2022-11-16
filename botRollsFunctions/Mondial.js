@@ -30,31 +30,33 @@ const Mondial = async function (
   let GuessData_Saved = [];
   let textMessage = "";
 
-  if ((stage > 266 && stage < 293) || stage === 252) {
+  if ((stage > 266 && stage < 293) || stage === 483) {
     // const tableTextMassage = await footballFunc.getTableTextMassages({
     //   stage,
     //   tableObj,
     // });
     // textMessage1 = tableTextMassage;
+    textMessage1 = "עובדים על זה..";
   } else if (stage === 480 || (stage > 394 && stage < 476)) {
-    const shlavHanokOutMessages = await shlavHanokOut(
-      message,
-      cycleDate,
-      cycleText,
-      cycleNum,
-      GamesList,
-      cycleIndexNum,
-      UsersIndex,
-      GuessData,
-      GuessData_ShlavHanokout,
-      user_name,
-      stage,
-      score
-    );
+    // const shlavHanokOutMessages = await shlavHanokOut(
+    //   message,
+    //   cycleDate,
+    //   cycleText,
+    //   cycleNum,
+    //   GamesList,
+    //   cycleIndexNum,
+    //   UsersIndex,
+    //   GuessData,
+    //   GuessData_ShlavHanokout,
+    //   user_name,
+    //   stage,
+    //   score
+    // );
 
-    textMessage1 = shlavHanokOutMessages[0];
-    textMessage2 = shlavHanokOutMessages[1];
-    textMessage3 = shlavHanokOutMessages[2];
+    // textMessage1 = shlavHanokOutMessages[0];
+    // textMessage2 = shlavHanokOutMessages[1];
+    // textMessage3 = shlavHanokOutMessages[2];
+    textMessage1 = "עובדים על זה כרגע, נסו בעוד כמה ימים.";
   } else {
     switch (stage) {
       case 257:
@@ -111,57 +113,57 @@ const Mondial = async function (
           }
         }
 
-      //   case 481:
-      //     const achievementsOfSeason = await footballFunc.getAchievementsOfSeason(
-      //       user_name,
-      //       AchievementsOfSeasonData,
-      //       UsersIndex
-      //     );
-      //     console.log(achievementsOfSeason);
-      //     textMessage1 =
-      //       "להלן הישגי העונה שניחשתם:" +
-      //       `\n *האלופה:* ${achievementsOfSeason[2].data}` +
-      //       `\n *הסגנית:* ${achievementsOfSeason[5].data}` +
-      //       `\n *הטוטו:* ${achievementsOfSeason[8].data}` +
-      //       `\n *אירופיאיות1:* ${achievementsOfSeason[11].data}` +
-      //       `\n *אירופיאיות2:* ${achievementsOfSeason[14].data}` +
-      //       `\n *אירופיאיות3:* ${achievementsOfSeason[17].data}` +
-      //       `\n *אירופיאיות4:* ${achievementsOfSeason[20].data}` +
-      //       `\n *אלופת החורף:* ${achievementsOfSeason[23].data}` +
-      //       `\n *המלך:* ${achievementsOfSeason[26].data}` +
-      //       `\n *הנסיך:* ${achievementsOfSeason[29].data}` +
-      //       `\n *השף:* ${achievementsOfSeason[32].data}` +
-      //       `\n *הסו שף:* ${achievementsOfSeason[35].data}` +
-      //       `\n *לא נביא:* ${achievementsOfSeason[38].data}` +
-      //       `\n *הנה הוא מגיע:* ${achievementsOfSeason[41].data}` +
-      //       `\n *יאללה הביתה 1:* ${achievementsOfSeason[44].data}` +
-      //       `\n *יאללה הביתה 2:* ${achievementsOfSeason[49].data}` +
-      //       `\n *והיא עולה 1:* ${achievementsOfSeason[54].data}` +
-      //       `\n *והיא עולה 2:* ${achievementsOfSeason[59].data}` +
-      //       `\n *ואלו שמות: מקום 1:* ${achievementsOfSeason[64].data}` +
-      //       `\n *ואלו שמות: מקום 2:* ${achievementsOfSeason[65].data}` +
-      //       `\n *ואלו שמות: מקום 3:* ${achievementsOfSeason[66].data}` +
-      //       `\n *ואלו שמות: מקום 4:* ${achievementsOfSeason[67].data}` +
-      //       `\n *ואלו שמות: מקום 5:* ${achievementsOfSeason[68].data}` +
-      //       `\n *ואלו שמות: מקום 6:* ${achievementsOfSeason[69].data}` +
-      //       `\n *מאוורר:* ${achievementsOfSeason[72].data}` +
-      //       `\n *טורנדו:* ${achievementsOfSeason[75].data}` +
-      //       `\n *מקום 1:* ${achievementsOfSeason[76].data}` +
-      //       `\n *מקום 2:* ${achievementsOfSeason[77].data}` +
-      //       `\n *מקום 3:* ${achievementsOfSeason[78].data}` +
-      //       `\n *מקום 4:* ${achievementsOfSeason[79].data}` +
-      //       `\n *מקום 5:* ${achievementsOfSeason[80].data}` +
-      //       `\n *מקום 6:* ${achievementsOfSeason[81].data}` +
-      //       `\n *מקום 7:* ${achievementsOfSeason[84].data}` +
-      //       `\n *מקום 8:* ${achievementsOfSeason[85].data}` +
-      //       `\n *מקום 9:* ${achievementsOfSeason[86].data}` +
-      //       `\n *מקום 10:* ${achievementsOfSeason[87].data}` +
-      //       `\n *מקום 11:* ${achievementsOfSeason[88].data}` +
-      //       `\n *מקום 12:* ${achievementsOfSeason[89].data}` +
-      //       `\n *מקום 13:* ${achievementsOfSeason[90].data}` +
-      //       `\n *מקום 14:* ${achievementsOfSeason[91].data}`;
-
-      //     break;
+      case 481:
+        //     const achievementsOfSeason = await footballFunc.getAchievementsOfSeason(
+        //       user_name,
+        //       AchievementsOfSeasonData,
+        //       UsersIndex
+        //     );
+        //     console.log(achievementsOfSeason);
+        //     textMessage1 =
+        //       "להלן הישגי העונה שניחשתם:" +
+        //       `\n *האלופה:* ${achievementsOfSeason[2].data}` +
+        //       `\n *הסגנית:* ${achievementsOfSeason[5].data}` +
+        //       `\n *הטוטו:* ${achievementsOfSeason[8].data}` +
+        //       `\n *אירופיאיות1:* ${achievementsOfSeason[11].data}` +
+        //       `\n *אירופיאיות2:* ${achievementsOfSeason[14].data}` +
+        //       `\n *אירופיאיות3:* ${achievementsOfSeason[17].data}` +
+        //       `\n *אירופיאיות4:* ${achievementsOfSeason[20].data}` +
+        //       `\n *אלופת החורף:* ${achievementsOfSeason[23].data}` +
+        //       `\n *המלך:* ${achievementsOfSeason[26].data}` +
+        //       `\n *הנסיך:* ${achievementsOfSeason[29].data}` +
+        //       `\n *השף:* ${achievementsOfSeason[32].data}` +
+        //       `\n *הסו שף:* ${achievementsOfSeason[35].data}` +
+        //       `\n *לא נביא:* ${achievementsOfSeason[38].data}` +
+        //       `\n *הנה הוא מגיע:* ${achievementsOfSeason[41].data}` +
+        //       `\n *יאללה הביתה 1:* ${achievementsOfSeason[44].data}` +
+        //       `\n *יאללה הביתה 2:* ${achievementsOfSeason[49].data}` +
+        //       `\n *והיא עולה 1:* ${achievementsOfSeason[54].data}` +
+        //       `\n *והיא עולה 2:* ${achievementsOfSeason[59].data}` +
+        //       `\n *ואלו שמות: מקום 1:* ${achievementsOfSeason[64].data}` +
+        //       `\n *ואלו שמות: מקום 2:* ${achievementsOfSeason[65].data}` +
+        //       `\n *ואלו שמות: מקום 3:* ${achievementsOfSeason[66].data}` +
+        //       `\n *ואלו שמות: מקום 4:* ${achievementsOfSeason[67].data}` +
+        //       `\n *ואלו שמות: מקום 5:* ${achievementsOfSeason[68].data}` +
+        //       `\n *ואלו שמות: מקום 6:* ${achievementsOfSeason[69].data}` +
+        //       `\n *מאוורר:* ${achievementsOfSeason[72].data}` +
+        //       `\n *טורנדו:* ${achievementsOfSeason[75].data}` +
+        //       `\n *מקום 1:* ${achievementsOfSeason[76].data}` +
+        //       `\n *מקום 2:* ${achievementsOfSeason[77].data}` +
+        //       `\n *מקום 3:* ${achievementsOfSeason[78].data}` +
+        //       `\n *מקום 4:* ${achievementsOfSeason[79].data}` +
+        //       `\n *מקום 5:* ${achievementsOfSeason[80].data}` +
+        //       `\n *מקום 6:* ${achievementsOfSeason[81].data}` +
+        //       `\n *מקום 7:* ${achievementsOfSeason[84].data}` +
+        //       `\n *מקום 8:* ${achievementsOfSeason[85].data}` +
+        //       `\n *מקום 9:* ${achievementsOfSeason[86].data}` +
+        //       `\n *מקום 10:* ${achievementsOfSeason[87].data}` +
+        //       `\n *מקום 11:* ${achievementsOfSeason[88].data}` +
+        //       `\n *מקום 12:* ${achievementsOfSeason[89].data}` +
+        //       `\n *מקום 13:* ${achievementsOfSeason[90].data}` +
+        //       `\n *מקום 14:* ${achievementsOfSeason[91].data}`;
+        textMessage1 = "עובדים על זה כרגע..";
+        break;
 
       case 482:
         textMessage1 =
