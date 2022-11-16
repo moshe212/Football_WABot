@@ -330,6 +330,31 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage1 = LigatAlufotMessages[0];
     textMessage2 = LigatAlufotMessages[1];
     textMessage3 = LigatAlufotMessages[2];
+  } else if (stage === 257 || (stage > 478 && stage < 660)) {
+    const MondialMessages = await botRollsFunctions.Mondial(
+      message,
+      mondialCycleNum,
+      mondialCycleText,
+      mondialCycleDate,
+      mondialGamesList,
+      mondialCycleIndexNum,
+      mondialUsersIndex,
+      mondialGuessData,
+      user_name,
+      stage,
+      score,
+      gameNum,
+      score1,
+      score2,
+      mondialAchievementsOfSeasonData,
+      mondialTableObj,
+      GuessData_ShlavHanokout,
+      mondialUsersList
+    );
+
+    textMessage1 = MondialMessages[0];
+    textMessage2 = MondialMessages[1];
+    textMessage3 = MondialMessages[2];
   } else {
     console.log(`Sorry, we are out of range.`);
   }

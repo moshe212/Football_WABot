@@ -36,7 +36,7 @@ const Mondial = async function (
     //   tableObj,
     // });
     // textMessage1 = tableTextMassage;
-  } else if (stage === 297 || (stage > 394 && stage < 476)) {
+  } else if (stage === 480 || (stage > 394 && stage < 476)) {
     const shlavHanokOutMessages = await shlavHanokOut(
       message,
       cycleDate,
@@ -57,7 +57,7 @@ const Mondial = async function (
     textMessage3 = shlavHanokOutMessages[2];
   } else {
     switch (stage) {
-      case 256:
+      case 257:
         if (cycleText.includes("מחזור") || cycleText.includes("שלב הנוקאאוט")) {
           const firstMessages = await footballFunc.firstSort(
             stage,
@@ -65,7 +65,7 @@ const Mondial = async function (
             user_name,
             UsersIndex,
             cycleDate,
-            "Alufot"
+            "Mondial"
           );
 
           textMessage1 = firstMessages[0];
@@ -74,7 +74,7 @@ const Mondial = async function (
 
           break;
         }
-      case 296:
+      case 479:
         if (cycleNum !== "0" && cycleText.includes("מחזור")) {
           textMessage1 =
             "בחירה מצוינת!" +
@@ -111,7 +111,7 @@ const Mondial = async function (
           }
         }
 
-      //   case 298:
+      //   case 481:
       //     const achievementsOfSeason = await footballFunc.getAchievementsOfSeason(
       //       user_name,
       //       AchievementsOfSeasonData,
@@ -163,7 +163,7 @@ const Mondial = async function (
 
       //     break;
 
-      case 299:
+      case 482:
         textMessage1 =
           "הלינק לקבוצת הווטסאפ הרשמית של *היציע: ליגת העל* הוא:" +
           "\n https://chat.whatsapp.com/CZyFCQqAvHYJkD8QC2VQPb";
@@ -216,7 +216,7 @@ const Mondial = async function (
       //       " בחצות. יאללה ביי! 😎 ";
       //     break;
 
-      case 301:
+      case 485:
       case 396:
         textMessage1 =
           "החלטתם לשגע אותי היום? לכו תעשו שיעורי בית ותחזרו למלא את הניחושים כשתהיו מוכנים.שימו לב שאתם עושים זאת לא יאוחר מה-" +
@@ -226,7 +226,7 @@ const Mondial = async function (
           " בחצות 😎";
 
         break;
-      case 300:
+      case 484:
         // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
 
         console.log(GamesList);
@@ -237,7 +237,7 @@ const Mondial = async function (
         textMessage1 = str + "\n" + Team1 + " - " + Team2;
 
         break;
-      case 304:
+      case 488:
         console.log(GamesList);
         Team1 = GamesList[1][0];
         Team2 = GamesList[1][1];
@@ -263,11 +263,11 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         break;
-      case 307:
+      case 491:
         console.log(GamesList);
         Team1 = GamesList[2][0];
         Team2 = GamesList[2][1];
@@ -292,11 +292,11 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         break;
-      case 310:
+      case 494:
         console.log(GamesList);
         Team1 = GamesList[3][0];
         Team2 = GamesList[3][1];
@@ -321,11 +321,11 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         break;
-      case 313:
+      case 497:
         console.log(GamesList);
         Team1 = GamesList[4][0];
         Team2 = GamesList[4][1];
@@ -349,11 +349,11 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         break;
-      case 316:
+      case 500:
         console.log(GamesList);
         Team1 = GamesList[5][0];
         Team2 = GamesList[5][1];
@@ -377,11 +377,11 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         break;
-      case 319:
+      case 503:
         console.log(GamesList);
 
         Team1 = GamesList[6][0];
@@ -407,12 +407,12 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         break;
 
-      case 322:
+      case 506:
         console.log(GamesList);
         Team1 = GamesList[7][0];
         Team2 = GamesList[7][1];
@@ -437,11 +437,11 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         break;
-      case 325:
+      case 509:
         console.log(GamesList);
         Team1 = GamesList[8][0];
         Team2 = GamesList[8][1];
@@ -466,11 +466,11 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         break;
-      case 328:
+      case 512:
         console.log(GamesList);
         Team1 = GamesList[9][0];
         Team2 = GamesList[9][1];
@@ -495,11 +495,11 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         break;
-      case 331:
+      case 515:
         console.log(GamesList);
         Team1 = GamesList[10][0];
         Team2 = GamesList[10][1];
@@ -524,11 +524,11 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         break;
-      case 334:
+      case 518:
         console.log(GamesList);
         Team1 = GamesList[11][0];
         Team2 = GamesList[11][1];
@@ -553,11 +553,11 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         break;
-      case 337:
+      case 521:
         console.log(GamesList);
         Team1 = GamesList[12][0];
         Team2 = GamesList[12][1];
@@ -582,11 +582,11 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         break;
-      case 340:
+      case 524:
         console.log(GamesList);
         Team1 = GamesList[13][0];
         Team2 = GamesList[13][1];
@@ -611,11 +611,11 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         break;
-      case 343:
+      case 527:
         console.log(GamesList);
         Team1 = GamesList[14][0];
         Team2 = GamesList[14][1];
@@ -640,11 +640,11 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         break;
-      case 346:
+      case 530:
         console.log(GamesList);
         Team1 = GamesList[15][0];
         Team2 = GamesList[15][1];
@@ -670,13 +670,13 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         break;
       //-----------------------------------------------------------------------------
 
-      case 349:
+      case 533:
         // score = req.body.query.message;
         ScoreTeam1 = score.split(":")[1];
         ScoreTeam2 = score.split(":")[0];
@@ -694,7 +694,7 @@ const Mondial = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          "Mondial"
         );
 
         GuessData_Saved = await footballFunc.getSavedScore(
@@ -703,7 +703,7 @@ const Mondial = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Alufot"
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -723,7 +723,7 @@ const Mondial = async function (
           null,
           null,
           true,
-          "Alufot"
+          "Mondial"
         );
 
         console.log("resSaveIdx", resSaveIdx);
@@ -735,14 +735,14 @@ const Mondial = async function (
 
         break;
 
-      case 353:
+      case 537:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Alufot"
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -757,8 +757,8 @@ const Mondial = async function (
 
         break;
 
-      case 355:
-      case 478:
+      case 539:
+        // case 478:
         // gameNum = req.body.query.message.split(" ")[1];
         // score1 = req.body.query.message.split(" ")[3].split(":")[1];
         // score2 = req.body.query.message.split(" ")[3].split(":")[0];
@@ -772,7 +772,7 @@ const Mondial = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "Alufot",
+          "Mondial",
           "שלב הבתים"
         );
 
@@ -780,14 +780,14 @@ const Mondial = async function (
         textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
         break;
 
-      case 358:
+      case 542:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Alufot"
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -801,14 +801,14 @@ const Mondial = async function (
 
         break;
 
-      case 359:
+      case 543:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Alufot"
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -821,7 +821,7 @@ const Mondial = async function (
 
         break;
 
-      case 361:
+      case 545:
         // gameNum = req.body.query.message.split(" ")[1];
         // score1 = req.body.query.message.split(" ")[3].split(":")[1];
         // score2 = req.body.query.message.split(" ")[3].split(":")[0];
@@ -835,7 +835,7 @@ const Mondial = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "Alufot",
+          "Mondial",
           "שלב הבתים"
         );
 
@@ -843,14 +843,14 @@ const Mondial = async function (
         textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
         break;
 
-      case 364:
+      case 548:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Alufot"
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -863,14 +863,14 @@ const Mondial = async function (
         textMessage3 = textMessage[2];
         break;
 
-      case 365:
+      case 549:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Alufot"
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -883,7 +883,7 @@ const Mondial = async function (
 
         break;
 
-      case 367:
+      case 551:
         // gameNum = req.body.query.message.split(" ")[1];
         // score1 = req.body.query.message.split(" ")[3].split(":")[1];
         // score2 = req.body.query.message.split(" ")[3].split(":")[0];
@@ -897,7 +897,7 @@ const Mondial = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "Alufot",
+          "Mondial",
           "שלב הבתים"
         );
 
@@ -905,14 +905,14 @@ const Mondial = async function (
         textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
         break;
 
-      case 370:
+      case 554:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Alufot"
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -925,14 +925,14 @@ const Mondial = async function (
         textMessage3 = textMessage[2];
         break;
 
-      case 371:
+      case 555:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Alufot"
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -945,7 +945,7 @@ const Mondial = async function (
 
         break;
 
-      case 373:
+      case 557:
         // gameNum = req.body.query.message.split(" ")[1];
         // score1 = req.body.query.message.split(" ")[3].split(":")[1];
         // score2 = req.body.query.message.split(" ")[3].split(":")[0];
@@ -959,7 +959,7 @@ const Mondial = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "Alufot",
+          "Mondial",
           "שלב הבתים"
         );
 
@@ -967,14 +967,14 @@ const Mondial = async function (
         textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
         break;
 
-      case 376:
+      case 560:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Alufot"
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -987,14 +987,14 @@ const Mondial = async function (
         textMessage3 = textMessage[2];
         break;
 
-      case 377:
+      case 561:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Alufot"
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -1007,7 +1007,7 @@ const Mondial = async function (
 
         break;
 
-      case 379:
+      case 563:
         // gameNum = req.body.query.message.split(" ")[1];
         // score1 = req.body.query.message.split(" ")[3].split(":")[1];
         // score2 = req.body.query.message.split(" ")[3].split(":")[0];
@@ -1021,7 +1021,7 @@ const Mondial = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "Alufot",
+          "Mondial",
           "שלב הבתים"
         );
 
@@ -1029,14 +1029,14 @@ const Mondial = async function (
         textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
         break;
 
-      case 382:
+      case 566:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Alufot"
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -1049,14 +1049,14 @@ const Mondial = async function (
         textMessage3 = textMessage[2];
         break;
 
-      case 383:
+      case 567:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Alufot"
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -1069,7 +1069,7 @@ const Mondial = async function (
 
         break;
 
-      case 385:
+      case 569:
         // gameNum = req.body.query.message.split(" ")[1];
         // score1 = req.body.query.message.split(" ")[3].split(":")[1];
         // score2 = req.body.query.message.split(" ")[3].split(":")[0];
@@ -1083,7 +1083,7 @@ const Mondial = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "Alufot",
+          "Mondial",
           "שלב הבתים"
         );
 
@@ -1091,14 +1091,14 @@ const Mondial = async function (
         textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
         break;
 
-      case 388:
+      case 572:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Alufot"
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -1111,14 +1111,14 @@ const Mondial = async function (
         textMessage3 = textMessage[2];
         break;
 
-      case 389:
+      case 573:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Alufot"
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -1131,7 +1131,7 @@ const Mondial = async function (
 
         break;
 
-      case 391:
+      case 575:
         // gameNum = req.body.query.message.split(" ")[1];
         // score1 = req.body.query.message.split(" ")[3].split(":")[1];
         // score2 = req.body.query.message.split(" ")[3].split(":")[0];
@@ -1145,7 +1145,7 @@ const Mondial = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "Alufot",
+          "Mondial",
           "שלב הבתים"
         );
 
@@ -1155,7 +1155,7 @@ const Mondial = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Alufot"
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(

@@ -17,6 +17,7 @@ const firstSort = async function (
     case 110:
     case 253:
     case 256:
+    case 257:
       console.log("UsersList", UsersList);
       if (!UsersList.includes(user_name)) {
         console.log("not includs");
@@ -25,6 +26,8 @@ const firstSort = async function (
             ? "ליגת העל"
             : fileName === "Alufot"
             ? "ליגת האלופות"
+            : fileName === "Mondial"
+            ? "מונדיאל"
             : "";
         textMessage1 =
           "אהלן, אני הבוט של *היציע: " +
@@ -61,6 +64,9 @@ const firstSort = async function (
         } else if (fileName === "Alufot") {
           textMessage1 =
             "ברוכים הבאים למשחק *היציע: ליגת האלופות* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי המחזור \n2️⃣ - לניחושי שלב הנוקאאוט\n3️⃣ - להישגי העונה שלכם \n4️⃣ - לקבוצת ה-Whatsapp הרשמית \n5️⃣ - לטבלאות\n6️⃣ - לחזרה לתפריט הראשי";
+        } else if (fileName === "Mondial") {
+          textMessage1 =
+            "ברוכים הבאים למשחק *היציע: מונדיאל* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי המחזור \n2️⃣ - לניחושי שלב הנוקאאוט\n3️⃣ - להישגי העונה שלכם \n4️⃣ - לקבוצת ה-Whatsapp הרשמית \n5️⃣ - לטבלאות\n6️⃣ - לחזרה לתפריט הראשי";
         }
       } else {
         if (fileName === "LigatAl") {
@@ -71,6 +77,10 @@ const firstSort = async function (
           textMessage1 = "מה קורה נשמות? שמח שחזרתם!" + "\nמה ברצונכם לעשות?";
           textMessage2 =
             "ברוכים הבאים למשחק *היציע: ליגת האלופות* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי המחזור \n2️⃣ - לניחושי שלב הנוקאאוט\n3️⃣ - להישגי העונה שלכם \n4️⃣ - לקבוצת ה-Whatsapp הרשמית \n5️⃣ - לטבלאות\n6️⃣ - לחזרה לתפריט הראשי";
+        } else if (fileName === "Mondial") {
+          textMessage1 = "מה קורה נשמות? שמח שחזרתם!" + "\nמה ברצונכם לעשות?";
+          textMessage2 =
+            "ברוכים הבאים למשחק *היציע: מונדיאל* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי המחזור \n2️⃣ - לניחושי שלב הנוקאאוט\n3️⃣ - להישגי העונה שלכם \n4️⃣ - לקבוצת ה-Whatsapp הרשמית \n5️⃣ - לטבלאות\n6️⃣ - לחזרה לתפריט הראשי";
         }
       }
 
