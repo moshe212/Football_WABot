@@ -166,9 +166,9 @@ const Mondial = async function (
         break;
 
       case 482:
-        textMessage1 =
-          "הלינק לקבוצת הווטסאפ הרשמית של *היציע: ליגת העל* הוא:" +
-          "\n https://chat.whatsapp.com/CZyFCQqAvHYJkD8QC2VQPb";
+        textMessage1 = "הקובץ יושק ביום ראשון..";
+        // "הלינק לקבוצת הווטסאפ הרשמית של *היציע: ליגת העל* הוא:" +
+        // "\n https://chat.whatsapp.com/CZyFCQqAvHYJkD8QC2VQPb";
 
         break;
       case 578:
