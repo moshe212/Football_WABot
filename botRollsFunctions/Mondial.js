@@ -1173,7 +1173,7 @@ const Mondial = async function (
   return [textMessage1, textMessage2, textMessage3];
 };
 
-module.exports = { LigatAlufot };
+module.exports = { Mondial };
 
 const isPositiveInteger = (str) => {
   // if (typeof str !== "string") {
@@ -1188,5 +1188,3 @@ const isPositiveInteger = (str) => {
 
   return false;
 };
-
-module.exports = { Mondial };
