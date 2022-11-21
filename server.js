@@ -193,7 +193,7 @@ const getMondialData = async () => {
     "שלב הבתים",
     "Mondial"
   );
-  GuessData_ShlavHanokout = await footballFunc.getDataFromSheet(
+  mondialGuessData_ShlavHanokout = await footballFunc.getDataFromSheet(
     "שלב הנוקאאוט",
     "Mondial"
   );
@@ -351,7 +351,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       score2,
       mondialAchievementsOfSeasonData,
       mondialTableObj,
-      GuessData_ShlavHanokout,
+      mondialGuessData_ShlavHanokout,
       mondialUsersList
     );
 
