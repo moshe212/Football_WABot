@@ -1,4 +1,5 @@
 const { footballFunc } = require("../footballFunc");
+const { shlavHanokOut_Mondial } = require("./shlavHanokOut_Mondial");
 
 const Mondial = async function (
   message,
@@ -37,26 +38,25 @@ const Mondial = async function (
     // });
     // textMessage1 = tableTextMassage;
     textMessage1 = "עובדים על זה..";
-  } else if (stage === 480 || (stage > 394 && stage < 476)) {
-    // const shlavHanokOutMessages = await shlavHanokOut(
-    //   message,
-    //   cycleDate,
-    //   cycleText,
-    //   cycleNum,
-    //   GamesList,
-    //   cycleIndexNum,
-    //   UsersIndex,
-    //   GuessData,
-    //   GuessData_ShlavHanokout,
-    //   user_name,
-    //   stage,
-    //   score
-    // );
+  } else if (stage === 480 || (stage > 578 && stage < 665)) {
+    const shlavHanokOutMessages = await shlavHanokOut_Mondial(
+      message,
+      cycleDate,
+      cycleText,
+      cycleNum,
+      GamesList,
+      cycleIndexNum,
+      UsersIndex,
+      GuessData,
+      GuessData_ShlavHanokout,
+      user_name,
+      stage,
+      score
+    );
 
-    // textMessage1 = shlavHanokOutMessages[0];
-    // textMessage2 = shlavHanokOutMessages[1];
-    // textMessage3 = shlavHanokOutMessages[2];
-    textMessage1 = "עובדים על זה כרגע, נסו בעוד כמה ימים.";
+    textMessage1 = shlavHanokOutMessages[0];
+    textMessage2 = shlavHanokOutMessages[1];
+    textMessage3 = shlavHanokOutMessages[2];
   } else {
     switch (stage) {
       case 257:
@@ -105,7 +105,7 @@ const Mondial = async function (
             break;
           } else {
             textMessage1 =
-              "שומעים רגע? כרגע לא ניתן לשלוח ניחושים לליגת האלופות." +
+              "שומעים רגע? כרגע לא ניתן לשלוח ניחושים למונדיאל שלב הבתים." +
               "\nיכול להיות שניתן לשלוח ניחושים לשלב הנוקאאוט..";
             textMessage2 =
               "אנא פנו למנהל המערכת או בחרו 3️⃣ לחזרה לתפריט הקודם..";
