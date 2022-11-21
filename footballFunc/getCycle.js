@@ -61,7 +61,7 @@ const getCycle = async (data) => {
     } else if (cycleText.includes("שלב הנוקאאוט")) {
       console.log("נוקאאוט", cycleText);
       const arr = cycleText.split(" ");
-      cycleNum = (arr[4] + " " + arr[5] + " " + arr[6]).trim();
+      cycleNum = (arr[4] + " " + arr[5] + " " + arr[6] ? arr[6] : "").trim();
     } else {
       cycleNum = cycleText.substring(cycleText.length - 2).trim();
     }
