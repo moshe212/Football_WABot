@@ -226,6 +226,12 @@ app.post("/api/Whatsapp", async (req, res) => {
     alufotCycleDate,
     alufotCycleText
   );
+  console.log(
+    "mondialCycleNum",
+    mondialCycleNum,
+    mondialCycleDate,
+    mondialCycleText
+  );
   const stage = req.body.query.ruleId;
   console.log(stage);
 
