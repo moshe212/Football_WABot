@@ -212,9 +212,9 @@ const job1 = schedule.scheduleJob("0 0 4 * * *", getData);
 const job2 = schedule.scheduleJob("0 0 4 * * *", getAlufotData);
 const job3 = schedule.scheduleJob("0 0 4 * * *", getMondialData);
 
-await getData();
-await getAlufotData();
-await getMondialData();
+getData();
+getAlufotData();
+getMondialData();
 
 app.post("/api/Whatsapp", async (req, res) => {
   const user_name = req.body.query.sender;
