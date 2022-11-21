@@ -212,9 +212,9 @@ const job1 = schedule.scheduleJob("0 0 4 * * *", getData);
 const job2 = schedule.scheduleJob("0 0 4 * * *", getAlufotData);
 const job3 = schedule.scheduleJob("0 0 4 * * *", getMondialData);
 
-getData();
-getAlufotData();
-getMondialData();
+await getData();
+await getAlufotData();
+await getMondialData();
 
 app.post("/api/Whatsapp", async (req, res) => {
   const user_name = req.body.query.sender;
@@ -226,12 +226,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     alufotCycleDate,
     alufotCycleText
   );
-  console.log(
-    "mondialCycleNum",
-    mondialCycleNum,
-    mondialCycleDate,
-    mondialCycleText
-  );
+  console.log("mondialCycleNum", mondialCycleNum);
   const stage = req.body.query.ruleId;
   console.log(stage);
 

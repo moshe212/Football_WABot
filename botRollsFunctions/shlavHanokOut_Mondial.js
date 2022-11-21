@@ -35,7 +35,7 @@ const shlavHanokOut_Mondial = async function (
   switch (stage) {
     case 480:
       if (cycleNum !== "0" && cycleText.includes("שלב הנוקאאוט")) {
-        console.log({ cycleText });
+        console.log({ cycleNum });
         textMessage1 =
           "בחירה מצוינת!" +
           "\nהדד ליין לשליחת ניחושים לשלב הנוקאאוט, שלב *" +
