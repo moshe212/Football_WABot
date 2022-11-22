@@ -215,7 +215,8 @@ const shlavHanokOut_Mondial = async function (
           user_name,
           UsersIndex,
           GuessData_ShlavHanokout,
-          cycleIndexNum
+          cycleIndexNum,
+          "Mondial"
         );
 
         // ----------End fix auto----------------
@@ -224,7 +225,8 @@ const shlavHanokOut_Mondial = async function (
           UsersIndex,
           cycleIndexNum,
           "שלב הנוקאאוט",
-          GamesList
+          GamesList,
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -387,7 +389,8 @@ const shlavHanokOut_Mondial = async function (
           UsersIndex,
           cycleIndexNum,
           "שלב הנוקאאוט",
-          GamesList
+          GamesList,
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -680,7 +683,8 @@ const shlavHanokOut_Mondial = async function (
           UsersIndex,
           cycleIndexNum,
           "שלב הנוקאאוט",
-          GamesList
+          GamesList,
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -1335,7 +1339,8 @@ const shlavHanokOut_Mondial = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Mondial"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -1375,7 +1380,8 @@ const shlavHanokOut_Mondial = async function (
         GuessData_ShlavHanokout,
         cycleIndexNum,
         teamUp_ToFix,
-        minute_toFix
+        minute_toFix,
+        "Mondial"
       );
 
       textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
@@ -1388,7 +1394,8 @@ const shlavHanokOut_Mondial = async function (
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
-        cycleIndexNum
+        cycleIndexNum,
+        "Mondial"
       );
 
       // ----------End fix auto----------------
@@ -1397,7 +1404,8 @@ const shlavHanokOut_Mondial = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Mondial"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -1416,7 +1424,8 @@ const shlavHanokOut_Mondial = async function (
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
-        cycleIndexNum
+        cycleIndexNum,
+        "Mondial"
       );
 
       // ----------End fix auto----------------
@@ -1425,7 +1434,8 @@ const shlavHanokOut_Mondial = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Mondial"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -1465,7 +1475,8 @@ const shlavHanokOut_Mondial = async function (
         GuessData_ShlavHanokout,
         cycleIndexNum,
         teamUp_ToFix,
-        minute_toFix
+        minute_toFix,
+        "Mondial"
       );
 
       textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
@@ -1478,7 +1489,8 @@ const shlavHanokOut_Mondial = async function (
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
-        cycleIndexNum
+        cycleIndexNum,
+        "Mondial"
       );
 
       // ----------End fix auto----------------
@@ -1487,7 +1499,8 @@ const shlavHanokOut_Mondial = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Mondial"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -1506,7 +1519,8 @@ const shlavHanokOut_Mondial = async function (
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
-        cycleIndexNum
+        cycleIndexNum,
+        "Mondial"
       );
 
       // ----------End fix auto----------------
@@ -1515,7 +1529,8 @@ const shlavHanokOut_Mondial = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Mondial"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -1536,7 +1551,8 @@ const shlavHanokOut_Mondial = async function (
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
-        cycleIndexNum
+        cycleIndexNum,
+        "Mondial"
       );
 
       // ----------End fix auto----------------
@@ -1545,7 +1561,8 @@ const shlavHanokOut_Mondial = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Mondial"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -1567,7 +1584,8 @@ const shlavHanokOut_Mondial = async function (
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
-        cycleIndexNum
+        cycleIndexNum,
+        "Mondial"
       );
 
       // ----------End fix auto----------------
@@ -1576,7 +1594,8 @@ const shlavHanokOut_Mondial = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Mondial"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -1597,7 +1616,8 @@ const shlavHanokOut_Mondial = async function (
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
-        cycleIndexNum
+        cycleIndexNum,
+        "Mondial"
       );
 
       // ----------End fix auto----------------
@@ -1606,7 +1626,8 @@ const shlavHanokOut_Mondial = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Mondial"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -1628,7 +1649,8 @@ const shlavHanokOut_Mondial = async function (
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
-        cycleIndexNum
+        cycleIndexNum,
+        "Mondial"
       );
 
       // ----------End fix auto----------------
@@ -1637,7 +1659,8 @@ const shlavHanokOut_Mondial = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Mondial"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -1659,7 +1682,8 @@ const shlavHanokOut_Mondial = async function (
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
-        cycleIndexNum
+        cycleIndexNum,
+        "Mondial"
       );
 
       // ----------End fix auto----------------
@@ -1668,7 +1692,8 @@ const shlavHanokOut_Mondial = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Mondial"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -1689,7 +1714,8 @@ const shlavHanokOut_Mondial = async function (
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
-        cycleIndexNum
+        cycleIndexNum,
+        "Mondial"
       );
 
       // ----------End fix auto----------------
@@ -1698,7 +1724,8 @@ const shlavHanokOut_Mondial = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Mondial"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -1720,7 +1747,8 @@ const shlavHanokOut_Mondial = async function (
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
-        cycleIndexNum
+        cycleIndexNum,
+        "Mondial"
       );
 
       // ----------End fix auto----------------
@@ -1729,7 +1757,8 @@ const shlavHanokOut_Mondial = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Mondial"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -1751,7 +1780,8 @@ const shlavHanokOut_Mondial = async function (
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
-        cycleIndexNum
+        cycleIndexNum,
+        "Mondial"
       );
 
       // ----------End fix auto----------------
@@ -1760,7 +1790,8 @@ const shlavHanokOut_Mondial = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Mondial"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -1781,7 +1812,8 @@ const shlavHanokOut_Mondial = async function (
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
-        cycleIndexNum
+        cycleIndexNum,
+        "Mondial"
       );
 
       // ----------End fix auto----------------
@@ -1790,7 +1822,8 @@ const shlavHanokOut_Mondial = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Mondial"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
@@ -1812,7 +1845,8 @@ const shlavHanokOut_Mondial = async function (
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
-        cycleIndexNum
+        cycleIndexNum,
+        "Mondial"
       );
 
       // ----------End fix auto----------------
@@ -1821,7 +1855,8 @@ const shlavHanokOut_Mondial = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Mondial"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
