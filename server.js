@@ -155,6 +155,7 @@ let mondialGamesList = [];
 let mondialCycleIndexNum = 0;
 let mondialUsersIndex = [];
 let mondialGuessData = [];
+let mondialGuessData_ShlavHanokout = [];
 let mondialUsersList = [];
 let mondialAchievementsOfSeasonData = [];
 let mondialTablesData = [];
@@ -228,7 +229,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   );
   console.log("mondialCycleNum", mondialCycleNum);
   console.log("mondialGamesList", mondialGamesList);
-  console.log("mondialGames", mondialGames);
+
   const stage = req.body.query.ruleId;
   console.log(stage);
 
