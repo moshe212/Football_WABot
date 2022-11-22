@@ -1231,7 +1231,8 @@ const shlavHanokOut_Mondial = async function (
           UsersIndex,
           cycleIndexNum,
           "שלב הנוקאאוט",
-          GamesList
+          GamesList,
+          "Mondial"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFix_Nokout(
