@@ -1355,9 +1355,9 @@ const shlavHanokOut_Mondial = async function (
 
       break;
     case 642:
-      // gameNum = message.split(" ")[1];
-      // score1 = message.split(" ")[3].split(":")[1];
-      // score2 = message.split(" ")[3].split(":")[0];
+      gameNum = message.split(" ")[1];
+      score1 = message.split(" ")[3].split(":")[1];
+      score2 = message.split(" ")[3].split(":")[0];
       teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
       teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num];
       minute_toFix = message.split(" ")[7];
@@ -1450,9 +1450,9 @@ const shlavHanokOut_Mondial = async function (
 
       break;
     case 647:
-      // gameNum = message.split(" ")[1];
-      // score1 = message.split(" ")[3].split(":")[1];
-      // score2 = message.split(" ")[3].split(":")[0];
+      gameNum = message.split(" ")[1];
+      score1 = message.split(" ")[3].split(":")[1];
+      score2 = message.split(" ")[3].split(":")[0];
       teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
       teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num - 1];
       minute_toFix = message.split(" ")[7];
