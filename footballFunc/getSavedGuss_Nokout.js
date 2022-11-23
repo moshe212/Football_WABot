@@ -8,6 +8,7 @@ const getSavedGuss_Nokout = async function (
   GamesList,
   fileName
 ) {
+  console.log({ fileName });
   const creds = require("../config/CreditTransaction-d9fe1ef7e128.json");
   // Initialize the sheet - doc ID is the long id in the sheets URL
   const doc =
