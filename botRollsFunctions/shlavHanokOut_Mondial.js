@@ -1230,6 +1230,17 @@ const shlavHanokOut_Mondial = async function (
           Minuts,
           "Mondial"
         );
+        // ----------Start fix auto----------------
+        await footballFunc.fixAuto_Main_Nokout(
+          GamesList,
+          user_name,
+          UsersIndex,
+          GuessData_ShlavHanokout,
+          cycleIndexNum,
+          "Mondial"
+        );
+
+        // ----------End fix auto----------------
         GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
           user_name,
           UsersIndex,
