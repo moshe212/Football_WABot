@@ -14,7 +14,8 @@ const fixAuto_Main_Nokout = async function (
     UsersIndex,
     cycleIndexNum,
     "שלב הנוקאאוט",
-    GamesList
+    GamesList,
+    fileName
   );
   for (let c = 0; c < GuessData_Saved.length; c++) {
     if (
