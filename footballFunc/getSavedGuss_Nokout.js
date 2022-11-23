@@ -28,6 +28,9 @@ const getSavedGuss_Nokout = async function (
         }
       }
       const GuessData = await sheet.getRows();
+      console.log("parseInt", parseInt(cycleIndexNum));
+      console.log("index", parseInt(index));
+      console.log(GuessData[parseInt(cycleIndexNum) + parseInt(index) - 2]);
       if (
         GuessData[parseInt(cycleIndexNum) + parseInt(index) - 2]._rawData[1] ===
         user_name
