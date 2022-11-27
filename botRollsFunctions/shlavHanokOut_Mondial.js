@@ -1872,6 +1872,34 @@ const shlavHanokOut_Mondial = async function (
       break;
 
     case 664:
+      gameNum = message.split(" ")[1];
+      score1 = message.split(" ")[3].split(":")[1];
+      score2 = message.split(" ")[3].split(":")[0];
+      teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
+      teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num - 1];
+      minute_toFix = message.split(" ")[7];
+
+      console.log(
+        "answer",
+        score1,
+        score2,
+        gameNum,
+        teamUp_ToFix,
+        minute_toFix
+      );
+
+      footballFunc.saveFix_Nokout(
+        parseInt(gameNum),
+        parseInt(score1),
+        parseInt(score2),
+        user_name,
+        UsersIndex,
+        GuessData_ShlavHanokout,
+        cycleIndexNum,
+        teamUp_ToFix,
+        minute_toFix,
+        "Mondial"
+      );
       // ----------Start fix auto----------------
       await footballFunc.fixAuto_Main_Nokout(
         GamesList,
