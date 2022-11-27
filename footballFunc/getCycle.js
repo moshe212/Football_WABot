@@ -1,7 +1,7 @@
 const moment = require("moment");
 
 const getCycle = async (data) => {
-  console.log(data);
+  // console.log(data);
   let isBetween = false;
   let cycleText = "";
   let startDate = "";
