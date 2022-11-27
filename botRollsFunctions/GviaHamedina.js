@@ -88,7 +88,7 @@ const GviaHamedina = async function ({
 
       const str9 = "*" + cycleNum + ", משחק מספר 1:* ";
       textMessage1 = str9 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;
@@ -263,7 +263,7 @@ const GviaHamedina = async function ({
 
       const str12 = "*" + cycleNum + ", משחק מספר 2:* ";
       textMessage1 = str12 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;
@@ -425,7 +425,7 @@ const GviaHamedina = async function ({
 
       const str15 = "*" + cycleNum + ", משחק מספר 3:* ";
       textMessage1 = str15 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;
@@ -552,7 +552,7 @@ const GviaHamedina = async function ({
 
       const str18 = "*" + cycleNum + ", משחק מספר 4:* ";
       textMessage1 = str18 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;
@@ -714,7 +714,7 @@ const GviaHamedina = async function ({
 
       const str21 = "*" + cycleNum + ", משחק מספר 5:* ";
       textMessage1 = str21 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;
@@ -841,7 +841,7 @@ const GviaHamedina = async function ({
 
       const str57 = "*" + cycleNum + ", משחק מספר 6:* ";
       textMessage1 = str57 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;
@@ -968,7 +968,7 @@ const GviaHamedina = async function ({
 
       const str60 = "*" + cycleNum + ", משחק מספר 7:* ";
       textMessage1 = str60 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;
@@ -1095,7 +1095,7 @@ const GviaHamedina = async function ({
 
       const str24 = "*" + cycleNum + ", משחק מספר 8:* ";
       textMessage1 = str24 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;
@@ -1257,7 +1257,7 @@ const GviaHamedina = async function ({
 
       const str27 = "*" + cycleNum + ", משחק מספר 9:* ";
       textMessage1 = str27 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;
@@ -1384,7 +1384,7 @@ const GviaHamedina = async function ({
 
       const str30 = "*" + cycleNum + ", משחק מספר 10:* ";
       textMessage1 = str30 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;
@@ -1511,7 +1511,7 @@ const GviaHamedina = async function ({
 
       const str33 = "*" + cycleNum + ", משחק מספר 11:* ";
       textMessage1 = str33 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;
@@ -1638,7 +1638,7 @@ const GviaHamedina = async function ({
 
       const str36 = "*" + cycleNum + ", משחק מספר 12:* ";
       textMessage1 = str36 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;
@@ -1765,7 +1765,7 @@ const GviaHamedina = async function ({
 
       const str39 = "*" + cycleNum + ", משחק מספר 13:* ";
       textMessage1 = str39 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;
@@ -1892,7 +1892,7 @@ const GviaHamedina = async function ({
 
       const str42 = "*" + cycleNum + ", משחק מספר 14:* ";
       textMessage1 = str42 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;
@@ -2019,7 +2019,7 @@ const GviaHamedina = async function ({
 
       const str45 = "*" + cycleNum + ", משחק מספר 15:* ";
       textMessage1 = str45 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;
@@ -2146,7 +2146,7 @@ const GviaHamedina = async function ({
 
       const str48 = "*" + cycleNum + ", משחק מספר 16:* ";
       textMessage1 = str48 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = req.body.query.message;

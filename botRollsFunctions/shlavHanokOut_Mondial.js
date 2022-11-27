@@ -92,7 +92,7 @@ const shlavHanokOut_Mondial = async function (
 
       const str2 = "*" + cycleNum + ", משחק מספר 1:* ";
       textMessage1 = str2 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = message;
@@ -271,7 +271,7 @@ const shlavHanokOut_Mondial = async function (
 
       const str5 = "*" + cycleNum + ", משחק מספר 2:* ";
       textMessage1 = str5 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = message;
@@ -447,7 +447,7 @@ const shlavHanokOut_Mondial = async function (
 
       const str8 = "*" + cycleNum + ", משחק מספר 3:* ";
       textMessage1 = str8 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = message;
@@ -576,7 +576,7 @@ const shlavHanokOut_Mondial = async function (
 
       const str11 = "*" + cycleNum + ", משחק מספר 4:* ";
       textMessage1 = str11 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = message;
@@ -752,7 +752,7 @@ const shlavHanokOut_Mondial = async function (
 
       const str14 = "*" + cycleNum + ", משחק מספר 5:* ";
       textMessage1 = str14 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = message;
@@ -881,7 +881,7 @@ const shlavHanokOut_Mondial = async function (
 
       const str17 = "*" + cycleNum + ", משחק מספר 6:* ";
       textMessage1 = str17 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = message;
@@ -1010,7 +1010,7 @@ const shlavHanokOut_Mondial = async function (
 
       const str20 = "*" + cycleNum + ", משחק מספר 7:* ";
       textMessage1 = str20 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = message;
@@ -1139,7 +1139,7 @@ const shlavHanokOut_Mondial = async function (
 
       const str23 = "*" + cycleNum + ", משחק מספר 8:* ";
       textMessage1 = str23 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מי הקבוצה שתעלה לשלב שמינית הגמר?";
+      textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
       // score = message;
