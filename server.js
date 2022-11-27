@@ -337,7 +337,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage1 = LigatAlufotMessages[0];
     textMessage2 = LigatAlufotMessages[1];
     textMessage3 = LigatAlufotMessages[2];
-  } else if (stage === 257 || (stage > 478 && stage < 660)) {
+  } else if (stage === 257 || (stage > 478 && stage < 665)) {
     const MondialMessages = await botRollsFunctions.Mondial(
       message,
       mondialCycleNum,
