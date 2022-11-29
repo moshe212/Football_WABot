@@ -1404,7 +1404,7 @@ const shlavHanokOut_Mondial = async function (
         minute_toFix
       );
 
-      footballFunc.saveFix_Nokout(
+      await footballFunc.saveFix_Nokout(
         parseInt(gameNum),
         parseInt(score1),
         parseInt(score2),
@@ -1499,7 +1499,7 @@ const shlavHanokOut_Mondial = async function (
         minute_toFix
       );
 
-      footballFunc.saveFix_Nokout(
+      await footballFunc.saveFix_Nokout(
         parseInt(gameNum),
         parseInt(score1),
         parseInt(score2),
@@ -1888,7 +1888,7 @@ const shlavHanokOut_Mondial = async function (
         minute_toFix
       );
 
-      footballFunc.saveFix_Nokout(
+      await footballFunc.saveFix_Nokout(
         parseInt(gameNum),
         parseInt(score1),
         parseInt(score2),
