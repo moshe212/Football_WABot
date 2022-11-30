@@ -32,23 +32,24 @@ const shlavHanokOut_Mondial = async function (
   let GuessData_Saved = [];
   let textMessage = "";
 
+  let cycle =
+    cycleNum === "גמר ומקום 3" ? "משחק הגמר והמשחק על המקום ה-3" : cycleNum;
+
   switch (stage) {
     case 480:
       if (cycleNum !== "0" && cycleText.includes("שלב הנוקאאוט")) {
         console.log({ cycleNum });
+
         textMessage1 =
           "בחירה מצוינת!" +
-            "\nהדד ליין לשליחת ניחושים לשלב הנוקאאוט, שלב *" +
-            cycleNum ===
-          "גמר ומקום 3"
-            ? "משחק הגמר והמשחק על המקום ה-3"
-            : cycleNum +
-              "* הוא עד ה-" +
-              "*" +
-              cycleDate +
-              "*" +
-              " בחצות." +
-              "\nשניה אחרי אני סוגר הבסטה, אז אל תאחרו!";
+          "\nהדד ליין לשליחת ניחושים לשלב הנוקאאוט, שלב *" +
+          cycle +
+          "* הוא עד ה-" +
+          "*" +
+          cycleDate +
+          "*" +
+          " בחצות." +
+          "\nשניה אחרי אני סוגר הבסטה, אז אל תאחרו!";
         textMessage2 =
           "*שימו לב*: קיימת קורולציה בין השאלות. אנא הקפידו לבחור את הקבוצה שעולה בהתאם לקבוצה שמנצחת, וכן לבחור באופציית הפנדלים עבור משחק שמסתיים בתיקו. אם לא תעשו זאת, המערכת תתקן בצורה אוטומטית. שנתחיל?";
         textMessage3 = "\n 1️⃣ כן \n2️⃣ לא";
@@ -57,10 +58,11 @@ const shlavHanokOut_Mondial = async function (
       } else {
         if (cycleText.includes("שלב הנוקאאוט")) {
           textMessage1 =
-            "שומעים רגע? הדד ליין לשליחת הניחושים לשלב" + "*" + cycleNum ===
-            "גמר ומקום 3"
-              ? "משחק הגמר והמשחק על המקום ה-3"
-              : cycleNum + "*" + " עבר.";
+            "שומעים רגע? הדד ליין לשליחת הניחושים לשלב" +
+            "*" +
+            cycleNum +
+            "*" +
+            " עבר.";
           textMessage2 =
             "אם רק עכשיו נזכרתם לשלוח ניחושים אז אנחנו בבעיה. אנא פנו למנהל המערכת";
           break;
@@ -76,11 +78,8 @@ const shlavHanokOut_Mondial = async function (
       if (cycleText.includes("שלב הנוקאאוט")) {
         Team1 = GamesList[0][0];
         Team2 = GamesList[0][1];
-
-        const str1 =
-          cycleNum === "גמר ומקום 3"
-            ? "משחק הגמר"
-            : "*" + cycleNum + ", משחק מספר 1:* ";
+        cycle = cycleNum === "גמר ומקום 3" ? "משחק הגמר" : cycleNum;
+        const str1 = "*" + cycle + ", משחק מספר 1:* ";
         textMessage1 = str1 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
       }
@@ -94,11 +93,8 @@ const shlavHanokOut_Mondial = async function (
       console.log(GamesList);
       Team1 = GamesList[0][0];
       Team2 = GamesList[0][1];
-
-      const str2 =
-        cycleNum === "גמר ומקום 3"
-          ? "משחק הגמר"
-          : "*" + cycleNum + ", משחק מספר 1:* ";
+      cycle = cycleNum === "גמר ומקום 3" ? "משחק הגמר" : cycleNum;
+      const str2 = "*" + cycle + ", משחק מספר 1:* ";
       textMessage1 = str2 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
       textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
@@ -141,10 +137,8 @@ const shlavHanokOut_Mondial = async function (
         "Mondial"
       );
       console.log("GameRow", GameRow.data);
-      const str3 =
-        cycleNum === "גמר ומקום 3"
-          ? "משחק הגמר"
-          : "*" + cycleNum + ", משחק מספר 1:* ";
+      cycle = cycleNum === "גמר ומקום 3" ? "משחק הגמר" : cycleNum;
+      const str3 = "*" + cycle + ", משחק מספר 1:* ";
 
       textMessage1 = str3 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
@@ -254,10 +248,8 @@ const shlavHanokOut_Mondial = async function (
       } else {
         Team1 = GamesList[1][0];
         Team2 = GamesList[1][1];
-        const str4 =
-          cycleNum === "גמר ומקום 3"
-            ? "המשחק על המקום ה-3"
-            : "*" + cycleNum + ", משחק מספר 2:* ";
+        cycle = cycleNum === "גמר ומקום 3" ? "המשחק על המקום ה-3" : cycleNum;
+        const str4 = "*" + cycle + ", משחק מספר 2:* ";
 
         textMessage1 = str4 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
@@ -283,10 +275,9 @@ const shlavHanokOut_Mondial = async function (
       console.log(GamesList);
       Team1 = GamesList[1][0];
       Team2 = GamesList[1][1];
-      const str5 =
-        cycleNum === "גמר ומקום 3"
-          ? "המשחק על המקום ה-3"
-          : "*" + cycleNum + ", משחק מספר 2:* ";
+      cycle = cycleNum === "גמר ומקום 3" ? "המשחק על המקום ה-3" : cycleNum;
+
+      const str5 = "*" + cycle + ", משחק מספר 2:* ";
 
       textMessage1 = str5 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
@@ -329,10 +320,9 @@ const shlavHanokOut_Mondial = async function (
         "Mondial"
       );
       console.log("GameRow", GameRow.data);
-      const str6 =
-        cycleNum === "גמר ומקום 3"
-          ? "המשחק על המקום ה-3"
-          : "*" + cycleNum + ", משחק מספר 2:* ";
+      cycle = cycleNum === "גמר ומקום 3" ? "המשחק על המקום ה-3" : cycleNum;
+
+      const str6 = "*" + cycle + ", משחק מספר 2:* ";
 
       textMessage1 = str6 + "\n" + Team1 + " - " + Team2;
       textMessage2 = "איך יסתיים המשחק?";
