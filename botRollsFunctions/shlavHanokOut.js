@@ -34,7 +34,7 @@ const shlavHanokOut = async function (
 
   switch (stage) {
     case 297:
-      console.log({ cycleNum });
+      console.log({ cycleText });
       if (cycleNum !== "0" && cycleText.includes("שלב הנוקאאוט")) {
         textMessage1 =
           "בחירה מצוינת!" +
