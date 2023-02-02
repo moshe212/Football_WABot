@@ -34,7 +34,6 @@ const shlavHanokOut = async function (
 
   switch (stage) {
     case 297:
-      console.log({ cycleNum });
       if (cycleNum !== "0" && cycleText.includes("שלב הנוקאאוט")) {
         textMessage1 =
           "בחירה מצוינת!" +
@@ -86,7 +85,7 @@ const shlavHanokOut = async function (
 
       break;
     case 398:
-      if (cycleNum.includes()) console.log(GamesList);
+      console.log(GamesList);
       Team1 = GamesList[0][0];
       Team2 = GamesList[0][1];
 
@@ -117,61 +116,33 @@ const shlavHanokOut = async function (
       );
 
       break;
-    // case 401:
-    // console.log(GamesList);
-    // Team1 = GamesList[0][0];
-    // Team2 = GamesList[0][1];
-
-    // GameRow = await footballFunc.getGameGuss(
-    //   user_name,
-    //   UsersIndex,
-    //   GuessData_ShlavHanokout,
-    //   cycleIndexNum,
-    //   "שלב הנוקאאוט",
-    //   "F",
-    //   "I",
-    //   "Alufot"
-    // );
-    // console.log("GameRow", GameRow.data);
-    // const str3 = "*" + cycleNum + ", משחק מספר 1:* ";
-    // textMessage1 = str3 + "\n" + Team1 + " - " + Team2;
-    // textMessage2 = "איך יסתיים המשחק?";
-    // console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
-    // // console.log(GameRow.data[0][0], GameRow.data[0][1]);
-    // if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-    //   textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
-    // } else {
-    //   textMessage3 = "\n3️⃣ פנדלים";
-    // }
-
-    // ChoiseUp = message;
-    // if (parseInt(ChoiseUp) === 1) {
-    //   ChoiseUpteam = Team1;
-    // } else {
-    //   ChoiseUpteam = Team2;
-    // }
-
-    // footballFunc.saveData_googleAPI(
-    //   user_name,
-    //   UsersIndex,
-    //   GuessData_ShlavHanokout,
-    //   cycleIndexNum,
-    //   "שלב הנוקאאוט",
-    //   "H",
-    //   "",
-    //   "",
-    //   "",
-    //   "",
-    //   ChoiseUpteam,
-    //   "Alufot"
-    // );
-
-    // break;
-
-    case 403:
+      // case 401:
       console.log(GamesList);
       Team1 = GamesList[0][0];
       Team2 = GamesList[0][1];
+
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData_ShlavHanokout,
+        cycleIndexNum,
+        "שלב הנוקאאוט",
+        "F",
+        "I",
+        "Alufot"
+      );
+      console.log("GameRow", GameRow.data);
+      const str3 = "*" + cycleNum + ", משחק מספר 1:* ";
+      textMessage1 = str3 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n3️⃣ פנדלים";
+      }
+
       ChoiseUp = message;
       if (parseInt(ChoiseUp) === 1) {
         ChoiseUpteam = Team1;
@@ -193,6 +164,34 @@ const shlavHanokOut = async function (
         ChoiseUpteam,
         "Alufot"
       );
+
+      break;
+
+    case 403:
+      console.log(GamesList);
+      ChoiseMinut = message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData_ShlavHanokout,
+        cycleIndexNum,
+        "שלב הנוקאאוט",
+        "F",
+        "I",
+        "Alufot"
+      );
+
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות";
+      } else {
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "90 דקות*";
+        } else {
+          Minuts = "פנדלים";
+        }
+      }
 
       if (GamesList.length < 2) {
         await footballFunc.saveData_googleAPI(
@@ -294,59 +293,32 @@ const shlavHanokOut = async function (
       );
 
       break;
-    // case 407:
-    // console.log(GamesList);
-    // Team1 = GamesList[1][0];
-    // Team2 = GamesList[1][1];
-    // GameRow = await footballFunc.getGameGuss(
-    //   user_name,
-    //   UsersIndex,
-    //   GuessData_ShlavHanokout,
-    //   cycleIndexNum,
-    //   "שלב הנוקאאוט",
-    //   "V",
-    //   "Y",
-    //   "Alufot"
-    // );
-    // console.log("GameRow", GameRow.data);
-    // const str6 = "*" + cycleNum + ", משחק מספר 2:* ";
-    // textMessage1 = str6 + "\n" + Team1 + " - " + Team2;
-    // textMessage2 = "איך יסתיים המשחק?";
-    // console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
-    // // console.log(GameRow.data[0][0], GameRow.data[0][1]);
-    // if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-    //   textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
-    // } else {
-    //   textMessage3 = "\n3️⃣ פנדלים";
-    // }
-
-    // ChoiseUp = message;
-    // if (parseInt(ChoiseUp) === 1) {
-    //   ChoiseUpteam = Team1;
-    // } else {
-    //   ChoiseUpteam = Team2;
-    // }
-
-    // footballFunc.saveData_googleAPI(
-    //   user_name,
-    //   UsersIndex,
-    //   GuessData_ShlavHanokout,
-    //   cycleIndexNum,
-    //   "שלב הנוקאאוט",
-    //   "X",
-    //   "",
-    //   "",
-    //   "",
-    //   "",
-    //   ChoiseUpteam,
-    //   "Alufot"
-    // );
-
-    // break;
-    case 409:
+      // case 407:
       console.log(GamesList);
       Team1 = GamesList[1][0];
       Team2 = GamesList[1][1];
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData_ShlavHanokout,
+        cycleIndexNum,
+        "שלב הנוקאאוט",
+        "V",
+        "Y",
+        "Alufot"
+      );
+      console.log("GameRow", GameRow.data);
+      const str6 = "*" + cycleNum + ", משחק מספר 2:* ";
+      textMessage1 = str6 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n3️⃣ פנדלים";
+      }
+
       ChoiseUp = message;
       if (parseInt(ChoiseUp) === 1) {
         ChoiseUpteam = Team1;
@@ -368,6 +340,32 @@ const shlavHanokOut = async function (
         ChoiseUpteam,
         "Alufot"
       );
+
+      break;
+    case 409:
+      console.log(GamesList);
+      ChoiseMinut = message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData_ShlavHanokout,
+        cycleIndexNum,
+        "שלב הנוקאאוט",
+        "V",
+        "Y",
+        "Alufot"
+      );
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות";
+      } else {
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "90 דקות*";
+        } else {
+          Minuts = "פנדלים";
+        }
+      }
       if (GamesList.length < 3) {
         await footballFunc.saveData_googleAPI(
           user_name,
@@ -459,66 +457,32 @@ const shlavHanokOut = async function (
       );
 
       break;
-    // case 413:
-    // console.log(GamesList);
-    // Team1 = GamesList[2][0];
-    // Team2 = GamesList[2][1];
-    // GameRow = await footballFunc.getGameGuss(
-    //   user_name,
-    //   UsersIndex,
-    //   GuessData_ShlavHanokout,
-    //   cycleIndexNum,
-    //   "שלב הנוקאאוט",
-    //   "AL",
-    //   "AO",
-    //   "Alufot"
-    // );
-    // console.log("GameRow", GameRow.data);
-    // const str9 = "*" + cycleNum + ", משחק מספר 3:* ";
-    // textMessage1 = str9 + "\n" + Team1 + " - " + Team2;
-    // textMessage2 = "איך יסתיים המשחק?";
-    // console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
-    // // console.log(GameRow.data[0][0], GameRow.data[0][1]);
-    // if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-    //   textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
-    // } else {
-    //   textMessage3 = "\n3️⃣ פנדלים";
-    // }
-
-    // ChoiseUp = message;
-    // if (parseInt(ChoiseUp) === 1) {
-    //   ChoiseUpteam = Team1;
-    // } else {
-    //   ChoiseUpteam = Team2;
-    // }
-
-    // footballFunc.saveData_googleAPI(
-    //   user_name,
-    //   UsersIndex,
-    //   GuessData_ShlavHanokout,
-    //   cycleIndexNum,
-    //   "שלב הנוקאאוט",
-    //   "AN",
-    //   "",
-    //   "",
-    //   "",
-    //   "",
-    //   ChoiseUpteam,
-    //   "Alufot"
-    // );
-
-    // break;
-    case 415:
+      // case 413:
       console.log(GamesList);
-      Team1 = GamesList[3][0];
-      Team2 = GamesList[3][1];
-
-      const str10 = "*" + cycleNum + ", משחק מספר 4:* ";
-      textMessage1 = str10 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-
       Team1 = GamesList[2][0];
       Team2 = GamesList[2][1];
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData_ShlavHanokout,
+        cycleIndexNum,
+        "שלב הנוקאאוט",
+        "AL",
+        "AO",
+        "Alufot"
+      );
+      console.log("GameRow", GameRow.data);
+      const str9 = "*" + cycleNum + ", משחק מספר 3:* ";
+      textMessage1 = str9 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "איך יסתיים המשחק?";
+      console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+      // console.log(GameRow.data[0][0], GameRow.data[0][1]);
+      if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+        textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
+      } else {
+        textMessage3 = "\n3️⃣ פנדלים";
+      }
+
       ChoiseUp = message;
       if (parseInt(ChoiseUp) === 1) {
         ChoiseUpteam = Team1;
@@ -538,6 +502,54 @@ const shlavHanokOut = async function (
         "",
         "",
         ChoiseUpteam,
+        "Alufot"
+      );
+
+      break;
+    case 415:
+      console.log(GamesList);
+      Team1 = GamesList[3][0];
+      Team2 = GamesList[3][1];
+
+      const str10 = "*" + cycleNum + ", משחק מספר 4:* ";
+      textMessage1 = str10 + "\n" + Team1 + " - " + Team2;
+      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+
+      ChoiseMinut = message;
+      GameRow = await footballFunc.getGameGuss(
+        user_name,
+        UsersIndex,
+        GuessData_ShlavHanokout,
+        cycleIndexNum,
+        "שלב הנוקאאוט",
+        "AL",
+        "AO",
+        "Alufot"
+      );
+      if (parseInt(ChoiseMinut) === 1) {
+        Minuts = "90 דקות";
+      } else if (parseInt(ChoiseMinut) === 2) {
+        Minuts = "120 דקות";
+      } else {
+        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+          Minuts = "90 דקות*";
+        } else {
+          Minuts = "פנדלים";
+        }
+      }
+
+      footballFunc.saveData_googleAPI(
+        user_name,
+        UsersIndex,
+        GuessData_ShlavHanokout,
+        cycleIndexNum,
+        "שלב הנוקאאוט",
+        "AO",
+        "",
+        "",
+        "",
+        "",
+        Minuts,
         "Alufot"
       );
 
