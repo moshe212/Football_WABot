@@ -149,11 +149,75 @@ const getAlufotData = async () => {
   // }
 };
 
+let mondialCycleNum = "0";
+let mondialCycleText = "";
+let mondialCycleDate = "";
+let mondialGames = [];
+let mondialGamesList = [];
+let mondialCycleIndexNum = 0;
+let mondialUsersIndex = [];
+let mondialGuessData = [];
+let mondialGuessData_ShlavHanokout = [];
+let mondialUsersList = [];
+let mondialAchievementsOfSeasonData = [];
+let mondialTablesData = [];
+let mondialTableObj = {};
+const getMondialData = async () => {
+  const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים", "Mondial");
+  const res_cycle = await footballFunc.getCycle(Data);
+  mondialCycleNum = res_cycle[0];
+  mondialCycleText = res_cycle[3];
+  const cycleDate1 = moment(res_cycle[1]).format("DD-MM-YYYY");
+  const cycleDate2 = cycleDate1.replace("-", ".");
+  mondialCycleDate = cycleDate2.replace("-", ".");
+
+  mondialCycleIndexNum = res_cycle[2];
+
+  mondialGames = await footballFunc.getDataFromSheet(
+    "רשימת משחקים לפי מחזור",
+    "Mondial"
+  );
+  for (let g = 0; g < mondialGames.length; g++) {
+    if (mondialGames[g]._rawData[0] === mondialCycleNum) {
+      const team_1 = mondialGames[g]._rawData[1];
+      const team_2 = mondialGames[g]._rawData[2];
+      mondialGamesList.push([team_1, team_2]);
+    }
+  }
+
+  mondialUsersIndex = await footballFunc.getDataFromSheet(
+    "אינדקס משתמשים",
+    "Mondial"
+  );
+  for (let l = 0; l < mondialUsersIndex.length; l++) {
+    mondialUsersList.push(mondialUsersIndex[l]._rawData[0]);
+  }
+  mondialGuessData = await footballFunc.getDataFromSheet(
+    "שלב הבתים",
+    "Mondial"
+  );
+  mondialGuessData_ShlavHanokout = await footballFunc.getDataFromSheet(
+    "שלב הנוקאאוט",
+    "Mondial"
+  );
+
+  // mondialAchievementsOfSeasonData = await footballFunc.getDataFromSheet(
+  //   "הישגים",
+  //   "Alufot"
+  // );
+  // mondialTablesData = await footballFunc.getTablesData();
+
+  // for (let i = 0; i < mondialTablesData.length; i++) {
+  //   mondialTableObj = { ...mondialTableObj, ...mondialTablesData[i] };
+  // }
+};
 const job1 = schedule.scheduleJob("0 0 4 * * *", getData);
 const job2 = schedule.scheduleJob("0 0 4 * * *", getAlufotData);
+const job3 = schedule.scheduleJob("0 0 4 * * *", getMondialData);
 
 getData();
 getAlufotData();
+getMondialData();
 
 app.post("/api/Whatsapp", async (req, res) => {
   const user_name = req.body.query.sender;
@@ -165,6 +229,9 @@ app.post("/api/Whatsapp", async (req, res) => {
     alufotCycleDate,
     alufotCycleText
   );
+  console.log("mondialCycleNum", mondialCycleNum);
+  console.log("mondialGamesList", mondialGamesList);
+
   const stage = req.body.query.ruleId;
   console.log(stage);
 
@@ -189,7 +256,10 @@ app.post("/api/Whatsapp", async (req, res) => {
       // moment().year() +
       "\nמה ברצונכם לעשות?";
     textMessage2 =
-      "\n1️⃣ - למשחק *היציע: ליגת העל* \n2️⃣ - למשחק *היציע: גביע המדינה* \n3️⃣ - למשחק *היציע: ליגת האלופות* \n4️⃣ - למשחק *היציע: מונדיאל*  \n5️⃣ - למשחק *היציע: יורו* \n6️⃣ - למשחק *היציע: בחירות* \n7️⃣ - למשחק *היציע: אולימפיאדה*";
+      "\n1️⃣ - למשחק *היציע: ליגת העל*" +
+      "\n2️⃣ - למשחק *היציע: גביע המדינה*" +
+      "\n3️⃣ - למשחק *היציע: ליגת האלופות* \n4️⃣ - למשחק *היציע: מונדיאל*";
+    // +"\n5️⃣ - למשחק *היציע: יורו* \n6️⃣ - למשחק *היציע: בחירות* \n7️⃣ - למשחק *היציע: אולימפיאדה*";
   } else if (stage === 113) {
     textMessage1 =
       "אז מה אתם אוכלים לי את הראש? תחזרו לכאן כשתרצו למלא ניחושים, ותשתדלו שזה יקרה לפני ה-" +
@@ -269,6 +339,31 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage1 = LigatAlufotMessages[0];
     textMessage2 = LigatAlufotMessages[1];
     textMessage3 = LigatAlufotMessages[2];
+  } else if (stage === 257 || (stage > 478 && stage < 665)) {
+    const MondialMessages = await botRollsFunctions.Mondial(
+      message,
+      mondialCycleNum,
+      mondialCycleText,
+      mondialCycleDate,
+      mondialGamesList,
+      mondialCycleIndexNum,
+      mondialUsersIndex,
+      mondialGuessData,
+      user_name,
+      stage,
+      score,
+      gameNum,
+      score1,
+      score2,
+      mondialAchievementsOfSeasonData,
+      mondialTableObj,
+      mondialGuessData_ShlavHanokout,
+      mondialUsersList
+    );
+
+    textMessage1 = MondialMessages[0];
+    textMessage2 = MondialMessages[1];
+    textMessage3 = MondialMessages[2];
   } else {
     console.log(`Sorry, we are out of range.`);
   }

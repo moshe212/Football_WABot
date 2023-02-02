@@ -27,6 +27,8 @@ const getGameGuss = async function (
       ? "1J3iFj9uM3TEC3y__u02PFnq5M5YKSezXP6TVYOEGMto"
       : fileName === "Alufot"
       ? "1a8XbSk7anY4S0SvyJawCqrYYcae4WUN3C-NUO7_K-ys"
+      : fileName === "Mondial"
+      ? "1b_hJkbj-fKNlWzpI4irXhIqKi1SxuzvVtAbrgRjBSmc"
       : "";
   let Range_Cell = "";
   try {

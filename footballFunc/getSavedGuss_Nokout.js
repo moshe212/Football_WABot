@@ -5,13 +5,16 @@ const getSavedGuss_Nokout = async function (
   UsersIndex,
   cycleIndexNum,
   sheetTitle,
-  GamesList
+  GamesList,
+  fileName
 ) {
+  console.log({ fileName });
   const creds = require("../config/CreditTransaction-d9fe1ef7e128.json");
   // Initialize the sheet - doc ID is the long id in the sheets URL
-  const doc = new GoogleSpreadsheet(
-    "1a8XbSk7anY4S0SvyJawCqrYYcae4WUN3C-NUO7_K-ys"
-  );
+  const doc =
+    fileName === "Mondial"
+      ? new GoogleSpreadsheet("1b_hJkbj-fKNlWzpI4irXhIqKi1SxuzvVtAbrgRjBSmc")
+      : new GoogleSpreadsheet("1a8XbSk7anY4S0SvyJawCqrYYcae4WUN3C-NUO7_K-ys");
 
   try {
     await doc.useServiceAccountAuth(creds);
@@ -26,6 +29,9 @@ const getSavedGuss_Nokout = async function (
         }
       }
       const GuessData = await sheet.getRows();
+      console.log("parseInt", parseInt(cycleIndexNum));
+      console.log("index", parseInt(index));
+      console.log(GuessData[parseInt(cycleIndexNum) + parseInt(index) - 2]);
       if (
         GuessData[parseInt(cycleIndexNum) + parseInt(index) - 2]._rawData[1] ===
         user_name

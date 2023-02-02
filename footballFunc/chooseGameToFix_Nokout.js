@@ -49,13 +49,16 @@ const chooseGameToFix_Nokout = async function (
     fullStrfIX = fullStrfIX + strfIX;
   }
 
+  const cycle =
+    cycleNum === "גמר ומקום 3" ? "משחק הגמר והמשחק על המקום ה-3" : cycleNum;
+
   const textMessage1 = message2
     ? "בחרתם לשנות אחד או יותר מניחושי שלב-" +
       cycleNum +
       "." +
       " בחרו את המשחק והניחוש אותו תרצו לשנות." +
       fullStrfIX
-    : "*להלן הניחושים שלכם לשלב-" + cycleNum + ":*" + "\n" + fullStr;
+    : "*להלן הניחושים שלכם לשלב-" + cycle + ":*" + "\n" + fullStr;
 
   const textMessage2 = message2
     ? "יש להשיב במבנה הבא: " +

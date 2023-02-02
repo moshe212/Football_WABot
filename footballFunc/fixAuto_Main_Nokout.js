@@ -6,14 +6,16 @@ const fixAuto_Main_Nokout = async function (
   user_name,
   UsersIndex,
   GuessData,
-  cycleIndexNum
+  cycleIndexNum,
+  fileName
 ) {
   const GuessData_Saved = await getSavedGuss_Nokout(
     user_name,
     UsersIndex,
     cycleIndexNum,
     "שלב הנוקאאוט",
-    GamesList
+    GamesList,
+    fileName
   );
   for (let c = 0; c < GuessData_Saved.length; c++) {
     if (
@@ -30,7 +32,7 @@ const fixAuto_Main_Nokout = async function (
         cycleIndexNum,
         "",
         "3",
-        "Alufot",
+        fileName,
         "שלב הנוקאאוט"
       );
     } else if (
@@ -49,7 +51,7 @@ const fixAuto_Main_Nokout = async function (
         cycleIndexNum,
         GuessData_Saved[c].team1[0],
         "",
-        "Alufot",
+        fileName,
         "שלב הנוקאאוט"
       );
     } else if (
@@ -75,7 +77,7 @@ const fixAuto_Main_Nokout = async function (
         cycleIndexNum,
         GuessData_Saved[c].team2[0],
         "",
-        "Alufot",
+        fileName,
         "שלב הנוקאאוט"
       );
     }

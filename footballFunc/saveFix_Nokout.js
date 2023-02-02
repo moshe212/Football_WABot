@@ -9,7 +9,8 @@ const saveFix_Nokout = async function (
   GuessData,
   cycleIndexNum,
   teamUp,
-  minute
+  minute,
+  fileName
 ) {
   console.log(
     "fix",
@@ -53,7 +54,7 @@ const saveFix_Nokout = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -67,7 +68,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           TeamUp,
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -81,7 +82,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           Minute,
-          "Alufot"
+          fileName
         );
 
         break;
@@ -110,7 +111,7 @@ const saveFix_Nokout = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -124,7 +125,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           TeamUp,
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -138,7 +139,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           Minute,
-          "Alufot"
+          fileName
         );
 
         break;
@@ -167,7 +168,7 @@ const saveFix_Nokout = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -181,7 +182,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           TeamUp,
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -195,7 +196,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           Minute,
-          "Alufot"
+          fileName
         );
         break;
 
@@ -223,7 +224,7 @@ const saveFix_Nokout = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -237,7 +238,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           TeamUp,
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -251,7 +252,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           Minute,
-          "Alufot"
+          fileName
         );
         break;
 
@@ -279,7 +280,7 @@ const saveFix_Nokout = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -293,7 +294,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           TeamUp,
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -307,7 +308,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           Minute,
-          "Alufot"
+          fileName
         );
 
         break;
@@ -336,7 +337,7 @@ const saveFix_Nokout = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -350,7 +351,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           TeamUp,
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -364,7 +365,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           Minute,
-          "Alufot"
+          fileName
         );
 
         break;
@@ -393,7 +394,7 @@ const saveFix_Nokout = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -407,7 +408,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           TeamUp,
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -421,7 +422,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           Minute,
-          "Alufot"
+          fileName
         );
 
         break;
@@ -449,7 +450,7 @@ const saveFix_Nokout = async function (
           ScoreTeam2,
           "",
           "",
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -463,7 +464,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           TeamUp,
-          "Alufot"
+          fileName
         );
         await saveData_Full(
           user_name,
@@ -477,7 +478,7 @@ const saveFix_Nokout = async function (
           "",
           "",
           Minute,
-          "Alufot"
+          fileName
         );
 
         break;
