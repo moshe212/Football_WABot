@@ -95,29 +95,6 @@ const shlavHanokOut = async function (
         textMessage1 = str2 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
         textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
-
-        // score = message;
-        ScoreTeam1 = score.split(":")[1];
-        ScoreTeam2 = score.split(":")[0];
-        console.log("ScoreTeam1", ScoreTeam1);
-        console.log("ScoreTeam2", ScoreTeam2);
-
-        footballFunc.saveData_googleAPI(
-          user_name,
-          UsersIndex,
-          GuessData_ShlavHanokout,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          "F",
-          "G",
-          ScoreTeam1,
-          ScoreTeam2,
-          "",
-          "",
-          "Alufot"
-        );
-
-        break;
       } else {
         console.log(GamesList);
         Team1 = GamesList[0][0];
@@ -143,9 +120,27 @@ const shlavHanokOut = async function (
         } else {
           textMessage3 = "\n3️⃣ פנדלים";
         }
-
-        break;
       }
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_googleAPI(
+        user_name,
+        UsersIndex,
+        GuessData_ShlavHanokout,
+        cycleIndexNum,
+        "שלב הנוקאאוט",
+        "F",
+        "G",
+        ScoreTeam1,
+        ScoreTeam2,
+        "",
+        "",
+        "Alufot"
+      );
+      break;
 
     case 401:
       if (GamesList.length < 2) {
@@ -220,7 +215,7 @@ const shlavHanokOut = async function (
           cycleIndexNum,
           "שלב הנוקאאוט",
           "F",
-          "I",
+          "H",
           "Alufot"
         );
 
@@ -242,7 +237,7 @@ const shlavHanokOut = async function (
           GuessData,
           cycleIndexNum,
           "שלב הנוקאאוט",
-          "I",
+          "H",
           "",
           "",
           "",
@@ -296,7 +291,7 @@ const shlavHanokOut = async function (
           cycleIndexNum,
           "שלב הנוקאאוט",
           "V",
-          "Y",
+          "X",
           "Alufot"
         );
         console.log("GameRow", GameRow.data);
@@ -355,8 +350,8 @@ const shlavHanokOut = async function (
           GuessData_ShlavHanokout,
           cycleIndexNum,
           "שלב הנוקאאוט",
-          "BB",
-          "BE",
+          "V",
+          "X",
           "Alufot"
         );
         if (parseInt(ChoiseMinut) === 1) {
@@ -377,7 +372,7 @@ const shlavHanokOut = async function (
           GuessData,
           cycleIndexNum,
           "שלב הנוקאאוט",
-          "I",
+          "X",
           "",
           "",
           "",
@@ -410,7 +405,7 @@ const shlavHanokOut = async function (
           cycleIndexNum,
           "שלב הנוקאאוט",
           "AL",
-          "AO",
+          "AN",
           "Alufot"
         );
         console.log("GameRow", GameRow.data);
@@ -437,8 +432,8 @@ const shlavHanokOut = async function (
         GuessData_ShlavHanokout,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        "V",
-        "W",
+        "AL",
+        "AM",
         ScoreTeam1,
         ScoreTeam2,
         "",
@@ -469,7 +464,7 @@ const shlavHanokOut = async function (
           GuessData_ShlavHanokout,
           cycleIndexNum,
           "שלב הנוקאאוט",
-          "X",
+          "AN",
           "",
           "",
           "",
@@ -488,8 +483,8 @@ const shlavHanokOut = async function (
           GuessData_ShlavHanokout,
           cycleIndexNum,
           "שלב הנוקאאוט",
-          "BB",
-          "BE",
+          "AL",
+          "AN",
           "Alufot"
         );
         if (parseInt(ChoiseMinut) === 1) {
@@ -510,7 +505,7 @@ const shlavHanokOut = async function (
           GuessData,
           cycleIndexNum,
           "שלב הנוקאאוט",
-          "I",
+          "AN",
           "",
           "",
           "",
@@ -542,8 +537,8 @@ const shlavHanokOut = async function (
           GuessData_ShlavHanokout,
           cycleIndexNum,
           "שלב הנוקאאוט",
-          "AL",
-          "AO",
+          "BB",
+          "BD",
           "Alufot"
         );
         console.log("GameRow", GameRow.data);
@@ -570,8 +565,8 @@ const shlavHanokOut = async function (
         GuessData_ShlavHanokout,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        "V",
-        "W",
+        "BB",
+        "BC",
         ScoreTeam1,
         ScoreTeam2,
         "",
@@ -580,6 +575,97 @@ const shlavHanokOut = async function (
       );
       break;
 
+    case 413:
+      if (cycleText.includes("UP")) {
+        ChoiseUp = message;
+        if (parseInt(ChoiseUp) === 1) {
+          ChoiseUpteam = Team1;
+        } else {
+          ChoiseUpteam = Team2;
+        }
+
+        footballFunc.saveData_googleAPI(
+          user_name,
+          UsersIndex,
+          GuessData_ShlavHanokout,
+          cycleIndexNum,
+          "שלב הנוקאאוט",
+          "BD",
+          "",
+          "",
+          "",
+          "",
+          ChoiseUpteam,
+          "Alufot"
+        );
+      } else {
+        console.log(GamesList);
+        ChoiseMinut = message;
+        GameRow = await footballFunc.getGameGuss(
+          user_name,
+          UsersIndex,
+          GuessData_ShlavHanokout,
+          cycleIndexNum,
+          "שלב הנוקאאוט",
+          "BB",
+          "BD",
+          "Alufot"
+        );
+        if (parseInt(ChoiseMinut) === 1) {
+          Minuts = "90 דקות";
+        } else if (parseInt(ChoiseMinut) === 2) {
+          Minuts = "120 דקות";
+        } else {
+          if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
+            Minuts = "90 דקות*";
+          } else {
+            Minuts = "פנדלים";
+          }
+        }
+
+        await footballFunc.saveData_googleAPI(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          "שלב הנוקאאוט",
+          "BD",
+          "",
+          "",
+          "",
+          "",
+          Minuts,
+          "Alufot"
+        );
+      }
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main_Nokout(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData_ShlavHanokout,
+        cycleIndexNum
+      );
+
+      // ----------End fix auto----------------
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "שלב הנוקאאוט",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
+        GuessData_Saved,
+        false,
+        cycleNum
+      );
+
+      textMessage1 = textMessage[0];
+      textMessage2 = textMessage[1];
+
+      break;
     case 448:
       textMessage1 = "הניחושים נקלטו. שיהיה בהצלחה";
       textMessage2 = "ניפגש במחזור הבא";
