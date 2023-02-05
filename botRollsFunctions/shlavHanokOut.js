@@ -650,7 +650,8 @@ const shlavHanokOut = async function (
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
-        cycleIndexNum
+        cycleIndexNum,
+        "Alufot"
       );
 
       // ----------End fix auto----------------
@@ -659,7 +660,8 @@ const shlavHanokOut = async function (
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Alufot"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
