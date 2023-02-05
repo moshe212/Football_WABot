@@ -165,7 +165,9 @@ const shlavHanokOut = async function (
         textMessage = await footballFunc.chooseGameToFix_Nokout(
           GuessData_Saved,
           false,
-          cycleNum
+          cycleNum,
+          cycleText,
+          "Alufot"
         );
 
         textMessage1 = textMessage[0];
@@ -667,7 +669,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
 
       textMessage1 = textMessage[0];
@@ -692,7 +696,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         true,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
       console.log(textMessage);
       textMessage1 = textMessage[0];
@@ -754,7 +760,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
       console.log(textMessage);
       textMessage1 = textMessage[0];
@@ -782,7 +790,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         true,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
       console.log(textMessage);
       textMessage1 = textMessage[0];
@@ -844,7 +854,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
       console.log(textMessage);
       textMessage1 = textMessage[0];
@@ -872,7 +884,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         true,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
       console.log(textMessage);
       textMessage1 = textMessage[0];
@@ -902,7 +916,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
       console.log(textMessage);
       textMessage1 = textMessage[0];
@@ -933,7 +949,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
       console.log(textMessage);
       textMessage1 = textMessage[0];
@@ -963,7 +981,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         true,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
       console.log(textMessage);
       textMessage1 = textMessage[0];
@@ -994,7 +1014,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
       console.log(textMessage);
       textMessage1 = textMessage[0];
@@ -1025,7 +1047,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
       console.log(textMessage);
       textMessage1 = textMessage[0];
@@ -1055,7 +1079,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         true,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
       console.log(textMessage);
       textMessage1 = textMessage[0];
@@ -1086,7 +1112,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
       console.log(textMessage);
       textMessage1 = textMessage[0];
@@ -1117,7 +1145,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
       console.log(textMessage);
       textMessage1 = textMessage[0];
@@ -1147,7 +1177,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         true,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
       console.log(textMessage);
       textMessage1 = textMessage[0];
@@ -1178,7 +1210,9 @@ const shlavHanokOut = async function (
       textMessage = await footballFunc.chooseGameToFix_Nokout(
         GuessData_Saved,
         false,
-        cycleNum
+        cycleNum,
+        cycleText,
+        "Alufot"
       );
       console.log(textMessage);
       textMessage1 = textMessage[0];
