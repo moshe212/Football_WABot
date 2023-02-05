@@ -5,7 +5,7 @@ const chooseGameToFix_Nokout = async function (
   cycleText,
   fileName
 ) {
-  if (fileName === "Mondial") {
+ 
     let fullStr = "";
     for (let i = 0; i < GuessData_Saved.length; i++) {
       const str =
@@ -82,8 +82,7 @@ const chooseGameToFix_Nokout = async function (
     const textMessage3 = "empty";
 
     return [textMessage1, textMessage2, textMessage3];
-  } else {
-  }
+  } 
 };
 
 module.exports = { chooseGameToFix_Nokout };
