@@ -38,7 +38,7 @@ const LigatAlufot = async function (
     //   tableObj,
     // });
     // textMessage1 = tableTextMassage;
-  } else if (stage === 297 || (stage > 394 && stage < 476)) {
+  } else if (stage === 297 || (stage > 394 && stage < 476) || stage === 666) {
     const shlavHanokOutMessages = await shlavHanokOut(
       message,
       cycleDate,

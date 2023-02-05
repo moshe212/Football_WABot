@@ -674,18 +674,19 @@ const shlavHanokOut = async function (
       textMessage2 = textMessage[1];
 
       break;
-    case 448:
+    case 415:
       textMessage1 = "הניחושים נקלטו. שיהיה בהצלחה";
       textMessage2 = "ניפגש במחזור הבא";
       break;
 
-    case 449:
+    case 666:
       GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
         cycleIndexNum,
         "שלב הנוקאאוט",
-        GamesList
+        GamesList,
+        "Alufot"
       );
       console.log("GuessData_Saved", GuessData_Saved);
       textMessage = await footballFunc.chooseGameToFix_Nokout(
