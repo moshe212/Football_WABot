@@ -18,7 +18,7 @@ const chooseGameToFix_Nokout = async function (
         GuessData_Saved[i].team1[1] +
         fileName ===
         "Mondial" ||
-      (fileName === "Alufot" && cycleText.inlcudes("TIME"))
+      (fileName === "Alufot" && cycleText.includes("TIME"))
         ? +"*\n*" +
           GuessData_Saved[i].teamUp +
           "* עולה, ב-" +
@@ -49,7 +49,7 @@ const chooseGameToFix_Nokout = async function (
         GuessData_Saved[f].teamUp +
         fileName ===
         "Mondial" ||
-      (fileName === "Alufot" && cycleText.inlcudes("TIME"))
+      (fileName === "Alufot" && cycleText.includes("TIME"))
         ? +"* עולה, ב-" + "*" + GuessData_Saved[f].minute + "*\n"
         : "";
 
@@ -70,7 +70,7 @@ const chooseGameToFix_Nokout = async function (
   const textMessage2 = message2
     ? "יש להשיב במבנה הבא: " + "*משחק 1 תוצאה 2:1 עולה 1 זמן 2*" + fileName ===
         "Mondial" ||
-      (fileName === "Alufot" && cycleText.inlcudes("TIME"))
+      (fileName === "Alufot" && cycleText.includes("TIME"))
       ? +"\nפרמטר הזמן: \n*1* 90 דקות \n*2* 120 דקות \n*3* פנדלים"
       : ""
     : "\n 1️⃣ לאישור וסיום \n 2️⃣ לשינוי ועריכה ";
