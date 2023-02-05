@@ -318,6 +318,8 @@ const shlavHanokOut = async function (
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       if (cycleText.includes("UP")) {
+        Team1 = GamesList[1][0];
+        Team2 = GamesList[1][1];
         ChoiseUp = message;
         if (parseInt(ChoiseUp) === 1) {
           ChoiseUpteam = Team1;
@@ -451,6 +453,8 @@ const shlavHanokOut = async function (
       textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
       if (cycleText.includes("UP")) {
+        Team1 = GamesList[2][0];
+        Team2 = GamesList[2][1];
         ChoiseUp = message;
         if (parseInt(ChoiseUp) === 1) {
           ChoiseUpteam = Team1;
@@ -577,6 +581,8 @@ const shlavHanokOut = async function (
 
     case 413:
       if (cycleText.includes("UP")) {
+        Team1 = GamesList[3][0];
+        Team2 = GamesList[3][1];
         ChoiseUp = message;
         if (parseInt(ChoiseUp) === 1) {
           ChoiseUpteam = Team1;
