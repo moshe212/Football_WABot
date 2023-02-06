@@ -41,7 +41,7 @@ const LigatAlufot = async function (
   } else if (
     stage === 297 ||
     (stage > 394 && stage < 476) ||
-    (stage > 665 && stage < 682)
+    (stage > 665 && stage < 695)
   ) {
     const shlavHanokOutMessages = await shlavHanokOut(
       message,

@@ -686,6 +686,7 @@ const shlavHanokOut = async function (
       break;
 
     case 666:
+    case 671:
       GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
@@ -710,6 +711,8 @@ const shlavHanokOut = async function (
       break;
     case 668:
     case 669:
+    case 683:
+    case 684:
       gameNum = message.split(" ")[1];
       score1 = message.split(" ")[3].split(":")[1];
       score2 = message.split(" ")[3].split(":")[0];
@@ -746,8 +749,10 @@ const shlavHanokOut = async function (
       textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
       textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
       break;
-    case 671:
+
     case 677:
+    case 686:
+    case 692:
       // ----------Start fix auto----------------
       await footballFunc.fixAuto_Main_Nokout(
         GamesList,
@@ -779,6 +784,8 @@ const shlavHanokOut = async function (
       break;
     case 672:
     case 678:
+    case 685:
+    case 691:
       // ----------Start fix auto----------------
       await footballFunc.fixAuto_Main_Nokout(
         GamesList,
@@ -812,8 +819,10 @@ const shlavHanokOut = async function (
       break;
     case 674:
     case 675:
-    case 680:
-    case 681:
+    case 688:
+    case 689:
+    case 693:
+    case 694:
       gameNum = message.split(" ")[1];
       score1 = message.split(" ")[3].split(":")[1];
       score2 = message.split(" ")[3].split(":")[0];
