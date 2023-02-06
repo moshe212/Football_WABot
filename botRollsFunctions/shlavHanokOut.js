@@ -146,16 +146,6 @@ const shlavHanokOut = async function (
 
     case 401:
       if (GamesList.length < 2) {
-        // ----------Start fix auto----------------
-        await footballFunc.fixAuto_Main_Nokout(
-          GamesList,
-          user_name,
-          UsersIndex,
-          GuessData_ShlavHanokout,
-          cycleIndexNum
-        );
-
-        // ----------End fix auto----------------
         GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
           user_name,
           UsersIndex,
@@ -649,14 +639,14 @@ const shlavHanokOut = async function (
         );
       }
       // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum,
-        "Alufot"
-      );
+      // await footballFunc.fixAuto_Main_Nokout(
+      //   GamesList,
+      //   user_name,
+      //   UsersIndex,
+      //   GuessData_ShlavHanokout,
+      //   cycleIndexNum,
+      //   "Alufot"
+      // );
 
       // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
@@ -709,6 +699,7 @@ const shlavHanokOut = async function (
       textMessage3 = textMessage[2];
 
       break;
+
     case 668:
     case 669:
     case 683:
@@ -753,16 +744,6 @@ const shlavHanokOut = async function (
     case 677:
     case 686:
     case 692:
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum
-      );
-
-      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
@@ -782,20 +763,11 @@ const shlavHanokOut = async function (
       textMessage1 = textMessage[0];
       textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
       break;
+
     case 672:
     case 678:
     case 685:
     case 691:
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum
-      );
-
-      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
@@ -817,6 +789,7 @@ const shlavHanokOut = async function (
       textMessage3 = textMessage[2];
 
       break;
+
     case 674:
     case 675:
     case 688:
@@ -843,7 +816,7 @@ const shlavHanokOut = async function (
         minute_toFix
       );
 
-      footballFunc.saveFix_Nokout(
+      await footballFunc.saveFix_Nokout(
         parseInt(gameNum),
         parseInt(score1),
         parseInt(score2),
@@ -856,402 +829,6 @@ const shlavHanokOut = async function (
         "Alufot"
       );
 
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum
-      );
-
-      // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
-        user_name,
-        UsersIndex,
-        cycleIndexNum,
-        "שלב הנוקאאוט",
-        GamesList
-      );
-      console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Nokout(
-        GuessData_Saved,
-        false,
-        cycleNum,
-        cycleText,
-        "Alufot"
-      );
-      console.log(textMessage);
-      textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
-      break;
-    case 459:
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum
-      );
-
-      // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
-        user_name,
-        UsersIndex,
-        cycleIndexNum,
-        "שלב הנוקאאוט",
-        GamesList
-      );
-      console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Nokout(
-        GuessData_Saved,
-        false,
-        cycleNum,
-        cycleText,
-        "Alufot"
-      );
-      console.log(textMessage);
-      textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
-      break;
-    case 458:
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum
-      );
-
-      // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
-        user_name,
-        UsersIndex,
-        cycleIndexNum,
-        "שלב הנוקאאוט",
-        GamesList
-      );
-      console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Nokout(
-        GuessData_Saved,
-        true,
-        cycleNum,
-        cycleText,
-        "Alufot"
-      );
-      console.log(textMessage);
-      textMessage1 = textMessage[0];
-      textMessage2 = textMessage[1];
-      textMessage3 = textMessage[2];
-
-      break;
-    case 461:
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum
-      );
-
-      // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
-        user_name,
-        UsersIndex,
-        cycleIndexNum,
-        "שלב הנוקאאוט",
-        GamesList
-      );
-      console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Nokout(
-        GuessData_Saved,
-        false,
-        cycleNum,
-        cycleText,
-        "Alufot"
-      );
-      console.log(textMessage);
-      textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
-      break;
-
-    //-----------------------------GamesListLength=1---------
-    //if GamesList.length = 1 show the gusses and finish
-    case 467:
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum
-      );
-
-      // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
-        user_name,
-        UsersIndex,
-        cycleIndexNum,
-        "שלב הנוקאאוט",
-        GamesList
-      );
-      console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Nokout(
-        GuessData_Saved,
-        false,
-        cycleNum,
-        cycleText,
-        "Alufot"
-      );
-      console.log(textMessage);
-      textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
-      break;
-
-    //453
-    case 468:
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum
-      );
-
-      // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
-        user_name,
-        UsersIndex,
-        cycleIndexNum,
-        "שלב הנוקאאוט",
-        GamesList
-      );
-      console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Nokout(
-        GuessData_Saved,
-        true,
-        cycleNum,
-        cycleText,
-        "Alufot"
-      );
-      console.log(textMessage);
-      textMessage1 = textMessage[0];
-      textMessage2 = textMessage[1];
-      textMessage3 = textMessage[2];
-
-      break;
-
-    case 471:
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum
-      );
-
-      // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
-        user_name,
-        UsersIndex,
-        cycleIndexNum,
-        "שלב הנוקאאוט",
-        GamesList
-      );
-      console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Nokout(
-        GuessData_Saved,
-        false,
-        cycleNum,
-        cycleText,
-        "Alufot"
-      );
-      console.log(textMessage);
-      textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
-      break;
-
-    //-----------------------------GamesListLength=2---------
-    //if GamesList.length = 2 and choose 1 show the gusses and finish
-    case 469:
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum
-      );
-
-      // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
-        user_name,
-        UsersIndex,
-        cycleIndexNum,
-        "שלב הנוקאאוט",
-        GamesList
-      );
-      console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Nokout(
-        GuessData_Saved,
-        false,
-        cycleNum,
-        cycleText,
-        "Alufot"
-      );
-      console.log(textMessage);
-      textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
-      break;
-
-    //if GamesList.length = 2 and choose 2
-    case 470:
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum
-      );
-
-      // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
-        user_name,
-        UsersIndex,
-        cycleIndexNum,
-        "שלב הנוקאאוט",
-        GamesList
-      );
-      console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Nokout(
-        GuessData_Saved,
-        true,
-        cycleNum,
-        cycleText,
-        "Alufot"
-      );
-      console.log(textMessage);
-      textMessage1 = textMessage[0];
-      textMessage2 = textMessage[1];
-      textMessage3 = textMessage[2];
-
-      break;
-
-    case 472:
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum
-      );
-
-      // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
-        user_name,
-        UsersIndex,
-        cycleIndexNum,
-        "שלב הנוקאאוט",
-        GamesList
-      );
-      console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Nokout(
-        GuessData_Saved,
-        false,
-        cycleNum,
-        cycleText,
-        "Alufot"
-      );
-      console.log(textMessage);
-      textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
-      break;
-
-    //-----------------------------GamesListLength=4---------
-    //if GamesList.length = 2 and choose 1 show the gusses and finish
-    case 474:
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum
-      );
-
-      // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
-        user_name,
-        UsersIndex,
-        cycleIndexNum,
-        "שלב הנוקאאוט",
-        GamesList
-      );
-      console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Nokout(
-        GuessData_Saved,
-        false,
-        cycleNum,
-        cycleText,
-        "Alufot"
-      );
-      console.log(textMessage);
-      textMessage1 = textMessage[0];
-      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
-      break;
-
-    //if GamesList.length = 2 and choose 2
-    case 475:
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum
-      );
-
-      // ----------End fix auto----------------
-      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
-        user_name,
-        UsersIndex,
-        cycleIndexNum,
-        "שלב הנוקאאוט",
-        GamesList
-      );
-      console.log("GuessData_Saved", GuessData_Saved);
-      textMessage = await footballFunc.chooseGameToFix_Nokout(
-        GuessData_Saved,
-        true,
-        cycleNum,
-        cycleText,
-        "Alufot"
-      );
-      console.log(textMessage);
-      textMessage1 = textMessage[0];
-      textMessage2 = textMessage[1];
-      textMessage3 = textMessage[2];
-
-      break;
-
-    case 476:
-      // ----------Start fix auto----------------
-      await footballFunc.fixAuto_Main_Nokout(
-        GamesList,
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum
-      );
-
-      // ----------End fix auto----------------
       GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
         user_name,
         UsersIndex,
@@ -1272,7 +849,6 @@ const shlavHanokOut = async function (
       textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
       break;
   }
-
   return [textMessage1, textMessage2, textMessage3];
 };
 
