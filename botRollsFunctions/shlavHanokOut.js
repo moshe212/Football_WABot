@@ -31,6 +31,8 @@ const shlavHanokOut = async function (
   let Minuts = "";
   let GuessData_Saved = [];
   let textMessage = "";
+  let score1 = "";
+  let score2 = "";
 
   switch (stage) {
     case 297:
@@ -706,13 +708,18 @@ const shlavHanokOut = async function (
       textMessage3 = textMessage[2];
 
       break;
-    case 451:
-      // gameNum = message.split(" ")[1];
-      // score1 = message.split(" ")[3].split(":")[1];
-      // score2 = message.split(" ")[3].split(":")[0];
-      teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
-      teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num];
-      minute_toFix = message.split(" ")[7];
+    case 668:
+    case 669:
+      gameNum = message.split(" ")[1];
+      score1 = message.split(" ")[3].split(":")[1];
+      score2 = message.split(" ")[3].split(":")[0];
+
+      if (cycleText.includes("UP")) {
+        teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
+        teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num];
+      } else if (cycleText.includes("TIME")) {
+        minute_toFix = message.split(" ")[5];
+      }
 
       console.log(
         "answer",
@@ -732,13 +739,15 @@ const shlavHanokOut = async function (
         GuessData_ShlavHanokout,
         cycleIndexNum,
         teamUp_ToFix,
-        minute_toFix
+        minute_toFix,
+        "Alufot"
       );
 
       textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
       textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
       break;
-    case 454:
+    case 671:
+    case 677:
       // ----------Start fix auto----------------
       await footballFunc.fixAuto_Main_Nokout(
         GamesList,
@@ -768,7 +777,8 @@ const shlavHanokOut = async function (
       textMessage1 = textMessage[0];
       textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
       break;
-    case 453:
+    case 672:
+    case 678:
       // ----------Start fix auto----------------
       await footballFunc.fixAuto_Main_Nokout(
         GamesList,
@@ -800,13 +810,20 @@ const shlavHanokOut = async function (
       textMessage3 = textMessage[2];
 
       break;
-    case 456:
-      // gameNum = message.split(" ")[1];
-      // score1 = message.split(" ")[3].split(":")[1];
-      // score2 = message.split(" ")[3].split(":")[0];
-      teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
-      teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num - 1];
-      minute_toFix = message.split(" ")[7];
+    case 674:
+    case 675:
+    case 680:
+    case 681:
+      gameNum = message.split(" ")[1];
+      score1 = message.split(" ")[3].split(":")[1];
+      score2 = message.split(" ")[3].split(":")[0];
+
+      if (cycleText.includes("UP")) {
+        teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
+        teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num];
+      } else if (cycleText.includes("TIME")) {
+        minute_toFix = message.split(" ")[5];
+      }
 
       console.log(
         "answer",
@@ -826,11 +843,38 @@ const shlavHanokOut = async function (
         GuessData_ShlavHanokout,
         cycleIndexNum,
         teamUp_ToFix,
-        minute_toFix
+        minute_toFix,
+        "Alufot"
       );
 
-      textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
-      textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
+      // ----------Start fix auto----------------
+      await footballFunc.fixAuto_Main_Nokout(
+        GamesList,
+        user_name,
+        UsersIndex,
+        GuessData_ShlavHanokout,
+        cycleIndexNum
+      );
+
+      // ----------End fix auto----------------
+      GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
+        user_name,
+        UsersIndex,
+        cycleIndexNum,
+        "שלב הנוקאאוט",
+        GamesList
+      );
+      console.log("GuessData_Saved", GuessData_Saved);
+      textMessage = await footballFunc.chooseGameToFix_Nokout(
+        GuessData_Saved,
+        false,
+        cycleNum,
+        cycleText,
+        "Alufot"
+      );
+      console.log(textMessage);
+      textMessage1 = textMessage[0];
+      textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
       break;
     case 459:
       // ----------Start fix auto----------------

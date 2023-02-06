@@ -26,6 +26,7 @@ const saveFix_Nokout = async function (
   let ScoreTeam2 = 0;
   let TeamUp = "";
   let Minute = "";
+  let minuteColumn = "";
   try {
     switch (gameNum) {
       case 1:
@@ -56,34 +57,39 @@ const saveFix_Nokout = async function (
           "",
           fileName
         );
-        await saveData_Full(
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          "H",
-          "",
-          "",
-          "",
-          "",
-          TeamUp,
-          fileName
-        );
-        await saveData_Full(
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          "I",
-          "",
-          "",
-          "",
-          "",
-          Minute,
-          fileName
-        );
+        if (TeamUp !== "") {
+          await saveData_Full(
+            user_name,
+            UsersIndex,
+            GuessData,
+            cycleIndexNum,
+            "שלב הנוקאאוט",
+            "H",
+            "",
+            "",
+            "",
+            "",
+            TeamUp,
+            fileName
+          );
+        }
+        if (Minute !== "") {
+          minuteColumn = fileName === "Mondial" ? "I" : "H";
+          await saveData_Full(
+            user_name,
+            UsersIndex,
+            GuessData,
+            cycleIndexNum,
+            "שלב הנוקאאוט",
+            minuteColumn,
+            "",
+            "",
+            "",
+            "",
+            Minute,
+            fileName
+          );
+        }
 
         break;
       case 2:
@@ -113,34 +119,40 @@ const saveFix_Nokout = async function (
           "",
           fileName
         );
-        await saveData_Full(
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          "X",
-          "",
-          "",
-          "",
-          "",
-          TeamUp,
-          fileName
-        );
-        await saveData_Full(
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          "Y",
-          "",
-          "",
-          "",
-          "",
-          Minute,
-          fileName
-        );
+
+        if (TeamUp !== "") {
+          await saveData_Full(
+            user_name,
+            UsersIndex,
+            GuessData,
+            cycleIndexNum,
+            "שלב הנוקאאוט",
+            "X",
+            "",
+            "",
+            "",
+            "",
+            TeamUp,
+            fileName
+          );
+        }
+        if (Minute !== "") {
+          minuteColumn = fileName === "Mondial" ? "Y" : "X";
+          await saveData_Full(
+            user_name,
+            UsersIndex,
+            GuessData,
+            cycleIndexNum,
+            "שלב הנוקאאוט",
+            minuteColumn,
+            "",
+            "",
+            "",
+            "",
+            Minute,
+            fileName
+          );
+        }
 
         break;
 
@@ -170,34 +182,41 @@ const saveFix_Nokout = async function (
           "",
           fileName
         );
-        await saveData_Full(
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          "AN",
-          "",
-          "",
-          "",
-          "",
-          TeamUp,
-          fileName
-        );
-        await saveData_Full(
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          "AO",
-          "",
-          "",
-          "",
-          "",
-          Minute,
-          fileName
-        );
+
+        if (TeamUp !== "") {
+          await saveData_Full(
+            user_name,
+            UsersIndex,
+            GuessData,
+            cycleIndexNum,
+            "שלב הנוקאאוט",
+            "AN",
+            "",
+            "",
+            "",
+            "",
+            TeamUp,
+            fileName
+          );
+        }
+
+        if (Minute !== "") {
+          minuteColumn = fileName === "Mondial" ? "AO" : "AN";
+          await saveData_Full(
+            user_name,
+            UsersIndex,
+            GuessData,
+            cycleIndexNum,
+            "שלב הנוקאאוט",
+            minuteColumn,
+            "",
+            "",
+            "",
+            "",
+            Minute,
+            fileName
+          );
+        }
         break;
 
       case 4:
@@ -226,34 +245,41 @@ const saveFix_Nokout = async function (
           "",
           fileName
         );
-        await saveData_Full(
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          "BD",
-          "",
-          "",
-          "",
-          "",
-          TeamUp,
-          fileName
-        );
-        await saveData_Full(
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          "BE",
-          "",
-          "",
-          "",
-          "",
-          Minute,
-          fileName
-        );
+
+        if (TeamUp !== "") {
+          await saveData_Full(
+            user_name,
+            UsersIndex,
+            GuessData,
+            cycleIndexNum,
+            "שלב הנוקאאוט",
+            "BD",
+            "",
+            "",
+            "",
+            "",
+            TeamUp,
+            fileName
+          );
+        }
+
+        if (Minute !== "") {
+          minuteColumn = fileName === "Mondial" ? "BE" : "BD";
+          await saveData_Full(
+            user_name,
+            UsersIndex,
+            GuessData,
+            cycleIndexNum,
+            "שלב הנוקאאוט",
+            minuteColumn,
+            "",
+            "",
+            "",
+            "",
+            Minute,
+            fileName
+          );
+        }
         break;
 
       case 5:

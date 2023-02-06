@@ -16,7 +16,7 @@ const chooseGameToFix_Nokout = async function (
           GuessData_Saved[i].minute +
           "*\n"
         : fileName === "Alufot" && cycleText.includes("UP")
-        ? "*\n" + GuessData_Saved[i].teamUp + "*" + "עולה"
+        ? "\n*" + GuessData_Saved[i].teamUp + "*" + "עולה"
         : fileName === "Alufot" && cycleText.includes("TIME")
         ? "*\n" + GuessData_Saved[i].minute + " דקות*"
         : "";
@@ -79,13 +79,19 @@ const chooseGameToFix_Nokout = async function (
     : "*להלן הניחושים שלכם לשלב-" + cycle + ":*" + "\n" + fullStr;
 
   const TextMsg2 =
-    fileName === "Mondial" ||
-    (fileName === "Alufot" && cycleText.includes("TIME"))
+    fileName === "Mondial"
+      ? "עליכם להשיב במבנה הבא: " +
+        "\n" +
+        "*משחק 1 תוצאה 2:1 עולה 1 זמן 2*" +
+        "\nפרמטר הזמן: \n*1* 90 דקות \n*2* 120 דקות \n*3* פנדלים"
+      : fileName === "Alufot" && cycleText.includes("TIME")
       ? "עליכם להשיב במבנה הבא: " +
         "\n" +
         "*משחק 1 תוצאה 2:1 זמן 2*" +
         "\nפרמטר הזמן: \n*1* 90 דקות \n*2* 120 דקות \n*3* פנדלים"
-      : "עליכם להשיב במבנה הבא: " + "\n" + "*משחק 1 תוצאה 2:1*";
+      : fileName === "Alufot" && cycleText.includes("UP")
+      ? "עליכם להשיב במבנה הבא: " + "\n" + "*משחק 1 תוצאה 2:1* עולה 1"
+      : "";
   const textMessage2 = message2
     ? TextMsg2
     : "\n 1️⃣ לאישור וסיום \n 2️⃣ לשינוי ועריכה ";
