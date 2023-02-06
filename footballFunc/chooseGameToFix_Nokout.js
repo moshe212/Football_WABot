@@ -29,7 +29,8 @@ const chooseGameToFix_Nokout = async function (
       GuessData_Saved[i].team2[1] +
       ":" +
       GuessData_Saved[i].team1[1] +
-      endStr;
+      endStr +
+      "\n";
 
     fullStr = fullStr + str;
   }
