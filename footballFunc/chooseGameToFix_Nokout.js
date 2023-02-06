@@ -8,14 +8,17 @@ const chooseGameToFix_Nokout = async function (
   let fullStr = "";
   for (let i = 0; i < GuessData_Saved.length; i++) {
     const endStr =
-      fileName === "Mondial" ||
-      (fileName === "Alufot" && cycleText.includes("TIME"))
+      fileName === "Mondial"
         ? "*\n*" +
           GuessData_Saved[i].teamUp +
           "* עולה, ב-" +
           "*" +
           GuessData_Saved[i].minute +
           "*\n"
+        : fileName === "Alufot" && cycleText.includes("UP")
+        ? "*\n" + GuessData_Saved[i].teamUp + "*" + "עולה"
+        : fileName === "Alufot" && cycleText.includes("TIME")
+        ? "*\n" + GuessData_Saved[i].minute + " דקות*"
         : "";
     const str =
       "\n" +
@@ -34,14 +37,17 @@ const chooseGameToFix_Nokout = async function (
   let fullStrfIX = "";
   for (let f = 0; f < GuessData_Saved.length; f++) {
     const endStrFix =
-      fileName === "Mondial" ||
-      (fileName === "Alufot" && cycleText.includes("TIME"))
+      fileName === "Mondial"
         ? "*\n*" +
-          GuessData_Saved[f].teamUp +
+          GuessData_Saved[i].teamUp +
           "* עולה, ב-" +
           "*" +
-          GuessData_Saved[f].minute +
+          GuessData_Saved[i].minute +
           "*\n"
+        : fileName === "Alufot" && cycleText.includes("UP")
+        ? "*\n" + GuessData_Saved[i].teamUp + "*" + "עולה"
+        : fileName === "Alufot" && cycleText.includes("TIME")
+        ? "*\n" + GuessData_Saved[i].minute + " דקות*"
         : "";
     const strfIX =
       "\n" +
