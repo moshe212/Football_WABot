@@ -748,6 +748,7 @@ const shlavHanokOut = async function (
       textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
       break;
 
+    case 672:
     case 686:
     case 692:
       GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
@@ -795,7 +796,6 @@ const shlavHanokOut = async function (
 
       break;
 
-    case 672:
     case 696:
     case 697:
     case 678:
