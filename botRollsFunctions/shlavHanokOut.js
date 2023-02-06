@@ -709,11 +709,15 @@ const shlavHanokOut = async function (
       console.log("gameNum", gameNum);
       console.log("GamesList", GamesList);
       console.log("parse", parseInt(message.split(" ")[5]));
-      console.log("gm", GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num]);
+      console.log(
+        "gm",
+        GamesList[parseInt(gameNum) - 1][parseInt(teamUp_ToFix_Num) - 1]
+      );
 
       if (cycleText.includes("UP")) {
         teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
-        teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num];
+        teamUp_ToFix =
+          GamesList[parseInt(gameNum) - 1][parseInt(teamUp_ToFix_Num) - 1];
       } else if (cycleText.includes("TIME")) {
         minute_toFix = message.split(" ")[5];
       }
@@ -809,7 +813,8 @@ const shlavHanokOut = async function (
 
       if (cycleText.includes("UP")) {
         teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
-        teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num];
+        teamUp_ToFix =
+          GamesList[parseInt(gameNum) - 1][parseInt(teamUp_ToFix_Num) - 1];
       } else if (cycleText.includes("TIME")) {
         minute_toFix = message.split(" ")[5];
       }
