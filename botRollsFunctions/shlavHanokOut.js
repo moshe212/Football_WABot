@@ -706,6 +706,9 @@ const shlavHanokOut = async function (
       score1 = message.split(" ")[3].split(":")[1];
       score2 = message.split(" ")[3].split(":")[0];
 
+      console.log("parse", parseInt(message.split(" ")[5]));
+      console.log("gm", GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num]);
+
       if (cycleText.includes("UP")) {
         teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
         teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num];
