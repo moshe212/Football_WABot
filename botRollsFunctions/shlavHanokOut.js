@@ -218,7 +218,7 @@ const shlavHanokOut = async function (
         await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
-          GuessData,
+          GuessData_ShlavHanokout,
           cycleIndexNum,
           "שלב הנוקאאוט",
           "H",
@@ -356,7 +356,7 @@ const shlavHanokOut = async function (
         await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
-          GuessData,
+          GuessData_ShlavHanokout,
           cycleIndexNum,
           "שלב הנוקאאוט",
           "X",
@@ -494,7 +494,7 @@ const shlavHanokOut = async function (
         await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
-          GuessData,
+          GuessData_ShlavHanokout,
           cycleIndexNum,
           "שלב הנוקאאוט",
           "AN",
@@ -624,7 +624,7 @@ const shlavHanokOut = async function (
         await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
-          GuessData,
+          GuessData_ShlavHanokout,
           cycleIndexNum,
           "שלב הנוקאאוט",
           "BD",
