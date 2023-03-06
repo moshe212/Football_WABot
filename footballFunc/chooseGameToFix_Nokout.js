@@ -18,7 +18,7 @@ const chooseGameToFix_Nokout = async function (
         : fileName === "Alufot" && cycleText.includes("UP")
         ? "\n*" + GuessData_Saved[i].teamUp + "*" + " עולה"
         : fileName === "Alufot" && cycleText.includes("TIME")
-        ? "*\n" + GuessData_Saved[i].minute + "*"
+        ? "*\n" + GuessData_Saved[i].minute
         : "";
     const str =
       "\n" +
@@ -48,7 +48,7 @@ const chooseGameToFix_Nokout = async function (
         : fileName === "Alufot" && cycleText.includes("UP")
         ? "\n*" + GuessData_Saved[f].teamUp + "*" + " עולה"
         : fileName === "Alufot" && cycleText.includes("TIME")
-        ? "\n*" + GuessData_Saved[f].minute + "*"
+        ? "\n*" + GuessData_Saved[f].minute
         : "";
     const strfIX =
       "\n" +
