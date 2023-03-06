@@ -93,7 +93,7 @@ const shlavHanokOut = async function (
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_googleAPI(
+      await footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
@@ -186,7 +186,7 @@ const shlavHanokOut = async function (
           ChoiseUpteam = Team2;
         }
 
-        footballFunc.saveData_googleAPI(
+        await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
           GuessData_ShlavHanokout,
@@ -249,7 +249,7 @@ const shlavHanokOut = async function (
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_googleAPI(
+      await footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
@@ -322,7 +322,7 @@ const shlavHanokOut = async function (
           ChoiseUpteam = Team2;
         }
 
-        footballFunc.saveData_googleAPI(
+        await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
           GuessData_ShlavHanokout,
@@ -389,7 +389,7 @@ const shlavHanokOut = async function (
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_googleAPI(
+      await footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
@@ -460,7 +460,7 @@ const shlavHanokOut = async function (
           ChoiseUpteam = Team2;
         }
 
-        footballFunc.saveData_googleAPI(
+        await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
           GuessData_ShlavHanokout,
@@ -527,7 +527,7 @@ const shlavHanokOut = async function (
       console.log("ScoreTeam1", ScoreTeam1);
       console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_googleAPI(
+      await footballFunc.saveData_googleAPI(
         user_name,
         UsersIndex,
         GuessData_ShlavHanokout,
