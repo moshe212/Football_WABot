@@ -203,18 +203,6 @@ const shlavHanokOut = async function (
         break;
       } else {
         ChoiseMinut = message;
-
-        GameRow = await footballFunc.getGameGuss(
-          user_name,
-          UsersIndex,
-          GuessData_ShlavHanokout,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          "F",
-          "H",
-          "Alufot"
-        );
-
         if (parseInt(ChoiseMinut) === 1) {
           Minuts = "90 דקות";
         } else if (parseInt(ChoiseMinut) === 2) {
@@ -241,6 +229,17 @@ const shlavHanokOut = async function (
           Minuts,
           "Alufot"
         );
+        GameRow = await footballFunc.getGameGuss(
+          user_name,
+          UsersIndex,
+          GuessData_ShlavHanokout,
+          cycleIndexNum,
+          "שלב הנוקאאוט",
+          "F",
+          "H",
+          "Alufot"
+        );
+
         break;
       }
 
@@ -342,16 +341,6 @@ const shlavHanokOut = async function (
       } else {
         console.log(GamesList);
         ChoiseMinut = message;
-        GameRow = await footballFunc.getGameGuss(
-          user_name,
-          UsersIndex,
-          GuessData_ShlavHanokout,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          "V",
-          "X",
-          "Alufot"
-        );
         if (parseInt(ChoiseMinut) === 1) {
           Minuts = "90 דקות";
         } else if (parseInt(ChoiseMinut) === 2) {
@@ -378,11 +367,43 @@ const shlavHanokOut = async function (
           Minuts,
           "Alufot"
         );
+
+        GameRow = await footballFunc.getGameGuss(
+          user_name,
+          UsersIndex,
+          GuessData_ShlavHanokout,
+          cycleIndexNum,
+          "שלב הנוקאאוט",
+          "V",
+          "X",
+          "Alufot"
+        );
+
         break;
       }
 
     case 407:
       console.log(GamesList);
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_googleAPI(
+        user_name,
+        UsersIndex,
+        GuessData_ShlavHanokout,
+        cycleIndexNum,
+        "שלב הנוקאאוט",
+        "AL",
+        "AM",
+        ScoreTeam1,
+        ScoreTeam2,
+        "",
+        "",
+        "Alufot"
+      );
+
       if (cycleText.includes("UP")) {
         console.log(GamesList);
         Team1 = GamesList[2][0];
@@ -419,25 +440,6 @@ const shlavHanokOut = async function (
         }
       }
 
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
-      console.log("ScoreTeam1", ScoreTeam1);
-      console.log("ScoreTeam2", ScoreTeam2);
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum,
-        "שלב הנוקאאוט",
-        "AL",
-        "AM",
-        ScoreTeam1,
-        ScoreTeam2,
-        "",
-        "",
-        "Alufot"
-      );
       break;
     case 409:
       console.log(GamesList);
@@ -477,16 +479,6 @@ const shlavHanokOut = async function (
       } else {
         console.log(GamesList);
         ChoiseMinut = message;
-        GameRow = await footballFunc.getGameGuss(
-          user_name,
-          UsersIndex,
-          GuessData_ShlavHanokout,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          "AL",
-          "AN",
-          "Alufot"
-        );
         if (parseInt(ChoiseMinut) === 1) {
           Minuts = "90 דקות";
         } else if (parseInt(ChoiseMinut) === 2) {
@@ -513,11 +505,43 @@ const shlavHanokOut = async function (
           Minuts,
           "Alufot"
         );
+
+        GameRow = await footballFunc.getGameGuss(
+          user_name,
+          UsersIndex,
+          GuessData_ShlavHanokout,
+          cycleIndexNum,
+          "שלב הנוקאאוט",
+          "AL",
+          "AN",
+          "Alufot"
+        );
+
         break;
       }
 
     case 411:
       console.log(GamesList);
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_googleAPI(
+        user_name,
+        UsersIndex,
+        GuessData_ShlavHanokout,
+        cycleIndexNum,
+        "שלב הנוקאאוט",
+        "BB",
+        "BC",
+        ScoreTeam1,
+        ScoreTeam2,
+        "",
+        "",
+        "Alufot"
+      );
+
       if (cycleText.includes("UP")) {
         console.log(GamesList);
         Team1 = GamesList[3][0];
@@ -554,25 +578,6 @@ const shlavHanokOut = async function (
         }
       }
 
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
-      console.log("ScoreTeam1", ScoreTeam1);
-      console.log("ScoreTeam2", ScoreTeam2);
-
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum,
-        "שלב הנוקאאוט",
-        "BB",
-        "BC",
-        ScoreTeam1,
-        ScoreTeam2,
-        "",
-        "",
-        "Alufot"
-      );
       break;
 
     case 413:
@@ -604,16 +609,6 @@ const shlavHanokOut = async function (
       } else {
         console.log(GamesList);
         ChoiseMinut = message;
-        GameRow = await footballFunc.getGameGuss(
-          user_name,
-          UsersIndex,
-          GuessData_ShlavHanokout,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          "BB",
-          "BD",
-          "Alufot"
-        );
         if (parseInt(ChoiseMinut) === 1) {
           Minuts = "90 דקות";
         } else if (parseInt(ChoiseMinut) === 2) {
@@ -638,6 +633,17 @@ const shlavHanokOut = async function (
           "",
           "",
           Minuts,
+          "Alufot"
+        );
+
+        GameRow = await footballFunc.getGameGuss(
+          user_name,
+          UsersIndex,
+          GuessData_ShlavHanokout,
+          cycleIndexNum,
+          "שלב הנוקאאוט",
+          "BB",
+          "BD",
           "Alufot"
         );
       }
