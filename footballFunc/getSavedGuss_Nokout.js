@@ -53,7 +53,7 @@ const getSavedGuss_Nokout = async function (
               score1 = SavedGuess[5];
               score2 = SavedGuess[6];
               teamUp = SavedGuess[7];
-              minute = SavedGuess[8];
+              minute = fileName === "Mondial" ? SavedGuess[8] : SavedGuess[7];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
@@ -67,7 +67,7 @@ const getSavedGuss_Nokout = async function (
               score1 = SavedGuess[21];
               score2 = SavedGuess[22];
               teamUp = SavedGuess[23];
-              minute = SavedGuess[24];
+              minute = fileName === "Mondial" ? SavedGuess[24] : SavedGuess[23];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
@@ -80,7 +80,7 @@ const getSavedGuss_Nokout = async function (
               score1 = SavedGuess[37];
               score2 = SavedGuess[38];
               teamUp = SavedGuess[39];
-              minute = SavedGuess[40];
+              minute = fileName === "Mondial" ? SavedGuess[40] : SavedGuess[39];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
@@ -93,7 +93,7 @@ const getSavedGuss_Nokout = async function (
               score1 = SavedGuess[53];
               score2 = SavedGuess[54];
               teamUp = SavedGuess[55];
-              minute = SavedGuess[56];
+              minute = fileName === "Mondial" ? SavedGuess[56] : SavedGuess[55];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
@@ -106,7 +106,7 @@ const getSavedGuss_Nokout = async function (
               score1 = SavedGuess[69];
               score2 = SavedGuess[70];
               teamUp = SavedGuess[71];
-              minute = SavedGuess[72];
+              minute = fileName === "Mondial" ? SavedGuess[72] : SavedGuess[71];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
