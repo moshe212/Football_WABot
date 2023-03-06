@@ -88,6 +88,26 @@ const shlavHanokOut = async function (
 
       break;
     case 398:
+      ScoreTeam1 = score.split(":")[1];
+      ScoreTeam2 = score.split(":")[0];
+      console.log("ScoreTeam1", ScoreTeam1);
+      console.log("ScoreTeam2", ScoreTeam2);
+
+      footballFunc.saveData_googleAPI(
+        user_name,
+        UsersIndex,
+        GuessData_ShlavHanokout,
+        cycleIndexNum,
+        "שלב הנוקאאוט",
+        "F",
+        "G",
+        ScoreTeam1,
+        ScoreTeam2,
+        "",
+        "",
+        "Alufot"
+      );
+
       if (cycleText.includes("UP")) {
         console.log(GamesList);
         Team1 = GamesList[0][0];
@@ -123,25 +143,7 @@ const shlavHanokOut = async function (
           textMessage3 = "\n3️⃣ פנדלים";
         }
       }
-      ScoreTeam1 = score.split(":")[1];
-      ScoreTeam2 = score.split(":")[0];
-      console.log("ScoreTeam1", ScoreTeam1);
-      console.log("ScoreTeam2", ScoreTeam2);
 
-      footballFunc.saveData_googleAPI(
-        user_name,
-        UsersIndex,
-        GuessData_ShlavHanokout,
-        cycleIndexNum,
-        "שלב הנוקאאוט",
-        "F",
-        "G",
-        ScoreTeam1,
-        ScoreTeam2,
-        "",
-        "",
-        "Alufot"
-      );
       break;
 
     case 401:
@@ -574,6 +576,7 @@ const shlavHanokOut = async function (
       break;
 
     case 413:
+      console.log(GamesList);
       if (cycleText.includes("UP")) {
         Team1 = GamesList[3][0];
         Team2 = GamesList[3][1];
@@ -584,7 +587,7 @@ const shlavHanokOut = async function (
           ChoiseUpteam = Team2;
         }
 
-        footballFunc.saveData_googleAPI(
+        await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
           GuessData_ShlavHanokout,
