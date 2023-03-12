@@ -136,7 +136,7 @@ const shlavHanokOut = async function (
         textMessage1 = str3 + "\n" + Team1 + " - " + Team2;
         textMessage2 = "איך יסתיים המשחק?";
         textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות \n3️⃣ פנדלים";
-        console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
+        // console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
         // console.log(GameRow.data[0][0], GameRow.data[0][1]);
         // if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
         //   textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
