@@ -1,6 +1,6 @@
 const { footballFunc } = require("../footballFunc");
 
-const Olami = async function ({
+const Olami = async function (
   cycleNum,
   cycleText,
   cycleDate,
@@ -16,8 +16,8 @@ const Olami = async function ({
   score2,
   AchievementsOfSeasonData,
   tableObj,
-  UsersList,
-}) {
+  UsersList
+) {
   let textMessage1 = "empty";
   let textMessage2 = "empty";
   let textMessage3 = "empty";
