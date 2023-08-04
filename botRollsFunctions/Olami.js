@@ -35,6 +35,7 @@ const Olami = async function ({
     });
     textMessage1 = tableTextMassage;
   } else {
+    console.log("stage", cycleText);
     switch (stage) {
       case 700:
         if (cycleText.includes("מחזור")) {
