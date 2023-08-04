@@ -36,7 +36,7 @@ const Olami = async function ({
     textMessage1 = tableTextMassage;
   } else {
     switch (stage) {
-      case 110:
+      case 700:
         if (cycleText.includes("מחזור")) {
           const firstMessages = await footballFunc.firstSort(
             stage,
