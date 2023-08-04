@@ -18,6 +18,7 @@ const firstSort = async function (
     case 253:
     case 256:
     case 257:
+    case 700:
       console.log("UsersList", UsersList);
       if (!UsersList.includes(user_name)) {
         console.log("not includs");
@@ -28,6 +29,8 @@ const firstSort = async function (
             ? "ליגת האלופות"
             : fileName === "Mondial"
             ? "מונדיאל"
+            : fileName === "Olami"
+            ? "כדורגל עולמי"
             : "";
         textMessage1 =
           "אהלן, אני הבוט של *היציע: " +
@@ -72,6 +75,9 @@ const firstSort = async function (
             // "\n5️⃣ - לטבלאות"+
             "\n6️⃣ - לקובץ הלייב" +
             "\n0️⃣ - לחזרה לתפריט הראשי";
+        } else if (fileName === "Olami") {
+          textMessage1 =
+            "ברוכים הבאים למשחק *היציע: כדורגל עולמי* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי המחזור \n2️⃣ -לקבוצת ה-Whatsapp הרשמית \n3️⃣ - לחזרה לתפריט הראשי";
         }
       } else {
         if (fileName === "LigatAl") {
@@ -91,6 +97,10 @@ const firstSort = async function (
             // "\n5️⃣ - לטבלאות"+
             "\n6️⃣ - לקובץ הלייב" +
             "\n0️⃣ - לחזרה לתפריט הראשי";
+        } else if (fileName === "Olami") {
+          textMessage1 = "מה קורה נשמות? שמח שחזרתם!" + "\nמה ברצונכם לעשות?";
+          textMessage2 =
+            "ברוכים הבאים למשחק *היציע: כדורגל עולמי* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי המחזור \n2️⃣ -לקבוצת ה-Whatsapp הרשמית \n3️⃣ - לחזרה לתפריט הראשי";
         }
       }
 

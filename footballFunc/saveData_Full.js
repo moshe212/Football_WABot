@@ -25,6 +25,8 @@ const saveData_Full = async function (
       ? "1a8XbSk7anY4S0SvyJawCqrYYcae4WUN3C-NUO7_K-ys"
       : fileName === "Mondial"
       ? "1b_hJkbj-fKNlWzpI4irXhIqKi1SxuzvVtAbrgRjBSmc"
+      : fileName === "Olami"
+      ? "1ca-85Sjr4NHpzImvq3KCsOq2n8aUEZ_CMGKrpO5Hbyg"
       : "";
   const doc = new GoogleSpreadsheet(id);
 
