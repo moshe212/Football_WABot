@@ -436,7 +436,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     (stage > 248 && stage < 253) ||
     (stage > 266 && stage < 293)
   ) {
-    const OlamiMessages = await botRollsFunctions.Olami({
+    const OlamiMessages = await botRollsFunctions.Olami(
       olamiCycleNum,
       olamiCycleText,
       olamiCycleDate,
@@ -452,8 +452,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       score2,
       olamiAchievementsOfSeasonData,
       olamiTableObj,
-      olamiUsersList,
-    });
+      olamiUsersList
+    );
 
     textMessage1 = OlamiMessages[0];
     textMessage2 = OlamiMessages[1];
