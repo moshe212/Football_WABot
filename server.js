@@ -257,7 +257,7 @@ const getOlamiData = async () => {
   for (let l = 0; l < olamiUsersIndex.length; l++) {
     olamiUsersList.push(olamiUsersIndex[l]._rawData[0]);
   }
-  olamiGuessData = await footballFunc.getDataFromSheet("שלב הבתים", "Olami");
+  olamiGuessData = await footballFunc.getDataFromSheet("הניחושים", "Olami");
   olamiGuessData_ShlavHanokout = await footballFunc.getDataFromSheet(
     "שלב הנוקאאוט",
     "Olami"
