@@ -228,8 +228,10 @@ let olamiTableObj = {};
 const getOlamiData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים", "Olami");
   const res_cycle = await footballFunc.getCycle(Data);
+  console.log("res_cycle_olami", res_cycle);
   olamiCycleNum = res_cycle[0];
   olamiCycleText = res_cycle[3];
+  console.log("olamiCycleText", olamiCycleText);
   const cycleDate1 = moment(res_cycle[1]).format("DD-MM-YYYY");
   const cycleDate2 = cycleDate1.replace("-", ".");
   olamiCycleDate = cycleDate2.replace("-", ".");
@@ -285,14 +287,9 @@ app.post("/api/Whatsapp", async (req, res) => {
   const user_name = req.body.query.sender;
   console.log("username", user_name);
   console.log("cycleNum", cycleNum, cycleDate);
-  console.log(
-    "alufotCycleNum",
-    alufotCycleNum,
-    alufotCycleDate,
-    alufotCycleText
-  );
-  console.log("mondialCycleNum", mondialCycleNum);
-  console.log("mondialGamesList", mondialGamesList);
+  console.log("olamiCycleNum", olamiCycleNum, olamiCycleDate, olamiCycleText);
+  // console.log("mondialCycleNum", mondialCycleNum);
+  // console.log("mondialGamesList", mondialGamesList);
 
   const stage = req.body.query.ruleId;
   console.log(stage);
