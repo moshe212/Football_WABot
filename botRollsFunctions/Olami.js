@@ -359,15 +359,14 @@ const Olami = async function (
         );
 
         break;
+
       case 714:
         console.log(GamesList);
-        Team1 = GamesList[6][0];
-        Team2 = GamesList[6][1];
+        Team1 = GamesList[5][0];
+        Team2 = GamesList[5][1];
 
         const str7 = "*מחזור " + cycleNum + ", משחק מספר 7:* ";
-        textMessage1 = str7 + "\n" + Team1 + " - " + Team2;
-        textMessage2 =
-          "*שימו לב:* אחרי שתנחשו את תוצאת המשחק האחרונה, ייקח לי כמה שניות לעבד את הנתונים ולהציג את ניחושי המחזור המלאים ששלחתם. במידה ולא קיבלתם ממני סיכום של הניחושים לאחר 2 דקות, אנא שילחו שוב את הניחוש למשחק האחרון.";
+        textMessage1 = str6 + "\n" + Team1 + " - " + Team2;
         // score = req.body.query.message;
         ScoreTeam1 = score.split(":")[1];
         ScoreTeam2 = score.split(":")[0];
@@ -390,7 +389,96 @@ const Olami = async function (
 
         break;
 
-      case 64:
+      case 775:
+        console.log(GamesList);
+        Team1 = GamesList[5][0];
+        Team2 = GamesList[5][1];
+
+        const str8 = "*מחזור " + cycleNum + ", משחק מספר 8:* ";
+        textMessage1 = str6 + "\n" + Team1 + " - " + Team2;
+        // score = req.body.query.message;
+        ScoreTeam1 = score.split(":")[1];
+        ScoreTeam2 = score.split(":")[0];
+        // GuessData = await footballFunc.getDataFromSheet("הניחושים");
+
+        footballFunc.saveData_googleAPI(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          "הניחושים",
+          "BX",
+          "BY",
+          ScoreTeam1,
+          ScoreTeam2,
+          "",
+          "",
+          "Olami"
+        );
+
+        break;
+
+      case 776:
+        console.log(GamesList);
+        Team1 = GamesList[5][0];
+        Team2 = GamesList[5][1];
+
+        const str9 = "*מחזור " + cycleNum + ", משחק מספר 9:* ";
+        textMessage1 = str6 + "\n" + Team1 + " - " + Team2;
+        // score = req.body.query.message;
+        ScoreTeam1 = score.split(":")[1];
+        ScoreTeam2 = score.split(":")[0];
+        // GuessData = await footballFunc.getDataFromSheet("הניחושים");
+
+        footballFunc.saveData_googleAPI(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          "הניחושים",
+          "CJ",
+          "CK",
+          ScoreTeam1,
+          ScoreTeam2,
+          "",
+          "",
+          "Olami"
+        );
+
+        break;
+
+      case 777:
+        console.log(GamesList);
+        Team1 = GamesList[6][0];
+        Team2 = GamesList[6][1];
+
+        const str10 = "*מחזור " + cycleNum + ", משחק מספר 10:* ";
+        textMessage1 = str7 + "\n" + Team1 + " - " + Team2;
+        textMessage2 =
+          "*שימו לב:* אחרי שתנחשו את תוצאת המשחק האחרונה, ייקח לי כמה שניות לעבד את הנתונים ולהציג את ניחושי המחזור המלאים ששלחתם. במידה ולא קיבלתם ממני סיכום של הניחושים לאחר 2 דקות, אנא שילחו שוב את הניחוש למשחק האחרון.";
+        // score = req.body.query.message;
+        ScoreTeam1 = score.split(":")[1];
+        ScoreTeam2 = score.split(":")[0];
+        // GuessData = await footballFunc.getDataFromSheet("הניחושים");
+
+        footballFunc.saveData_googleAPI(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          "הניחושים",
+          "CV",
+          "CW",
+          ScoreTeam1,
+          ScoreTeam2,
+          "",
+          "",
+          "Olami"
+        );
+
+        break;
+
+      case 778:
         // score = req.body.query.message;
         ScoreTeam1 = score.split(":")[1];
         ScoreTeam2 = score.split(":")[0];
@@ -402,8 +490,8 @@ const Olami = async function (
           GuessData,
           cycleIndexNum,
           "הניחושים",
-          "BX",
-          "BY",
+          "DH",
+          "DI",
           ScoreTeam1,
           ScoreTeam2,
           "",
@@ -450,7 +538,7 @@ const Olami = async function (
 
         break;
 
-      case 68:
+      case 780:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
@@ -472,7 +560,7 @@ const Olami = async function (
 
         break;
 
-      case 69:
+      case 781:
         // gameNum = req.body.query.message.split(" ")[1];
         // score1 = req.body.query.message.split(" ")[3].split(":")[1];
         // score2 = req.body.query.message.split(" ")[3].split(":")[0];
@@ -494,7 +582,7 @@ const Olami = async function (
         textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
         break;
 
-      case 70:
+      case 782:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
@@ -515,7 +603,7 @@ const Olami = async function (
 
         break;
 
-      case 71:
+      case 783:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
@@ -535,111 +623,49 @@ const Olami = async function (
 
         break;
 
-      case 72:
-        // gameNum = req.body.query.message.split(" ")[1];
-        // score1 = req.body.query.message.split(" ")[3].split(":")[1];
-        // score2 = req.body.query.message.split(" ")[3].split(":")[0];
-        console.log("answer", score1, score2, gameNum);
+      // case 72:
+      //   // gameNum = req.body.query.message.split(" ")[1];
+      //   // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      //   // score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      //   console.log("answer", score1, score2, gameNum);
 
-        footballFunc.saveFix(
-          parseInt(gameNum),
-          parseInt(score1),
-          parseInt(score2),
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "Olami",
-          "הניחושים"
-        );
+      //   footballFunc.saveFix(
+      //     parseInt(gameNum),
+      //     parseInt(score1),
+      //     parseInt(score2),
+      //     user_name,
+      //     UsersIndex,
+      //     GuessData,
+      //     cycleIndexNum,
+      //     "Olami",
+      //     "הניחושים"
+      //   );
 
-        textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
-        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
-        break;
+      //   textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
+      //   textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
+      //   break;
 
-      case 73:
-        GuessData_Saved = await footballFunc.getSavedScore(
-          user_name,
-          UsersIndex,
-          cycleIndexNum,
-          "הניחושים",
-          GamesList,
-          "Olami"
-        );
+      // case 73:
+      //   GuessData_Saved = await footballFunc.getSavedScore(
+      //     user_name,
+      //     UsersIndex,
+      //     cycleIndexNum,
+      //     "הניחושים",
+      //     GamesList,
+      //     "Olami"
+      //   );
 
-        textMessage = await footballFunc.chooseGameToFix(
-          GuessData_Saved,
-          true,
-          cycleNum
-        );
-        textMessage1 = textMessage[0];
-        textMessage2 = textMessage[1];
-        textMessage3 = textMessage[2];
-        break;
+      //   textMessage = await footballFunc.chooseGameToFix(
+      //     GuessData_Saved,
+      //     true,
+      //     cycleNum
+      //   );
+      //   textMessage1 = textMessage[0];
+      //   textMessage2 = textMessage[1];
+      //   textMessage3 = textMessage[2];
+      //   break;
 
-      case 74:
-        GuessData_Saved = await footballFunc.getSavedScore(
-          user_name,
-          UsersIndex,
-          cycleIndexNum,
-          "הניחושים",
-          GamesList,
-          "Olami"
-        );
-
-        textMessage = await footballFunc.chooseGameToFix(
-          GuessData_Saved,
-          false,
-          cycleNum
-        );
-        textMessage1 = textMessage[0];
-        textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
-
-        break;
-
-      case 79:
-        // gameNum = req.body.query.message.split(" ")[1];
-        // score1 = req.body.query.message.split(" ")[3].split(":")[1];
-        // score2 = req.body.query.message.split(" ")[3].split(":")[0];
-        console.log("answer", score1, score2, gameNum);
-
-        footballFunc.saveFix(
-          parseInt(gameNum),
-          parseInt(score1),
-          parseInt(score2),
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "Olami",
-          "הניחושים"
-        );
-
-        textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
-        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
-        break;
-
-      case 82:
-        GuessData_Saved = await footballFunc.getSavedScore(
-          user_name,
-          UsersIndex,
-          cycleIndexNum,
-          "הניחושים",
-          GamesList,
-          "Olami"
-        );
-
-        textMessage = await footballFunc.chooseGameToFix(
-          GuessData_Saved,
-          true,
-          cycleNum
-        );
-        textMessage1 = textMessage[0];
-        textMessage2 = textMessage[1];
-        textMessage3 = textMessage[2];
-        break;
-
-      case 83:
+      case 785:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
@@ -659,228 +685,290 @@ const Olami = async function (
 
         break;
 
-      case 84:
-        // gameNum = req.body.query.message.split(" ")[1];
-        // score1 = req.body.query.message.split(" ")[3].split(":")[1];
-        // score2 = req.body.query.message.split(" ")[3].split(":")[0];
-        console.log("answer", score1, score2, gameNum);
+      // case 79:
+      //   // gameNum = req.body.query.message.split(" ")[1];
+      //   // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      //   // score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      //   console.log("answer", score1, score2, gameNum);
 
-        footballFunc.saveFix(
-          parseInt(gameNum),
-          parseInt(score1),
-          parseInt(score2),
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "Olami",
-          "הניחושים"
-        );
+      //   footballFunc.saveFix(
+      //     parseInt(gameNum),
+      //     parseInt(score1),
+      //     parseInt(score2),
+      //     user_name,
+      //     UsersIndex,
+      //     GuessData,
+      //     cycleIndexNum,
+      //     "Olami",
+      //     "הניחושים"
+      //   );
 
-        textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
-        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
-        break;
+      //   textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
+      //   textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
+      //   break;
 
-      case 87:
-        GuessData_Saved = await footballFunc.getSavedScore(
-          user_name,
-          UsersIndex,
-          cycleIndexNum,
-          "הניחושים",
-          GamesList,
-          "Olami"
-        );
+      // case 82:
+      //   GuessData_Saved = await footballFunc.getSavedScore(
+      //     user_name,
+      //     UsersIndex,
+      //     cycleIndexNum,
+      //     "הניחושים",
+      //     GamesList,
+      //     "Olami"
+      //   );
 
-        textMessage = await footballFunc.chooseGameToFix(
-          GuessData_Saved,
-          true,
-          cycleNum
-        );
-        textMessage1 = textMessage[0];
-        textMessage2 = textMessage[1];
-        textMessage3 = textMessage[2];
-        break;
+      //   textMessage = await footballFunc.chooseGameToFix(
+      //     GuessData_Saved,
+      //     true,
+      //     cycleNum
+      //   );
+      //   textMessage1 = textMessage[0];
+      //   textMessage2 = textMessage[1];
+      //   textMessage3 = textMessage[2];
+      //   break;
 
-      case 88:
-        GuessData_Saved = await footballFunc.getSavedScore(
-          user_name,
-          UsersIndex,
-          cycleIndexNum,
-          "הניחושים",
-          GamesList,
-          "Olami"
-        );
+      // case 83:
+      //   GuessData_Saved = await footballFunc.getSavedScore(
+      //     user_name,
+      //     UsersIndex,
+      //     cycleIndexNum,
+      //     "הניחושים",
+      //     GamesList,
+      //     "Olami"
+      //   );
 
-        textMessage = await footballFunc.chooseGameToFix(
-          GuessData_Saved,
-          false,
-          cycleNum
-        );
-        textMessage1 = textMessage[0];
-        textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
+      //   textMessage = await footballFunc.chooseGameToFix(
+      //     GuessData_Saved,
+      //     false,
+      //     cycleNum
+      //   );
+      //   textMessage1 = textMessage[0];
+      //   textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
 
-        break;
+      //   break;
 
-      case 89:
-        // gameNum = req.body.query.message.split(" ")[1];
-        // score1 = req.body.query.message.split(" ")[3].split(":")[1];
-        // score2 = req.body.query.message.split(" ")[3].split(":")[0];
-        console.log("answer", score1, score2, gameNum);
+      // case 84:
+      //   // gameNum = req.body.query.message.split(" ")[1];
+      //   // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      //   // score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      //   console.log("answer", score1, score2, gameNum);
 
-        footballFunc.saveFix(
-          parseInt(gameNum),
-          parseInt(score1),
-          parseInt(score2),
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "Olami",
-          "הניחושים"
-        );
+      //   footballFunc.saveFix(
+      //     parseInt(gameNum),
+      //     parseInt(score1),
+      //     parseInt(score2),
+      //     user_name,
+      //     UsersIndex,
+      //     GuessData,
+      //     cycleIndexNum,
+      //     "Olami",
+      //     "הניחושים"
+      //   );
 
-        textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
-        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
-        break;
+      //   textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
+      //   textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
+      //   break;
 
-      case 92:
-        GuessData_Saved = await footballFunc.getSavedScore(
-          user_name,
-          UsersIndex,
-          cycleIndexNum,
-          "הניחושים",
-          GamesList,
-          "Olami"
-        );
+      // case 87:
+      //   GuessData_Saved = await footballFunc.getSavedScore(
+      //     user_name,
+      //     UsersIndex,
+      //     cycleIndexNum,
+      //     "הניחושים",
+      //     GamesList,
+      //     "Olami"
+      //   );
 
-        textMessage = await footballFunc.chooseGameToFix(
-          GuessData_Saved,
-          true,
-          cycleNum
-        );
-        textMessage1 = textMessage[0];
-        textMessage2 = textMessage[1];
-        textMessage3 = textMessage[2];
-        break;
+      //   textMessage = await footballFunc.chooseGameToFix(
+      //     GuessData_Saved,
+      //     true,
+      //     cycleNum
+      //   );
+      //   textMessage1 = textMessage[0];
+      //   textMessage2 = textMessage[1];
+      //   textMessage3 = textMessage[2];
+      //   break;
 
-      case 93:
-        GuessData_Saved = await footballFunc.getSavedScore(
-          user_name,
-          UsersIndex,
-          cycleIndexNum,
-          "הניחושים",
-          GamesList,
-          "Olami"
-        );
+      // case 88:
+      //   GuessData_Saved = await footballFunc.getSavedScore(
+      //     user_name,
+      //     UsersIndex,
+      //     cycleIndexNum,
+      //     "הניחושים",
+      //     GamesList,
+      //     "Olami"
+      //   );
 
-        textMessage = await footballFunc.chooseGameToFix(
-          GuessData_Saved,
-          false,
-          cycleNum
-        );
-        textMessage1 = textMessage[0];
-        textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
+      //   textMessage = await footballFunc.chooseGameToFix(
+      //     GuessData_Saved,
+      //     false,
+      //     cycleNum
+      //   );
+      //   textMessage1 = textMessage[0];
+      //   textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
 
-        break;
+      //   break;
 
-      case 94:
-        // gameNum = req.body.query.message.split(" ")[1];
-        // score1 = req.body.query.message.split(" ")[3].split(":")[1];
-        // score2 = req.body.query.message.split(" ")[3].split(":")[0];
-        console.log("answer", score1, score2, gameNum);
+      // case 89:
+      //   // gameNum = req.body.query.message.split(" ")[1];
+      //   // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      //   // score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      //   console.log("answer", score1, score2, gameNum);
 
-        footballFunc.saveFix(
-          parseInt(gameNum),
-          parseInt(score1),
-          parseInt(score2),
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "Olami",
-          "הניחושים"
-        );
+      //   footballFunc.saveFix(
+      //     parseInt(gameNum),
+      //     parseInt(score1),
+      //     parseInt(score2),
+      //     user_name,
+      //     UsersIndex,
+      //     GuessData,
+      //     cycleIndexNum,
+      //     "Olami",
+      //     "הניחושים"
+      //   );
 
-        textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
-        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
-        break;
+      //   textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
+      //   textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
+      //   break;
 
-      case 97:
-        GuessData_Saved = await footballFunc.getSavedScore(
-          user_name,
-          UsersIndex,
-          cycleIndexNum,
-          "הניחושים",
-          GamesList,
-          "Olami"
-        );
+      // case 92:
+      //   GuessData_Saved = await footballFunc.getSavedScore(
+      //     user_name,
+      //     UsersIndex,
+      //     cycleIndexNum,
+      //     "הניחושים",
+      //     GamesList,
+      //     "Olami"
+      //   );
 
-        textMessage = await footballFunc.chooseGameToFix(
-          GuessData_Saved,
-          true,
-          cycleNum
-        );
-        textMessage1 = textMessage[0];
-        textMessage2 = textMessage[1];
-        textMessage3 = textMessage[2];
-        break;
+      //   textMessage = await footballFunc.chooseGameToFix(
+      //     GuessData_Saved,
+      //     true,
+      //     cycleNum
+      //   );
+      //   textMessage1 = textMessage[0];
+      //   textMessage2 = textMessage[1];
+      //   textMessage3 = textMessage[2];
+      //   break;
 
-      case 98:
-        GuessData_Saved = await footballFunc.getSavedScore(
-          user_name,
-          UsersIndex,
-          cycleIndexNum,
-          "הניחושים",
-          GamesList,
-          "Olami"
-        );
+      // case 93:
+      //   GuessData_Saved = await footballFunc.getSavedScore(
+      //     user_name,
+      //     UsersIndex,
+      //     cycleIndexNum,
+      //     "הניחושים",
+      //     GamesList,
+      //     "Olami"
+      //   );
 
-        textMessage = await footballFunc.chooseGameToFix(
-          GuessData_Saved,
-          false,
-          cycleNum
-        );
-        textMessage1 = textMessage[0];
-        textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
+      //   textMessage = await footballFunc.chooseGameToFix(
+      //     GuessData_Saved,
+      //     false,
+      //     cycleNum
+      //   );
+      //   textMessage1 = textMessage[0];
+      //   textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
 
-        break;
+      //   break;
 
-      case 99:
-        // gameNum = req.body.query.message.split(" ")[1];
-        // score1 = req.body.query.message.split(" ")[3].split(":")[1];
-        // score2 = req.body.query.message.split(" ")[3].split(":")[0];
-        console.log("answer", score1, score2, gameNum);
+      // case 94:
+      //   // gameNum = req.body.query.message.split(" ")[1];
+      //   // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      //   // score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      //   console.log("answer", score1, score2, gameNum);
 
-        await footballFunc.saveFix(
-          parseInt(gameNum),
-          parseInt(score1),
-          parseInt(score2),
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "Olami",
-          "הניחושים"
-        );
+      //   footballFunc.saveFix(
+      //     parseInt(gameNum),
+      //     parseInt(score1),
+      //     parseInt(score2),
+      //     user_name,
+      //     UsersIndex,
+      //     GuessData,
+      //     cycleIndexNum,
+      //     "Olami",
+      //     "הניחושים"
+      //   );
 
-        GuessData_Saved = await footballFunc.getSavedScore(
-          user_name,
-          UsersIndex,
-          cycleIndexNum,
-          "הניחושים",
-          GamesList,
-          "Olami"
-        );
+      //   textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
+      //   textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
+      //   break;
 
-        textMessage = await footballFunc.chooseGameToFix(
-          GuessData_Saved,
-          false,
-          cycleNum
-        );
-        textMessage1 = textMessage[0];
-        textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
+      // case 97:
+      //   GuessData_Saved = await footballFunc.getSavedScore(
+      //     user_name,
+      //     UsersIndex,
+      //     cycleIndexNum,
+      //     "הניחושים",
+      //     GamesList,
+      //     "Olami"
+      //   );
 
-        break;
+      //   textMessage = await footballFunc.chooseGameToFix(
+      //     GuessData_Saved,
+      //     true,
+      //     cycleNum
+      //   );
+      //   textMessage1 = textMessage[0];
+      //   textMessage2 = textMessage[1];
+      //   textMessage3 = textMessage[2];
+      //   break;
+
+      // case 98:
+      //   GuessData_Saved = await footballFunc.getSavedScore(
+      //     user_name,
+      //     UsersIndex,
+      //     cycleIndexNum,
+      //     "הניחושים",
+      //     GamesList,
+      //     "Olami"
+      //   );
+
+      //   textMessage = await footballFunc.chooseGameToFix(
+      //     GuessData_Saved,
+      //     false,
+      //     cycleNum
+      //   );
+      //   textMessage1 = textMessage[0];
+      //   textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
+
+      //   break;
+
+      // case 99:
+      //   // gameNum = req.body.query.message.split(" ")[1];
+      //   // score1 = req.body.query.message.split(" ")[3].split(":")[1];
+      //   // score2 = req.body.query.message.split(" ")[3].split(":")[0];
+      //   console.log("answer", score1, score2, gameNum);
+
+      //   await footballFunc.saveFix(
+      //     parseInt(gameNum),
+      //     parseInt(score1),
+      //     parseInt(score2),
+      //     user_name,
+      //     UsersIndex,
+      //     GuessData,
+      //     cycleIndexNum,
+      //     "Olami",
+      //     "הניחושים"
+      //   );
+
+      //   GuessData_Saved = await footballFunc.getSavedScore(
+      //     user_name,
+      //     UsersIndex,
+      //     cycleIndexNum,
+      //     "הניחושים",
+      //     GamesList,
+      //     "Olami"
+      //   );
+
+      //   textMessage = await footballFunc.chooseGameToFix(
+      //     GuessData_Saved,
+      //     false,
+      //     cycleNum
+      //   );
+      //   textMessage1 = textMessage[0];
+      //   textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\n ניפגש במחזור הבא.";
+
+      //   break;
     }
   }
 
