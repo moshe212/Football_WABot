@@ -366,7 +366,7 @@ const Olami = async function (
         Team2 = GamesList[5][1];
 
         const str7 = "*מחזור " + cycleNum + ", משחק מספר 7:* ";
-        textMessage1 = str6 + "\n" + Team1 + " - " + Team2;
+        textMessage1 = str7 + "\n" + Team1 + " - " + Team2;
         // score = req.body.query.message;
         ScoreTeam1 = score.split(":")[1];
         ScoreTeam2 = score.split(":")[0];
@@ -395,7 +395,7 @@ const Olami = async function (
         Team2 = GamesList[5][1];
 
         const str8 = "*מחזור " + cycleNum + ", משחק מספר 8:* ";
-        textMessage1 = str6 + "\n" + Team1 + " - " + Team2;
+        textMessage1 = str8 + "\n" + Team1 + " - " + Team2;
         // score = req.body.query.message;
         ScoreTeam1 = score.split(":")[1];
         ScoreTeam2 = score.split(":")[0];
@@ -424,7 +424,7 @@ const Olami = async function (
         Team2 = GamesList[5][1];
 
         const str9 = "*מחזור " + cycleNum + ", משחק מספר 9:* ";
-        textMessage1 = str6 + "\n" + Team1 + " - " + Team2;
+        textMessage1 = str9 + "\n" + Team1 + " - " + Team2;
         // score = req.body.query.message;
         ScoreTeam1 = score.split(":")[1];
         ScoreTeam2 = score.split(":")[0];
@@ -453,7 +453,7 @@ const Olami = async function (
         Team2 = GamesList[6][1];
 
         const str10 = "*מחזור " + cycleNum + ", משחק מספר 10:* ";
-        textMessage1 = str7 + "\n" + Team1 + " - " + Team2;
+        textMessage1 = str10 + "\n" + Team1 + " - " + Team2;
         textMessage2 =
           "*שימו לב:* אחרי שתנחשו את תוצאת המשחק האחרונה, ייקח לי כמה שניות לעבד את הנתונים ולהציג את ניחושי המחזור המלאים ששלחתם. במידה ולא קיבלתם ממני סיכום של הניחושים לאחר 2 דקות, אנא שילחו שוב את הניחוש למשחק האחרון.";
         // score = req.body.query.message;
