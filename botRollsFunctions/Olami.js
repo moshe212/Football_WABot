@@ -514,20 +514,20 @@ const Olami = async function (
           cycleNum
         );
 
-        // const resSaveIdx = await footballFunc.saveData_googleAPI(
-        //   user_name,
-        //   UsersIndex,
-        //   null,
-        //   null,
-        //   "אינדקס משתמשים",
-        //   null,
-        //   null,
-        //   null,
-        //   null,
-        //   true,
-        //   "",
-        //   "Olami"
-        // );
+        const resSaveIdx = await footballFunc.saveData_googleAPI(
+          user_name,
+          UsersIndex,
+          null,
+          null,
+          "אינדקס משתמשים",
+          null,
+          null,
+          null,
+          null,
+          true,
+          "",
+          "Olami"
+        );
 
         console.log("resSaveIdx", resSaveIdx);
         console.log("textMessage", textMessage);

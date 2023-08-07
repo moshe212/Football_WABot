@@ -180,15 +180,7 @@ const chooseGameToFix_Olami = async function (
       " " +
       GuessData_Saved[9].team1[1] +
       ":" +
-      GuessData_Saved[9].team2[1] +
-      "\n" +
-      GuessData_Saved[10].team1[0] +
-      " - " +
-      GuessData_Saved[10].team2[0] +
-      " " +
-      GuessData_Saved[10].team1[1] +
-      ":" +
-      GuessData_Saved[10].team2[1];
+      GuessData_Saved[9].team2[1];
 
   const textMessage2 = message2
     ? "יש להשיב במבנה הבא: " + "*משחק 1 תוצאה 2:1*"
