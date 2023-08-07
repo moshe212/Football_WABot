@@ -508,7 +508,7 @@ const Olami = async function (
           "Olami"
         );
 
-        textMessage = await footballFunc.chooseGameToFix(
+        textMessage = await footballFunc.chooseGameToFix_Olami(
           GuessData_Saved,
           false,
           cycleNum
@@ -548,7 +548,7 @@ const Olami = async function (
           "Olami"
         );
 
-        textMessage = await footballFunc.chooseGameToFix(
+        textMessage = await footballFunc.chooseGameToFix_Olami(
           GuessData_Saved,
           true,
           cycleNum
@@ -592,7 +592,7 @@ const Olami = async function (
           "Olami"
         );
 
-        textMessage = await footballFunc.chooseGameToFix(
+        textMessage = await footballFunc.chooseGameToFix_Olami(
           GuessData_Saved,
           true,
           cycleNum
@@ -613,7 +613,7 @@ const Olami = async function (
           "Olami"
         );
 
-        textMessage = await footballFunc.chooseGameToFix(
+        textMessage = await footballFunc.chooseGameToFix_Olami(
           GuessData_Saved,
           false,
           cycleNum
@@ -655,7 +655,7 @@ const Olami = async function (
       //     "Olami"
       //   );
 
-      //   textMessage = await footballFunc.chooseGameToFix(
+      //   textMessage = await footballFunc.chooseGameToFix_Olami(
       //     GuessData_Saved,
       //     true,
       //     cycleNum
@@ -675,7 +675,7 @@ const Olami = async function (
           "Olami"
         );
 
-        textMessage = await footballFunc.chooseGameToFix(
+        textMessage = await footballFunc.chooseGameToFix_Olami(
           GuessData_Saved,
           false,
           cycleNum
@@ -717,7 +717,7 @@ const Olami = async function (
       //     "Olami"
       //   );
 
-      //   textMessage = await footballFunc.chooseGameToFix(
+      //   textMessage = await footballFunc.chooseGameToFix_Olami(
       //     GuessData_Saved,
       //     true,
       //     cycleNum
@@ -737,7 +737,7 @@ const Olami = async function (
       //     "Olami"
       //   );
 
-      //   textMessage = await footballFunc.chooseGameToFix(
+      //   textMessage = await footballFunc.chooseGameToFix_Olami(
       //     GuessData_Saved,
       //     false,
       //     cycleNum
@@ -779,7 +779,7 @@ const Olami = async function (
       //     "Olami"
       //   );
 
-      //   textMessage = await footballFunc.chooseGameToFix(
+      //   textMessage = await footballFunc.chooseGameToFix_Olami(
       //     GuessData_Saved,
       //     true,
       //     cycleNum
@@ -799,7 +799,7 @@ const Olami = async function (
       //     "Olami"
       //   );
 
-      //   textMessage = await footballFunc.chooseGameToFix(
+      //   textMessage = await footballFunc.chooseGameToFix_Olami(
       //     GuessData_Saved,
       //     false,
       //     cycleNum
@@ -841,7 +841,7 @@ const Olami = async function (
       //     "Olami"
       //   );
 
-      //   textMessage = await footballFunc.chooseGameToFix(
+      //   textMessage = await footballFunc.chooseGameToFix_Olami(
       //     GuessData_Saved,
       //     true,
       //     cycleNum
@@ -861,7 +861,7 @@ const Olami = async function (
       //     "Olami"
       //   );
 
-      //   textMessage = await footballFunc.chooseGameToFix(
+      //   textMessage = await footballFunc.chooseGameToFix_Olami(
       //     GuessData_Saved,
       //     false,
       //     cycleNum
@@ -903,7 +903,7 @@ const Olami = async function (
       //     "Olami"
       //   );
 
-      //   textMessage = await footballFunc.chooseGameToFix(
+      //   textMessage = await footballFunc.chooseGameToFix_Olami(
       //     GuessData_Saved,
       //     true,
       //     cycleNum
@@ -923,7 +923,7 @@ const Olami = async function (
       //     "Olami"
       //   );
 
-      //   textMessage = await footballFunc.chooseGameToFix(
+      //   textMessage = await footballFunc.chooseGameToFix_Olami(
       //     GuessData_Saved,
       //     false,
       //     cycleNum
@@ -960,7 +960,7 @@ const Olami = async function (
       //     "Olami"
       //   );
 
-      //   textMessage = await footballFunc.chooseGameToFix(
+      //   textMessage = await footballFunc.chooseGameToFix_Olami(
       //     GuessData_Saved,
       //     false,
       //     cycleNum
