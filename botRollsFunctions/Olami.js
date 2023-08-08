@@ -208,6 +208,7 @@ const Olami = async function (
         // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
 
         console.log(GamesList);
+        console.log("Games Value");
         console.log(GamesList[0][3]);
         console.log(GamesList[0][4]);
         console.log(GamesList[0][5]);
