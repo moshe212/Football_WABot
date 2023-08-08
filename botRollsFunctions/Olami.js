@@ -209,9 +209,9 @@ const Olami = async function (
 
         console.log(GamesList);
         console.log("Games Value");
+        console.log(GamesList[0][2]);
         console.log(GamesList[0][3]);
         console.log(GamesList[0][4]);
-        console.log(GamesList[0][5]);
         Team1 = GamesList[0][0];
         Team2 = GamesList[0][1];
 
@@ -221,6 +221,10 @@ const Olami = async function (
         break;
       case 709:
         console.log(GamesList);
+        console.log("Games Value");
+        console.log(GamesList[0][2]);
+        console.log(GamesList[0][3]);
+        console.log(GamesList[0][4]);
         Team1 = GamesList[1][0];
         Team2 = GamesList[1][1];
 
@@ -251,6 +255,10 @@ const Olami = async function (
         break;
       case 710:
         console.log(GamesList);
+        console.log("Games Value");
+        console.log(GamesList[0][2]);
+        console.log(GamesList[0][3]);
+        console.log(GamesList[0][4]);
         Team1 = GamesList[2][0];
         Team2 = GamesList[2][1];
 

@@ -246,7 +246,10 @@ const getOlamiData = async () => {
     if (olamiGames[g]._rawData[0] === olamiCycleNum) {
       const team_1 = olamiGames[g]._rawData[1];
       const team_2 = olamiGames[g]._rawData[2];
-      olamiGamesList.push([team_1, team_2]);
+      const text1 = olamiGames[g]._rawData[4];
+      const text2 = olamiGames[g]._rawData[5];
+      const text3 = olamiGames[g]._rawData[6];
+      olamiGamesList.push([team_1, team_2, text1, text2, text3]);
     }
   }
 
