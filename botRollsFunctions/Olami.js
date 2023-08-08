@@ -215,9 +215,9 @@ const Olami = async function (
         Text2 = GamesList[0][3];
         Text3 = GamesList[0][4];
 
-        const str = `*משחק מספר 1: ${Text1 ? Text1 + " " : "*"}${
-          Text2 ? Text2 + " " : "*"
-        }${Text3 ? Text3 : ""}*`;
+        const str = `*משחק מספר 1: ${Text1 ? Text1 : "*"}${
+          Text2 ? " " + Text2 : "*"
+        }${Text3 ? " " + Text3 : ""}*`;
         textMessage1 = str + "\n" + Team1 + " - " + Team2;
 
         break;
