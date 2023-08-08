@@ -208,27 +208,31 @@ const Olami = async function (
         // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
 
         console.log(GamesList);
-        console.log("Games Value");
-        console.log(GamesList[0][2]);
-        console.log(GamesList[0][3]);
-        console.log(GamesList[0][4]);
+
         Team1 = GamesList[0][0];
         Team2 = GamesList[0][1];
+        Text1 = GamesList[0][2];
+        Text2 = GamesList[0][3];
+        Text3 = GamesList[0][4];
 
-        const str = "*מחזור " + cycleNum + ", משחק מספר 1:* ";
+        const str = `משחק מספר 1: ${Text1 ? Text1 : ""}${Text2 ? Text2 : ""}${
+          Text3 ? Text3 : ""
+        }`;
         textMessage1 = str + "\n" + Team1 + " - " + Team2;
 
         break;
       case 709:
         console.log(GamesList);
-        console.log("Games Value");
-        console.log(GamesList[0][2]);
-        console.log(GamesList[0][3]);
-        console.log(GamesList[0][4]);
+
         Team1 = GamesList[1][0];
         Team2 = GamesList[1][1];
+        Text1 = GamesList[1][2];
+        Text2 = GamesList[1][3];
+        Text3 = GamesList[1][4];
 
-        const str2 = "*מחזור " + cycleNum + ", משחק מספר 2:* ";
+        const str2 = `משחק מספר 2: ${Text1 ? Text1 : ""}${Text2 ? Text2 : ""}${
+          Text3 ? Text3 : ""
+        }`;
         textMessage1 = str2 + "\n" + Team1 + " - " + Team2;
 
         // score = req.body.query.message;
@@ -255,14 +259,16 @@ const Olami = async function (
         break;
       case 710:
         console.log(GamesList);
-        console.log("Games Value");
-        console.log(GamesList[0][2]);
-        console.log(GamesList[0][3]);
-        console.log(GamesList[0][4]);
+
         Team1 = GamesList[2][0];
         Team2 = GamesList[2][1];
+        Text1 = GamesList[2][2];
+        Text2 = GamesList[2][3];
+        Text3 = GamesList[2][4];
 
-        const str3 = "*מחזור " + cycleNum + ", משחק מספר 3:* ";
+        const str3 = `משחק מספר 3: ${Text1 ? Text1 : ""}${
+          Text2 ? Text2 : ""
+        }{Text3?Text3 :""}`;
         textMessage1 = str3 + "\n" + Team1 + " - " + Team2;
 
         // score = req.body.query.message;
@@ -290,8 +296,13 @@ const Olami = async function (
         console.log(GamesList);
         Team1 = GamesList[3][0];
         Team2 = GamesList[3][1];
+        Text1 = GamesList[3][2];
+        Text2 = GamesList[3][3];
+        Text3 = GamesList[3][4];
 
-        const str4 = "*מחזור " + cycleNum + ", משחק מספר 4:* ";
+        const str4 = `משחק מספר 4: ${Text1 ? Text1 : ""}${Text2 ? Text2 : ""}${
+          Text3 ? Text3 : ""
+        }`;
         textMessage1 = str4 + "\n" + Team1 + " - " + Team2;
 
         // score = req.body.query.message;
@@ -319,8 +330,13 @@ const Olami = async function (
         console.log(GamesList);
         Team1 = GamesList[4][0];
         Team2 = GamesList[4][1];
+        Text1 = GamesList[4][2];
+        Text2 = GamesList[4][3];
+        Text3 = GamesList[4][4];
 
-        const str5 = "*מחזור " + cycleNum + ", משחק מספר 5:* ";
+        const str5 = `משחק מספר 5: ${Text1 ? Text1 : ""}${Text2 ? Text2 : ""}${
+          Text3 ? Text3 : ""
+        }`;
         textMessage1 = str5 + "\n" + Team1 + " - " + Team2;
         // score = req.body.query.message;
         ScoreTeam1 = score.split(":")[1];
@@ -347,8 +363,13 @@ const Olami = async function (
         console.log(GamesList);
         Team1 = GamesList[5][0];
         Team2 = GamesList[5][1];
+        Text1 = GamesList[5][2];
+        Text2 = GamesList[5][3];
+        Text3 = GamesList[5][4];
 
-        const str6 = "*מחזור " + cycleNum + ", משחק מספר 6:* ";
+        const str6 = `משחק מספר 6: ${Text1 ? Text1 : ""}${Text2 ? Text2 : ""}${
+          Text3 ? Text3 : ""
+        }`;
         textMessage1 = str6 + "\n" + Team1 + " - " + Team2;
         // score = req.body.query.message;
         ScoreTeam1 = score.split(":")[1];
@@ -376,8 +397,13 @@ const Olami = async function (
         console.log(GamesList);
         Team1 = GamesList[6][0];
         Team2 = GamesList[6][1];
+        Text1 = GamesList[6][2];
+        Text2 = GamesList[6][3];
+        Text3 = GamesList[6][4];
 
-        const str7 = "*מחזור " + cycleNum + ", משחק מספר 7:* ";
+        const str7 = `משחק מספר 7: ${Text1 ? Text1 : ""}${Text2 ? Text2 : ""}${
+          Text3 ? Text3 : ""
+        }`;
         textMessage1 = str7 + "\n" + Team1 + " - " + Team2;
         // score = req.body.query.message;
         ScoreTeam1 = score.split(":")[1];
@@ -405,8 +431,13 @@ const Olami = async function (
         console.log(GamesList);
         Team1 = GamesList[7][0];
         Team2 = GamesList[7][1];
+        Text1 = GamesList[7][2];
+        Text2 = GamesList[7][3];
+        Text3 = GamesList[7][4];
 
-        const str8 = "*מחזור " + cycleNum + ", משחק מספר 8:* ";
+        const str8 = `משחק מספר 8: ${Text1 ? Text1 : ""}${Text2 ? Text2 : ""}${
+          Text3 ? Text3 : ""
+        }`;
         textMessage1 = str8 + "\n" + Team1 + " - " + Team2;
         // score = req.body.query.message;
         ScoreTeam1 = score.split(":")[1];
@@ -434,8 +465,13 @@ const Olami = async function (
         console.log(GamesList);
         Team1 = GamesList[8][0];
         Team2 = GamesList[8][1];
+        Text1 = GamesList[8][2];
+        Text2 = GamesList[8][3];
+        Text3 = GamesList[8][4];
 
-        const str9 = "*מחזור " + cycleNum + ", משחק מספר 9:* ";
+        const str9 = `משחק מספר 9: ${Text1 ? Text1 : ""}${Text2 ? Text2 : ""}${
+          Text3 ? Text3 : ""
+        }`;
         textMessage1 = str9 + "\n" + Team1 + " - " + Team2;
         // score = req.body.query.message;
         ScoreTeam1 = score.split(":")[1];
@@ -461,10 +497,15 @@ const Olami = async function (
 
       case 777:
         console.log(GamesList);
-        Team1 = GamesList[6][0];
-        Team2 = GamesList[6][1];
+        Team1 = GamesList[9][0];
+        Team2 = GamesList[9][1];
+        Text1 = GamesList[9][2];
+        Text2 = GamesList[9][3];
+        Text3 = GamesList[9][4];
 
-        const str10 = "*מחזור " + cycleNum + ", משחק מספר 10:* ";
+        const str10 = `משחק מספר 10: ${Text1 ? Text1 : ""}${
+          Text2 ? Text2 : ""
+        }${Text3 ? Text3 : ""}`;
         textMessage1 = str10 + "\n" + Team1 + " - " + Team2;
         textMessage2 =
           "*שימו לב:* אחרי שתנחשו את תוצאת המשחק האחרונה, ייקח לי כמה שניות לעבד את הנתונים ולהציג את ניחושי המחזור המלאים ששלחתם. במידה ולא קיבלתם ממני סיכום של הניחושים לאחר 2 דקות, אנא שילחו שוב את הניחוש למשחק האחרון.";
