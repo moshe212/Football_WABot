@@ -208,6 +208,9 @@ const Olami = async function (
         // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
 
         console.log(GamesList);
+        console.log(GamesList[0][3]);
+        console.log(GamesList[0][4]);
+        console.log(GamesList[0][5]);
         Team1 = GamesList[0][0];
         Team2 = GamesList[0][1];
 
@@ -362,8 +365,8 @@ const Olami = async function (
 
       case 714:
         console.log(GamesList);
-        Team1 = GamesList[5][0];
-        Team2 = GamesList[5][1];
+        Team1 = GamesList[6][0];
+        Team2 = GamesList[6][1];
 
         const str7 = "*מחזור " + cycleNum + ", משחק מספר 7:* ";
         textMessage1 = str7 + "\n" + Team1 + " - " + Team2;
@@ -391,8 +394,8 @@ const Olami = async function (
 
       case 775:
         console.log(GamesList);
-        Team1 = GamesList[5][0];
-        Team2 = GamesList[5][1];
+        Team1 = GamesList[7][0];
+        Team2 = GamesList[7][1];
 
         const str8 = "*מחזור " + cycleNum + ", משחק מספר 8:* ";
         textMessage1 = str8 + "\n" + Team1 + " - " + Team2;
@@ -420,8 +423,8 @@ const Olami = async function (
 
       case 776:
         console.log(GamesList);
-        Team1 = GamesList[5][0];
-        Team2 = GamesList[5][1];
+        Team1 = GamesList[8][0];
+        Team2 = GamesList[8][1];
 
         const str9 = "*מחזור " + cycleNum + ", משחק מספר 9:* ";
         textMessage1 = str9 + "\n" + Team1 + " - " + Team2;
