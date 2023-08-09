@@ -58,7 +58,7 @@ const Olami = async function (
         if (cycleNum !== "0" && cycleText.includes("מחזור")) {
           textMessage1 =
             "בחירה מצוינת!" +
-            "\nהדד ליין לשליחת ניחושים למחזור ה- *" +
+            "\nהדד ליין לשליחת ניחושים לשבוע המשחקים ה-*" +
             cycleNum +
             "* הוא עד ה-" +
             "*" +
@@ -72,7 +72,7 @@ const Olami = async function (
         } else {
           if (cycleText.includes("מחזור")) {
             textMessage1 =
-              "שומעים רגע? הדד ליין לשליחת הניחושים למחזור " +
+              "שומעים רגע? הדד ליין לשליחת הניחושים לשבוע המשחקים ה-" +
               "*" +
               cycleNum +
               "*" +
@@ -147,17 +147,19 @@ const Olami = async function (
         textMessage1 =
           "הלינק לקבוצת הווטסאפ הרשמית של *היציע: כדורגל עולמי* הוא:" +
           "\n https://chat.whatsapp.com/9vAhNyagyxhJnpujEKqJV8" +
+          "\n" +
           "\n קישור לקובץ הלייב - https://docs.google.com/spreadsheets/d/1SgqAiRYXEFdxxu_YQ2RSbYx_JuPtXoW0pff2uLINVFc/edit" +
+          "\n" +
           "\n קישור לקובץ החוקים והכללים - https://docs.google.com/document/d/1Lde9i31TK3-9FU_9sQuN3zz0IGWnk-t5KNozl0vR3sw/edit";
 
-        textMessage2 = "לחזרה לתפריט הראשי לחץ 0️⃣";
+        textMessage2 = "0️⃣ לחזרה לתפריט הראשי";
         break;
 
       case 701:
         if (cycleNum !== "0") {
           textMessage1 =
             "בחירה מצוינת!" +
-            "\nהדד ליין לשליחת ניחושים ל*מחזור ה-" +
+            "\nהדד ליין לשליחת ניחושים ל*שבוע המשחקים ה-" +
             cycleNum +
             "* הוא עד ה-" +
             "*" +
@@ -170,7 +172,7 @@ const Olami = async function (
           break;
         } else {
           textMessage1 =
-            "שומעים רגע? הדד ליין לשליחת הניחושים ל*מחזור ה-" +
+            "שומעים רגע? הדד ליין לשליחת הניחושים ל*שבוע המשחקים ה-" +
             cycleNum +
             "*" +
             " עבר.";
