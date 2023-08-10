@@ -145,14 +145,14 @@ const Olami = async function (
 
       case 773:
         textMessage1 =
-          "הלינק לקבוצת הווטסאפ הרשמית של *היציע: כדורגל עולמי* הוא:" +
+          "קישור לקבוצת הוואטסאפ: " +
           "\n https://chat.whatsapp.com/9vAhNyagyxhJnpujEKqJV8" +
           "\n" +
-          "\n קישור לקובץ הלייב - https://docs.google.com/spreadsheets/d/1SgqAiRYXEFdxxu_YQ2RSbYx_JuPtXoW0pff2uLINVFc/edit" +
+          "\n קישור לקובץ הלייב: - https://docs.google.com/spreadsheets/d/1SgqAiRYXEFdxxu_YQ2RSbYx_JuPtXoW0pff2uLINVFc/edit" +
           "\n" +
-          "\n קישור לקובץ החוקים והכללים - https://docs.google.com/document/d/1Lde9i31TK3-9FU_9sQuN3zz0IGWnk-t5KNozl0vR3sw/edit";
+          "\n קישור לקובץ החוקים והכללים: - https://docs.google.com/document/d/1Lde9i31TK3-9FU_9sQuN3zz0IGWnk-t5KNozl0vR3sw/edit";
 
-        textMessage2 = "0️⃣ לחזרה לתפריט הראשי";
+        textMessage2 = "0️⃣ לחזרה לתפריט הקודם";
         break;
 
       case 701:
