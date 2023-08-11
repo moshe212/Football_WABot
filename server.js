@@ -265,7 +265,7 @@ const getOlamiData = async () => {
     "שלב הנוקאאוט",
     "Olami"
   );
-
+  console.log({ olamiUsersList });
   // olamiAchievementsOfSeasonData = await footballFunc.getDataFromSheet(
   //   "הישגים",
   //   "Alufot"
