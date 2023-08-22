@@ -143,13 +143,13 @@ const LigatAl = async function ({
 
       case 251:
         textMessage1 =
-          "קישור לקבוצת הוואטסאפ:" +
+          "*קישור לקבוצת הוואטסאפ:*" +
           "\n https://chat.whatsapp.com/CZyFCQqAvHYJkD8QC2VQPb" +
           "\n" +
-          "\nקישור לקובץ הלייב: - " +
+          "\n*קישור לקובץ הלייב:* " +
           "\nhttps://docs.google.com/spreadsheets/d/1cVGA2bOEdbrUFrcVHF6dhRxqpjuYcj-7zZt2fovOVQM/edit?usp=sharing" +
           "\n" +
-          "\nקישור לקובץ החוקים והכללים: - " +
+          "\n*קישור לקובץ החוקים והכללים:* " +
           "\nhttps://docs.google.com/document/d/1QY3I36KJoEljlSx5r36kDGSO-YWH1OV_qiqxV5UZW_w/edit?usp=sharing";
 
         break;
