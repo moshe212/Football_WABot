@@ -143,12 +143,14 @@ const LigatAl = async function ({
 
       case 251:
         textMessage1 =
-          "הלינק לקבוצת הווטסאפ הרשמית של *היציע: ליגת העל* הוא:" +
+          "קישור לקבוצת הוואטסאפ:" +
           "\n https://chat.whatsapp.com/CZyFCQqAvHYJkD8QC2VQPb" +
           "\n" +
-          "\n קישור לקובץ הלייב - https://docs.google.com/spreadsheets/d/1SgqAiRYXEFdxxu_YQ2RSbYx_JuPtXoW0pff2uLINVFc/edit" +
+          "\nקישור לקובץ הלייב: - " +
+          "\nhttps://docs.google.com/spreadsheets/d/1cVGA2bOEdbrUFrcVHF6dhRxqpjuYcj-7zZt2fovOVQM/edit?usp=sharing" +
           "\n" +
-          "\n קישור לקובץ החוקים והכללים - https://docs.google.com/document/d/1Lde9i31TK3-9FU_9sQuN3zz0IGWnk-t5KNozl0vR3sw/edit";
+          "\nקישור לקובץ החוקים והכללים: - " +
+          "\nhttps://docs.google.com/document/d/1QY3I36KJoEljlSx5r36kDGSO-YWH1OV_qiqxV5UZW_w/edit?usp=sharing";
 
         break;
 
