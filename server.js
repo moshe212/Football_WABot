@@ -116,7 +116,7 @@ const getAlufotData = async () => {
     "Alufot"
   );
   for (let g = 0; g < alufotGames.length; g++) {
-    console.log("alufotGames[g]._rawData[0]", alufotGames[g]._rawData[0]);
+    // console.log("alufotGames[g]._rawData[0]", alufotGames[g]._rawData[0]);
     console.log("alufotCycleNum", alufotCycleNum);
     if (alufotGames[g]._rawData[0] === alufotCycleNum) {
       const team_1 = alufotGames[g]._rawData[1];
@@ -211,26 +211,88 @@ const getMondialData = async () => {
   //   mondialTableObj = { ...mondialTableObj, ...mondialTablesData[i] };
   // }
 };
+
+let olamiCycleNum = "0";
+let olamiCycleText = "";
+let olamiCycleDate = "";
+let olamiGames = [];
+let olamiGamesList = [];
+let olamiCycleIndexNum = 0;
+let olamiUsersIndex = [];
+let olamiGuessData = [];
+let olamiGuessData_ShlavHanokout = [];
+let olamiUsersList = [];
+let olamiAchievementsOfSeasonData = [];
+let olamiTablesData = [];
+let olamiTableObj = {};
+const getOlamiData = async () => {
+  const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים", "Olami");
+  const res_cycle = await footballFunc.getCycle(Data);
+  console.log("res_cycle_olami", res_cycle);
+  olamiCycleNum = res_cycle[0];
+  olamiCycleText = res_cycle[3];
+  console.log("olamiCycleText", olamiCycleText);
+  const cycleDate1 = moment(res_cycle[1]).format("DD-MM-YYYY");
+  const cycleDate2 = cycleDate1.replace("-", ".");
+  olamiCycleDate = cycleDate2.replace("-", ".");
+
+  olamiCycleIndexNum = res_cycle[2];
+
+  olamiGames = await footballFunc.getDataFromSheet(
+    "רשימת משחקים לפי מחזור",
+    "Olami"
+  );
+  for (let g = 0; g < olamiGames.length; g++) {
+    if (olamiGames[g]._rawData[0] === olamiCycleNum) {
+      const team_1 = olamiGames[g]._rawData[1];
+      const team_2 = olamiGames[g]._rawData[2];
+      const text1 = olamiGames[g]._rawData[4];
+      const text2 = olamiGames[g]._rawData[5];
+      const text3 = olamiGames[g]._rawData[6];
+      olamiGamesList.push([team_1, team_2, text1, text2, text3]);
+    }
+  }
+
+  olamiUsersIndex = await footballFunc.getDataFromSheet(
+    "אינדקס משתמשים",
+    "Olami"
+  );
+  for (let l = 0; l < olamiUsersIndex.length; l++) {
+    olamiUsersList.push(olamiUsersIndex[l]._rawData[0]);
+  }
+  olamiGuessData = await footballFunc.getDataFromSheet("הניחושים", "Olami");
+  olamiGuessData_ShlavHanokout = await footballFunc.getDataFromSheet(
+    "שלב הנוקאאוט",
+    "Olami"
+  );
+  console.log({ olamiUsersList });
+  // olamiAchievementsOfSeasonData = await footballFunc.getDataFromSheet(
+  //   "הישגים",
+  //   "Alufot"
+  // );
+  // olamiTablesData = await footballFunc.getTablesData();
+
+  // for (let i = 0; i < olamiTablesData.length; i++) {
+  //   olamiTableObj = { ...olamiTableObj, ...olamiTablesData[i] };
+  // }
+};
 const job1 = schedule.scheduleJob("0 0 4 * * *", getData);
 const job2 = schedule.scheduleJob("0 0 4 * * *", getAlufotData);
 const job3 = schedule.scheduleJob("0 0 4 * * *", getMondialData);
+const job4 = schedule.scheduleJob("0 0 4 * * *", getOlamiData);
 
 getData();
 getAlufotData();
 getMondialData();
+getOlamiData();
 
 app.post("/api/Whatsapp", async (req, res) => {
   const user_name = req.body.query.sender;
   console.log("username", user_name);
   console.log("cycleNum", cycleNum, cycleDate);
-  console.log(
-    "alufotCycleNum",
-    alufotCycleNum,
-    alufotCycleDate,
-    alufotCycleText
-  );
-  console.log("mondialCycleNum", mondialCycleNum);
-  console.log("mondialGamesList", mondialGamesList);
+  console.log("olamiCycleNum", olamiCycleNum, olamiCycleDate, olamiCycleText);
+  // console.log("mondialCycleNum", mondialCycleNum);
+  // console.log("mondialGamesList", mondialGamesList);
 
   const stage = req.body.query.ruleId;
   console.log(stage);
@@ -257,8 +319,11 @@ app.post("/api/Whatsapp", async (req, res) => {
       "\nמה ברצונכם לעשות?";
     textMessage2 =
       "\n1️⃣ - למשחק *היציע: ליגת העל*" +
-      "\n2️⃣ - למשחק *היציע: גביע המדינה*" +
-      "\n3️⃣ - למשחק *היציע: ליגת האלופות* \n4️⃣ - למשחק *היציע: מונדיאל*";
+      "\n2️⃣ - למשחק *היציע: NBA*" +
+      "\n3️⃣ - למשחק *היציע: אולימפיאדה*" +
+      "\n4️⃣ - למשחק *היציע: מונדיאל*" +
+      "\n5️⃣ - למשחק *היציע: כדורגל עולמי*";
+
     // +"\n5️⃣ - למשחק *היציע: יורו* \n6️⃣ - למשחק *היציע: בחירות* \n7️⃣ - למשחק *היציע: אולימפיאדה*";
   } else if (stage === 113) {
     textMessage1 =
@@ -368,6 +433,34 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage1 = MondialMessages[0];
     textMessage2 = MondialMessages[1];
     textMessage3 = MondialMessages[2];
+  } else if (
+    (stage > 700 && stage < 800) ||
+    stage === 700 ||
+    (stage > 248 && stage < 253) ||
+    (stage > 266 && stage < 293)
+  ) {
+    const OlamiMessages = await botRollsFunctions.Olami(
+      olamiCycleNum,
+      olamiCycleText,
+      olamiCycleDate,
+      olamiGamesList,
+      olamiCycleIndexNum,
+      olamiUsersIndex,
+      olamiGuessData,
+      user_name,
+      stage,
+      score,
+      gameNum,
+      score1,
+      score2,
+      olamiAchievementsOfSeasonData,
+      olamiTableObj,
+      olamiUsersList
+    );
+
+    textMessage1 = OlamiMessages[0];
+    textMessage2 = OlamiMessages[1];
+    textMessage3 = OlamiMessages[2];
   } else {
     console.log(`Sorry, we are out of range.`);
   }

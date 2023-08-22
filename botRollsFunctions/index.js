@@ -5,6 +5,7 @@ const { Mondial } = require("./Mondial");
 const { LigatAlufot } = require("./LigatAlufot");
 const { shlavHanokOut } = require("./shlavHanokOut");
 const { shlavHanokOut_Mondial } = require("./shlavHanokOut_Mondial");
+const { Olami } = require("./Olami");
 
 const botRollsFunctions = {
   FirstSort,
@@ -14,6 +15,7 @@ const botRollsFunctions = {
   LigatAlufot,
   shlavHanokOut,
   shlavHanokOut_Mondial,
+  Olami,
 };
 
 module.exports = { botRollsFunctions };

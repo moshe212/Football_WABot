@@ -53,7 +53,9 @@ const getCycle = async (data) => {
       break;
     }
   }
+  console.log("cycleText", cycleText);
   if (cycleText.includes("זמן ניחושים")) {
+    console.log("זמן ניחושים", cycleText);
     let cycleNum = "";
     if (cycleText.includes("גביע המדינה")) {
       const arr = cycleText.split(" ");

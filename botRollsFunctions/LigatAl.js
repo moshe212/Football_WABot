@@ -84,7 +84,7 @@ const LigatAl = async function ({
             textMessage1 = "שומעים רגע? כרגע לא ניתן לשלוח ניחושים לליגת העל.";
             // + "\nיכול להיות שניתן לשלוח ניחושים לגביע המדינה..";
             textMessage2 =
-              "אנא פנו למנהל המערכת או בחרו 3️⃣ לחזרה לתפריט הקודם..";
+              "אנא פנו למנהל המערכת או בחרו 5️⃣ לחזרה לתפריט הקודם..";
             break;
           }
         }
@@ -144,7 +144,11 @@ const LigatAl = async function ({
       case 251:
         textMessage1 =
           "הלינק לקבוצת הווטסאפ הרשמית של *היציע: ליגת העל* הוא:" +
-          "\n https://chat.whatsapp.com/CZyFCQqAvHYJkD8QC2VQPb";
+          "\n https://chat.whatsapp.com/CZyFCQqAvHYJkD8QC2VQPb" +
+          "\n" +
+          "\n קישור לקובץ הלייב - https://docs.google.com/spreadsheets/d/1SgqAiRYXEFdxxu_YQ2RSbYx_JuPtXoW0pff2uLINVFc/edit" +
+          "\n" +
+          "\n קישור לקובץ החוקים והכללים - https://docs.google.com/document/d/1Lde9i31TK3-9FU_9sQuN3zz0IGWnk-t5KNozl0vR3sw/edit";
 
         break;
 
