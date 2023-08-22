@@ -77,15 +77,15 @@ const getData = async () => {
   //   "LigatAl"
   // );
 
-  AchievementsOfSeasonData = await footballFunc.getDataFromSheet(
-    "הישגים",
-    "LigatAl"
-  );
-  tablesData = await footballFunc.getTablesData();
+  // AchievementsOfSeasonData = await footballFunc.getDataFromSheet(
+  //   "הישגים",
+  //   "LigatAl"
+  // );
+  // tablesData = await footballFunc.getTablesData();
 
-  for (let i = 0; i < tablesData.length; i++) {
-    tableObj = { ...tableObj, ...tablesData[i] };
-  }
+  // for (let i = 0; i < tablesData.length; i++) {
+  //   tableObj = { ...tableObj, ...tablesData[i] };
+  // }
 };
 
 let alufotCycleNum = "0";
