@@ -19,6 +19,7 @@ const app = express();
 const server = http.createServer(app);
 
 const { footballFunc } = require("./footballFunc");
+const { basicFunc } = require("./basicFunc");
 const { botRollsFunctions } = require("./botRollsFunctions");
 
 dotenv.config();
@@ -285,6 +286,49 @@ getData();
 getAlufotData();
 getMondialData();
 getOlamiData();
+
+app.get("/Rotem_hr_WaBot", async (_req, res) => {
+  console.log("WaBot");
+  const user_name = _req.body.query.sender;
+  const message = _req.body.query.message;
+
+  console.log(now, "Message received");
+
+  console.log(`msg: ${message}`);
+
+  const words = message.split(" ");
+  const lastWord = words[words.length - 1];
+  console.log(lastWord);
+  let textMsg = "";
+  if (/^[0-9]+$/.test(lastWord)) {
+    console.log("The string contains only numbers");
+
+    const resShortURL = await basicFunc.getShortURL({ id: lastWord });
+    console.log("resShortURL", resShortURL);
+    const shortURL = resShortURL.secureShortURL;
+    console.log("short", shortURL);
+    const url = shortURL;
+    textMsg = `להלן הלינק לשאלון: ${url}`;
+  } else {
+    console.log("The string contains other characters besides numbers");
+
+    textMsg = "אנא ציין את מספר המשרה עליה תרצה לקבל מידע בסוף ההודעה..";
+  }
+  try {
+    const jsonFile = {
+      replies: [
+        {
+          message: textMsg,
+        },
+      ],
+    };
+
+    res.send(jsonFile);
+  } catch (e) {
+    console.log(e);
+    res.status(400).end();
+  }
+});
 
 app.post("/api/Whatsapp", async (req, res) => {
   const user_name = req.body.query.sender;

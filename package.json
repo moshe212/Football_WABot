@@ -22,6 +22,7 @@
     "markdown-to-text": "^0.1.1",
     "moment": "^2.29.1",
     "mongoose": "^5.13.7",
+    "node-fetch": "^2.7.0",
     "node-schedule": "^2.0.0",
     "path": "^0.12.7",
     "qrcode-terminal": "^0.12.0",
