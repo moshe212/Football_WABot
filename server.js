@@ -301,7 +301,7 @@ app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
   if (/^[0-9]+$/.test(lastWord)) {
     console.log("The string contains only numbers");
 
-    const resShortURL = await basicFunc.getShortURL({ id: lastWord });
+    const resShortURL = await basicFunc.getShortURL({ id: Number(lastWord) });
     console.log("resShortURL", resShortURL);
     const shortURL = resShortURL.secureShortURL;
     console.log("short", shortURL);
