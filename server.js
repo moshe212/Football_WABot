@@ -316,7 +316,7 @@ app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
     console.log("The string contains other characters besides numbers");
 
     textMsg =
-      "היי אני הבוט של רותם השמה, אשמח ללוות אתכם עד מציאת עבודה.. 😎" +
+      "היי אני הבוט של *רותם השמה*, אשמח ללוות אתכם עד מציאת עבודה.. 😎" +
       "\nאנא ציין את מספר המשרה עליה תרצה לקבל מידע בסוף ההודעה.." +
       "\nלדוגמא :אשמח לקבל פרטים על משרה מס' 57486";
   }
