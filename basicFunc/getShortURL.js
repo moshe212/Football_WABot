@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 
 const getShortURL = async ({ id }) => {
   console.log({ id });
-  const url = "https://api.short.io/links";
+  const url = "https://api.short.io/links/public";
   const options = {
     method: "POST",
     headers: {
