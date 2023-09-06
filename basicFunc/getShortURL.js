@@ -10,12 +10,11 @@ const getShortURL = async ({ id }) => {
     headers: {
       accept: "application/json",
       "content-type": "application/json",
-      Authorization: "pk_BXU3ebmYAkE4WXV2,",
+      Authorization: "pk_xHnKCtuyiQElJK41,",
     },
     body: JSON.stringify({
       domain: "rotemhr.link",
       originalURL: `http://192.117.146.232:3000/QestionForm?misraID=${id}`,
-      path: `misraID=${id}`,
     }),
   };
 
