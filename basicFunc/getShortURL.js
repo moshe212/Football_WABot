@@ -10,7 +10,7 @@ const getShortURL = async ({ id }) => {
     headers: {
       accept: "application/json",
       "content-type": "application/json",
-      Authorization: "sk_kWHVQfE17XSn37pO,",
+      Authorization: "pk_BXU3ebmYAkE4WXV2,",
     },
     body: JSON.stringify({
       domain: "rotemhr.link",
@@ -18,18 +18,6 @@ const getShortURL = async ({ id }) => {
       path: `misraID=${id}`,
     }),
   };
-
-  // fetch(url, options)
-  //   .then((res) => {
-  //     console.log("res");
-  //     res.json();
-  //   })
-  //   .then((json) => {
-  //     console.log("json:");
-  //     console.log(json);
-  //     return json;
-  //   })
-  //   .catch((err) => console.error("error:" + err));
 
   try {
     const res = await fetch(url, options);
