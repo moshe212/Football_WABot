@@ -20,8 +20,12 @@ const getShortURL = async ({ id }) => {
   };
 
   fetch(url, options)
-    .then((res) => res.json())
+    .then((res) => {
+      console.log("res");
+      res.json();
+    })
     .then((json) => {
+      console.log("json:");
       console.log(json);
       return json;
     })
