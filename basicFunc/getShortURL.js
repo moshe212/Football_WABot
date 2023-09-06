@@ -10,7 +10,7 @@ const getShortURL = async ({ id }) => {
     headers: {
       accept: "application/json",
       "content-type": "application/json",
-      Authorization: "pk_xHnKCtuyiQElJK41,",
+      Authorization: "pk_xHnKCtuyiQElJK41",
     },
     body: JSON.stringify({
       domain: "rotemhr.link",
