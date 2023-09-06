@@ -287,7 +287,7 @@ getAlufotData();
 getMondialData();
 getOlamiData();
 
-app.get("/Rotem_hr_WaBot", async (_req, res) => {
+app.get("/api/Rotem_hr_WaBot", async (_req, res) => {
   console.log("WaBot");
   const user_name = _req.body.query.sender;
   const message = _req.body.query.message;
