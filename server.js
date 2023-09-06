@@ -292,8 +292,6 @@ app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
   const user_name = _req.body.query.sender;
   const message = _req.body.query.message;
 
-  console.log(now, "Message received");
-
   console.log(`msg: ${message}`);
 
   const words = message.split(" ");
