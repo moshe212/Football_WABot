@@ -303,12 +303,15 @@ app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
 
     const resShortURL = await basicFunc.getShortURL({ id: Number(lastWord) });
     console.log("resShortURL", resShortURL);
-    // const shortURL = resShortURL.secureShortURL;
-    // console.log("short", shortURL);
+    const shortURL = resShortURL.shortURL;
+    console.log("short", shortURL);
     const url = `http://192.117.146.232:3000/QestionForm?misraID=${Number(
       lastWord
     )}`;
-    textMsg = `להלן הלינק לשאלון: ${url}`;
+    textMsg =
+      "היי בשביל להפוך את הלינק ללחיץ ניתן לשמור אותנו כאנשי קשר :)" +
+      "\nלהלן הלינק לשאלון:" +
+      `\n ${shortURL}`;
   } else {
     console.log("The string contains other characters besides numbers");
 
