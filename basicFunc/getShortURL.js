@@ -19,25 +19,27 @@ const getShortURL = async ({ id }) => {
     }),
   };
 
-  fetch(url, options)
-    .then((res) => {
-      console.log("res");
-      res.json();
-    })
-    .then((json) => {
-      console.log("json:");
-      console.log(json);
-      return json;
-    })
-    .catch((err) => console.error("error:" + err));
+  // fetch(url, options)
+  //   .then((res) => {
+  //     console.log("res");
+  //     res.json();
+  //   })
+  //   .then((json) => {
+  //     console.log("json:");
+  //     console.log(json);
+  //     return json;
+  //   })
+  //   .catch((err) => console.error("error:" + err));
 
-  // try {
-  //   const res = await fetch(url, options);
-  //   const resJson = await res.json();
-  //   return resJson;
-  // } catch (err) {
-  //   console.log("error:", err);
-  // }
+  try {
+    const res = await fetch(url, options);
+    console.log("res");
+    const resJson = await res.json();
+    console.log("json:", resJson);
+    return resJson;
+  } catch (err) {
+    console.log("error:", err);
+  }
 };
 
 module.exports = { getShortURL };
