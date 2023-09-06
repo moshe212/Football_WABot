@@ -309,13 +309,16 @@ app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
       lastWord
     )}`;
     textMsg =
-      "היי בשביל להפוך את הלינק ללחיץ ניתן לשמור אותנו כאנשי קשר :)" +
-      "\nלהלן הלינק לשאלון:" +
+      "היי בשביל להפוך את הלינק ללחיץ ניתן לשמור אותנו כאנשי קשר 🙂" +
+      "\nלהלן הלינק לשאלון לרישום למשרה:" +
       `\n ${shortURL}`;
   } else {
     console.log("The string contains other characters besides numbers");
 
-    textMsg = "אנא ציין את מספר המשרה עליה תרצה לקבל מידע בסוף ההודעה..";
+    textMsg =
+      "היי אני הבוט של רותם השמה, אשמח ללוות אתכם עד מציאת עבודה.. 😎" +
+      "\nאנא ציין את מספר המשרה עליה תרצה לקבל מידע בסוף ההודעה.." +
+      "\nלדוגמא :אשמח לקבל פרטים על משרה מס' 57486";
   }
   try {
     const jsonFile = {
