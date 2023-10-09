@@ -21,6 +21,7 @@ const server = http.createServer(app);
 const { footballFunc } = require("./footballFunc");
 const { basicFunc } = require("./basicFunc");
 const { botRollsFunctions } = require("./botRollsFunctions");
+const { armyFunc } = require("./armyFunc");
 
 dotenv.config();
 app.use(bodyParser.json());
@@ -336,6 +337,32 @@ app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
   }
 });
 
+app.post("/api/Army_WaBot", async (_req, res) => {
+  console.log("Army_WaBot");
+  const user_name = _req.body.query.sender;
+  const message = _req.body.query.message;
+  const stage = req.body.query.ruleId;
+  console.log(stage);
+
+  console.log(`msg: ${message}`);
+
+  const textMsgs = armyFunc.getAnswer(stage);
+
+  try {
+    const jsonFile = {
+      replies: [
+        {
+          message: textMsgs[0],
+        },
+      ],
+    };
+
+    res.send(jsonFile);
+  } catch (e) {
+    console.log(e);
+    res.status(400).end();
+  }
+});
 app.post("/api/Whatsapp", async (req, res) => {
   const user_name = req.body.query.sender;
   console.log("username", user_name);
