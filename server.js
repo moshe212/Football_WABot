@@ -366,9 +366,6 @@ app.post("/api/Army_WaBot", async (_req, res) => {
           {
             message: textMsgs[0],
           },
-          {
-            message: textMsgs[1],
-          },
         ],
       };
       res.send(jsonFile);
