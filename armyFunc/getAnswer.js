@@ -94,6 +94,129 @@ const getAnswer = async function (rullID, data) {
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
+
+    //------------------------------------
+
+    case 1099:
+      await saveData("איתור נעדרים", "B2", data);
+      textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
+      break;
+
+    case 1100:
+      await saveData("תמיכה רגשית", "B2", data);
+      textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
+
+      break;
+
+    case 1101:
+      await saveData("ציוד לחיילים", "B2", data);
+      textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
+
+      break;
+
+    case 1102:
+      await saveData("לינה ואירוח", "B2", data);
+      textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
+
+      break;
+
+    case 1103:
+      await saveData("מזון ושתיה", "B2", data);
+      textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
+
+      break;
+
+    case 1104:
+      await saveData("ביגוד", "B2", data);
+      textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
+
+      break;
+
+    case 1105:
+      await saveData("הסעות ומשלוחים", "B2", data);
+      textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
+
+      break;
+
+    case 1106:
+      await saveData("סיוע לילדים ומשפחות", "B2", data);
+      textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
+
+      break;
+
+    case 1107:
+      await saveData("תרומות כספיות", "B2", data);
+      textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
+
+      break;
+
+    case 1108:
+      await saveData("אחר", "B2", data);
+      textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
+
+      break;
+
+    //------------------------------------
+
+    case 1109:
+      await saveData("איתור נעדרים", "C2", data);
+      textMessage1 = "תודה על הזכות לסייע ולעזור! .";
+      textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
+      break;
+
+    case 1110:
+      await saveData("תמיכה רגשית", "C2", data);
+      textMessage1 = "תודה על הזכות לסייע ולעזור! .";
+      textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
+      break;
+
+    case 1111:
+      await saveData("ציוד לחיילים", "C2", data);
+      textMessage1 = "תודה על הזכות לסייע ולעזור! .";
+      textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
+      break;
+
+    case 1112:
+      await saveData("לינה ואירוח", "C2", data);
+      textMessage1 = "תודה על הזכות לסייע ולעזור! .";
+      textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
+      break;
+
+    case 1113:
+      await saveData("מזון ושתיה", "C2", data);
+      textMessage1 = "תודה על הזכות לסייע ולעזור! .";
+      textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
+      break;
+
+    case 1114:
+      await saveData("ביגוד", "C2", data);
+      textMessage1 = "תודה על הזכות לסייע ולעזור! .";
+      textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
+      break;
+
+    case 1115:
+      await saveData("הסעות ומשלוחים", "C2", data);
+      textMessage1 = "תודה על הזכות לסייע ולעזור! .";
+      textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
+      break;
+
+    case 1116:
+      await saveData("סיוע לילדים ומשפחות", "C2", data);
+      textMessage1 = "תודה על הזכות לסייע ולעזור! .";
+      textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
+      break;
+
+    case 1117:
+      await saveData("תרומות כספיות", "C2", data);
+      textMessage1 = "תודה על הזכות לסייע ולעזור! .";
+      textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
+      break;
+
+    case 1118:
+      await saveData("אחר", "C2", data);
+      textMessage1 = "תודה על הזכות לסייע ולעזור! .";
+      textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
+      break;
   }
 
   return [textMessage1, textMessage2, textMessage3];
