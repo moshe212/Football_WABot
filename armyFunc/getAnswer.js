@@ -22,18 +22,16 @@ const getAnswer = async function (rullID, data) {
         "\n9️⃣ - תרומות כספיות" +
         "\n0️⃣ - אחר";
       break;
-    case rullID.includes(
-      1068,
-      1080,
-      1081,
-      1082,
-      1083,
-      1084,
-      1085,
-      1086,
-      1087,
-      1088
-    ):
+    case 1068:
+    case 1080:
+    case 1081:
+    case 1082:
+    case 1083:
+    case 1084:
+    case 1085:
+    case 1086:
+    case 1087:
+    case 1088:
       textMessage1 =
         "אנא כתבו בהודעה אחת קצרהֿ, ממוקדת ולא ארוכה מידי את הסיוע לו אתם זקוקים.";
       break;
