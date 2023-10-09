@@ -341,7 +341,7 @@ app.post("/api/Army_WaBot", async (_req, res) => {
   console.log("Army_WaBot");
   const user_name = _req.body.query.sender;
   const message = _req.body.query.message;
-  const stage = req.body.query.ruleId;
+  const stage = _req.body.query.ruleId;
   console.log(stage);
 
   console.log(`msg: ${message}`);
