@@ -20,11 +20,11 @@ const saveData = async function (sheetTitle, columnLetter1, data) {
   try {
     Range_Cell = sheetTitle + "!" + columnLetter1;
 
-    const res_save = await googleSheetsInstance.spreadsheets.values.update({
-      auth, //auth object
-      spreadsheetId, //spreadsheet id
-      range: Range_Cell, //"Sheet1!A:B" sheet name and range of cells
-      valueInputOption: "USER_ENTERED", // The information will be passed according to what the usere passes in as date, number or text
+    const res_save = googleSheetsInstance.spreadsheets.values.update({
+      auth,
+      spreadsheetId,
+      range: Range_Cell,
+      valueInputOption: "USER_ENTERED",
       insertDataOption: "INSERT_ROWS",
       //   valueInputOption: 'RAW',
       resource: {
@@ -34,9 +34,8 @@ const saveData = async function (sheetTitle, columnLetter1, data) {
     console.log("save");
     return res_save;
   } catch (e) {
-    console.log("not save");
+    console.log("not save", e);
     return "not save";
-    throw e;
   }
 };
 
