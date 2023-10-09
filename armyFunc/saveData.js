@@ -20,7 +20,7 @@ const saveData = async function (sheetTitle, columnLetter1, data) {
   try {
     Range_Cell = sheetTitle + "!" + columnLetter1;
 
-    const res_save = googleSheetsInstance.spreadsheets.values.update({
+    const res_save = googleSheetsInstance.spreadsheets.values.append({
       auth,
       spreadsheetId,
       range: Range_Cell,
