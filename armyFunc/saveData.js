@@ -17,25 +17,46 @@ const saveData = async function (sheetTitle, columnLetter1, data) {
   const spreadsheetId = "1EVIxduo5Yh8F4rXEKBxfHLHkPkE4A4a4XpHPD3jWyWc";
 
   let Range_Cell = "";
-  try {
-    Range_Cell = sheetTitle + "!" + columnLetter1;
 
-    const res_save = googleSheetsInstance.spreadsheets.values.append({
-      auth,
-      spreadsheetId,
-      range: Range_Cell,
-      valueInputOption: "USER_ENTERED",
-      insertDataOption: "INSERT_ROWS",
-      //   valueInputOption: 'RAW',
-      resource: {
-        values: [[data]],
-      },
-    });
-    console.log("save");
-    return res_save;
-  } catch (e) {
-    console.log("not save", e);
-    return "not save";
+  if (append) {
+    try {
+      Range_Cell = sheetTitle + "!" + columnLetter1;
+
+      const res_save = googleSheetsInstance.spreadsheets.values.append({
+        auth,
+        spreadsheetId,
+        range: Range_Cell,
+        valueInputOption: "USER_ENTERED",
+        insertDataOption: "INSERT_ROWS",
+        resource: {
+          values: [[data]],
+        },
+      });
+      console.log("save");
+      return res_save;
+    } catch (e) {
+      console.log("not save", e);
+      return "not save";
+    }
+  } else {
+    try {
+      Range_Cell = sheetTitle + "!" + columnLetter1;
+
+      const res_save = googleSheetsInstance.spreadsheets.values.update({
+        auth,
+        spreadsheetId,
+        range: Range_Cell,
+        valueInputOption: "USER_ENTERED",
+        resource: {
+          values: [[data]],
+        },
+      });
+      console.log("save");
+      return res_save;
+    } catch (e) {
+      console.log("not save", e);
+      return "not save";
+    }
   }
 };
 
