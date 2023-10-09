@@ -37,60 +37,60 @@ const getAnswer = async function (rullID, data) {
       break;
 
     case 1089:
-      await saveData("איתור נעדרים", "A", null, data);
+      await saveData("איתור נעדרים", "A", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
       break;
 
     case 1090:
-      await saveData("תמיכה רגשית", "A", null, data);
+      await saveData("תמיכה רגשית", "A", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1091:
-      await saveData("ציוד לחיילים", "A", null, data);
+      await saveData("ציוד לחיילים", "A", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1092:
-      await saveData("לינה ואירוח", "A", null, data);
+      await saveData("לינה ואירוח", "A", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1093:
-      await saveData("מזון ושתיה", "A", null, data);
+      await saveData("מזון ושתיה", "A", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1094:
-      await saveData("ביגוד", "A", null, data);
+      await saveData("ביגוד", "A", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1095:
-      await saveData("הסעות ומשלוחים", "A", null, data);
+      await saveData("הסעות ומשלוחים", "A", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1096:
-      await saveData("סיוע לילדים ומשפחות", "A", null, data);
+      await saveData("סיוע לילדים ומשפחות", "A", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1097:
-      await saveData("תרומות כספיות", "A", null, data);
+      await saveData("תרומות כספיות", "A", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1098:
-      await saveData("אחר", "A", null, data);
+      await saveData("אחר", "A", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
