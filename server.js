@@ -347,22 +347,38 @@ app.post("/api/Army_WaBot", async (_req, res) => {
   console.log(`msg: ${message}`);
 
   const textMsgs = await armyFunc.getAnswer(stage, message);
-
   try {
-    const jsonFile = {
-      replies: [
-        {
-          message: textMsgs[0],
-        },
-      ],
-    };
-
-    res.send(jsonFile);
+    if (textMsgs.length > 1) {
+      const jsonFile = {
+        replies: [
+          {
+            message: textMsgs[0],
+          },
+          {
+            message: textMsgs[1],
+          },
+        ],
+      };
+      res.send(jsonFile);
+    } else {
+      const jsonFile = {
+        replies: [
+          {
+            message: textMsgs[0],
+          },
+          {
+            message: textMsgs[1],
+          },
+        ],
+      };
+      res.send(jsonFile);
+    }
   } catch (e) {
     console.log(e);
     res.status(400).end();
   }
 });
+
 app.post("/api/Whatsapp", async (req, res) => {
   const user_name = req.body.query.sender;
   console.log("username", user_name);
