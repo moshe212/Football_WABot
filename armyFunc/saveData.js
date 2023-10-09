@@ -18,13 +18,16 @@ const saveData = async function (sheetTitle, columnLetter1, data) {
 
   let Range_Cell = "";
   try {
-    Range_Cell = sheetTitle + "!" + columnLetter1;
+    Range_Cell =
+      sheetTitle + "!" + columnLetter1 + (raw_idx + 2) + ":" + columnLetter1;
 
     const res_save = await googleSheetsInstance.spreadsheets.values.update({
       auth, //auth object
       spreadsheetId, //spreadsheet id
       range: Range_Cell, //"Sheet1!A:B" sheet name and range of cells
       valueInputOption: "USER_ENTERED", // The information will be passed according to what the usere passes in as date, number or text
+      insertDataOption: "INSERT_ROWS",
+      //   valueInputOption: 'RAW',
       resource: {
         values: [[data]],
       },
