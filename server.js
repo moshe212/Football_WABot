@@ -346,7 +346,7 @@ app.post("/api/Army_WaBot", async (_req, res) => {
 
   console.log(`msg: ${message}`);
 
-  let textMsgs = await armyFunc.getAnswer(stage, message);
+  const textMsgs = await armyFunc.getAnswer(stage, message);
 
   try {
     const jsonFile = {

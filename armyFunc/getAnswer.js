@@ -1,8 +1,8 @@
 const { saveData } = require("./saveData");
 
 const getAnswer = async function (rullID, data) {
-  const textMessage1 = "";
-  const textMessage2 = "";
+  let textMessage1 = "";
+  let textMessage2 = "";
 
   switch (rullID) {
     case 1067:
