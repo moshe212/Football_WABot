@@ -3,6 +3,7 @@ const { saveData } = require("./saveData");
 const getAnswer = async function (rullID, data) {
   let textMessage1 = "";
   let textMessage2 = "";
+  let textMessage3 = "";
 
   switch (rullID) {
     case 1067:
