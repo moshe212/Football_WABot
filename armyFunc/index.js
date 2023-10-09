@@ -1,5 +1,6 @@
 // const { getDataFromSheet } = require("../footballFunc/getDataFromSheet");
 const { getAnswer } = require("./getAnswer");
+const { saveData } = require("./saveData");
 // const { saveData } = require("../footballFunc/saveData");
 // const { saveData_Full } = require("../footballFunc/saveData_Full");
 // const { getSavedScore } = require("../footballFunc/getSavedScore");
@@ -37,6 +38,7 @@ const { getAnswer } = require("./getAnswer");
 
 const armyFunc = {
   getAnswer,
+  saveData,
 };
 
 module.exports = { armyFunc };
