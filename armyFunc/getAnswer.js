@@ -1,4 +1,4 @@
-const { saveData } = require("./await saveData");
+const { saveData } = require("./saveData");
 
 const getAnswer = async function (rullID, data) {
   let textMessage1 = "";
