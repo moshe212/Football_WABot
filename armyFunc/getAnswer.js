@@ -1,4 +1,4 @@
-const { saveData } = require("./saveData");
+const { await saveData } = require("./await saveData");
 
 const getAnswer = async function (rullID, data) {
   let textMessage1 = "";
@@ -38,43 +38,43 @@ const getAnswer = async function (rullID, data) {
       break;
 
     case 1089:
-      saveData("איתור נעדרים", "A", null, data);
+      await saveData("איתור נעדרים", "A", null, data);
       break;
 
     case 1090:
-      saveData("תמיכה רגשית", "A", null, data);
+      await saveData("תמיכה רגשית", "A", null, data);
       break;
 
     case 1091:
-      saveData("ציוד לחיילים", "A", null, data);
+      await saveData("ציוד לחיילים", "A", null, data);
       break;
 
     case 1092:
-      saveData("לינה ואירוח", "A", null, data);
+      await saveData("לינה ואירוח", "A", null, data);
       break;
 
     case 1093:
-      saveData("מזון ושתיה", "A", null, data);
+      await saveData("מזון ושתיה", "A", null, data);
       break;
 
     case 1094:
-      saveData("ביגוד", "A", null, data);
+      await saveData("ביגוד", "A", null, data);
       break;
 
     case 1095:
-      saveData("הסעות ומשלוחים", "A", null, data);
+      await saveData("הסעות ומשלוחים", "A", null, data);
       break;
 
     case 1096:
-      saveData("סיוע לילדים ומשפחות", "A", null, data);
+      await saveData("סיוע לילדים ומשפחות", "A", null, data);
       break;
 
     case 1097:
-      saveData("תרומות כספיות", "A", null, data);
+      await saveData("תרומות כספיות", "A", null, data);
       break;
 
     case 1098:
-      saveData("אחר", "A", null, data);
+      await saveData("אחר", "A", null, data);
       break;
   }
 
