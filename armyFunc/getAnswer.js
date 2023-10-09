@@ -37,60 +37,60 @@ const getAnswer = async function (rullID, data) {
       break;
 
     case 1089:
-      await saveData("איתור נעדרים", "A1", data);
+      await saveData("איתור נעדרים", "A2", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
       break;
 
     case 1090:
-      await saveData("תמיכה רגשית", "A1", data);
+      await saveData("תמיכה רגשית", "A2", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1091:
-      await saveData("ציוד לחיילים", "A1", data);
+      await saveData("ציוד לחיילים", "A2", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1092:
-      await saveData("לינה ואירוח", "A1", data);
+      await saveData("לינה ואירוח", "A2", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1093:
-      await saveData("מזון ושתיה", "A1", data);
+      await saveData("מזון ושתיה", "A2", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1094:
-      await saveData("ביגוד", "A1", data);
+      await saveData("ביגוד", "A2", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1095:
-      await saveData("הסעות ומשלוחים", "A1", data);
+      await saveData("הסעות ומשלוחים", "A2", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1096:
-      await saveData("סיוע לילדים ומשפחות", "A1", data);
+      await saveData("סיוע לילדים ומשפחות", "A2", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1097:
-      await saveData("תרומות כספיות", "A1", data);
+      await saveData("תרומות כספיות", "A2", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1098:
-      await saveData("אחר", "A1", data);
+      await saveData("אחר", "A2", data);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
