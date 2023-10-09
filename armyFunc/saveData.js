@@ -18,8 +18,7 @@ const saveData = async function (sheetTitle, columnLetter1, data) {
 
   let Range_Cell = "";
   try {
-    Range_Cell =
-      sheetTitle + "!" + columnLetter1 + (raw_idx + 2) + ":" + columnLetter1;
+    Range_Cell = sheetTitle + "!" + columnLetter1;
 
     const res_save = await googleSheetsInstance.spreadsheets.values.update({
       auth, //auth object
