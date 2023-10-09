@@ -1,7 +1,7 @@
 const { google } = require("googleapis");
 const moment = require("moment");
 
-const saveData = async function (sheetTitle, columnLetter1, data) {
+const saveData = async function (sheetTitle, columnLetter1, data, append) {
   const auth = new google.auth.GoogleAuth({
     keyFile: "config/CreditTransaction-d9fe1ef7e128.json", //the key file
     //url to spreadsheets API
