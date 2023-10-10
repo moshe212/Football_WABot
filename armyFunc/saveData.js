@@ -88,6 +88,7 @@ const getRowNumber = async (sheets, spreadsheetId, sheetTitle, phoneNumber) => {
 
     // Search for the specific value in your desired column
     const targetValue = phoneNumber;
+    console.log("targetValue: " + targetValue);
     let rowNumber = null;
 
     if (values) {
