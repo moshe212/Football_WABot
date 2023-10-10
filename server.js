@@ -338,7 +338,8 @@ app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
 });
 
 app.post("/api/Army_WaBot", async (_req, res) => {
-  console.log("Army_WaBot");
+  console.log("Army_WaBot", _req.body.query);
+
   const phoneNumber = _req.body.query.sender;
   const message = _req.body.query.message;
   const stage = _req.body.query.ruleId;
