@@ -69,7 +69,7 @@ const saveData = async function (
   }
 };
 
-export const getRowNumber = async (phoneNumber) => {
+const getRowNumber = async (phoneNumber) => {
   try {
     const range = "Sheet1!A:B"; // Adjust the range based on your needs
 
