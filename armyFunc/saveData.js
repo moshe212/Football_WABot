@@ -105,6 +105,7 @@ const getRowNumber = async (sheets, spreadsheetId, sheetTitle, phoneNumber) => {
     }
 
     console.log("Row number:", rowNumber);
+    return rowNumber;
   } catch (error) {
     console.error("Error:", error.message);
   }
