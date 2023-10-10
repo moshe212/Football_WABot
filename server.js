@@ -346,8 +346,12 @@ app.post("/api/Army_WaBot", async (_req, res) => {
   console.log(stage);
 
   console.log(`msg: ${message}`);
-
-  const textMsgs = await armyFunc.getAnswer(stage, message, phoneNumber.trim());
+  console.log("phon", phoneNumber.replace(" ", ""));
+  const textMsgs = await armyFunc.getAnswer(
+    stage,
+    message,
+    phoneNumber.replace(" ", "")
+  );
   try {
     if (textMsgs.length > 1) {
       const jsonFile = {
