@@ -348,12 +348,20 @@ app.post("/api/Army_WaBot", async (_req, res) => {
   console.log(`msg: ${message}`);
   console.log(
     "phon",
-    phoneNumber.replace(" ", "").replace(" ", "").replace(" ", "")
+    phoneNumber
+      .replace(" ", "")
+      .replace(" ", "")
+      .replace(" ", "")
+      .replace("+", "")
   );
   const textMsgs = await armyFunc.getAnswer(
     stage,
     message,
-    phoneNumber.replace(" ", "").replace(" ", "").replace(" ", "")
+    phoneNumber
+      .replace(" ", "")
+      .replace(" ", "")
+      .replace(" ", "")
+      .replace("+", "")
   );
   try {
     if (textMsgs.length > 1) {
