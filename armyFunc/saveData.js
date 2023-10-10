@@ -76,7 +76,7 @@ const saveData = async function (
 
 const getRowNumber = async (sheets, spreadsheetId, sheetTitle, phoneNumber) => {
   try {
-    const range = `${sheetTitle}!A:C`; // Adjust the range based on your needs
+    const range = `${sheetTitle}!A:D`; // Adjust the range based on your needs
 
     // Make the API request to get the values
     const response = await sheets.spreadsheets.values.get({
@@ -95,8 +95,13 @@ const getRowNumber = async (sheets, spreadsheetId, sheetTitle, phoneNumber) => {
       for (let i = 0; i < values.length; i++) {
         const row = values[i];
         console.log("row: " + row);
-        console.log("3", row[2]);
-        if (row.length > 0 && row[2] == undefined && row[0] === targetValue) {
+        console.log("2", row[2]);
+        console.log("3", row[3]);
+        if (
+          row.length > 0 &&
+          (row[2] == undefined || row[3] == undefined) &&
+          row[0] === targetValue
+        ) {
           // Adjust column index (0-based) according to your needs
           console.log("length", row.length);
           rowNumber = i + 1;
