@@ -46,7 +46,7 @@ const saveData = async function (
     }
   } else {
     try {
-      const rowIndex = getRowNumber(
+      const rowIndex = await getRowNumber(
         googleSheetsInstance,
         spreadsheetId,
         sheetTitle,
