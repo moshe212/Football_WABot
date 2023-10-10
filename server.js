@@ -339,14 +339,14 @@ app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
 
 app.post("/api/Army_WaBot", async (_req, res) => {
   console.log("Army_WaBot");
-  const user_name = _req.body.query.sender;
+  const phoneNumber = _req.body.query.sender;
   const message = _req.body.query.message;
   const stage = _req.body.query.ruleId;
   console.log(stage);
 
   console.log(`msg: ${message}`);
 
-  const textMsgs = await armyFunc.getAnswer(stage, message);
+  const textMsgs = await armyFunc.getAnswer(stage, message, phoneNumber);
   try {
     if (textMsgs.length > 1) {
       const jsonFile = {

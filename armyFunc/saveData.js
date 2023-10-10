@@ -1,7 +1,13 @@
 const { google } = require("googleapis");
 const moment = require("moment");
 
-const saveData = async function (sheetTitle, columnLetter1, data, append) {
+const saveData = async function (
+  sheetTitle,
+  columnLetter1,
+  data,
+  append,
+  phoneNumber
+) {
   const auth = new google.auth.GoogleAuth({
     keyFile: "config/CreditTransaction-d9fe1ef7e128.json", //the key file
     //url to spreadsheets API
@@ -20,7 +26,7 @@ const saveData = async function (sheetTitle, columnLetter1, data, append) {
 
   if (append) {
     try {
-      Range_Cell = sheetTitle + "!" + columnLetter1;
+      Range_Cell = sheetTitle + "!" + "A2:" + columnLetter1;
 
       const res_save = googleSheetsInstance.spreadsheets.values.append({
         auth,
@@ -29,7 +35,7 @@ const saveData = async function (sheetTitle, columnLetter1, data, append) {
         valueInputOption: "USER_ENTERED",
         insertDataOption: "INSERT_ROWS",
         resource: {
-          values: [[data]],
+          values: [[phoneNumber, data]],
         },
       });
       console.log("save");
@@ -40,6 +46,9 @@ const saveData = async function (sheetTitle, columnLetter1, data, append) {
     }
   } else {
     try {
+      const index = getRowNumber(phoneNumber);
+      console.log("idx", index);
+
       Range_Cell = sheetTitle + "!" + columnLetter1;
 
       const res_save = googleSheetsInstance.spreadsheets.values.update({
@@ -57,6 +66,39 @@ const saveData = async function (sheetTitle, columnLetter1, data, append) {
       console.log("not save", e);
       return "not save";
     }
+  }
+};
+
+export const getRowNumber = async (phoneNumber) => {
+  try {
+    const range = "Sheet1!A:B"; // Adjust the range based on your needs
+
+    // Make the API request to get the values
+    const response = await sheets.spreadsheets.values.get({
+      spreadsheetId,
+      range,
+    });
+
+    const values = response.data.values;
+
+    // Search for the specific value in your desired column
+    const targetValue = phoneNumber;
+    let rowNumber = null;
+
+    if (values) {
+      for (let i = 0; i < values.length; i++) {
+        const row = values[i];
+        if (row.length >= 2 && row[1] === targetValue) {
+          // Adjust column index (0-based) according to your needs
+          rowNumber = i + 1;
+          break;
+        }
+      }
+    }
+
+    console.log("Row number:", rowNumber);
+  } catch (error) {
+    console.error("Error:", error.message);
   }
 };
 

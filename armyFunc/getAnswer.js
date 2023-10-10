@@ -1,9 +1,11 @@
 const { saveData } = require("./saveData");
+const moment = require("moment");
 
-const getAnswer = async function (rullID, data) {
+const getAnswer = async function (rullID, data, phoneNumber) {
   let textMessage1 = "";
   let textMessage2 = "";
   let textMessage3 = "";
+  const time = moment().format("MMMM Do YYYY, h:mm:ss a");
 
   switch (rullID) {
     case 1067:
@@ -37,60 +39,71 @@ const getAnswer = async function (rullID, data) {
       break;
 
     case 1089:
-      await saveData("איתור נעדרים", "A2", data, true);
+      await saveData("איתור נעדרים", "B2", data, true, phoneNumber);
+      await saveData("איתור נעדרים", "E2", time, false);
+
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
       break;
 
     case 1090:
-      await saveData("תמיכה רגשית", "A2", data, true);
+      await saveData("תמיכה רגשית", "B2", data, true);
+      await saveData("תמיכה רגשית", "E2", time, false);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1091:
-      await saveData("ציוד לחיילים", "A2", data, true);
+      await saveData("ציוד לחיילים", "B2", data, true);
+      await saveData("ציוד לחיילים", "E2", time, false);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1092:
-      await saveData("לינה ואירוח", "A2", data, true);
+      await saveData("לינה ואירוח", "B2", data, true);
+      await saveData("לינה ואירוח", "E2", time, false);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1093:
-      await saveData("מזון ושתיה", "A2", data, true);
+      await saveData("מזון ושתיה", "B2", data, true);
+      await saveData("מזון ושתיה", "E2", time, false);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1094:
-      await saveData("ביגוד", "A2", data, true);
+      await saveData("ביגוד", "B2", data, true);
+      await saveData("ביגוד", "E2", time, false);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1095:
-      await saveData("הסעות ומשלוחים", "A2", data, true);
+      await saveData("הסעות ומשלוחים", "B2", data, true);
+      await saveData("הסעות ומשלוחים", "E2", time, false);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1096:
-      await saveData("סיוע לילדים ומשפחות", "A2", data, true);
+      await saveData("סיוע לילדים ומשפחות", "B2", data, true);
+      await saveData("סיוע לילדים ומשפחות", "E2", time, false);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1097:
-      await saveData("תרומות כספיות", "A2", data, true);
+      await saveData("תרומות כספיות", "B2", data, true);
+      await saveData("תרומות כספיות", "E2", time, false);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1098:
-      await saveData("אחר", "A2", data, true);
+      await saveData("אחר", "B2", data, true);
+      await saveData("אחר", "E2", time, false);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
