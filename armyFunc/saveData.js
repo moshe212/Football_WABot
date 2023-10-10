@@ -54,7 +54,7 @@ const saveData = async function (
       );
       console.log("idx", rowIndex);
 
-      Range_Cell = sheetTitle + "!" + columnLetter1;
+      Range_Cell = sheetTitle + "!" + columnLetter1 + rowIndex;
 
       const res_save = googleSheetsInstance.spreadsheets.values.update({
         auth,

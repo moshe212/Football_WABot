@@ -41,70 +41,70 @@ const getAnswer = async function (rullID, data, phoneNumber) {
     case 1089:
       console.log("1089", phoneNumber);
       await saveData("איתור נעדרים", "B2", data, true, phoneNumber);
-      await saveData("איתור נעדרים", "E2", time, false, phoneNumber);
+      await saveData("איתור נעדרים", "E", time, false, phoneNumber);
 
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
       break;
 
     case 1090:
       await saveData("תמיכה רגשית", "B2", data, true, phoneNumber);
-      await saveData("תמיכה רגשית", "E2", time, false, phoneNumber);
+      await saveData("תמיכה רגשית", "E", time, false, phoneNumber);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1091:
       await saveData("ציוד לחיילים", "B2", data, true, phoneNumber);
-      await saveData("ציוד לחיילים", "E2", time, false, phoneNumber);
+      await saveData("ציוד לחיילים", "E", time, false, phoneNumber);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1092:
       await saveData("לינה ואירוח", "B2", data, true, phoneNumber);
-      await saveData("לינה ואירוח", "E2", time, false, phoneNumber);
+      await saveData("לינה ואירוח", "E", time, false, phoneNumber);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1093:
       await saveData("מזון ושתיה", "B2", data, true, phoneNumber);
-      await saveData("מזון ושתיה", "E2", time, false, phoneNumber);
+      await saveData("מזון ושתיה", "E", time, false, phoneNumber);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1094:
       await saveData("ביגוד", "B2", data, true, phoneNumber);
-      await saveData("ביגוד", "E2", time, false, phoneNumber);
+      await saveData("ביגוד", "E", time, false, phoneNumber);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1095:
       await saveData("הסעות ומשלוחים", "B2", data, true, phoneNumber);
-      await saveData("הסעות ומשלוחים", "E2", time, false, phoneNumber);
+      await saveData("הסעות ומשלוחים", "E", time, false, phoneNumber);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1096:
       await saveData("סיוע לילדים ומשפחות", "B2", data, true, phoneNumber);
-      await saveData("סיוע לילדים ומשפחות", "E2", time, false, phoneNumber);
+      await saveData("סיוע לילדים ומשפחות", "E", time, false, phoneNumber);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1097:
       await saveData("תרומות כספיות", "B2", data, true, phoneNumber);
-      await saveData("תרומות כספיות", "E2", time, false, phoneNumber);
+      await saveData("תרומות כספיות", "E", time, false, phoneNumber);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
 
     case 1098:
       await saveData("אחר", "B2", data, true, phoneNumber);
-      await saveData("אחר", "E2", time, false, phoneNumber);
+      await saveData("אחר", "E", time, false, phoneNumber);
       textMessage1 = "כתבו את שמכם המלא. שם פרטי ואח״כ שם משפחה";
 
       break;
@@ -112,60 +112,60 @@ const getAnswer = async function (rullID, data, phoneNumber) {
     //------------------------------------
 
     case 1099:
-      await saveData("איתור נעדרים", "B2", data, false, phoneNumber);
+      await saveData("איתור נעדרים", "C", data, false, phoneNumber);
       textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
       break;
 
     case 1100:
-      await saveData("תמיכה רגשית", "B2", data, false, phoneNumber);
+      await saveData("תמיכה רגשית", "C", data, false, phoneNumber);
       textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
 
       break;
 
     case 1101:
-      await saveData("ציוד לחיילים", "B2", data, false, phoneNumber);
+      await saveData("ציוד לחיילים", "C", data, false, phoneNumber);
       textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
 
       break;
 
     case 1102:
-      await saveData("לינה ואירוח", "B2", data, false, phoneNumber);
+      await saveData("לינה ואירוח", "C", data, false, phoneNumber);
       textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
 
       break;
 
     case 1103:
-      await saveData("מזון ושתיה", "B2", data, false, phoneNumber);
+      await saveData("מזון ושתיה", "C", data, false, phoneNumber);
       textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
 
       break;
 
     case 1104:
-      await saveData("ביגוד", "B2", data, false, phoneNumber);
+      await saveData("ביגוד", "C", data, false, phoneNumber);
       textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
 
       break;
 
     case 1105:
-      await saveData("הסעות ומשלוחים", "B2", data, false, phoneNumber);
+      await saveData("הסעות ומשלוחים", "C", data, false, phoneNumber);
       textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
 
       break;
 
     case 1106:
-      await saveData("סיוע לילדים ומשפחות", "B2", data, false, phoneNumber);
+      await saveData("סיוע לילדים ומשפחות", "C", data, false, phoneNumber);
       textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
 
       break;
 
     case 1107:
-      await saveData("תרומות כספיות", "B2", data, false, phoneNumber);
+      await saveData("תרומות כספיות", "C", data, false, phoneNumber);
       textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
 
       break;
 
     case 1108:
-      await saveData("אחר", "B2", data, false, phoneNumber);
+      await saveData("אחר", "C", data, false, phoneNumber);
       textMessage1 = "כתבו מספר טלפון על מנת שנוכל ליצור אתכם קשר.";
 
       break;
@@ -173,61 +173,61 @@ const getAnswer = async function (rullID, data, phoneNumber) {
     //------------------------------------
 
     case 1109:
-      await saveData("איתור נעדרים", "C2", data, false, phoneNumber);
+      await saveData("איתור נעדרים", "D", data, false, phoneNumber);
       textMessage1 = "תודה על הזכות לסייע ולעזור! .";
       textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
       break;
 
     case 1110:
-      await saveData("תמיכה רגשית", "C2", data, false, phoneNumber);
+      await saveData("תמיכה רגשית", "D", data, false, phoneNumber);
       textMessage1 = "תודה על הזכות לסייע ולעזור! .";
       textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
       break;
 
     case 1111:
-      await saveData("ציוד לחיילים", "C2", data, false, phoneNumber);
+      await saveData("ציוד לחיילים", "D", data, false, phoneNumber);
       textMessage1 = "תודה על הזכות לסייע ולעזור! .";
       textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
       break;
 
     case 1112:
-      await saveData("לינה ואירוח", "C2", data, false, phoneNumber);
+      await saveData("לינה ואירוח", "D", data, false, phoneNumber);
       textMessage1 = "תודה על הזכות לסייע ולעזור! .";
       textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
       break;
 
     case 1113:
-      await saveData("מזון ושתיה", "C2", data, false, phoneNumber);
+      await saveData("מזון ושתיה", "D", data, false, phoneNumber);
       textMessage1 = "תודה על הזכות לסייע ולעזור! .";
       textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
       break;
 
     case 1114:
-      await saveData("ביגוד", "C2", data, false, phoneNumber);
+      await saveData("ביגוד", "D", data, false, phoneNumber);
       textMessage1 = "תודה על הזכות לסייע ולעזור! .";
       textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
       break;
 
     case 1115:
-      await saveData("הסעות ומשלוחים", "C2", data, false, phoneNumber);
+      await saveData("הסעות ומשלוחים", "D", data, false, phoneNumber);
       textMessage1 = "תודה על הזכות לסייע ולעזור! .";
       textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
       break;
 
     case 1116:
-      await saveData("סיוע לילדים ומשפחות", "C2", data, false, phoneNumber);
+      await saveData("סיוע לילדים ומשפחות", "D", data, false, phoneNumber);
       textMessage1 = "תודה על הזכות לסייע ולעזור! .";
       textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
       break;
 
     case 1117:
-      await saveData("תרומות כספיות", "C2", data, false, phoneNumber);
+      await saveData("תרומות כספיות", "D", data, false, phoneNumber);
       textMessage1 = "תודה על הזכות לסייע ולעזור! .";
       textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
       break;
 
     case 1118:
-      await saveData("אחר", "C2", data, false, phoneNumber);
+      await saveData("אחר", "D", data, false, phoneNumber);
       textMessage1 = "תודה על הזכות לסייע ולעזור! .";
       textMessage2 = "החיילים בצבא של דוד יצרו איתך קשר בהקדם האפשרי! ";
       break;
