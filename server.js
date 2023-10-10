@@ -347,7 +347,7 @@ app.post("/api/Army_WaBot", async (_req, res) => {
 
   console.log(`msg: ${message}`);
 
-  const textMsgs = await armyFunc.getAnswer(stage, message, trim(phoneNumber));
+  const textMsgs = await armyFunc.getAnswer(stage, message, phoneNumber.trim());
   try {
     if (textMsgs.length > 1) {
       const jsonFile = {
