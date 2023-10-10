@@ -75,7 +75,7 @@ const saveData = async function (
 
 const getRowNumber = async (sheets, spreadsheetId, phoneNumber) => {
   try {
-    const range = "Sheet1!A:B"; // Adjust the range based on your needs
+    const range = `${sheetTitle}!A:B`; // Adjust the range based on your needs
 
     // Make the API request to get the values
     const response = await sheets.spreadsheets.values.get({
