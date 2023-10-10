@@ -46,8 +46,12 @@ const saveData = async function (
     }
   } else {
     try {
-      const index = getRowNumber(phoneNumber);
-      console.log("idx", index);
+      const rowIndex = getRowNumber(
+        googleSheetsInstance,
+        spreadsheetId,
+        phoneNumber
+      );
+      console.log("idx", rowIndex);
 
       Range_Cell = sheetTitle + "!" + columnLetter1;
 
@@ -69,7 +73,7 @@ const saveData = async function (
   }
 };
 
-const getRowNumber = async (phoneNumber) => {
+const getRowNumber = async (sheets, spreadsheetId, phoneNumber) => {
   try {
     const range = "Sheet1!A:B"; // Adjust the range based on your needs
 
