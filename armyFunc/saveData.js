@@ -98,6 +98,7 @@ const getRowNumber = async (sheets, spreadsheetId, sheetTitle, phoneNumber) => {
         console.log("1", row[0]);
         if (row.length == 3 && row[0] === targetValue) {
           // Adjust column index (0-based) according to your needs
+          console.log("length", row.length);
           rowNumber = i + 1;
           break;
         }
