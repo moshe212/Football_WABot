@@ -22,6 +22,7 @@ const { footballFunc } = require("./footballFunc");
 const { basicFunc } = require("./basicFunc");
 const { botRollsFunctions } = require("./botRollsFunctions");
 const { armyFunc } = require("./armyFunc");
+const { footballDataFunc } = require("./footballDataFunc");
 
 dotenv.config();
 app.use(bodyParser.json());
@@ -118,8 +119,8 @@ const getAlufotData = async () => {
     "Alufot"
   );
   for (let g = 0; g < alufotGames.length; g++) {
-    // console.log("alufotGames[g]._rawData[0]", alufotGames[g]._rawData[0]);
-    console.log("alufotCycleNum", alufotCycleNum);
+    // //console.log("alufotGames[g]._rawData[0]", alufotGames[g]._rawData[0]);
+    //console.log("alufotCycleNum", alufotCycleNum);
     if (alufotGames[g]._rawData[0] === alufotCycleNum) {
       const team_1 = alufotGames[g]._rawData[1];
       const team_2 = alufotGames[g]._rawData[2];
@@ -230,10 +231,10 @@ let olamiTableObj = {};
 const getOlamiData = async () => {
   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים", "Olami");
   const res_cycle = await footballFunc.getCycle(Data);
-  console.log("res_cycle_olami", res_cycle);
+  //console.log("res_cycle_olami", res_cycle);
   olamiCycleNum = res_cycle[0];
   olamiCycleText = res_cycle[3];
-  console.log("olamiCycleText", olamiCycleText);
+  //console.log("olamiCycleText", olamiCycleText);
   const cycleDate1 = moment(res_cycle[1]).format("DD-MM-YYYY");
   const cycleDate2 = cycleDate1.replace("-", ".");
   olamiCycleDate = cycleDate2.replace("-", ".");
@@ -267,7 +268,7 @@ const getOlamiData = async () => {
     "שלב הנוקאאוט",
     "Olami"
   );
-  console.log({ olamiUsersList });
+  //console.log({ olamiUsersList });
   // olamiAchievementsOfSeasonData = await footballFunc.getDataFromSheet(
   //   "הישגים",
   //   "Alufot"
@@ -287,25 +288,26 @@ getData();
 getAlufotData();
 getMondialData();
 getOlamiData();
+footballDataFunc.getNBAData();
 
 app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
-  console.log("WaBot");
+  //console.log("WaBot");
   const user_name = _req.body.query.sender;
   const message = _req.body.query.message;
 
-  console.log(`msg: ${message}`);
+  //console.log(`msg: ${message}`);
 
   const words = message.split(" ");
   const lastWord = words[words.length - 1];
-  console.log(lastWord);
+  //console.log(lastWord);
   let textMsg = "";
   if (/^[0-9]+$/.test(lastWord)) {
-    console.log("The string contains only numbers");
+    //console.log("The string contains only numbers");
 
     const resShortURL = await basicFunc.getShortURL({ id: Number(lastWord) });
-    console.log("resShortURL", resShortURL);
+    //console.log("resShortURL", resShortURL);
     const shortURL = resShortURL.shortURL;
-    console.log("short", shortURL);
+    //console.log("short", shortURL);
     const url = `http://192.117.146.232:3000/QestionForm?misraID=${Number(
       lastWord
     )}`;
@@ -314,7 +316,7 @@ app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
       "\nלהלן הלינק לשאלון לרישום למשרה:" +
       `\n ${shortURL}`;
   } else {
-    console.log("The string contains other characters besides numbers");
+    //console.log("The string contains other characters besides numbers");
 
     textMsg =
       "היי אני הבוט של *רותם השמה*, אשמח ללוות אתכם עד מציאת עבודה.. 😎" +
@@ -332,28 +334,28 @@ app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
 
     res.send(jsonFile);
   } catch (e) {
-    console.log(e);
+    //console.log(e);
     res.status(400).end();
   }
 });
 
 app.post("/api/Army_WaBot", async (_req, res) => {
-  console.log("Army_WaBot", _req.body.query);
+  //console.log("Army_WaBot", _req.body.query);
 
   const phoneNumber = _req.body.query.sender;
   const message = _req.body.query.message;
   const stage = _req.body.query.ruleId;
-  console.log(stage);
+  //console.log(stage);
 
-  console.log(`msg: ${message}`);
-  console.log(
-    "phon",
-    phoneNumber
-      .replace(" ", "")
-      .replace(" ", "")
-      .replace(" ", "")
-      .replace("+", "")
-  );
+  //console.log(`msg: ${message}`);
+  //console.log(
+  //   "phon",
+  //   phoneNumber
+  //     .replace(" ", "")
+  //     .replace(" ", "")
+  //     .replace(" ", "")
+  //     .replace("+", "")
+  // );
   const textMsgs = await armyFunc.getAnswer(
     stage,
     message,
@@ -387,21 +389,21 @@ app.post("/api/Army_WaBot", async (_req, res) => {
       res.send(jsonFile);
     }
   } catch (e) {
-    console.log(e);
+    //console.log(e);
     res.status(400).end();
   }
 });
 
 app.post("/api/Whatsapp", async (req, res) => {
   const user_name = req.body.query.sender;
-  console.log("username", user_name);
-  console.log("cycleNum", cycleNum, cycleDate);
-  console.log("olamiCycleNum", olamiCycleNum, olamiCycleDate, olamiCycleText);
-  // console.log("mondialCycleNum", mondialCycleNum);
-  // console.log("mondialGamesList", mondialGamesList);
+  //console.log("username", user_name);
+  //console.log("cycleNum", cycleNum, cycleDate);
+  //console.log("olamiCycleNum", olamiCycleNum, olamiCycleDate, olamiCycleText);
+  // //console.log("mondialCycleNum", mondialCycleNum);
+  // //console.log("mondialGamesList", mondialGamesList);
 
   const stage = req.body.query.ruleId;
-  console.log(stage);
+  //console.log(stage);
 
   let textMessage1 = "empty";
   let textMessage2 = "empty";
@@ -568,7 +570,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage2 = OlamiMessages[1];
     textMessage3 = OlamiMessages[2];
   } else {
-    console.log(`Sorry, we are out of range.`);
+    //console.log(`Sorry, we are out of range.`);
   }
 
   const jsonFile =
@@ -609,11 +611,11 @@ app.post("/api/Whatsapp", async (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  console.log(req.body);
+  //console.log(req.body);
   res.send("non rout");
   //   res.sendFile(path.join(__dirname + "/Client/build/index.html"));
 });
 
 server.listen(port, () => {
-  console.log("Example app listening on port " + port);
+  //console.log("Example app listening on port " + port);
 });

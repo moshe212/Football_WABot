@@ -13,6 +13,8 @@ const getDataFromSheet = async function (sheetTitle, fileName) {
       ? "1b_hJkbj-fKNlWzpI4irXhIqKi1SxuzvVtAbrgRjBSmc"
       : fileName === "Olami"
       ? "1ca-85Sjr4NHpzImvq3KCsOq2n8aUEZ_CMGKrpO5Hbyg"
+      : fileName === "NBA"
+      ? "1n00YD7sTIKT_PEJJp_z4KqDNLxyjr92R6NOVsggNMe0"
       : "";
   const doc = new GoogleSpreadsheet(id);
 
