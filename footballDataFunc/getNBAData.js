@@ -1,6 +1,6 @@
-const { footballFunc } = require("./footballFunc");
-const { basicFunc } = require("./basicFunc");
-const { botRollsFunctions } = require("./botRollsFunctions");
+const { footballFunc } = require("../footballFunc");
+const { basicFunc } = require("../basicFunc");
+const { botRollsFunctions } = require("../botRollsFunctions");
 
 let nbaCycleNum = "0";
 let nbaCycleText = "";
