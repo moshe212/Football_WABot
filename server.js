@@ -284,10 +284,10 @@ const job2 = schedule.scheduleJob("0 0 4 * * *", getAlufotData);
 const job3 = schedule.scheduleJob("0 0 4 * * *", getMondialData);
 const job4 = schedule.scheduleJob("0 0 4 * * *", getOlamiData);
 
-getData();
-getAlufotData();
-getMondialData();
-getOlamiData();
+// getData();
+// getAlufotData();
+// getMondialData();
+// getOlamiData();
 
 //-------------------------------------
 const {
@@ -300,7 +300,7 @@ const {
   nbaUsersIndex,
   nbaGuessData,
   nbaUsersList,
-} = footballDataFunc.getNBAData();
+} = await footballDataFunc.getNBAData();
 
 console.log(
   "nbaData:",
