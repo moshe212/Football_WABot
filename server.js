@@ -595,7 +595,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage2 = OlamiMessages[1];
     textMessage3 = OlamiMessages[2];
   } else if (stage === 255 || stage > 800) {
-    console.log("NBAMessages");
+    console.log("NBAMessages", nbaUsersList);
     const NBAMessages = await botRollsFunctions.Nba({
       message,
       cycleDate: nbaCycleDate,
