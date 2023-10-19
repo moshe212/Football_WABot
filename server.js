@@ -312,7 +312,6 @@ console.log(
   nbaCycleIndexNum,
   nbaUsersIndex,
   nbaGuessData,
-  nbaGuessData_ShlavHanokout,
   nbaUsersList
 );
 
