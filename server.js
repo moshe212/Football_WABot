@@ -376,13 +376,13 @@ app.post("/api/Army_WaBot", async (_req, res) => {
 
   console.log(`msg: ${message}`);
   console.log(
-  //   "phon",
-  //   phoneNumber
-  //     .replace(" ", "")
-  //     .replace(" ", "")
-  //     .replace(" ", "")
-  //     .replace("+", "")
-  // );
+    "phon",
+    phoneNumber
+      .replace(" ", "")
+      .replace(" ", "")
+      .replace(" ", "")
+      .replace("+", "")
+  );
   const textMsgs = await armyFunc.getAnswer(
     stage,
     message,
