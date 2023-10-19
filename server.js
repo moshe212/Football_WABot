@@ -596,17 +596,19 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage3 = OlamiMessages[2];
   } else if (stage === 255 || stage > 800) {
     console.log("NBAMessages");
-    const NBAMessages = await botRollsFunctions.Nba(
-      nbaCycleNum,
-      nbaCycleText,
-      nbaCycleDate,
-      nbaGames,
-      nbaGamesList,
-      nbaCycleIndexNum,
-      nbaUsersIndex,
-      nbaGuessData,
-      nbaUsersList
-    );
+    const NBAMessages = await botRollsFunctions.Nba({
+      message,
+      cycleDate: nbaCycleDate,
+      cycleText: nbaCycleText,
+      cycleNum: nbaCycleNum,
+      GamesList: nbaGamesList,
+      cycleIndexNum: nbaCycleIndexNum,
+      UsersIndex: nbaUsersIndex,
+      GuessData: nbaGuessData,
+      user_name,
+      stage,
+      score,
+    });
 
     textMessage1 = NBAMessages[0];
     textMessage2 = NBAMessages[1];

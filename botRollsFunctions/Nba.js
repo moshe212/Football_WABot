@@ -1,6 +1,6 @@
 const { footballFunc } = require("../footballFunc");
 
-const Nba = async function (
+const Nba = async function ({
   message,
   cycleDate,
   cycleText,
@@ -11,8 +11,8 @@ const Nba = async function (
   GuessData,
   user_name,
   stage,
-  score
-) {
+  score,
+}) {
   let teamUp_ToFix = "";
   let minute_toFix = "";
   let teamUp_ToFix_Num = "";
