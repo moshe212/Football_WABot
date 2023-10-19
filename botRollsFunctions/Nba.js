@@ -9,7 +9,6 @@ const NBA = async function (
   cycleIndexNum,
   UsersIndex,
   GuessData,
-  GuessData_ShlavHanokout,
   user_name,
   stage,
   score
