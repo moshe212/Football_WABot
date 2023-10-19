@@ -35,7 +35,9 @@ const Nba = async function (
     cycleNum === "גמר ומקום 3" ? "משחק הגמר והמשחק על המקום ה-3" : cycleNum;
 
   console.log("Nba");
+  console.log("stage", stage);
   if (stage === 255) {
+    console.log("stage-255");
     const firstMessages = await footballFunc.firstSort(
       stage,
       UsersList,
