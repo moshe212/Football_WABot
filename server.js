@@ -307,17 +307,17 @@ getAllData().then((data) => {
   // console.log("test", test);
 });
 
-const {
-  nbaCycleNum,
-  nbaCycleText,
-  nbaCycleDate,
-  nbaGames,
-  nbaGamesList,
-  nbaCycleIndexNum,
-  nbaUsersIndex,
-  nbaGuessData,
-  nbaUsersList,
-} = test?.nbaData;
+// const {
+//   nbaCycleNum,
+//   nbaCycleText,
+//   nbaCycleDate,
+//   nbaGames,
+//   nbaGamesList,
+//   nbaCycleIndexNum,
+//   nbaUsersIndex,
+//   nbaGuessData,
+//   nbaUsersList,
+// } = test?.nbaData;
 
 // console.log(
 //   "nbaData:",
@@ -443,6 +443,18 @@ app.post("/api/Whatsapp", async (req, res) => {
   console.log("olamiCycleNum", olamiCycleNum, olamiCycleDate, olamiCycleText);
   // console.log("mondialCycleNum", mondialCycleNum);
   // console.log("mondialGamesList", mondialGamesList);
+
+  const {
+    nbaCycleNum,
+    nbaCycleText,
+    nbaCycleDate,
+    nbaGames,
+    nbaGamesList,
+    nbaCycleIndexNum,
+    nbaUsersIndex,
+    nbaGuessData,
+    nbaUsersList,
+  } = test?.nbaData;
 
   const stage = req.body.query.ruleId;
   console.log(stage);
