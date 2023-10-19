@@ -310,7 +310,7 @@ const {
   nbaUsersIndex,
   nbaGuessData,
   nbaUsersList,
-} = await getAllData();
+} = getAllData();
 
 console.log(
   "nbaData:",
