@@ -48,7 +48,7 @@ const getNBAData = async () => {
   }
   nbaGuessData = await footballFunc.getDataFromSheet("הניחושים", "NBA");
 
-  //   console.log({ nbaUsersList });
+  console.log({ nbaUsersList });
 
   return {
     nbaCycleNum,
