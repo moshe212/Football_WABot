@@ -299,6 +299,13 @@ const getAllData = async () => {
 
   return { nbaData };
 };
+let test;
+
+getAllData().then((data) => {
+  // console.log(data);
+  test = data;
+  // console.log("test", test);
+});
 
 const {
   nbaCycleNum,
@@ -310,20 +317,20 @@ const {
   nbaUsersIndex,
   nbaGuessData,
   nbaUsersList,
-} = getAllData();
+} = test.nbaData;
 
-console.log(
-  "nbaData:",
-  nbaCycleNum,
-  nbaCycleText,
-  nbaCycleDate,
-  nbaGames,
-  nbaGamesList,
-  nbaCycleIndexNum,
-  nbaUsersIndex,
-  nbaGuessData,
-  nbaUsersList
-);
+// console.log(
+//   "nbaData:",
+//   nbaCycleNum,
+//   nbaCycleText,
+//   nbaCycleDate,
+//   nbaGames,
+//   nbaGamesList,
+//   nbaCycleIndexNum,
+//   nbaUsersIndex,
+//   nbaGuessData,
+//   nbaUsersList
+// );
 
 app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
   console.log("WaBot");
