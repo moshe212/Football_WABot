@@ -288,7 +288,34 @@ getData();
 getAlufotData();
 getMondialData();
 getOlamiData();
-footballDataFunc.getNBAData();
+
+//-------------------------------------
+const {
+  nbaCycleNum,
+  nbaCycleText,
+  nbaCycleDate,
+  nbaGames,
+  nbaGamesList,
+  nbaCycleIndexNum,
+  nbaUsersIndex,
+  nbaGuessData,
+  nbaGuessData_ShlavHanokout,
+  nbaUsersList,
+} = footballDataFunc.getNBAData();
+
+console.log(
+  "nbaData:",
+  nbaCycleNum,
+  nbaCycleText,
+  nbaCycleDate,
+  nbaGames,
+  nbaGamesList,
+  nbaCycleIndexNum,
+  nbaUsersIndex,
+  nbaGuessData,
+  nbaGuessData_ShlavHanokout,
+  nbaUsersList
+);
 
 app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
   //console.log("WaBot");

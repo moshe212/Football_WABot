@@ -12,9 +12,7 @@ let nbaUsersIndex = [];
 let nbaGuessData = [];
 let nbaGuessData_ShlavHanokout = [];
 let nbaUsersList = [];
-let nbaAchievementsOfSeasonData = [];
-let nbaTablesData = [];
-let nbaTableObj = {};
+
 const getNBAData = async () => {
   console.log("getNBAData");
   //   const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים", "NBA");
@@ -54,6 +52,19 @@ const getNBAData = async () => {
   //     "NBA"
   //   );
   //   console.log({ nbaUsersList });
+
+  return {
+    nbaCycleNum,
+    nbaCycleText,
+    nbaCycleDate,
+    nbaGames,
+    nbaGamesList,
+    nbaCycleIndexNum,
+    nbaUsersIndex,
+    nbaGuessData,
+    nbaGuessData_ShlavHanokout,
+    nbaUsersList,
+  };
 };
 
 module.exports = { getNBAData };
