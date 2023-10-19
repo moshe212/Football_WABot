@@ -1,6 +1,6 @@
 const { footballFunc } = require("../footballFunc");
 
-const NBA = async function (
+const Nba = async function (
   message,
   cycleDate,
   cycleText,
@@ -34,6 +34,7 @@ const NBA = async function (
   let cycle =
     cycleNum === "גמר ומקום 3" ? "משחק הגמר והמשחק על המקום ה-3" : cycleNum;
 
+  console.log("Nba");
   if (stage === 255) {
     const firstMessages = await footballFunc.firstSort(
       stage,
@@ -1990,4 +1991,4 @@ const NBA = async function (
   return [textMessage1, textMessage2, textMessage3];
 };
 
-module.exports = { NBA };
+module.exports = { Nba };
