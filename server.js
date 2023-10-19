@@ -299,7 +299,6 @@ const {
   nbaCycleIndexNum,
   nbaUsersIndex,
   nbaGuessData,
-  nbaGuessData_ShlavHanokout,
   nbaUsersList,
 } = footballDataFunc.getNBAData();
 
@@ -596,6 +595,22 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage1 = OlamiMessages[0];
     textMessage2 = OlamiMessages[1];
     textMessage3 = OlamiMessages[2];
+  } else if (stage === 255 || stage > 800) {
+    const NBAMessages = await botRollsFunctions.NBA(
+      nbaCycleNum,
+      nbaCycleText,
+      nbaCycleDate,
+      nbaGames,
+      nbaGamesList,
+      nbaCycleIndexNum,
+      nbaUsersIndex,
+      nbaGuessData,
+      nbaUsersList
+    );
+
+    textMessage1 = NBAMessages[0];
+    textMessage2 = NBAMessages[1];
+    textMessage3 = NBAMessages[2];
   } else {
     console.log(`Sorry, we are out of range.`);
   }
