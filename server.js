@@ -290,6 +290,16 @@ const job4 = schedule.scheduleJob("0 0 4 * * *", getOlamiData);
 // getOlamiData();
 
 //-------------------------------------
+const getAllData = async () => {
+  // await getData();
+  // await getAlufotData();
+  // await getMondialData();
+  // await getOlamiData();
+  const nbaData = await footballDataFunc.getNBAData();
+
+  return { nbaData };
+};
+
 const {
   nbaCycleNum,
   nbaCycleText,
@@ -300,7 +310,7 @@ const {
   nbaUsersIndex,
   nbaGuessData,
   nbaUsersList,
-} = await footballDataFunc.getNBAData();
+} = await getAllData();
 
 console.log(
   "nbaData:",

@@ -50,7 +50,7 @@ const getNBAData = async () => {
 
   console.log({ nbaUsersList });
 
-  return {
+  const data = {
     nbaCycleNum,
     nbaCycleText,
     nbaCycleDate,
@@ -61,6 +61,7 @@ const getNBAData = async () => {
     nbaGuessData,
     nbaUsersList,
   };
+  return data;
 };
 
 module.exports = { getNBAData };
