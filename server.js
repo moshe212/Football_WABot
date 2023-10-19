@@ -317,7 +317,7 @@ const {
   nbaUsersIndex,
   nbaGuessData,
   nbaUsersList,
-} = test.nbaData;
+} = test?.nbaData;
 
 // console.log(
 //   "nbaData:",
