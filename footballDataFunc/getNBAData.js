@@ -15,7 +15,7 @@ let nbaUsersList = [];
 
 const getNBAData = async () => {
   console.log("getNBAData");
-  const Data = await footballFunc.getDataFromSheet("תאריכים", "NBA");
+  const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים", "NBA");
   const res_cycle = await footballFunc.getCycle(Data);
   console.log("res_cycle_nba", res_cycle);
   nbaCycleNum = res_cycle[0];
@@ -27,7 +27,10 @@ const getNBAData = async () => {
 
   nbaCycleIndexNum = res_cycle[2];
 
-  nbaGames = await footballFunc.getDataFromSheet("משחקים", "NBA");
+  nbaGames = await footballFunc.getDataFromSheet(
+    "רשימת משחקים לפי מחזור",
+    "NBA"
+  );
   for (let g = 0; g < nbaGames.length; g++) {
     if (nbaGames[g]._rawData[0] === nbaCycleNum) {
       const team_1 = nbaGames[g]._rawData[1];
@@ -39,11 +42,11 @@ const getNBAData = async () => {
     }
   }
 
-  nbaUsersIndex = await footballFunc.getDataFromSheet("משתמשים", "NBA");
+  nbaUsersIndex = await footballFunc.getDataFromSheet("אינדקס משתמשים", "NBA");
   for (let l = 0; l < nbaUsersIndex.length; l++) {
     nbaUsersList.push(nbaUsersIndex[l]._rawData[0]);
   }
-  nbaGuessData = await footballFunc.getDataFromSheet("ניחושים", "NBA");
+  nbaGuessData = await footballFunc.getDataFromSheet("הניחושים", "NBA");
 
   //   console.log({ nbaUsersList });
 

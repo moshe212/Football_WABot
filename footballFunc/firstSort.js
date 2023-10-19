@@ -20,7 +20,7 @@ const firstSort = async function (
     case 256:
     case 257:
     case 700:
-      // console.log("UsersList", UsersList);
+      console.log("UsersListNBA", UsersList);
       if (!UsersList.includes(user_name)) {
         console.log("not includs");
         const game =
