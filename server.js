@@ -608,6 +608,7 @@ app.post("/api/Whatsapp", async (req, res) => {
       user_name,
       stage,
       score,
+      UsersList: nbaUsersList,
     });
 
     textMessage1 = NBAMessages[0];

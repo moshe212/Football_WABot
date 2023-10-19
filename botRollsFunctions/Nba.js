@@ -12,6 +12,7 @@ const Nba = async function ({
   user_name,
   stage,
   score,
+  UsersList,
 }) {
   let teamUp_ToFix = "";
   let minute_toFix = "";
