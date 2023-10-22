@@ -120,14 +120,30 @@ const Nba = async function ({
 
         break;
       case 898:
-        textMessagesObj = sendQ2({ message, winTeam, Qestion2a, Qestion2b });
+        textMessagesObj = sendQ2({
+          message,
+          winTeam,
+          Qestion2a,
+          Qestion2b,
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+        });
         textMessage1 = textMessagesObj.textMessage1;
         textMessage2 = textMessagesObj.textMessage2;
 
         break;
       case 901:
         number = parseInt(GamesList[0][6]);
-        textMessagesObj = sendQ3({ Qestion3, number });
+        textMessagesObj = sendQ3({
+          Qestion3,
+          number,
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+        });
         textMessage1 = textMessagesObj.textMessage1;
         textMessage2 = textMessagesObj.textMessage2;
 
@@ -142,6 +158,10 @@ const Nba = async function ({
           gameNum,
           isNeedToSave: true,
           message,
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
         });
         textMessage1 = textMessagesObj.textMessage1;
         textMessage2 = textMessagesObj.textMessage2;
@@ -1857,6 +1877,10 @@ const sendQ1 = ({
   gameNum,
   isNeedToSave,
   message,
+  user_name,
+  UsersIndex,
+  GuessData,
+  cycleIndexNum,
 }) => {
   console.log(GamesList);
   const gameIndex = parseInt(gameNum) - 1;
@@ -1902,7 +1926,16 @@ const sendQ1 = ({
   return textMessages;
 };
 
-const sendQ2 = ({ message, winTeam, Qestion2a, Qestion2b }) => {
+const sendQ2 = ({
+  message,
+  winTeam,
+  Qestion2a,
+  Qestion2b,
+  user_name,
+  UsersIndex,
+  GuessData,
+  cycleIndexNum,
+}) => {
   console.log("message1", message);
   if (parseInt(message) === 1) {
     winTeam = "בית";
@@ -1932,7 +1965,14 @@ const sendQ2 = ({ message, winTeam, Qestion2a, Qestion2b }) => {
   return textMessages;
 };
 
-const sendQ3 = ({ Qestion3, number }) => {
+const sendQ3 = ({
+  Qestion3,
+  number,
+  user_name,
+  UsersIndex,
+  GuessData,
+  cycleIndexNum,
+}) => {
   const difference = footballFunc.getDifference(parseInt(message));
 
   const textMessage1 = Qestion3;
