@@ -29,12 +29,23 @@ const Nba = async function ({
   let Date = "";
   let Hour = "";
   let Channel = "";
+  let winTeam = "";
   let ChoiseUp = "";
   let ChoiseUpteam = "";
   let ChoiseMinut = "";
   let Minuts = "";
   let GuessData_Saved = [];
   let textMessage = "";
+
+  const Qestion1a = "*שאלה ראשונה:* איזו קבוצה תנצח את המשחק?";
+  const Qestion1b = "\n1️⃣-בית" + "\n2️⃣ חוץ";
+
+  const Qestion2a = "*שאלה שניה:* מה יהיה ההפרש בו יסתיים המשחק? (כולל הארכות)";
+  const Qestion2b =
+    "\n1️⃣1-4" + "\n2️⃣5-7" + "\n3️⃣8-10" + "\n4️⃣11-14" + "\n5️⃣16+";
+
+  const Qestion3a =
+    "\nמה סך הנקודות שיקלעו שתי הקבוצות יחד בתום המשחק? (כולל הארכות)";
 
   let cycle =
     cycleNum === "גמר ומקום 3" ? "משחק הגמר והמשחק על המקום ה-3" : cycleNum;
@@ -103,43 +114,35 @@ const Nba = async function ({
         console.log("Details:", Team1, Team2, Day, Date, Hour, Channel);
 
         const str1 = "*משחק מספר 1:* ";
-        textMessage1 = `${str1} \n ${Team1}- ${Team2} \n ${Day}, ה${Date}, ${Hour} שעון ישראל, \n${Channel}`;
-        textMessage2 = "*שאלה ראשונה:* איזו קבוצה תנצח את המשחק?";
-        textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
+        textMessage1 = `${str1} \n ${Team1}- ${Team2} \n ${Day}, ה-${Date}, ${Hour} שעון ישראל, \n${Channel}`;
+        textMessage2 = Qestion1a;
+        textMessage3 = Qestion1b;
 
         break;
-      case 583:
-        console.log(GamesList);
-        Team1 = GamesList[0][0];
-        Team2 = GamesList[0][1];
+      case 901:
+        console.log("message1", message);
+        if (parseInt(message) === 1) {
+          winTeam = "בית";
+        } else {
+          winTeam = "חוץ";
+        }
 
-        const str2 =
-          cycleNum === "גמר ומקום 3"
-            ? "*משחק הגמר*"
-            : "*" + cycleNum + ", משחק מספר 1:* ";
-        textMessage1 = str2 + "\n" + Team1 + " - " + Team2;
-        textMessage2 = "מי הקבוצה שתעלה לשלב הבא?";
-        textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
-
-        // score = message;
-        ScoreTeam1 = score.split(":")[1];
-        ScoreTeam2 = score.split(":")[0];
-        console.log("ScoreTeam1", ScoreTeam1);
-        console.log("ScoreTeam2", ScoreTeam2);
+        textMessage1 = Qestion2a;
+        textMessage2 = Qestion2b;
 
         footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
-          GuessData_ShlavHanokout,
+          GuessData,
           cycleIndexNum,
-          "שלב הנוקאאוט",
-          "F",
-          "G",
-          ScoreTeam1,
-          ScoreTeam2,
+          "הניחושים",
+          "D",
           "",
           "",
-          "Mondial"
+          "",
+          "",
+          winTeam,
+          "NBA"
         );
 
         break;
