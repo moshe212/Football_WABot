@@ -145,6 +145,7 @@ const Nba = async function ({
           GuessData,
           cycleIndexNum,
           column: "F",
+          message,
         });
         textMessage1 = textMessagesObj.textMessage1;
         textMessage2 = textMessagesObj.textMessage2;
@@ -1978,6 +1979,7 @@ const sendQ3 = ({
   GuessData,
   cycleIndexNum,
   column,
+  message,
 }) => {
   const difference = footballFunc.getDifference(parseInt(message));
 
