@@ -129,6 +129,7 @@ const Nba = async function ({
           UsersIndex,
           GuessData,
           cycleIndexNum,
+          column: "D",
         });
         textMessage1 = textMessagesObj.textMessage1;
         textMessage2 = textMessagesObj.textMessage2;
@@ -143,6 +144,7 @@ const Nba = async function ({
           UsersIndex,
           GuessData,
           cycleIndexNum,
+          column: "F",
         });
         textMessage1 = textMessagesObj.textMessage1;
         textMessage2 = textMessagesObj.textMessage2;
@@ -162,6 +164,7 @@ const Nba = async function ({
           UsersIndex,
           GuessData,
           cycleIndexNum,
+          column: "H",
         });
         textMessage1 = textMessagesObj.textMessage1;
         textMessage2 = textMessagesObj.textMessage2;
@@ -1881,6 +1884,7 @@ const sendQ1 = ({
   UsersIndex,
   GuessData,
   cycleIndexNum,
+  column,
 }) => {
   console.log(GamesList);
   const gameIndex = parseInt(gameNum) - 1;
@@ -1912,7 +1916,7 @@ const sendQ1 = ({
       GuessData,
       cycleIndexNum,
       "הניחושים",
-      "H",
+      column,
       "",
       "",
       "",
@@ -1935,6 +1939,7 @@ const sendQ2 = ({
   UsersIndex,
   GuessData,
   cycleIndexNum,
+  column,
 }) => {
   console.log("message1", message);
   if (parseInt(message) === 1) {
@@ -1952,7 +1957,7 @@ const sendQ2 = ({
     GuessData,
     cycleIndexNum,
     "הניחושים",
-    "D",
+    column,
     "",
     "",
     "",
@@ -1972,6 +1977,7 @@ const sendQ3 = ({
   UsersIndex,
   GuessData,
   cycleIndexNum,
+  column,
 }) => {
   const difference = footballFunc.getDifference(parseInt(message));
 
@@ -1984,7 +1990,7 @@ const sendQ3 = ({
     GuessData,
     cycleIndexNum,
     "הניחושים",
-    "F",
+    column,
     "",
     "",
     "",
