@@ -38,7 +38,7 @@ const Nba = async function ({
   let textMessage = "";
 
   const Qestion1a = "*שאלה ראשונה:* איזו קבוצה תנצח את המשחק?";
-  const Qestion1b = "\n1️⃣-בית" + "\n2️⃣ חוץ";
+  const Qestion1b = "\n1️⃣-בית" + "\n2️⃣-חוץ";
 
   const Qestion2a = "*שאלה שניה:* מה יהיה ההפרש בו יסתיים המשחק? (כולל הארכות)";
   const Qestion2b =
@@ -80,7 +80,7 @@ const Nba = async function ({
       case 801:
         textMessage1 =
           "בחירה מצוינת!" +
-          "\nהדד ליין לשליחת ניחושים ל*שבוע משחקים מספר *" +
+          "\nהדד ליין לשליחת ניחושים ל*שבוע משחקים מספר*" +
           cycle +
           "* הוא עד ה-" +
           "*" +
@@ -119,7 +119,7 @@ const Nba = async function ({
         textMessage3 = Qestion1b;
 
         break;
-      case 901:
+      case 898:
         console.log("message1", message);
         if (parseInt(message) === 1) {
           winTeam = "בית";
