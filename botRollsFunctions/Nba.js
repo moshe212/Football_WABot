@@ -92,27 +92,22 @@ const Nba = async function ({
 
       case 894:
         console.log(GamesList);
-        if (cycleText.includes("שלב הנוקאאוט")) {
-          Team1 = GamesList[0][0];
-          Team2 = GamesList[0][1];
-          Day = GamesList[0][2];
-          Date = GamesList[0][3];
-          Hour = GamesList[0][4];
-          Channel = GamesList[0][5];
 
-          console.log("Details:", Team1, Team2, Day, Date, Hour, Channel);
+        Team1 = GamesList[0][0];
+        Team2 = GamesList[0][1];
+        Day = GamesList[0][2];
+        Date = GamesList[0][3];
+        Hour = GamesList[0][4];
+        Channel = GamesList[0][5];
 
-          const str1 =
-            cycleNum === "גמר ומקום 3"
-              ? "*משחק הגמר*"
-              : "*" + cycleNum + ", משחק מספר 1:* ";
-          textMessage1 = str1 + "\n" + Team1 + " - " + Team2;
-          textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-        }
-        //  else {
-        //   textMessage1 = "השתחלתם ללופ של ניחושי גביע המדינה למרות שאי אפשר..";
-        //   textMessage1 = "אנא פנו למנהל המערכת או בחרו 3️⃣ לחזרה לתפריט הקודם..";
-        // }
+        console.log("Details:", Team1, Team2, Day, Date, Hour, Channel);
+
+        const str1 =
+          cycleNum === "גמר ומקום 3"
+            ? "*משחק הגמר*"
+            : "*" + cycleNum + ", משחק מספר 1:* ";
+        textMessage1 = str1 + "\n" + Team1 + " - " + Team2;
+        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
 
         break;
       case 583:
