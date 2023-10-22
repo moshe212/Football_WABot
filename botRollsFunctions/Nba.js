@@ -1895,7 +1895,7 @@ const sendQ1 = ({
   const Date = GamesList[gameIndex][3];
   const Hour = GamesList[gameIndex][4];
   const Channel = GamesList[gameIndex][5];
-  const number = parseInt(GamesList[gameIndex - 1][6]);
+  const number = isNeedToSave ? parseInt(GamesList[gameIndex - 1][6]) : "0";
 
   console.log("Details:", Team1, Team2, Day, Date, Hour, Channel);
 
