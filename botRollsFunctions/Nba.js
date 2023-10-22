@@ -102,12 +102,10 @@ const Nba = async function ({
 
         console.log("Details:", Team1, Team2, Day, Date, Hour, Channel);
 
-        const str1 =
-          cycleNum === "גמר ומקום 3"
-            ? "*משחק הגמר*"
-            : "*" + cycleNum + ", משחק מספר 1:* ";
-        textMessage1 = str1 + "\n" + Team1 + " - " + Team2;
-        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+        const str1 = "*משחק מספר 1:* ";
+        textMessage1 = `${str1} \n ${Team1}- ${Team2} \n ${Day}, ה${Date}, ${Hour} שעון ישראל, \n${Channel}`;
+        textMessage2 = "*שאלה ראשונה:* איזו קבוצה תנצח את המשחק?";
+        textMessage3 = "\n1️⃣ " + Team1 + "\n2️⃣ " + Team2;
 
         break;
       case 583:

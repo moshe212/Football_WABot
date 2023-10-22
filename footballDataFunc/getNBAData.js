@@ -35,8 +35,7 @@ const getNBAData = async () => {
     if (nbaGames[g]._rawData[0] === nbaCycleNum) {
       const team_1 = nbaGames[g]._rawData[1];
       const team_2 = nbaGames[g]._rawData[2];
-      const day = nbaGames[g]._rawData[2];
-
+      const day = nbaGames[g]._rawData[3];
       const date = nbaGames[g]._rawData[4];
       const time = nbaGames[g]._rawData[5];
       const channel = nbaGames[g]._rawData[6];
