@@ -32,6 +32,8 @@ const Nba = async function ({
   let winTeam = "";
   let number = 0;
   let totalScore = "";
+  let textMessagesObj = {};
+  let gameNum = "";
   let ChoiseUp = "";
   let ChoiseUpteam = "";
   let ChoiseMinut = "";
@@ -104,116 +106,50 @@ const Nba = async function ({
         break;
 
       case 894:
-        console.log(GamesList);
-
-        Team1 = GamesList[0][0];
-        Team2 = GamesList[0][1];
-        Day = GamesList[0][2];
-        Date = GamesList[0][3];
-        Hour = GamesList[0][4];
-        Channel = GamesList[0][5];
-
-        console.log("Details:", Team1, Team2, Day, Date, Hour, Channel);
-
-        const str1 = "*משחק מספר 1:* ";
-        textMessage1 = `${str1} \n ${Team1}- ${Team2} \n ${Day}, ה-${Date}, ${Hour} שעון ישראל, \n${Channel}`;
-        textMessage2 = Qestion1a;
-        textMessage3 = Qestion1b;
+        gameNum = "1";
+        textMessagesObj = sendQ1({
+          GamesList,
+          Qestion1a,
+          Qestion1b,
+          gameNum,
+          isNeedToSave: false,
+        });
+        textMessage1 = textMessagesObj.textMessage1;
+        textMessage2 = textMessagesObj.textMessage2;
+        textMessage3 = textMessagesObj.textMessage3;
 
         break;
       case 898:
-        console.log("message1", message);
-        if (parseInt(message) === 1) {
-          winTeam = "בית";
-        } else {
-          winTeam = "חוץ";
-        }
-
-        textMessage1 = Qestion2a;
-        textMessage2 = Qestion2b;
-
-        footballFunc.saveData_googleAPI(
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "הניחושים",
-          "D",
-          "",
-          "",
-          "",
-          "",
-          winTeam,
-          "NBA"
-        );
+        textMessagesObj = sendQ2({ message, winTeam, Qestion2a, Qestion2b });
+        textMessage1 = textMessagesObj.textMessage1;
+        textMessage2 = textMessagesObj.textMessage2;
 
         break;
       case 901:
         number = parseInt(GamesList[0][6]);
-        difference = footballFunc.getDifference(parseInt(message));
-
-        textMessage1 = Qestion3;
-        textMessage2 = `\n1️⃣אנדר ${number}` + `\n2️⃣אובר ${number}`;
-
-        footballFunc.saveData_googleAPI(
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "הניחושים",
-          "F",
-          "",
-          "",
-          "",
-          "",
-          difference,
-          "NBA"
-        );
+        textMessagesObj = sendQ3({ Qestion3, number });
+        textMessage1 = textMessagesObj.textMessage1;
+        textMessage2 = textMessagesObj.textMessage2;
 
         break;
 
       case 903:
-        console.log(GamesList);
+        gameNum = "2";
+        textMessagesObj = sendQ1({
+          GamesList,
+          Qestion1a,
+          Qestion1b,
+          gameNum,
+          isNeedToSave: true,
+          message,
+        });
+        textMessage1 = textMessagesObj.textMessage1;
+        textMessage2 = textMessagesObj.textMessage2;
+        textMessage3 = textMessagesObj.textMessage3;
 
-        Team1 = GamesList[0][0];
-        Team2 = GamesList[0][1];
-        Day = GamesList[0][2];
-        Date = GamesList[0][3];
-        Hour = GamesList[0][4];
-        Channel = GamesList[0][5];
-
-        console.log("Details:", Team1, Team2, Day, Date, Hour, Channel);
-
-        const str2 = "*משחק מספר 2:* ";
-        textMessage1 = `${str2} \n ${Team1}- ${Team2} \n ${Day}, ה-${Date}, ${Hour} שעון ישראל, \n${Channel}`;
-        textMessage2 = Qestion1a;
-        textMessage3 = Qestion1b;
-
-        number = parseInt(GamesList[0][6]);
-
-        if (parseInt(message) === "1") {
-          totalScore = `אנדר ${number}`;
-        } else {
-          totalScore = `אובר ${number}`;
-        }
-
-        footballFunc.saveData_googleAPI(
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "הניחושים",
-          "H",
-          "",
-          "",
-          "",
-          "",
-          totalScore,
-          "NBA"
-        );
         break;
 
-      case 590:
+      case 907:
         console.log(GamesList);
         Team1 = GamesList[1][0];
         Team2 = GamesList[1][1];
@@ -1913,3 +1849,110 @@ const Nba = async function ({
 };
 
 module.exports = { Nba };
+
+const sendQ1 = ({
+  GamesList,
+  Qestion1a,
+  Qestion1b,
+  gameNum,
+  isNeedToSave,
+  message,
+}) => {
+  console.log(GamesList);
+  const gameIndex = parseInt(gameNum) - 1;
+  const Team1 = GamesList[gameIndex][0];
+  const Team2 = GamesList[gameIndex][1];
+  const Day = GamesList[gameIndex][2];
+  const Date = GamesList[gameIndex][3];
+  const Hour = GamesList[gameIndex][4];
+  const Channel = GamesList[gameIndex][5];
+  const number = parseInt(GamesList[gameIndex][6]);
+
+  console.log("Details:", Team1, Team2, Day, Date, Hour, Channel);
+
+  const str1 = `*משחק מספר ${gameNum}:* `;
+  const textMessage1 = `${str1} \n ${Team1}- ${Team2} \n ${Day}, ה-${Date}, ${Hour} שעון ישראל, \n${Channel}`;
+  const textMessage2 = Qestion1a;
+  const textMessage3 = Qestion1b;
+
+  if (isNeedToSave) {
+    if (parseInt(message) === 1) {
+      totalScore = `אנדר ${number}`;
+    } else {
+      totalScore = `אובר ${number}`;
+    }
+
+    footballFunc.saveData_googleAPI(
+      user_name,
+      UsersIndex,
+      GuessData,
+      cycleIndexNum,
+      "הניחושים",
+      "H",
+      "",
+      "",
+      "",
+      "",
+      totalScore,
+      "NBA"
+    );
+  }
+
+  const textMessages = { textMessage1, textMessage2, textMessage3 };
+  return textMessages;
+};
+
+const sendQ2 = ({ message, winTeam, Qestion2a, Qestion2b }) => {
+  console.log("message1", message);
+  if (parseInt(message) === 1) {
+    winTeam = "בית";
+  } else {
+    winTeam = "חוץ";
+  }
+
+  const textMessage1 = Qestion2a;
+  const textMessage2 = Qestion2b;
+
+  footballFunc.saveData_googleAPI(
+    user_name,
+    UsersIndex,
+    GuessData,
+    cycleIndexNum,
+    "הניחושים",
+    "D",
+    "",
+    "",
+    "",
+    "",
+    winTeam,
+    "NBA"
+  );
+
+  const textMessages = { textMessage1, textMessage2 };
+  return textMessages;
+};
+
+const sendQ3 = ({ Qestion3, number }) => {
+  const difference = footballFunc.getDifference(parseInt(message));
+
+  const textMessage1 = Qestion3;
+  const textMessage2 = `\n1️⃣אנדר ${number}` + `\n2️⃣אובר ${number}`;
+
+  footballFunc.saveData_googleAPI(
+    user_name,
+    UsersIndex,
+    GuessData,
+    cycleIndexNum,
+    "הניחושים",
+    "F",
+    "",
+    "",
+    "",
+    "",
+    difference,
+    "NBA"
+  );
+
+  const textMessages = { textMessage1, textMessage2 };
+  return textMessages;
+};

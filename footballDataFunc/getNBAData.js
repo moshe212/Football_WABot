@@ -39,7 +39,8 @@ const getNBAData = async () => {
       const date = nbaGames[g]._rawData[4];
       const time = nbaGames[g]._rawData[5];
       const channel = nbaGames[g]._rawData[6];
-      nbaGamesList.push([team_1, team_2, day, date, time, channel]);
+      const totalScore = nbaGames[g]._rawData[7];
+      nbaGamesList.push([team_1, team_2, day, date, time, channel, totalScore]);
     }
   }
 
