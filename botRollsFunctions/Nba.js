@@ -30,6 +30,8 @@ const Nba = async function ({
   let Hour = "";
   let Channel = "";
   let winTeam = "";
+  let number = 0;
+  let totalScore = "";
   let ChoiseUp = "";
   let ChoiseUpteam = "";
   let ChoiseMinut = "";
@@ -44,8 +46,8 @@ const Nba = async function ({
   const Qestion2b =
     "\n1️⃣1-4" + "\n2️⃣5-7" + "\n3️⃣8-10" + "\n4️⃣11-14" + "\n5️⃣16+";
 
-  const Qestion3a =
-    "\nמה סך הנקודות שיקלעו שתי הקבוצות יחד בתום המשחק? (כולל הארכות)";
+  const Qestion3 =
+    "\n*שאלה שלישית:* מה סך הנקודות שיקלעו שתי הקבוצות יחד בתום המשחק? (כולל הארכות)";
 
   let cycle =
     cycleNum === "גמר ומקום 3" ? "משחק הגמר והמשחק על המקום ה-3" : cycleNum;
@@ -80,7 +82,7 @@ const Nba = async function ({
       case 801:
         textMessage1 =
           "בחירה מצוינת!" +
-          "\nהדד ליין לשליחת ניחושים ל*שבוע משחקים מספר*" +
+          "\nהדד ליין לשליחת ניחושים ל*שבוע משחקים מספר" +
           cycle +
           "* הוא עד ה-" +
           "*" +
@@ -146,160 +148,70 @@ const Nba = async function ({
         );
 
         break;
-      case 586:
-        console.log(GamesList);
-        Team1 = GamesList[0][0];
-        Team2 = GamesList[0][1];
+      case 901:
+        number = parseInt(GamesList[0][6]);
+        difference = footballFunc.getDifference(parseInt(message));
 
-        GameRow = await footballFunc.getGameGuss(
+        textMessage1 = Qestion3;
+        textMessage2 = `\n1️⃣אנדר ${number}` + `\n2️⃣אובר ${number}`;
+
+        footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
-          GuessData_ShlavHanokout,
+          GuessData,
           cycleIndexNum,
-          "שלב הנוקאאוט",
+          "הניחושים",
           "F",
-          "I",
-          "Mondial"
+          "",
+          "",
+          "",
+          "",
+          difference,
+          "NBA"
         );
-        console.log("GameRow", GameRow.data);
-        const str3 =
-          cycleNum === "גמר ומקום 3"
-            ? "*משחק הגמר*"
-            : "*" + cycleNum + ", משחק מספר 1:* ";
 
-        textMessage1 = str3 + "\n" + Team1 + " - " + Team2;
-        textMessage2 = "איך יסתיים המשחק?";
-        console.log(GameRow.data.values[0][0], GameRow.data.values[0][1]);
-        // console.log(GameRow.data[0][0], GameRow.data[0][1]);
-        if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-          textMessage3 = "\n1️⃣ 90 דקות \n2️⃣ 120 דקות";
-        } else {
-          textMessage3 = "\n3️⃣ פנדלים";
-        }
+        break;
 
-        ChoiseUp = message;
-        if (parseInt(ChoiseUp) === 1) {
-          ChoiseUpteam = Team1;
+      case 903:
+        console.log(GamesList);
+
+        Team1 = GamesList[0][0];
+        Team2 = GamesList[0][1];
+        Day = GamesList[0][2];
+        Date = GamesList[0][3];
+        Hour = GamesList[0][4];
+        Channel = GamesList[0][5];
+
+        console.log("Details:", Team1, Team2, Day, Date, Hour, Channel);
+
+        const str2 = "*משחק מספר 2:* ";
+        textMessage1 = `${str2} \n ${Team1}- ${Team2} \n ${Day}, ה-${Date}, ${Hour} שעון ישראל, \n${Channel}`;
+        textMessage2 = Qestion1a;
+        textMessage3 = Qestion1b;
+
+        number = parseInt(GamesList[0][6]);
+
+        if (parseInt(message) === "1") {
+          totalScore = `אנדר ${number}`;
         } else {
-          ChoiseUpteam = Team2;
+          totalScore = `אובר ${number}`;
         }
 
         footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
-          GuessData_ShlavHanokout,
+          GuessData,
           cycleIndexNum,
-          "שלב הנוקאאוט",
+          "הניחושים",
           "H",
           "",
           "",
           "",
           "",
-          ChoiseUpteam,
-          "Mondial"
+          totalScore,
+          "NBA"
         );
-
         break;
-
-      case 588:
-        console.log(GamesList);
-        ChoiseMinut = message;
-        GameRow = await footballFunc.getGameGuss(
-          user_name,
-          UsersIndex,
-          GuessData_ShlavHanokout,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          "F",
-          "I",
-          "Mondial"
-        );
-
-        if (parseInt(ChoiseMinut) === 1) {
-          Minuts = "90 דקות";
-        } else if (parseInt(ChoiseMinut) === 2) {
-          Minuts = "120 דקות";
-        } else {
-          if (GameRow.data.values[0][0] != GameRow.data.values[0][1]) {
-            Minuts = "90 דקות*";
-          } else {
-            Minuts = "פנדלים";
-          }
-        }
-
-        if (GamesList.length < 2) {
-          await footballFunc.saveData_googleAPI(
-            user_name,
-            UsersIndex,
-            GuessData,
-            cycleIndexNum,
-            "שלב הנוקאאוט",
-            "I",
-            "",
-            "",
-            "",
-            "",
-            Minuts,
-            "Mondial"
-          );
-          // ----------Start fix auto----------------
-          await footballFunc.fixAuto_Main_Nokout(
-            GamesList,
-            user_name,
-            UsersIndex,
-            GuessData_ShlavHanokout,
-            cycleIndexNum,
-            "Mondial"
-          );
-
-          // ----------End fix auto----------------
-          GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
-            user_name,
-            UsersIndex,
-            cycleIndexNum,
-            "שלב הנוקאאוט",
-            GamesList,
-            "Mondial"
-          );
-          console.log("GuessData_Saved", GuessData_Saved);
-          textMessage = await footballFunc.chooseGameToFix_Nokout(
-            GuessData_Saved,
-            false,
-            cycleNum
-          );
-
-          textMessage1 = textMessage[0];
-          textMessage2 = textMessage[1];
-
-          break;
-        } else {
-          Team1 = GamesList[1][0];
-          Team2 = GamesList[1][1];
-
-          const str4 =
-            cycleNum === "גמר ומקום 3"
-              ? "*המשחק על המקום ה-3*"
-              : "*" + cycleNum + ", משחק מספר 2:* ";
-
-          textMessage1 = str4 + "\n" + Team1 + " - " + Team2;
-          textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
-
-          footballFunc.saveData_googleAPI(
-            user_name,
-            UsersIndex,
-            GuessData_ShlavHanokout,
-            cycleIndexNum,
-            "שלב הנוקאאוט",
-            "I",
-            "",
-            "",
-            "",
-            "",
-            Minuts,
-            "Mondial"
-          );
-          break;
-        }
 
       case 590:
         console.log(GamesList);
