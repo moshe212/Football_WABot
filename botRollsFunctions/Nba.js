@@ -25,6 +25,10 @@ const Nba = async function ({
   let textMessage3 = "empty";
   let Team1 = "";
   let Team2 = "";
+  let Day = "";
+  let Date = "";
+  let Hour = "";
+  let Channel = "";
   let ChoiseUp = "";
   let ChoiseUpteam = "";
   let ChoiseMinut = "";
@@ -86,11 +90,17 @@ const Nba = async function ({
           " בשעה 14:00. יאללה ביי! 😎 ";
         break;
 
-      case 893:
+      case 894:
         console.log(GamesList);
         if (cycleText.includes("שלב הנוקאאוט")) {
           Team1 = GamesList[0][0];
           Team2 = GamesList[0][1];
+          Day = GamesList[0][2];
+          Date = GamesList[0][3];
+          Hour = GamesList[0][4];
+          Channel = GamesList[0][5];
+
+          console.log("Details:", Team1, Team2, Day, Date, Hour, Channel);
 
           const str1 =
             cycleNum === "גמר ומקום 3"
