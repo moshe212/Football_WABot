@@ -24,6 +24,27 @@ const saveFix_Nba = async function ({
     10: { win: "BF", difference: "BH", score: "BJ" },
   };
 
+  const home_out = winNum === 1 ? "בית" : "חוץ";
+  const totalScore = score === 1 ? "אנדר" : "אובר";
+  let diff = "";
+  switch (difference) {
+    case 1:
+      diff = "1-4";
+      break;
+    case 2:
+      diff = "5-7";
+      break;
+    case 3:
+      diff = "8-10";
+      break;
+    case 4:
+      diff = "11-14";
+      break;
+    case 5:
+      diff = "15+";
+      break;
+  }
+
   saveData_googleAPI(
     user_name,
     UsersIndex,
@@ -35,7 +56,7 @@ const saveFix_Nba = async function ({
     "",
     "",
     "",
-    winNum,
+    home_out,
     "NBA"
   );
 
@@ -50,7 +71,7 @@ const saveFix_Nba = async function ({
     "",
     "",
     "",
-    difference,
+    diff,
     "NBA"
   );
 
@@ -65,7 +86,7 @@ const saveFix_Nba = async function ({
     "",
     "",
     "",
-    score,
+    totalScore,
     "NBA"
   );
 
