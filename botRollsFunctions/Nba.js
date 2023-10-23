@@ -24,6 +24,10 @@ const Nba = async function ({
   let textMessage2 = "empty";
   let textMessage3 = "empty";
   let summaryText = "";
+  let winNum = "";
+  let score = "";
+  let difference = "";
+
   let Team1 = "";
   let Team2 = "";
   let Day = "";
@@ -677,7 +681,7 @@ const Nba = async function ({
         break;
 
       case 984:
-        number = summaryText = await getSummaryText({
+        summaryText = await getSummaryText({
           user_name,
           UsersIndex,
           cycleIndexNum,
@@ -711,131 +715,96 @@ const Nba = async function ({
         break;
       case 985:
         gameNum = message.split(" ")[1];
-        score1 = message.split(" ")[3].split(":")[1];
-        score2 = message.split(" ")[3].split(":")[0];
-        teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
-        teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num];
-        minute_toFix = message.split(" ")[7];
+        winNum = message.split(" ")[3];
+        difference = message.split(" ")[5];
+        score = message.split(" ")[7];
 
-        console.log(
-          "answer",
-          score1,
-          score2,
-          gameNum,
-          teamUp_ToFix,
-          minute_toFix
-        );
+        console.log("answer", gameNum, winNum, difference, score);
 
-        await footballFunc.saveFix_Nokout(
-          parseInt(gameNum),
-          parseInt(score1),
-          parseInt(score2),
+        await footballFunc.saveFix_Nba({
+          gameNum: parseInt(gameNum),
+          winNum: parseInt(winNum),
+          difference: parseInt(difference),
+          score: parseInt(score),
           user_name,
           UsersIndex,
-          GuessData_ShlavHanokout,
+          GuessData,
           cycleIndexNum,
-          teamUp_ToFix,
-          minute_toFix,
-          "Mondial"
-        );
+        });
 
         textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
         textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
         break;
-      case 645:
-        // ----------Start fix auto----------------
-        await footballFunc.fixAuto_Main_Nokout(
-          GamesList,
-          user_name,
-          UsersIndex,
-          GuessData_ShlavHanokout,
-          cycleIndexNum,
-          "Mondial"
-        );
-
-        // ----------End fix auto----------------
-        GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
-          user_name,
-          UsersIndex,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          GamesList,
-          "Mondial"
-        );
-        console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFix_Nokout(
-          GuessData_Saved,
-          false,
-          cycleNum
-        );
-        console.log(textMessage);
-        textMessage1 = textMessage[0];
-        textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש בשלב הבא.";
-        break;
-      case 644:
-        // ----------Start fix auto----------------
-        await footballFunc.fixAuto_Main_Nokout(
-          GamesList,
-          user_name,
-          UsersIndex,
-          GuessData_ShlavHanokout,
-          cycleIndexNum,
-          "Mondial"
-        );
-
-        // ----------End fix auto----------------
-        GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
-          user_name,
-          UsersIndex,
-          cycleIndexNum,
-          "שלב הנוקאאוט",
-          GamesList,
-          "Mondial"
-        );
-        console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFix_Nokout(
-          GuessData_Saved,
-          true,
-          cycleNum
-        );
-        console.log(textMessage);
-        textMessage1 = textMessage[0];
-        textMessage2 = textMessage[1];
-        textMessage3 = textMessage[2];
+      case 987:
+        textMessage1 = "הניחושים נקלטו. שיהיה בהצלחה";
+        textMessage2 =
+          "במידה ותרצו לעדכן , כתבו לי היי שוב ונמלא הכל מחדש. לצערי לערוך משחק בודד אחרי אישור הניחושים.";
+        textMessage3 = "ניפגש במחזור הבא";
 
         break;
-      case 647:
+
+      case 988:
+        summaryText = await getSummaryText({
+          user_name,
+          UsersIndex,
+          cycleIndexNum,
+          GamesList,
+        });
+
+        textMessage1 = `בחרתם לשנות אחד או יותר מניחושי שבוע המשחקים מספר ${cycle}.`;
+        textMessage2 =
+          `שימו לב למבנה ההודעה שאתם נדרשים לשלוח על מנת לבצע את השינוי, כמו כן בדקו כי אכן הניחוש שלכם השתנה ` +
+          `\n${summaryText}`;
+        textMessage3 =
+          "יש להשיב במבנה הבא (מספרים משקפים את הפרמטרים השונים):" +
+          "\nמשחק 4, ניצחון 2, הפרש 3, נקודות 1" +
+          "\n";
+        "\nלהלן הפרמטרים למבנה השינוי:" +
+          "\n*ניצחון - *" +
+          "\n 1️⃣ בית" +
+          "\n 2️⃣ חוץ" +
+          "\n" +
+          "\n*הפרש - *" +
+          "\n 1️⃣ 1-4" +
+          "\n 2️⃣ 5-7" +
+          "\n 3️⃣ 8-10" +
+          "\n 4️⃣ 11-14" +
+          "\n 5️⃣ 15+" +
+          "\n" +
+          "\n*נקודות - *" +
+          `\n 1️⃣ אנדר <מספר>` +
+          `\n 2️⃣ אובר <מספר>`;
+
+        break;
+      case 989:
         gameNum = message.split(" ")[1];
-        score1 = message.split(" ")[3].split(":")[1];
-        score2 = message.split(" ")[3].split(":")[0];
-        teamUp_ToFix_Num = parseInt(message.split(" ")[5]);
-        teamUp_ToFix = GamesList[parseInt(gameNum) - 1][teamUp_ToFix_Num - 1];
-        minute_toFix = message.split(" ")[7];
+        winNum = message.split(" ")[3];
+        difference = message.split(" ")[5];
+        score = message.split(" ")[7];
 
-        console.log(
-          "answer",
-          score1,
-          score2,
-          gameNum,
-          teamUp_ToFix,
-          minute_toFix
-        );
+        console.log("answer", gameNum, winNum, difference, score);
 
-        await footballFunc.saveFix_Nokout(
-          parseInt(gameNum),
-          parseInt(score1),
-          parseInt(score2),
+        await footballFunc.saveFix_Nba({
+          gameNum: parseInt(gameNum),
+          winNum: parseInt(winNum),
+          difference: parseInt(difference),
+          score: parseInt(score),
           user_name,
           UsersIndex,
-          GuessData_ShlavHanokout,
+          GuessData,
           cycleIndexNum,
-          teamUp_ToFix,
-          minute_toFix,
-          "Mondial"
-        );
+        });
 
-        textMessage1 = "האם תרצו לתקן או לשנות תוצאה נוספת?";
-        textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
+        summaryText = await getSummaryText({
+          user_name,
+          UsersIndex,
+          cycleIndexNum,
+          GamesList,
+        });
+
+        textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* \n${summaryText}`;
+        textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה";
+        textMessage3 = "ניפגש במחזור הבא";
         break;
       case 650:
         // ----------Start fix auto----------------
