@@ -1311,7 +1311,7 @@ const sendQ1 = async ({
   const str1 = `משחק מספר ${gameNum}: `;
   const textMessage1 = `${str1} \n *${Team1} - ${Team2}* \n ${Day}. ה-${Date}. ${Hour} שעון ישראל. ${Channel}`;
   const textMessage2 = Qestion1a;
-  const textMessage3 = user_name ? fullText : Qestion1b;
+  const textMessage3 = user_name != undefined ? fullText : Qestion1b;
   // const textMessage3 = Qestion1b;
 
   if (isNeedToSave) {
