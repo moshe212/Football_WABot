@@ -1,4 +1,5 @@
 const { saveData_Full } = require("./saveData_Full");
+const { saveData_googleAPI } = require("./saveData_googleAPI");
 
 const saveFix_Nba = async function ({
   gameNum,
@@ -23,13 +24,13 @@ const saveFix_Nba = async function ({
     10: { win: "BF", difference: "BH", score: "BJ" },
   };
 
-  footballFunc.saveData_googleAPI(
+  saveData_googleAPI(
     user_name,
     UsersIndex,
     GuessData,
     cycleIndexNum,
     "הניחושים",
-    columnOption.gameNum.win,
+    columnOption[gameNum].win,
     "",
     "",
     "",
@@ -38,13 +39,13 @@ const saveFix_Nba = async function ({
     "NBA"
   );
 
-  footballFunc.saveData_googleAPI(
+  saveData_googleAPI(
     user_name,
     UsersIndex,
     GuessData,
     cycleIndexNum,
     "הניחושים",
-    columnOption.gameNum.difference,
+    columnOption[gameNum].difference,
     "",
     "",
     "",
@@ -53,13 +54,13 @@ const saveFix_Nba = async function ({
     "NBA"
   );
 
-  footballFunc.saveData_googleAPI(
+  saveData_googleAPI(
     user_name,
     UsersIndex,
     GuessData,
     cycleIndexNum,
     "הניחושים",
-    columnOption.gameNum.score,
+    columnOption[gameNum].score,
     "",
     "",
     "",
