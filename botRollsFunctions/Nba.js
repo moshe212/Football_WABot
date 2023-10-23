@@ -1275,23 +1275,25 @@ const sendQ1 = async ({
   column,
 }) => {
   // console.log(GamesList);
-  const SavedGuess = await footballFunc.getSavedGuss_Nba({
-    user_name,
-    UsersIndex,
-    cycleIndexNum,
-    sheetTitle: "הניחושים",
-    GamesList,
-    fileName: "NBA",
-  });
+  if (user_name) {
+    const SavedGuess = await footballFunc.getSavedGuss_Nba({
+      user_name,
+      UsersIndex,
+      cycleIndexNum,
+      sheetTitle: "הניחושים",
+      GamesList,
+      fileName: "NBA",
+    });
 
-  let fullText = "";
-  for (const game of SavedGuess) {
-    const text =
-      `${game.Team1} - ${game.Team2}` +
-      `\nניצחון${game.Location}` +
-      `\n${game.Difference} הפרש` +
-      `\nסך הנקודות יהיה: ${game.Under_Over}`;
-    fullText += text + "\n\n";
+    let fullText = "";
+    for (const game of SavedGuess) {
+      const text =
+        `${game.Team1} - ${game.Team2}` +
+        `\nניצחון${game.Location}` +
+        `\n${game.Difference} הפרש` +
+        `\nסך הנקודות יהיה: ${game.Under_Over}`;
+      fullText += text + "\n\n";
+    }
   }
 
   const gameIndex = parseInt(gameNum) - 1;
@@ -1308,7 +1310,7 @@ const sendQ1 = async ({
   const str1 = `משחק מספר ${gameNum}: `;
   const textMessage1 = `${str1} \n *${Team1} - ${Team2}* \n ${Day}. ה-${Date}. ${Hour} שעון ישראל. ${Channel}`;
   const textMessage2 = Qestion1a;
-  const textMessage3 = fullText;
+  const textMessage3 = user_name ? fullText : Qestion1b;
   // const textMessage3 = Qestion1b;
 
   if (isNeedToSave) {
