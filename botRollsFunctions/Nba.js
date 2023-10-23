@@ -738,9 +738,15 @@ const Nba = async function ({
         textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
         break;
       case 987:
-        textMessage1 = "הניחושים נקלטו. שיהיה בהצלחה";
-        textMessage2 =
-          "במידה ותרצו לעדכן , כתבו לי היי שוב ונמלא הכל מחדש. לצערי לערוך משחק בודד אחרי אישור הניחושים.";
+        summaryText = await getSummaryText({
+          user_name,
+          UsersIndex,
+          cycleIndexNum,
+          GamesList,
+        });
+
+        textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* \n${summaryText}`;
+        textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה";
         textMessage3 = "ניפגש במחזור הבא";
 
         break;
