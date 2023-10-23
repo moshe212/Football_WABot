@@ -36,7 +36,7 @@ const Nba = async function ({
   let Hour = "";
   let Channel = "";
   let winTeam = "";
-  let number = 0;
+  let number = "";
   let totalScore = "";
   let textMessagesObj = {};
   let gameNum = "";
@@ -146,7 +146,7 @@ const Nba = async function ({
 
         break;
       case 901:
-        number = parseInt(GamesList[0][6]);
+        number = GamesList[0][6];
         textMessagesObj = sendQ3({
           Qestion3,
           number,
@@ -200,7 +200,7 @@ const Nba = async function ({
 
         break;
       case 910:
-        number = parseInt(GamesList[1][6]);
+        number = GamesList[1][6];
         textMessagesObj = sendQ3({
           Qestion3,
           number,
@@ -253,7 +253,7 @@ const Nba = async function ({
 
         break;
       case 919:
-        number = parseInt(GamesList[2][6]);
+        number = GamesList[2][6];
         textMessagesObj = sendQ3({
           Qestion3,
           number,
@@ -305,7 +305,7 @@ const Nba = async function ({
 
         break;
       case 926:
-        number = parseInt(GamesList[3][6]);
+        number = GamesList[3][6];
         textMessagesObj = sendQ3({
           Qestion3,
           number,
@@ -358,7 +358,7 @@ const Nba = async function ({
 
         break;
       case 935:
-        number = parseInt(GamesList[4][6]);
+        number = GamesList[4][6];
         textMessagesObj = sendQ3({
           Qestion3,
           number,
@@ -410,7 +410,7 @@ const Nba = async function ({
 
         break;
       case 942:
-        number = parseInt(GamesList[5][6]);
+        number = GamesList[5][6];
         textMessagesObj = sendQ3({
           Qestion3,
           number,
@@ -462,7 +462,7 @@ const Nba = async function ({
 
         break;
       case 949:
-        number = parseInt(GamesList[6][6]);
+        number = GamesList[6][6];
         textMessagesObj = sendQ3({
           Qestion3,
           number,
@@ -514,7 +514,7 @@ const Nba = async function ({
 
         break;
       case 956:
-        number = parseInt(GamesList[7][6]);
+        number = GamesList[7][6];
         textMessagesObj = sendQ3({
           Qestion3,
           number,
@@ -567,7 +567,7 @@ const Nba = async function ({
         break;
 
       case 963:
-        number = parseInt(GamesList[8][6]);
+        number = GamesList[8][6];
         textMessagesObj = sendQ3({
           Qestion3,
           number,
@@ -621,7 +621,7 @@ const Nba = async function ({
         break;
 
       case 970:
-        number = parseInt(GamesList[9][6]);
+        number = GamesList[9][6];
         textMessagesObj = sendQ3({
           Qestion3,
           number,
@@ -667,7 +667,7 @@ const Nba = async function ({
 
         console.log("973 GuessData", summaryText);
 
-        textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* \n${summaryText}`;
+        textMessage1 = `*אלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* \n${summaryText}`;
         // textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה";
         textMessage2 = "\n1️⃣ לאישור וסיום \n2️⃣ לשינוי ועריכה";
 
@@ -689,7 +689,7 @@ const Nba = async function ({
           GamesList,
         });
 
-        textMessage1 = `בחרתם לשנות אחד או יותר מניחושי שבוע המשחקים מספר ${cycle}.`;
+        textMessage1 = `בחרתם לשנות אחד או יותר מניחושי שבוע משחקים מספר ${cycle}.`;
         textMessage2 =
           `שימו לב למבנה ההודעה שאתם נדרשים לשלוח על מנת לבצע את השינוי, כמו כן בדקו כי אכן הניחוש שלכם השתנה ` +
           "\n" +
@@ -745,7 +745,7 @@ const Nba = async function ({
           GamesList,
         });
 
-        textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* \n${summaryText}`;
+        textMessage1 = `*אלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* \n${summaryText}`;
         textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה";
         textMessage3 = "ניפגש במחזור הבא";
 
@@ -759,7 +759,7 @@ const Nba = async function ({
           GamesList,
         });
 
-        textMessage1 = `בחרתם לשנות אחד או יותר מניחושי שבוע המשחקים מספר ${cycle}.`;
+        textMessage1 = `בחרתם לשנות אחד או יותר מניחושי שבוע משחקים מספר ${cycle}.`;
         textMessage2 =
           `שימו לב למבנה ההודעה שאתם נדרשים לשלוח על מנת לבצע את השינוי, כמו כן בדקו כי אכן הניחוש שלכם השתנה ` +
           "\n" +
@@ -811,7 +811,7 @@ const Nba = async function ({
           GamesList,
         });
 
-        textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* \n${summaryText}`;
+        textMessage1 = `*אלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* \n${summaryText}`;
         textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה";
         textMessage3 = "ניפגש במחזור הבא";
         break;
@@ -1271,27 +1271,6 @@ const sendQ1 = ({
 }) => {
   // console.log(GamesList);
   console.log("user_name", user_name);
-  // let fullText = "";
-  // if (user_name != undefined) {
-  //   console.log("in");
-  //   const SavedGuess = await footballFunc.getSavedGuss_Nba({
-  //     user_name,
-  //     UsersIndex,
-  //     cycleIndexNum,
-  //     sheetTitle: "הניחושים",
-  //     GamesList,
-  //     fileName: "NBA",
-  //   });
-
-  //   for (const game of SavedGuess) {
-  //     const text =
-  //       `${game.Team1} - ${game.Team2}` +
-  //       `\nניצחון${game.Location}` +
-  //       `\n${game.Difference} הפרש` +
-  //       `\nסך הנקודות יהיה: ${game.Under_Over}`;
-  //     fullText += text + "\n\n";
-  //   }
-  // }
 
   const gameIndex = parseInt(gameNum) - 1;
   const Team1 = GamesList[gameIndex][0];
@@ -1300,7 +1279,7 @@ const sendQ1 = ({
   const Date = GamesList[gameIndex][3];
   const Hour = GamesList[gameIndex][4];
   const Channel = GamesList[gameIndex][5];
-  const number = isNeedToSave ? parseInt(GamesList[gameIndex - 1][6]) : "0";
+  const number = isNeedToSave ? GamesList[gameIndex - 1][6] : "0";
 
   console.log("Details:", Team1, Team2, Day, Date, Hour, Channel);
 
@@ -1426,14 +1405,18 @@ const getSummaryText = async ({
     fileName: "NBA",
   });
 
+  let gameIndex = 0;
   let fullText = "";
   for (const game of SavedGuess) {
+    const number = GamesList[gameIndex][6];
     const text =
-      `${game.Team1} - ${game.Team2}` +
+      `*משחק מספר ${gameIndex + 1}:*` +
+      `\n*${game.Team1} - ${game.Team2}*` +
       `\nניצחון ${game.Location}` +
       `\n${game.Difference} הפרש` +
-      `\nסך הנקודות יהיה: ${game.Under_Over}`;
+      `\nסך הנקודות יהיה: ${game.Under_Over} ${number}}`;
     fullText += text + "\n\n";
+    gameIndex++;
   }
 
   return fullText;
