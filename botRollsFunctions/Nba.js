@@ -1276,6 +1276,7 @@ const sendQ1 = async ({
 }) => {
   // console.log(GamesList);
   console.log("user_name", user_name);
+  let fullText = "";
   if (user_name != undefined) {
     const SavedGuess = await footballFunc.getSavedGuss_Nba({
       user_name,
@@ -1286,7 +1287,6 @@ const sendQ1 = async ({
       fileName: "NBA",
     });
 
-    let fullText = "";
     for (const game of SavedGuess) {
       const text =
         `${game.Team1} - ${game.Team2}` +
