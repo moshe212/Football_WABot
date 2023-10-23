@@ -111,7 +111,7 @@ const Nba = async function ({
 
       case 894:
         gameNum = "1";
-        textMessagesObj = sendQ1({
+        textMessagesObj = await sendQ1({
           GamesList,
           Qestion1a,
           Qestion1b,
@@ -1312,8 +1312,8 @@ const sendQ1 = async ({
   const str1 = `משחק מספר ${gameNum}: `;
   const textMessage1 = `${str1} \n *${Team1} - ${Team2}* \n ${Day}. ה-${Date}. ${Hour} שעון ישראל. ${Channel}`;
   const textMessage2 = Qestion1a;
-  // const textMessage3 = user_name != undefined ? fullText : Qestion1b;
-  const textMessage3 = Qestion1b;
+  const textMessage3 = user_name != undefined ? fullText : Qestion1b;
+  // const textMessage3 = Qestion1b;
 
   if (isNeedToSave) {
     if (parseInt(message) === 1) {
