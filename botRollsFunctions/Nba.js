@@ -23,6 +23,7 @@ const Nba = async function ({
   let textMessage1 = "empty";
   let textMessage2 = "empty";
   let textMessage3 = "empty";
+  let summaryText = "";
   let Team1 = "";
   let Team2 = "";
   let Day = "";
@@ -631,25 +632,14 @@ const Nba = async function ({
         break;
 
       case 973:
-        const SavedGuess = await footballFunc.getSavedGuss_Nba({
+        summaryText = getSummaryText({
           user_name,
           UsersIndex,
           cycleIndexNum,
-          sheetTitle: "הניחושים",
           GamesList,
-          fileName: "NBA",
         });
 
-        let fullText = "";
-        for (const game of SavedGuess) {
-          const text =
-            `${game.Team1} - ${game.Team2}` +
-            `\nניצחון ${game.Location}` +
-            `\n${game.Difference} הפרש` +
-            `\nסך הנקודות יהיה: ${game.Under_Over}`;
-          fullText += text + "\n\n";
-        }
-        console.log("973 GuessData", SavedGuess);
+        console.log("973 GuessData", summaryText);
 
         if (parseInt(message) === 1) {
           totalScore = `אנדר`;
@@ -672,37 +662,54 @@ const Nba = async function ({
           "NBA"
         );
 
-        textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* \n${fullText}`;
+        textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* \n${summaryText}`;
         textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה";
-        textMessage3 = "ניפגש במחזור הבא";
-        break;
-      case 639:
-        textMessage1 = "הניחושים נקלטו. שיהיה בהצלחה";
-        textMessage2 = "ניפגש במחזור הבא";
+        // textMessage2='\n1️⃣ לאישור וסיום \n2️⃣ לשינוי ועריכה'
+
         break;
 
-      case 640:
-        GuessData_Saved = await footballFunc.getSavedGuss_Nokout(
+      case 983:
+        textMessage1 = "הניחושים נקלטו. שיהיה בהצלחה";
+        textMessage2 =
+          "במידה ותרצו לעדכן , כתבו לי היי שוב ונמלא הכל מחדש. לצערי לערוך משחק בודד אחרי אישור הניחושים.";
+        textMessage3 = "ניפגש במחזור הבא";
+
+        break;
+
+      case 984:
+        number = summaryText = getSummaryText({
           user_name,
           UsersIndex,
           cycleIndexNum,
-          "שלב הנוקאאוט",
           GamesList,
-          "Mondial"
-        );
-        console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFix_Nokout(
-          GuessData_Saved,
-          true,
-          cycleNum
-        );
-        console.log(textMessage);
-        textMessage1 = textMessage[0];
-        textMessage2 = textMessage[1];
-        textMessage3 = textMessage[2];
+        });
+
+        textMessage1 = `בחרתם לשנות אחד או יותר מניחושי שבוע המשחקים מספר ${cycle}.`;
+        textMessage2 =
+          `שימו לב למבנה ההודעה שאתם נדרשים לשלוח על מנת לבצע את השינוי, כמו כן בדקו כי אכן הניחוש שלכם השתנה ` +
+          `\n${summaryText}`;
+        textMessage3 =
+          "יש להשיב במבנה הבא (מספרים משקפים את הפרמטרים השונים):" +
+          "\nמשחק 4, ניצחון 2, הפרש 3, נקודות 1" +
+          "\n";
+        "\nלהלן הפרמטרים למבנה השינוי:" +
+          "\n*ניצחון - *" +
+          "\n 1️⃣ בית" +
+          "\n 2️⃣ חוץ" +
+          "\n" +
+          "\n*הפרש - *" +
+          "\n 1️⃣ 1-4" +
+          "\n 2️⃣ 5-7" +
+          "\n 3️⃣ 8-10" +
+          "\n 4️⃣ 11-14" +
+          "\n 5️⃣ 15+" +
+          "\n" +
+          "\n*נקודות - *" +
+          `\n 1️⃣ אנדר <מספר>` +
+          `\n 2️⃣ אובר <מספר>`;
 
         break;
-      case 642:
+      case 985:
         gameNum = message.split(" ")[1];
         score1 = message.split(" ")[3].split(":")[1];
         score2 = message.split(" ")[3].split(":")[0];
@@ -1424,4 +1431,32 @@ const sendQ3 = ({
 
   const textMessages = { textMessage1, textMessage2 };
   return textMessages;
+};
+
+const getSummaryText = async ({
+  user_name,
+  UsersIndex,
+  cycleIndexNum,
+  GamesList,
+}) => {
+  const SavedGuess = await footballFunc.getSavedGuss_Nba({
+    user_name,
+    UsersIndex,
+    cycleIndexNum,
+    sheetTitle: "הניחושים",
+    GamesList,
+    fileName: "NBA",
+  });
+
+  let fullText = "";
+  for (const game of SavedGuess) {
+    const text =
+      `${game.Team1} - ${game.Team2}` +
+      `\nניצחון ${game.Location}` +
+      `\n${game.Difference} הפרש` +
+      `\nסך הנקודות יהיה: ${game.Under_Over}`;
+    fullText += text + "\n\n";
+  }
+
+  return fullText;
 };
