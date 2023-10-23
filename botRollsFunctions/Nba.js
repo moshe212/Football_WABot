@@ -631,7 +631,16 @@ const Nba = async function ({
         break;
 
       case 973:
-        console.log("973 GuessData", GuessData);
+        const SavedGuess = await footballFunc.getSavedGuss_Nba({
+          user_name,
+          UsersIndex,
+          cycleIndexNum,
+          sheetTitle: "הניחושים",
+          GamesList,
+          fileName: "NBA",
+        });
+        console.log("973 GuessData", SavedGuess);
+
         if (parseInt(message) === 1) {
           totalScore = `אנדר`;
         } else {

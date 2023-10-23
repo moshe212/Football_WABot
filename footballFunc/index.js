@@ -25,6 +25,7 @@ const { saveFix_Nokout } = require("./saveFix_Nokout");
 const { firstSort } = require("./firstSort");
 const { chooseGameToFix_Olami } = require("./chooseGameToFix_Olami");
 const { getDifference } = require("./getDifference");
+const { getSavedGuss_Nba } = require("./getSavedGuss_Nba");
 
 const footballFunc = {
   getDataFromSheet,
@@ -54,6 +55,7 @@ const footballFunc = {
   firstSort,
   chooseGameToFix_Olami,
   getDifference,
+  getSavedGuss_Nba,
 };
 
 module.exports = { footballFunc };
