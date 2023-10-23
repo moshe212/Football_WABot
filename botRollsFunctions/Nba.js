@@ -721,7 +721,7 @@ const Nba = async function ({
         differenceFix = message.split(" ")[5];
         scoreFix = message.split(" ")[7];
 
-        console.log("answer", gameNum, winNum, difference, score);
+        console.log("answer", gameNumFix, winNumFix, differenceFix, scoreFix);
 
         await footballFunc.saveFix_Nba({
           gameNum: parseInt(gameNumFix),
@@ -785,7 +785,7 @@ const Nba = async function ({
         differenceFix = message.split(" ")[5];
         scoreFix = message.split(" ")[7];
 
-        console.log("answer", gameNum, winNum, difference, score);
+        console.log("answer", gameNumFix, winNumFix, differenceFix, scoreFix);
 
         await footballFunc.saveFix_Nba({
           gameNum: parseInt(gameNumFix),
