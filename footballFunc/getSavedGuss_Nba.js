@@ -9,6 +9,7 @@ const getSavedGuss_Nba = async function ({
   fileName,
 }) {
   console.log({ fileName });
+  console.log("GamesList", GamesList);
   const creds = require("../config/CreditTransaction-d9fe1ef7e128.json");
   // Initialize the sheet - doc ID is the long id in the sheets URL
   const doc = new GoogleSpreadsheet(
@@ -193,71 +194,7 @@ const getSavedGuss_Nba = async function ({
         //       };
         //       Arr.push(scoresObj);
         //       break;
-        //     case 11:
-        //       score1 = SavedGuess[181];
-        //       score2 = SavedGuess[182];
-        //       teamUp = SavedGuess[183];
-        //       minute = SavedGuess[184];
-        //       scoresObj = {
-        //         team1: [Team1, score1],
-        //         team2: [Team2, score2],
-        //         teamUp: teamUp,
-        //         minute: minute,
-        //       };
-        //       Arr.push(scoresObj);
-        //       break;
-        //     case 12:
-        //       score1 = SavedGuess[197];
-        //       score2 = SavedGuess[198];
-        //       teamUp = SavedGuess[199];
-        //       minute = SavedGuess[200];
-        //       scoresObj = {
-        //         team1: [Team1, score1],
-        //         team2: [Team2, score2],
-        //         teamUp: teamUp,
-        //         minute: minute,
-        //       };
-        //       Arr.push(scoresObj);
-        //       break;
-        //     case 13:
-        //       score1 = SavedGuess[213];
-        //       score2 = SavedGuess[214];
-        //       teamUp = SavedGuess[215];
-        //       minute = SavedGuess[216];
-        //       scoresObj = {
-        //         team1: [Team1, score1],
-        //         team2: [Team2, score2],
-        //         teamUp: teamUp,
-        //         minute: minute,
-        //       };
-        //       Arr.push(scoresObj);
-        //       break;
-        //     case 14:
-        //       score1 = SavedGuess[229];
-        //       score2 = SavedGuess[230];
-        //       teamUp = SavedGuess[231];
-        //       minute = SavedGuess[232];
-        //       scoresObj = {
-        //         team1: [Team1, score1],
-        //         team2: [Team2, score2],
-        //         teamUp: teamUp,
-        //         minute: minute,
-        //       };
-        //       Arr.push(scoresObj);
-        //       break;
-        //     case 15:
-        //       score1 = SavedGuess[245];
-        //       score2 = SavedGuess[246];
-        //       teamUp = SavedGuess[247];
-        //       minute = SavedGuess[248];
-        //       scoresObj = {
-        //         team1: [Team1, score1],
-        //         team2: [Team2, score2],
-        //         teamUp: teamUp,
-        //         minute: minute,
-        //       };
-        //       Arr.push(scoresObj);
-        //       break;
+
         //   }
         // }
         // console.log(Arr);
