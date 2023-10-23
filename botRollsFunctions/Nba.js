@@ -1283,6 +1283,17 @@ const sendQ1 = ({
     GamesList,
     fileName: "NBA",
   });
+
+  let fullText = "";
+  for (const game of SavedGuess) {
+    const text =
+      `${game.Team1} - ${game.Team2}` +
+      `\nניצחון${game.Location}` +
+      `\n${game.Difference} הפרש` +
+      `\nסך הנקודות יהיה: ${game.Under_Over}`;
+    fullText += text + "\n\n";
+  }
+
   const gameIndex = parseInt(gameNum) - 1;
   const Team1 = GamesList[gameIndex][0];
   const Team2 = GamesList[gameIndex][1];
@@ -1297,7 +1308,8 @@ const sendQ1 = ({
   const str1 = `משחק מספר ${gameNum}: `;
   const textMessage1 = `${str1} \n *${Team1} - ${Team2}* \n ${Day}. ה-${Date}. ${Hour} שעון ישראל. ${Channel}`;
   const textMessage2 = Qestion1a;
-  const textMessage3 = Qestion1b;
+  const textMessage3 = fullText;
+  // const textMessage3 = Qestion1b;
 
   if (isNeedToSave) {
     if (parseInt(message) === 1) {
