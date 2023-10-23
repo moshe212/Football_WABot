@@ -111,7 +111,7 @@ const Nba = async function ({
 
       case 894:
         gameNum = "1";
-        textMessagesObj = await sendQ1({
+        textMessagesObj = sendQ1({
           GamesList,
           Qestion1a,
           Qestion1b,
@@ -1271,7 +1271,7 @@ const Nba = async function ({
 
 module.exports = { Nba };
 
-const sendQ1 = async ({
+const sendQ1 = ({
   GamesList,
   Qestion1a,
   Qestion1b,
