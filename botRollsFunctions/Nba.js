@@ -632,7 +632,7 @@ const Nba = async function ({
         break;
 
       case 973:
-        summaryText = getSummaryText({
+        summaryText = await getSummaryText({
           user_name,
           UsersIndex,
           cycleIndexNum,
@@ -663,8 +663,8 @@ const Nba = async function ({
         );
 
         textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* \n${summaryText}`;
-        textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה";
-        // textMessage2='\n1️⃣ לאישור וסיום \n2️⃣ לשינוי ועריכה'
+        // textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה";
+        textMessage2 = "\n1️⃣ לאישור וסיום \n2️⃣ לשינוי ועריכה";
 
         break;
 
@@ -677,7 +677,7 @@ const Nba = async function ({
         break;
 
       case 984:
-        number = summaryText = getSummaryText({
+        number = summaryText = await getSummaryText({
           user_name,
           UsersIndex,
           cycleIndexNum,
