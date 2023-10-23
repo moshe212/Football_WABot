@@ -44,11 +44,11 @@ const getSavedGuss_Nba = async function ({
 
         let Arr = [];
 
+        let baseNum = 3;
         for (let g = 0; g < GamesList.length; g++) {
           const Team1 = GamesList[g][0];
           const Team2 = GamesList[g][1];
 
-          let baseNum = 3;
           const Location = SavedGuess[baseNum];
           const Difference = SavedGuess[baseNum + 2];
           const Under_Over = SavedGuess[baseNum + 4];
