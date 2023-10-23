@@ -15,9 +15,9 @@ const getSavedGuss_Nba = async function ({
   const doc = new GoogleSpreadsheet(
     "1n00YD7sTIKT_PEJJp_z4KqDNLxyjr92R6NOVsggNMe0"
   );
-  if (!user_name || !UsersIndex) {
-    return "err";
-  }
+  // if (!user_name || !UsersIndex) {
+  //   return "err";
+  // }
   try {
     await doc.useServiceAccountAuth(creds);
     await doc.loadInfo(); // loads document properties and worksheets
