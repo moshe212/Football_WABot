@@ -1414,7 +1414,7 @@ const getSummaryText = async ({
       `\n*${game.Team1} - ${game.Team2}*` +
       `\nניצחון ${game.Location}` +
       `\n${game.Difference} הפרש` +
-      `\nסך הנקודות יהיה: ${game.Under_Over} ${number}}`;
+      `\nסך הנקודות יהיה: ${game.Under_Over} ${number}`;
     fullText += text + "\n\n";
     gameIndex++;
   }
