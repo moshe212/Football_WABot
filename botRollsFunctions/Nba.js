@@ -24,9 +24,10 @@ const Nba = async function ({
   let textMessage2 = "empty";
   let textMessage3 = "empty";
   let summaryText = "";
-  let winNum = "";
-  let score = "";
-  let difference = "";
+  let winNumFix = "";
+  let scoreFix = "";
+  let differenceFix = "";
+  let gameNumFix = "";
 
   let Team1 = "";
   let Team2 = "";
@@ -714,18 +715,18 @@ const Nba = async function ({
 
         break;
       case 985:
-        gameNum = message.split(" ")[1];
-        winNum = message.split(" ")[3];
-        difference = message.split(" ")[5];
-        score = message.split(" ")[7];
+        gameNumFix = message.split(" ")[1];
+        winNumFix = message.split(" ")[3];
+        differenceFix = message.split(" ")[5];
+        scoreFix = message.split(" ")[7];
 
         console.log("answer", gameNum, winNum, difference, score);
 
         await footballFunc.saveFix_Nba({
-          gameNum: parseInt(gameNum),
-          winNum: parseInt(winNum),
-          difference: parseInt(difference),
-          score: parseInt(score),
+          gameNum: parseInt(gameNumFix),
+          winNum: parseInt(winNumFix),
+          difference: parseInt(differenceFix),
+          score: parseInt(scoreFix),
           user_name,
           UsersIndex,
           GuessData,
@@ -777,18 +778,18 @@ const Nba = async function ({
 
         break;
       case 989:
-        gameNum = message.split(" ")[1];
-        winNum = message.split(" ")[3];
-        difference = message.split(" ")[5];
-        score = message.split(" ")[7];
+        gameNumFix = message.split(" ")[1];
+        winNumFix = message.split(" ")[3];
+        differenceFix = message.split(" ")[5];
+        scoreFix = message.split(" ")[7];
 
         console.log("answer", gameNum, winNum, difference, score);
 
         await footballFunc.saveFix_Nba({
-          gameNum: parseInt(gameNum),
-          winNum: parseInt(winNum),
-          difference: parseInt(difference),
-          score: parseInt(score),
+          gameNum: parseInt(gameNumFix),
+          winNum: parseInt(winNumFix),
+          difference: parseInt(differenceFix),
+          score: parseInt(scoreFix),
           user_name,
           UsersIndex,
           GuessData,
