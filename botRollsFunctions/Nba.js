@@ -42,11 +42,11 @@ const Nba = async function ({
   let textMessage = "";
 
   const Qestion1a = "*שאלה ראשונה:* איזו קבוצה תנצח את המשחק?";
-  const Qestion1b = "\n1️⃣-בית" + "\n2️⃣-חוץ";
+  const Qestion1b = "\n1️⃣ - בית" + "\n2️⃣ - חוץ";
 
   const Qestion2a = "*שאלה שניה:* מה יהיה ההפרש בו יסתיים המשחק? (כולל הארכות)";
   const Qestion2b =
-    "\n1️⃣1-4" + "\n2️⃣5-7" + "\n3️⃣8-10" + "\n4️⃣11-14" + "\n5️⃣16+";
+    "\n1️⃣ 1-4" + "\n2️⃣ 5-7" + "\n3️⃣ 8-10" + "\n4️⃣ 11-14" + "\n5️⃣ 15+";
 
   const Qestion3 =
     "\n*שאלה שלישית:* מה סך הנקודות שיקלעו שתי הקבוצות יחד בתום המשחק? (כולל הארכות)";
@@ -75,16 +75,20 @@ const Nba = async function ({
       case 802:
         textMessage1 =
           "הנה רשימת הלינקים למשחק" +
-          "\nלינק לקובץ הלייב: https://docs.google.com/spreadsheets/d/1SgqAiRYXEFdxxu_YQ2RSbYx_JuPtXoW0pff2uLINVFc/edit" +
-          "\nלינק לקובץ החוקים והכללים: https://docs.google.com/document/d/1Lde9i31TK3-9FU_9sQuN3zz0IGWnk-t5KNozl0vR3sw/edit" +
-          "\nלינק לקבוצת הוואטסאפ: https://chat.whatsapp.com/CZyFCQqAvHYJkD8QC2VQPb";
+          "\nלינק לקובץ הלייב:" +
+          "\n https://docs.google.com/spreadsheets/d/15ylTw286Rh9wc5o9uHrcZIucTDRL5jCijmjp20mLQ0k/edit" +
+          "\nלינק לקובץ החוקים והכללים:" +
+          "\n https://docs.google.com/document/d/1ZaFB7EdhxMa7xdufF4Xcd6vmEXCub0SYhaaPva8jnmQ/edit" +
+          "\nלינק לקבוצת הוואטסאפ:" +
+          "\n https://chat.whatsapp.com/GU2MAoTL44i2FLa7BmEFlI";
 
+        textMessage2 = "0️⃣ לחזרה לתפריט הקודם";
         break;
 
       case 801:
         textMessage1 =
           "בחירה מצוינת!" +
-          "\nהדד ליין לשליחת ניחושים ל*שבוע משחקים מספר" +
+          "\nהדד ליין לשליחת ניחושים *לשבוע משחקים מספר " +
           cycle +
           "* הוא עד ה-" +
           "*" +
@@ -627,10 +631,11 @@ const Nba = async function ({
         break;
 
       case 973:
+        console.log("973 GuessData", GuessData);
         if (parseInt(message) === 1) {
-          totalScore = `אנדר ${number}`;
+          totalScore = `אנדר`;
         } else {
-          totalScore = `אובר ${number}`;
+          totalScore = `אובר`;
         }
 
         footballFunc.saveData_googleAPI(
@@ -648,7 +653,7 @@ const Nba = async function ({
           "NBA"
         );
 
-        textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}: `;
+        textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* `;
         textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה";
         textMessage3 = "ניפגש במחזור הבא";
         break;
@@ -1272,16 +1277,16 @@ const sendQ1 = ({
 
   console.log("Details:", Team1, Team2, Day, Date, Hour, Channel);
 
-  const str1 = `*משחק מספר ${gameNum}:* `;
-  const textMessage1 = `${str1} \n ${Team1}- ${Team2} \n ${Day}, ה-${Date}, ${Hour} שעון ישראל, \n${Channel}`;
+  const str1 = `משחק מספר ${gameNum}: `;
+  const textMessage1 = `${str1} \n *${Team1} - ${Team2}* \n ${Day}. ה-${Date}. ${Hour} שעון ישראל. ${Channel}`;
   const textMessage2 = Qestion1a;
   const textMessage3 = Qestion1b;
 
   if (isNeedToSave) {
     if (parseInt(message) === 1) {
-      totalScore = `אנדר ${number}`;
+      totalScore = `אנדר`;
     } else {
-      totalScore = `אובר ${number}`;
+      totalScore = `אובר`;
     }
 
     footballFunc.saveData_googleAPI(
@@ -1357,7 +1362,7 @@ const sendQ3 = ({
   const difference = footballFunc.getDifference(parseInt(message));
 
   const textMessage1 = Qestion3;
-  const textMessage2 = `\n1️⃣אנדר ${number}` + `\n2️⃣אובר ${number}`;
+  const textMessage2 = `\n1️⃣ - אנדר ${number}` + `\n2️⃣ - אובר ${number}`;
 
   footballFunc.saveData_googleAPI(
     user_name,
