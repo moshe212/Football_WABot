@@ -1274,7 +1274,15 @@ const sendQ1 = ({
   cycleIndexNum,
   column,
 }) => {
-  console.log(GamesList);
+  // console.log(GamesList);
+  const SavedGuess = footballFunc.getSavedGuss_Nba({
+    user_name,
+    UsersIndex,
+    cycleIndexNum,
+    sheetTitle: "הניחושים",
+    GamesList,
+    fileName: "NBA",
+  });
   const gameIndex = parseInt(gameNum) - 1;
   const Team1 = GamesList[gameIndex][0];
   const Team2 = GamesList[gameIndex][1];
