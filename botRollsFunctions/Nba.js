@@ -637,6 +637,21 @@ const Nba = async function ({
         break;
 
       case 973:
+        await footballFunc.saveData_googleAPI(
+          user_name,
+          UsersIndex,
+          GuessData,
+          cycleIndexNum,
+          "הניחושים",
+          "BJ",
+          "",
+          "",
+          "",
+          "",
+          totalScore,
+          "NBA"
+        );
+
         summaryText = await getSummaryText({
           user_name,
           UsersIndex,
@@ -651,21 +666,6 @@ const Nba = async function ({
         } else {
           totalScore = `אובר`;
         }
-
-        footballFunc.saveData_googleAPI(
-          user_name,
-          UsersIndex,
-          GuessData,
-          cycleIndexNum,
-          "הניחושים",
-          "BJ",
-          "",
-          "",
-          "",
-          "",
-          totalScore,
-          "NBA"
-        );
 
         textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* \n${summaryText}`;
         // textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה";
