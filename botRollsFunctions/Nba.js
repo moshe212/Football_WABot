@@ -639,6 +639,16 @@ const Nba = async function ({
           GamesList,
           fileName: "NBA",
         });
+
+        let fullText = "";
+        for (const game of SavedGuess) {
+          const text =
+            `${game.Team1} - ${game.Team2}` +
+            `\nניצחון${game.Location}` +
+            `\n${game.Difference} הפרש` +
+            `\nסך הנקודות יהיה: ${game.Under_Over}`;
+          fullText += text + "\n\n";
+        }
         console.log("973 GuessData", SavedGuess);
 
         if (parseInt(message) === 1) {
@@ -662,7 +672,7 @@ const Nba = async function ({
           "NBA"
         );
 
-        textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* `;
+        textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* ${fullText}`;
         textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה";
         textMessage3 = "ניפגש במחזור הבא";
         break;
@@ -1276,27 +1286,27 @@ const sendQ1 = async ({
 }) => {
   // console.log(GamesList);
   console.log("user_name", user_name);
-  let fullText = "";
-  if (user_name != undefined) {
-    console.log("in");
-    const SavedGuess = await footballFunc.getSavedGuss_Nba({
-      user_name,
-      UsersIndex,
-      cycleIndexNum,
-      sheetTitle: "הניחושים",
-      GamesList,
-      fileName: "NBA",
-    });
+  // let fullText = "";
+  // if (user_name != undefined) {
+  //   console.log("in");
+  //   const SavedGuess = await footballFunc.getSavedGuss_Nba({
+  //     user_name,
+  //     UsersIndex,
+  //     cycleIndexNum,
+  //     sheetTitle: "הניחושים",
+  //     GamesList,
+  //     fileName: "NBA",
+  //   });
 
-    for (const game of SavedGuess) {
-      const text =
-        `${game.Team1} - ${game.Team2}` +
-        `\nניצחון${game.Location}` +
-        `\n${game.Difference} הפרש` +
-        `\nסך הנקודות יהיה: ${game.Under_Over}`;
-      fullText += text + "\n\n";
-    }
-  }
+  //   for (const game of SavedGuess) {
+  //     const text =
+  //       `${game.Team1} - ${game.Team2}` +
+  //       `\nניצחון${game.Location}` +
+  //       `\n${game.Difference} הפרש` +
+  //       `\nסך הנקודות יהיה: ${game.Under_Over}`;
+  //     fullText += text + "\n\n";
+  //   }
+  // }
 
   const gameIndex = parseInt(gameNum) - 1;
   const Team1 = GamesList[gameIndex][0];
@@ -1312,8 +1322,8 @@ const sendQ1 = async ({
   const str1 = `משחק מספר ${gameNum}: `;
   const textMessage1 = `${str1} \n *${Team1} - ${Team2}* \n ${Day}. ה-${Date}. ${Hour} שעון ישראל. ${Channel}`;
   const textMessage2 = Qestion1a;
-  const textMessage3 = user_name != undefined ? fullText : Qestion1b;
-  // const textMessage3 = Qestion1b;
+  // const textMessage3 = user_name != undefined ? fullText : Qestion1b;
+  const textMessage3 = Qestion1b;
 
   if (isNeedToSave) {
     if (parseInt(message) === 1) {
