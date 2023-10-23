@@ -1275,7 +1275,8 @@ const sendQ1 = async ({
   column,
 }) => {
   // console.log(GamesList);
-  if (user_name) {
+  console.log("user_name", user_name);
+  if (user_name != undefined) {
     const SavedGuess = await footballFunc.getSavedGuss_Nba({
       user_name,
       UsersIndex,
