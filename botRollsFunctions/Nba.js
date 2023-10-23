@@ -644,7 +644,7 @@ const Nba = async function ({
         for (const game of SavedGuess) {
           const text =
             `${game.Team1} - ${game.Team2}` +
-            `\nניצחון${game.Location}` +
+            `\nניצחון ${game.Location}` +
             `\n${game.Difference} הפרש` +
             `\nסך הנקודות יהיה: ${game.Under_Over}`;
           fullText += text + "\n\n";
@@ -672,7 +672,7 @@ const Nba = async function ({
           "NBA"
         );
 
-        textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* ${fullText}`;
+        textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* \n${fullText}`;
         textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה";
         textMessage3 = "ניפגש במחזור הבא";
         break;
