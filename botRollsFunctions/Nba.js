@@ -1278,6 +1278,7 @@ const sendQ1 = async ({
   console.log("user_name", user_name);
   let fullText = "";
   if (user_name != undefined) {
+    console.log("in");
     const SavedGuess = await footballFunc.getSavedGuss_Nba({
       user_name,
       UsersIndex,
@@ -1311,8 +1312,8 @@ const sendQ1 = async ({
   const str1 = `משחק מספר ${gameNum}: `;
   const textMessage1 = `${str1} \n *${Team1} - ${Team2}* \n ${Day}. ה-${Date}. ${Hour} שעון ישראל. ${Channel}`;
   const textMessage2 = Qestion1a;
-  const textMessage3 = user_name != undefined ? fullText : Qestion1b;
-  // const textMessage3 = Qestion1b;
+  // const textMessage3 = user_name != undefined ? fullText : Qestion1b;
+  const textMessage3 = Qestion1b;
 
   if (isNeedToSave) {
     if (parseInt(message) === 1) {
