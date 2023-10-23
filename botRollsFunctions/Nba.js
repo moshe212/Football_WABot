@@ -637,6 +637,12 @@ const Nba = async function ({
         break;
 
       case 973:
+        if (parseInt(message) === 1) {
+          totalScore = `אנדר`;
+        } else {
+          totalScore = `אובר`;
+        }
+
         await footballFunc.saveData_googleAPI(
           user_name,
           UsersIndex,
@@ -660,12 +666,6 @@ const Nba = async function ({
         });
 
         console.log("973 GuessData", summaryText);
-
-        if (parseInt(message) === 1) {
-          totalScore = `אנדר`;
-        } else {
-          totalScore = `אובר`;
-        }
 
         textMessage1 = `*ואלו הניחושים שלכם לשבוע משחקים מספר ${cycle}:* \n${summaryText}`;
         // textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה";
