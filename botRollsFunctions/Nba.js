@@ -1261,7 +1261,7 @@ const Nba = async function ({
 
 module.exports = { Nba };
 
-const sendQ1 = ({
+const sendQ1 = async ({
   GamesList,
   Qestion1a,
   Qestion1b,
@@ -1275,7 +1275,7 @@ const sendQ1 = ({
   column,
 }) => {
   // console.log(GamesList);
-  const SavedGuess = footballFunc.getSavedGuss_Nba({
+  const SavedGuess = await footballFunc.getSavedGuss_Nba({
     user_name,
     UsersIndex,
     cycleIndexNum,
