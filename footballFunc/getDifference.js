@@ -14,7 +14,7 @@ const getDifference = (message) => {
       diff = "11-14";
       break;
     case 5:
-      diff = "16+";
+      diff = "15+";
       break;
   }
   console.log("diff", diff);
