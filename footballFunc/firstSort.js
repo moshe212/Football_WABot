@@ -12,14 +12,15 @@ const firstSort = async function (
   let textMessage2 = "";
   let textMessage3 = "";
   let isFirst = true;
-
+  console.log("filename: ", fileName);
   switch (stage) {
     case 110:
     case 253:
+    case 255:
     case 256:
     case 257:
     case 700:
-      console.log("UsersList", UsersList);
+      console.log("UsersListNBA", UsersList);
       if (!UsersList.includes(user_name)) {
         console.log("not includs");
         const game =
@@ -31,6 +32,8 @@ const firstSort = async function (
             ? "מונדיאל"
             : fileName === "Olami"
             ? "כדורגל עולמי"
+            : fileName === "NBA"
+            ? "NBA"
             : "";
         textMessage1 =
           "אהלן, אני הבוט של *היציע: " +
@@ -81,6 +84,9 @@ const firstSort = async function (
         } else if (fileName === "Olami") {
           textMessage1 =
             "ברוכים הבאים למשחק *היציע: כדורגל עולמי* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי השבוע \n2️⃣ לקישורים ומידע \n0️⃣ - לחזרה לתפריט הקודם";
+        } else if (fileName === "NBA") {
+          textMessage1 =
+            "ברוכים הבאים למשחק *היציע: NBA* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי השבוע \n2️⃣ לקישורים ומידע \n0️⃣ - לחזרה לתפריט הקודם";
         }
       } else {
         if (fileName === "LigatAl") {
@@ -107,6 +113,10 @@ const firstSort = async function (
           textMessage1 = "מה קורה נשמות? שמח שחזרתם!" + "\nמה ברצונכם לעשות?";
           textMessage2 =
             "ברוכים הבאים למשחק *היציע: כדורגל עולמי* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי השבוע \n2️⃣ - לקישורים ומידע \n0️⃣ - לחזרה לתפריט הקודם";
+        } else if (fileName === "NBA") {
+          textMessage1 = "מה קורה נשמות? שמח שחזרתם!" + "\nמה ברצונכם לעשות?";
+          textMessage2 =
+            "ברוכים הבאים למשחק *היציע: NBA* \nבחרו מהאפשרויות הבאות: \n1️⃣ - לניחוש משחקי השבוע \n2️⃣ - לקישורים ומידע \n0️⃣ - לחזרה לתפריט הקודם";
         }
       }
 

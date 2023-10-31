@@ -22,6 +22,7 @@ const { footballFunc } = require("./footballFunc");
 const { basicFunc } = require("./basicFunc");
 const { botRollsFunctions } = require("./botRollsFunctions");
 const { armyFunc } = require("./armyFunc");
+const { footballDataFunc } = require("./footballDataFunc");
 
 dotenv.config();
 app.use(bodyParser.json());
@@ -288,6 +289,49 @@ getAlufotData();
 getMondialData();
 getOlamiData();
 
+//-------------------------------------
+const getAllData = async () => {
+  // await getData();
+  // await getAlufotData();
+  // await getMondialData();
+  // await getOlamiData();
+  const nbaData = await footballDataFunc.getNBAData();
+
+  return { nbaData };
+};
+let test;
+
+getAllData().then((data) => {
+  // console.log(data);
+  test = data;
+  // console.log("test", test);
+});
+
+// const {
+//   nbaCycleNum,
+//   nbaCycleText,
+//   nbaCycleDate,
+//   nbaGames,
+//   nbaGamesList,
+//   nbaCycleIndexNum,
+//   nbaUsersIndex,
+//   nbaGuessData,
+//   nbaUsersList,
+// } = test?.nbaData;
+
+// console.log(
+//   "nbaData:",
+//   nbaCycleNum,
+//   nbaCycleText,
+//   nbaCycleDate,
+//   nbaGames,
+//   nbaGamesList,
+//   nbaCycleIndexNum,
+//   nbaUsersIndex,
+//   nbaGuessData,
+//   nbaUsersList
+// );
+
 app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
   console.log("WaBot");
   const user_name = _req.body.query.sender;
@@ -399,6 +443,18 @@ app.post("/api/Whatsapp", async (req, res) => {
   console.log("olamiCycleNum", olamiCycleNum, olamiCycleDate, olamiCycleText);
   // console.log("mondialCycleNum", mondialCycleNum);
   // console.log("mondialGamesList", mondialGamesList);
+  console.log("route", test);
+  const {
+    nbaCycleNum,
+    nbaCycleText,
+    nbaCycleDate,
+    nbaGames,
+    nbaGamesList,
+    nbaCycleIndexNum,
+    nbaUsersIndex,
+    nbaGuessData,
+    nbaUsersList,
+  } = test?.nbaData;
 
   const stage = req.body.query.ruleId;
   console.log(stage);
@@ -567,6 +623,26 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage1 = OlamiMessages[0];
     textMessage2 = OlamiMessages[1];
     textMessage3 = OlamiMessages[2];
+  } else if (stage === 255 || stage > 800) {
+    console.log("NBAMessages", nbaUsersList);
+    const NBAMessages = await botRollsFunctions.Nba({
+      message,
+      cycleDate: nbaCycleDate,
+      cycleText: nbaCycleText,
+      cycleNum: nbaCycleNum,
+      GamesList: nbaGamesList,
+      cycleIndexNum: nbaCycleIndexNum,
+      UsersIndex: nbaUsersIndex,
+      GuessData: nbaGuessData,
+      user_name,
+      stage,
+      score,
+      UsersList: nbaUsersList,
+    });
+
+    textMessage1 = NBAMessages[0];
+    textMessage2 = NBAMessages[1];
+    textMessage3 = NBAMessages[2];
   } else {
     console.log(`Sorry, we are out of range.`);
   }
