@@ -24,6 +24,8 @@ const { botRollsFunctions } = require("./botRollsFunctions");
 const { armyFunc } = require("./armyFunc");
 const { footballDataFunc } = require("./footballDataFunc");
 
+const scheduleRestartServer = require("./restartServer");
+
 dotenv.config();
 app.use(bodyParser.json());
 
@@ -279,10 +281,12 @@ const getOlamiData = async () => {
   //   olamiTableObj = { ...olamiTableObj, ...olamiTablesData[i] };
   // }
 };
-const job1 = schedule.scheduleJob("0 0 4 * * *", getData);
-const job2 = schedule.scheduleJob("0 0 4 * * *", getAlufotData);
-const job3 = schedule.scheduleJob("0 0 4 * * *", getMondialData);
-const job4 = schedule.scheduleJob("0 0 4 * * *", getOlamiData);
+// const job1 = schedule.scheduleJob("0 0 4 * * *", getData);
+// const job2 = schedule.scheduleJob("0 0 4 * * *", getAlufotData);
+// const job3 = schedule.scheduleJob("0 0 4 * * *", getMondialData);
+// const job4 = schedule.scheduleJob("0 0 4 * * *", getOlamiData);
+
+scheduleRestartServer();
 
 getData();
 getAlufotData();
