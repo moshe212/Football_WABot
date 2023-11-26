@@ -24,7 +24,7 @@ const { botRollsFunctions } = require("./botRollsFunctions");
 const { armyFunc } = require("./armyFunc");
 const { footballDataFunc } = require("./footballDataFunc");
 
-const scheduleRestartServer = require("./restartServer");
+const scheduleRestartServer = require("./serverRestart");
 
 dotenv.config();
 app.use(bodyParser.json());
