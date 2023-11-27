@@ -6,6 +6,7 @@ const restartCommand = "npm run server"; // Change this according to your server
 
 // Schedule the restart task
 const restartJob = schedule.scheduleJob("15 10 * * *", () => {
+  console.log("Restarting...");
   // Execute the restart command
   exec(restartCommand, (error, stdout, stderr) => {
     if (error) {
@@ -17,3 +18,5 @@ const restartJob = schedule.scheduleJob("15 10 * * *", () => {
     }
   });
 });
+
+module.exports = { restartJob };

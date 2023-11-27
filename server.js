@@ -24,6 +24,7 @@ const { botRollsFunctions } = require("./botRollsFunctions");
 const { armyFunc } = require("./armyFunc");
 const { footballDataFunc } = require("./footballDataFunc");
 
+const { exec } = require("child_process");
 const scheduleRestartServer = require("./serverRestart");
 
 dotenv.config();
@@ -281,12 +282,43 @@ const getOlamiData = async () => {
   //   olamiTableObj = { ...olamiTableObj, ...olamiTablesData[i] };
   // }
 };
-// const job1 = schedule.scheduleJob("0 0 4 * * *", getData);
-// const job2 = schedule.scheduleJob("0 0 4 * * *", getAlufotData);
-// const job3 = schedule.scheduleJob("0 0 4 * * *", getMondialData);
-// const job4 = schedule.scheduleJob("0 0 4 * * *", getOlamiData);
+const job1 = schedule.scheduleJob("0 0 4 * * *", getData);
+const job2 = schedule.scheduleJob("0 0 4 * * *", getAlufotData);
+const job3 = schedule.scheduleJob("0 0 4 * * *", getMondialData);
+const job4 = schedule.scheduleJob("0 0 4 * * *", getOlamiData);
 
-scheduleRestartServer();
+// const startServer = () => {
+//   console.log("Restarting...");
+
+//   const restartCommand = "npm run start";
+//   // Execute the restart command
+//   exec(restartCommand, (error, stdout, stderr) => {
+//     if (error) {
+//       console.error(`Error restarting server: ${error.message}`);
+//     } else {
+//       console.log("Server restarted successfully");
+//       console.log(`stdout: ${stdout}`);
+//       console.log(`stderr: ${stderr}`);
+//     }
+//   });
+// };
+
+// const reStart = () => {
+//   exec("killall node", (error, stdout, stderr) => {
+//     if (error) {
+//       console.error(`Error killing server process: ${error.message}`);
+//     } else {
+//       console.log("Server process killed successfully");
+//       console.log(`stdout: ${stdout}`);
+//       console.log(`stderr: ${stderr}`);
+
+//       // Restart the server immediately after killing it
+//       startServer();
+//     }
+//   });
+// };
+
+// const job1 = schedule.scheduleJob("55 10 * * *", reStart);
 
 getData();
 getAlufotData();
