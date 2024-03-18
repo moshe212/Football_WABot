@@ -368,6 +368,12 @@ getAllData().then((data) => {
 //   nbaUsersList
 // );
 
+app.post("/api/Adalo", async (_req, res) => {
+  console.log("Adalo");
+  console.log("req", _req.body);
+  res.status(200).end();
+});
+
 app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
   console.log("WaBot");
   const user_name = _req.body.query.sender;
