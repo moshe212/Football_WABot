@@ -16,8 +16,6 @@ const Euro = async function (
   gameNum,
   score1,
   score2,
-  AchievementsOfSeasonData,
-  tableObj,
   GuessData_ShlavHanokout,
   UsersList
 ) {

@@ -676,7 +676,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage3 = NBAMessages[2];
   } else if (stage === 258 || stage > 995) {
     console.log("Euro", euroUsersList);
-    const EuroMessages = await botRollsFunctions.Euro({
+    const EuroMessages = await botRollsFunctions.Euro(
       message,
       euroCycleNum,
       euroCycleText,
@@ -691,11 +691,9 @@ app.post("/api/Whatsapp", async (req, res) => {
       gameNum,
       score1,
       score2,
-      euroAchievementsOfSeasonData,
-      euroTableObj,
       euroGuessData_ShlavHanokout,
-      euroUsersList,
-    });
+      euroUsersList
+    );
 
     textMessage1 = EuroMessages[0];
     textMessage2 = EuroMessages[1];
