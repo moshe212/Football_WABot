@@ -332,41 +332,17 @@ const getAllData = async () => {
   // await getMondialData();
   // await getOlamiData();
   const nbaData = await footballDataFunc.getNBAData();
+  const euroData = await footballDataFunc.getEuroData();
 
-  return { nbaData };
+  return { nbaData, euroData };
 };
-let test;
+let allData;
 
 getAllData().then((data) => {
   // console.log(data);
-  test = data;
+  allData = data;
   // console.log("test", test);
 });
-
-// const {
-//   nbaCycleNum,
-//   nbaCycleText,
-//   nbaCycleDate,
-//   nbaGames,
-//   nbaGamesList,
-//   nbaCycleIndexNum,
-//   nbaUsersIndex,
-//   nbaGuessData,
-//   nbaUsersList,
-// } = test?.nbaData;
-
-// console.log(
-//   "nbaData:",
-//   nbaCycleNum,
-//   nbaCycleText,
-//   nbaCycleDate,
-//   nbaGames,
-//   nbaGamesList,
-//   nbaCycleIndexNum,
-//   nbaUsersIndex,
-//   nbaGuessData,
-//   nbaUsersList
-// );
 
 app.post("/api/Adalo", async (_req, res) => {
   console.log("Adalo");
@@ -385,7 +361,7 @@ app.post("/api/Rotem_hr_WaBot", async (_req, res) => {
   const lastWord = words[words.length - 1];
   console.log(lastWord);
   let textMsg = "";
-  if (/^[0-9]+$/.test(lastWord)) {
+  if (/^[0-9]+$/.allData(lastWord)) {
     console.log("The string contains only numbers");
 
     const resShortURL = await basicFunc.getShortURL({ id: Number(lastWord) });
@@ -485,7 +461,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   console.log("olamiCycleNum", olamiCycleNum, olamiCycleDate, olamiCycleText);
   // console.log("mondialCycleNum", mondialCycleNum);
   // console.log("mondialGamesList", mondialGamesList);
-  console.log("route", test);
+  console.log("route", allData);
   const {
     nbaCycleNum,
     nbaCycleText,
@@ -496,7 +472,19 @@ app.post("/api/Whatsapp", async (req, res) => {
     nbaUsersIndex,
     nbaGuessData,
     nbaUsersList,
-  } = test?.nbaData;
+  } = allData?.nbaData;
+
+  const {
+    euroCycleNum,
+    euroCycleText,
+    euroCycleDate,
+    euroGames,
+    euroGamesList,
+    euroCycleIndexNum,
+    euroUsersIndex,
+    euroGuessData,
+    euroUsersList,
+  } = allData?.euroData;
 
   const stage = req.body.query.ruleId;
   console.log(stage);
@@ -526,7 +514,8 @@ app.post("/api/Whatsapp", async (req, res) => {
       "\n2️⃣ - למשחק *היציע: NBA*" +
       "\n3️⃣ - למשחק *היציע: אולימפיאדה*" +
       "\n4️⃣ - למשחק *היציע: מונדיאל*" +
-      "\n5️⃣ - למשחק *היציע: כדורגל עולמי*";
+      "\n5️⃣ - למשחק *היציע: כדורגל עולמי*" +
+      "\n6️⃣ - למשחק *היציע: כדורגל יורו*";
 
     // +"\n5️⃣ - למשחק *היציע: יורו* \n6️⃣ - למשחק *היציע: בחירות* \n7️⃣ - למשחק *היציע: אולימפיאדה*";
   } else if (stage === 113) {
@@ -685,6 +674,26 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage1 = NBAMessages[0];
     textMessage2 = NBAMessages[1];
     textMessage3 = NBAMessages[2];
+  } else if (stage === 255 || stage > 800) {
+    console.log("Euro", euroUsersList);
+    const EuroMessages = await botRollsFunctions.Euro({
+      message,
+      cycleDate: euroCycleDate,
+      cycleText: euroCycleText,
+      cycleNum: euroCycleNum,
+      GamesList: euroGamesList,
+      cycleIndexNum: euroCycleIndexNum,
+      UsersIndex: euroUsersIndex,
+      GuessData: euroGuessData,
+      user_name,
+      stage,
+      score,
+      UsersList: euroUsersList,
+    });
+
+    textMessage1 = EuroMessages[0];
+    textMessage2 = EuroMessages[1];
+    textMessage3 = EuroMessages[2];
   } else {
     console.log(`Sorry, we are out of range.`);
   }

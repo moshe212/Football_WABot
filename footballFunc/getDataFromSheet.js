@@ -1,5 +1,4 @@
 const { GoogleSpreadsheet } = require("google-spreadsheet");
-const moment = require("moment"); // require
 
 const getDataFromSheet = async function (sheetTitle, fileName) {
   const creds = require("../config/CreditTransaction-d9fe1ef7e128.json");
@@ -15,6 +14,8 @@ const getDataFromSheet = async function (sheetTitle, fileName) {
       ? "1ca-85Sjr4NHpzImvq3KCsOq2n8aUEZ_CMGKrpO5Hbyg"
       : fileName === "NBA"
       ? "1n00YD7sTIKT_PEJJp_z4KqDNLxyjr92R6NOVsggNMe0"
+      : fileName === "Euro"
+      ? "1R1Sr-i9PXSCvwl81BQCm1Wwc5FMQld0Di4a3JfY3Fmk"
       : "";
   const doc = new GoogleSpreadsheet(id);
 
