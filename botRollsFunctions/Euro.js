@@ -59,7 +59,7 @@ const Euro = async function (
     textMessage3 = shlavHanokOutMessages[2];
   } else {
     switch (stage) {
-      case 257:
+      case 258:
         if (cycleText.includes("מחזור") || cycleText.includes("שלב הנוקאאוט")) {
           const firstMessages = await footballFunc.firstSort(
             stage,
@@ -67,7 +67,7 @@ const Euro = async function (
             user_name,
             UsersIndex,
             cycleDate,
-            "Mondial"
+            "Euro"
           );
 
           textMessage1 = firstMessages[0];
@@ -76,7 +76,7 @@ const Euro = async function (
 
           break;
         }
-      case 479:
+      case 996:
         if (cycleNum !== "0" && cycleText.includes("מחזור")) {
           textMessage1 =
             "בחירה מצוינת!" +
@@ -227,8 +227,7 @@ const Euro = async function (
       //       " בחצות. יאללה ביי! 😎 ";
       //     break;
 
-      case 485:
-      case 396:
+      case 1090:
         textMessage1 =
           "החלטתם לשגע אותי היום? לכו תעשו שיעורי בית ותחזרו למלא את הניחושים כשתהיו מוכנים.שימו לב שאתם עושים זאת לא יאוחר מה-" +
           "*" +
@@ -237,7 +236,7 @@ const Euro = async function (
           " בחצות 😎";
 
         break;
-      case 484:
+      case 1089:
         // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
 
         console.log(GamesList);
@@ -248,7 +247,7 @@ const Euro = async function (
         textMessage1 = str + "\n" + Team1 + " - " + Team2;
 
         break;
-      case 488:
+      case 999:
         console.log(GamesList);
         Team1 = GamesList[1][0];
         Team2 = GamesList[1][1];
@@ -278,7 +277,7 @@ const Euro = async function (
         );
 
         break;
-      case 491:
+      case 1002:
         console.log(GamesList);
         Team1 = GamesList[2][0];
         Team2 = GamesList[2][1];
@@ -307,7 +306,7 @@ const Euro = async function (
         );
 
         break;
-      case 494:
+      case 1005:
         console.log(GamesList);
         Team1 = GamesList[3][0];
         Team2 = GamesList[3][1];
@@ -336,7 +335,7 @@ const Euro = async function (
         );
 
         break;
-      case 497:
+      case 1008:
         console.log(GamesList);
         Team1 = GamesList[4][0];
         Team2 = GamesList[4][1];
@@ -364,7 +363,7 @@ const Euro = async function (
         );
 
         break;
-      case 500:
+      case 1011:
         console.log(GamesList);
         Team1 = GamesList[5][0];
         Team2 = GamesList[5][1];
@@ -392,7 +391,7 @@ const Euro = async function (
         );
 
         break;
-      case 503:
+      case 1014:
         console.log(GamesList);
 
         Team1 = GamesList[6][0];
@@ -423,7 +422,7 @@ const Euro = async function (
 
         break;
 
-      case 506:
+      case 1017:
         console.log(GamesList);
         Team1 = GamesList[7][0];
         Team2 = GamesList[7][1];
@@ -452,7 +451,7 @@ const Euro = async function (
         );
 
         break;
-      case 509:
+      case 1020:
         console.log(GamesList);
         Team1 = GamesList[8][0];
         Team2 = GamesList[8][1];
@@ -481,7 +480,7 @@ const Euro = async function (
         );
 
         break;
-      case 512:
+      case 1023:
         console.log(GamesList);
         Team1 = GamesList[9][0];
         Team2 = GamesList[9][1];
@@ -510,7 +509,7 @@ const Euro = async function (
         );
 
         break;
-      case 515:
+      case 1026:
         console.log(GamesList);
         Team1 = GamesList[10][0];
         Team2 = GamesList[10][1];
@@ -539,7 +538,7 @@ const Euro = async function (
         );
 
         break;
-      case 518:
+      case 1029:
         console.log(GamesList);
         Team1 = GamesList[11][0];
         Team2 = GamesList[11][1];

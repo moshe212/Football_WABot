@@ -19,6 +19,7 @@ const firstSort = async function (
     case 255:
     case 256:
     case 257:
+    case 258:
     case 700:
       console.log("UsersListNBA", UsersList);
       if (!UsersList.includes(user_name)) {

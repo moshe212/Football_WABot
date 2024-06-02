@@ -674,7 +674,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     textMessage1 = NBAMessages[0];
     textMessage2 = NBAMessages[1];
     textMessage3 = NBAMessages[2];
-  } else if (stage === 255 || stage > 800) {
+  } else if (stage === 258 || stage > 800) {
     console.log("Euro", euroUsersList);
     const EuroMessages = await botRollsFunctions.Euro({
       message,
