@@ -484,6 +484,7 @@ app.post("/api/Whatsapp", async (req, res) => {
     euroUsersIndex,
     euroGuessData,
     euroUsersList,
+    euroGuessData_ShlavHanokout,
   } = allData?.euroData;
 
   const stage = req.body.query.ruleId;
