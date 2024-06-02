@@ -13,7 +13,7 @@ let euroUsersList = [];
 
 const getEuroData = async () => {
   console.log("getEuroData");
-  const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים", "Mondial");
+  const Data = await footballFunc.getDataFromSheet("תאריכי מחזורים", "Euro");
   const res_cycle = await footballFunc.getCycle(Data);
   euroCycleNum = res_cycle[0];
   euroCycleText = res_cycle[3];
@@ -25,7 +25,7 @@ const getEuroData = async () => {
 
   euroGames = await footballFunc.getDataFromSheet(
     "רשימת משחקים לפי מחזור",
-    "Mondial"
+    "Euro"
   );
   for (let g = 0; g < euroGames.length; g++) {
     if (euroGames[g]._rawData[0] === euroCycleNum) {
@@ -37,15 +37,15 @@ const getEuroData = async () => {
 
   euroUsersIndex = await footballFunc.getDataFromSheet(
     "אינדקס משתמשים",
-    "Mondial"
+    "Euro"
   );
   for (let l = 0; l < euroUsersIndex.length; l++) {
     euroUsersList.push(euroUsersIndex[l]._rawData[0]);
   }
-  euroGuessData = await footballFunc.getDataFromSheet("שלב הבתים", "Mondial");
+  euroGuessData = await footballFunc.getDataFromSheet("שלב הבתים", "Euro");
   euroGuessData_ShlavHanokout = await footballFunc.getDataFromSheet(
     "שלב הנוקאאוט",
-    "Mondial"
+    "Euro"
   );
 
   console.log({ euroUsersList });
