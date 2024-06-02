@@ -60,6 +60,7 @@ const Euro = async function (
   } else {
     switch (stage) {
       case 258:
+        console.log("cycleText", cycleText);
         if (cycleText.includes("מחזור") || cycleText.includes("שלב הנוקאאוט")) {
           const firstMessages = await footballFunc.firstSort(
             stage,
