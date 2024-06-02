@@ -27,6 +27,8 @@ const getEuroData = async () => {
     "רשימת משחקים לפי מחזור",
     "Euro"
   );
+
+  console.log("res_cycle", res_cycle);
   for (let g = 0; g < euroGames.length; g++) {
     console.log("euroGames[g]._rawData[0]", euroGames[g]._rawData[0]);
     console.log("euroCycleNum", euroCycleNum);
