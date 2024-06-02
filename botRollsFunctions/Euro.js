@@ -21,6 +21,8 @@ const Euro = async function (
   GuessData_ShlavHanokout,
   UsersList
 ) {
+  console.log("stage euro", stage);
+
   let textMessage1 = "empty";
   let textMessage2 = "empty";
   let textMessage3 = "empty";
@@ -58,6 +60,7 @@ const Euro = async function (
     textMessage2 = shlavHanokOutMessages[1];
     textMessage3 = shlavHanokOutMessages[2];
   } else {
+    console.log("else");
     switch (stage) {
       case 258:
         console.log("cycleText", cycleText);
