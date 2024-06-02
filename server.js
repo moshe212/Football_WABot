@@ -678,17 +678,23 @@ app.post("/api/Whatsapp", async (req, res) => {
     console.log("Euro", euroUsersList);
     const EuroMessages = await botRollsFunctions.Euro({
       message,
-      cycleDate: euroCycleDate,
-      cycleText: euroCycleText,
-      cycleNum: euroCycleNum,
-      GamesList: euroGamesList,
-      cycleIndexNum: euroCycleIndexNum,
-      UsersIndex: euroUsersIndex,
-      GuessData: euroGuessData,
+      euroCycleNum,
+      euroCycleText,
+      euroCycleDate,
+      euroGamesList,
+      euroCycleIndexNum,
+      euroUsersIndex,
+      euroGuessData,
       user_name,
       stage,
       score,
-      UsersList: euroUsersList,
+      gameNum,
+      score1,
+      score2,
+      euroAchievementsOfSeasonData,
+      euroTableObj,
+      euroGuessData_ShlavHanokout,
+      euroUsersList,
     });
 
     textMessage1 = EuroMessages[0];
