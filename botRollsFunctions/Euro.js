@@ -520,7 +520,7 @@ const Euro = async function (
 
       //-----------------------------------------------------------------------------
 
-      case 533:
+      case 1032:
         // score = req.body.query.message;
         ScoreTeam1 = score.split(":")[1];
         ScoreTeam2 = score.split(":")[0];
