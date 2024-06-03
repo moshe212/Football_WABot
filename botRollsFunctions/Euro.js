@@ -108,7 +108,7 @@ const Euro = async function (
             break;
           } else {
             textMessage1 =
-              "שומעים רגע? כרגע לא ניתן לשלוח ניחושים למונדיאל שלב הבתים." +
+              "שומעים רגע? כרגע לא ניתן לשלוח ניחושים ליורו שלב הבתים." +
               "\nיכול להיות שניתן לשלוח ניחושים לשלב הנוקאאוט..";
             textMessage2 =
               "אנא פנו למנהל המערכת או בחרו 3️⃣ לחזרה לתפריט הקודם..";
@@ -168,66 +168,14 @@ const Euro = async function (
         textMessage1 = "עובדים על זה כרגע..";
         break;
 
-      case 482:
+      case 997:
         textMessage1 =
-          "הלינק לקבוצת הווטסאפ הרשמית של *היציע: ליגת העל* הוא:" +
+          "הלינק לקבוצת הווטסאפ הרשמית של *היציע:  יורו 2024* הוא:" +
           "\n https://chat.whatsapp.com/CZyFCQqAvHYJkD8QC2VQPb" +
           "\n קישור לקובץ הלייב - https://docs.google.com/spreadsheets/d/1SgqAiRYXEFdxxu_YQ2RSbYx_JuPtXoW0pff2uLINVFc/edit" +
           "\n קישור לקובץ החוקים והכללים - https://docs.google.com/document/d/1Lde9i31TK3-9FU_9sQuN3zz0IGWnk-t5KNozl0vR3sw/edit";
 
         break;
-      case 578:
-        textMessage1 = "הקובץ יושק ביום ראשון..";
-
-        // textMessage1 =
-        //   "הלינק לקובץ *היציע: LIVE* הוא:" + "\n https://bit.ly/LigatAl_Live";
-
-        break;
-      //   case 33:
-      //     if (cycleNum !== "0") {
-      //       textMessage1 =
-      //         "בחירה מצוינת!" +
-      //         "\nהדד ליין לשליחת ניחושים ל*מחזור ה-" +
-      //         cycleNum +
-      //         "* הוא עד ה-" +
-      //         "*" +
-      //         cycleDate +
-      //         "*" +
-      //         " בחצות." +
-      //         "\nשניה אחרי אני סוגר הבסטה, אז אל תאחרו! שנתחיל?";
-      //       textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
-
-      //       break;
-      //     } else {
-      //       textMessage1 =
-      //         "שומעים רגע? הדד ליין לשליחת הניחושים ל*מחזור ה-" +
-      //         cycleNum +
-      //         "*" +
-      //         " עבר.";
-      //       textMessage2 =
-      //         "אם רק עכשיו נזכרתם לשלוח ניחושים אז אנחנו בבעיה. אנא פנו למנהל המערכת";
-      //       break;
-      //     }
-
-      //   case 34:
-      //     textMessage1 =
-      //       "שימו לב: הדד ליין לשליחת הניחושים הוא עד ה-" +
-      //       "*" +
-      //       cycleDate +
-      //       "*" +
-      //       " בחצות. \nשניה אחרי זה אני יוצא לחופש עד המחזור הבא, אז אל תאחרו! שנתחיל?";
-      //     textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
-
-      //     break;
-
-      //   case 35:
-      //     textMessage1 =
-      //       "אז מה אתם אוכלים לי את הראש? תחזרו לכאן כשתרצו למלא ניחושים, ותשתדלו שזה יקרה לפני ה-" +
-      //       "*" +
-      //       cycleDate +
-      //       "*" +
-      //       " בחצות. יאללה ביי! 😎 ";
-      //     break;
 
       case 1090:
         textMessage1 =
@@ -275,7 +223,7 @@ const Euro = async function (
           ScoreTeam2,
           "",
           "",
-          "Mondial"
+          "Euro"
         );
 
         break;
@@ -304,7 +252,7 @@ const Euro = async function (
           ScoreTeam2,
           "",
           "",
-          "Mondial"
+          "Euro"
         );
 
         break;
@@ -333,7 +281,7 @@ const Euro = async function (
           ScoreTeam2,
           "",
           "",
-          "Mondial"
+          "Euro"
         );
 
         break;
@@ -361,7 +309,7 @@ const Euro = async function (
           ScoreTeam2,
           "",
           "",
-          "Mondial"
+          "Euro"
         );
 
         break;
@@ -389,7 +337,7 @@ const Euro = async function (
           ScoreTeam2,
           "",
           "",
-          "Mondial"
+          "Euro"
         );
 
         break;
@@ -419,7 +367,7 @@ const Euro = async function (
           ScoreTeam2,
           "",
           "",
-          "Mondial"
+          "Euro"
         );
 
         break;
@@ -449,7 +397,7 @@ const Euro = async function (
           ScoreTeam2,
           "",
           "",
-          "Mondial"
+          "Euro"
         );
 
         break;
@@ -478,7 +426,7 @@ const Euro = async function (
           ScoreTeam2,
           "",
           "",
-          "Mondial"
+          "Euro"
         );
 
         break;
@@ -507,7 +455,7 @@ const Euro = async function (
           ScoreTeam2,
           "",
           "",
-          "Mondial"
+          "Euro"
         );
 
         break;
@@ -536,7 +484,7 @@ const Euro = async function (
           ScoreTeam2,
           "",
           "",
-          "Mondial"
+          "Euro"
         );
 
         break;
@@ -565,7 +513,7 @@ const Euro = async function (
           ScoreTeam2,
           "",
           "",
-          "Mondial"
+          "Euro"
         );
 
         break;
@@ -590,7 +538,7 @@ const Euro = async function (
           ScoreTeam2,
           "",
           "",
-          "Mondial"
+          "Euro"
         );
 
         GuessData_Saved = await footballFunc.getSavedScore(
@@ -599,7 +547,7 @@ const Euro = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Mondial"
+          "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -619,7 +567,7 @@ const Euro = async function (
           null,
           null,
           true,
-          "Mondial"
+          "Euro"
         );
 
         console.log("resSaveIdx", resSaveIdx);
@@ -638,7 +586,7 @@ const Euro = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Mondial"
+          "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -668,7 +616,7 @@ const Euro = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "Mondial",
+          "Euro",
           "שלב הבתים"
         );
 
@@ -683,7 +631,7 @@ const Euro = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Mondial"
+          "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -704,7 +652,7 @@ const Euro = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Mondial"
+          "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -731,7 +679,7 @@ const Euro = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "Mondial",
+          "Euro",
           "שלב הבתים"
         );
 
@@ -746,7 +694,7 @@ const Euro = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Mondial"
+          "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -766,7 +714,7 @@ const Euro = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Mondial"
+          "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -793,7 +741,7 @@ const Euro = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "Mondial",
+          "Euro",
           "שלב הבתים"
         );
 
@@ -808,7 +756,7 @@ const Euro = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Mondial"
+          "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -828,7 +776,7 @@ const Euro = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Mondial"
+          "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -855,7 +803,7 @@ const Euro = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "Mondial",
+          "Euro",
           "שלב הבתים"
         );
 
@@ -870,7 +818,7 @@ const Euro = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Mondial"
+          "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -890,7 +838,7 @@ const Euro = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Mondial"
+          "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -917,7 +865,7 @@ const Euro = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "Mondial",
+          "Euro",
           "שלב הבתים"
         );
 
@@ -932,7 +880,7 @@ const Euro = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Mondial"
+          "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -952,7 +900,7 @@ const Euro = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Mondial"
+          "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -979,7 +927,7 @@ const Euro = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "Mondial",
+          "Euro",
           "שלב הבתים"
         );
 
@@ -994,7 +942,7 @@ const Euro = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Mondial"
+          "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -1014,7 +962,7 @@ const Euro = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Mondial"
+          "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
@@ -1041,7 +989,7 @@ const Euro = async function (
           UsersIndex,
           GuessData,
           cycleIndexNum,
-          "Mondial",
+          "Euro",
           "שלב הבתים"
         );
 
@@ -1051,7 +999,7 @@ const Euro = async function (
           cycleIndexNum,
           "שלב הבתים",
           GamesList,
-          "Mondial"
+          "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixAlufot(
