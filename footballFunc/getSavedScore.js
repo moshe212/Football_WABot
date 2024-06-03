@@ -154,6 +154,9 @@ const getSavedScore = async function (
               Arr.push(scoresObj);
               break;
             case 11:
+              console.log("134", SavedGuess[134]);
+              console.log("135", SavedGuess[135]);
+              console.log("136", SavedGuess[136]);
               score1 = SavedGuess[136];
               score2 = SavedGuess[135];
               scoresObj = {

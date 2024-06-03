@@ -591,6 +591,26 @@ const Euro = async function (
         console.log("GuessData_Saved", GuessData_Saved);
         textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
+          false,
+          cycleNum
+        );
+        textMessage1 = textMessage[0];
+        textMessage2 = "הניחושים נקלטו. שיהיה בהצלחה!" + "\nניפגש במחזור הבא.";
+
+        break;
+
+      case 1092:
+        GuessData_Saved = await footballFunc.getSavedScore(
+          user_name,
+          UsersIndex,
+          cycleIndexNum,
+          "שלב הבתים",
+          GamesList,
+          "Euro"
+        );
+        console.log("GuessData_Saved", GuessData_Saved);
+        textMessage = await footballFunc.chooseGameToFixEuro(
+          GuessData_Saved,
           true,
           cycleNum
         );
@@ -601,7 +621,7 @@ const Euro = async function (
 
         break;
 
-      case 1093:
+      case 1094:
         // case 478:
         // gameNum = req.body.query.message.split(" ")[1];
         // score1 = req.body.query.message.split(" ")[3].split(":")[1];
@@ -624,7 +644,7 @@ const Euro = async function (
         textMessage2 = "\n 1️⃣ כן \n2️⃣ לא";
         break;
 
-      case 542:
+      case 1095:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
@@ -645,7 +665,7 @@ const Euro = async function (
 
         break;
 
-      case 543:
+      case 1096:
         GuessData_Saved = await footballFunc.getSavedScore(
           user_name,
           UsersIndex,
@@ -665,7 +685,7 @@ const Euro = async function (
 
         break;
 
-      case 545:
+      case 555:
         // gameNum = req.body.query.message.split(" ")[1];
         // score1 = req.body.query.message.split(" ")[3].split(":")[1];
         // score2 = req.body.query.message.split(" ")[3].split(":")[0];
@@ -975,7 +995,7 @@ const Euro = async function (
 
         break;
 
-      case 575:
+      case 1097:
         // gameNum = req.body.query.message.split(" ")[1];
         // score1 = req.body.query.message.split(" ")[3].split(":")[1];
         // score2 = req.body.query.message.split(" ")[3].split(":")[0];
