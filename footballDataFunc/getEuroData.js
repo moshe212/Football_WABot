@@ -30,8 +30,6 @@ const getEuroData = async () => {
 
   console.log("res_cycle", res_cycle);
   for (let g = 0; g < euroGames.length; g++) {
-    console.log("euroGames[g]._rawData[0]", euroGames[g]._rawData[0]);
-    console.log("euroCycleNum", euroCycleNum);
     if (euroGames[g]._rawData[0] === euroCycleNum) {
       const team_1 = euroGames[g]._rawData[1];
       const team_2 = euroGames[g]._rawData[2];

@@ -532,8 +532,8 @@ const Euro = async function (
           GuessData,
           cycleIndexNum,
           "שלב הבתים",
-          "GB",
-          "GC",
+          "EF",
+          "EG",
           ScoreTeam1,
           ScoreTeam2,
           "",
@@ -550,7 +550,7 @@ const Euro = async function (
           "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFixAlufot(
+        textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
           false,
           cycleNum
@@ -589,7 +589,7 @@ const Euro = async function (
           "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFixAlufot(
+        textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
           true,
           cycleNum
@@ -634,7 +634,7 @@ const Euro = async function (
           "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFixAlufot(
+        textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
           true,
           cycleNum
@@ -655,7 +655,7 @@ const Euro = async function (
           "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFixAlufot(
+        textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
           false,
           cycleNum
@@ -697,7 +697,7 @@ const Euro = async function (
           "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFixAlufot(
+        textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
           true,
           cycleNum
@@ -717,7 +717,7 @@ const Euro = async function (
           "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFixAlufot(
+        textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
           false,
           cycleNum
@@ -759,7 +759,7 @@ const Euro = async function (
           "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFixAlufot(
+        textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
           true,
           cycleNum
@@ -779,7 +779,7 @@ const Euro = async function (
           "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFixAlufot(
+        textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
           false,
           cycleNum
@@ -821,7 +821,7 @@ const Euro = async function (
           "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFixAlufot(
+        textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
           true,
           cycleNum
@@ -841,7 +841,7 @@ const Euro = async function (
           "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFixAlufot(
+        textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
           false,
           cycleNum
@@ -883,7 +883,7 @@ const Euro = async function (
           "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFixAlufot(
+        textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
           true,
           cycleNum
@@ -903,7 +903,7 @@ const Euro = async function (
           "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFixAlufot(
+        textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
           false,
           cycleNum
@@ -945,7 +945,7 @@ const Euro = async function (
           "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFixAlufot(
+        textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
           true,
           cycleNum
@@ -965,7 +965,7 @@ const Euro = async function (
           "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFixAlufot(
+        textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
           false,
           cycleNum
@@ -1002,7 +1002,7 @@ const Euro = async function (
           "Euro"
         );
         console.log("GuessData_Saved", GuessData_Saved);
-        textMessage = await footballFunc.chooseGameToFixAlufot(
+        textMessage = await footballFunc.chooseGameToFixEuro(
           GuessData_Saved,
           false,
           cycleNum

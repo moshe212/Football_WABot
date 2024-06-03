@@ -19,6 +19,8 @@ const getSavedScore = async function (
       ? "1b_hJkbj-fKNlWzpI4irXhIqKi1SxuzvVtAbrgRjBSmc"
       : fileName === "Olami"
       ? "1ca-85Sjr4NHpzImvq3KCsOq2n8aUEZ_CMGKrpO5Hbyg"
+      : fileName === "Euro"
+      ? "1R1Sr-i9PXSCvwl81BQCm1Wwc5FMQld0Di4a3JfY3Fmk"
       : "";
   const doc = new GoogleSpreadsheet(id);
 
