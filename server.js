@@ -334,7 +334,7 @@ const getAllData = async () => {
   const nbaData = await footballDataFunc.getNBAData();
   const euroData = await footballDataFunc.getEuroData();
 
-  return { euroData };
+  return { nbaData, euroData };
 };
 let allData;
 
