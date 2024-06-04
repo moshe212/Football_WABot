@@ -175,6 +175,8 @@ const Euro = async function (
           "\n קישור לקובץ הלייב - https://docs.google.com/spreadsheets/d/1SgqAiRYXEFdxxu_YQ2RSbYx_JuPtXoW0pff2uLINVFc/edit" +
           "\n קישור לקובץ החוקים והכללים - https://docs.google.com/document/d/1Lde9i31TK3-9FU_9sQuN3zz0IGWnk-t5KNozl0vR3sw/edit";
 
+        textMessage2 = "הקש 0 לחזרה לתפריט הראשי";
+
         break;
 
       case 1090:
