@@ -325,15 +325,6 @@ getAlufotData();
 getMondialData();
 getOlamiData();
 
-// footballFunc.getSavedScore(
-//   "משה אנסבכר",
-//   UsersIndex,
-//   cycleIndexNum,
-//   "שלב הבתים",
-//   GamesList,
-//   "Euro"
-// );
-
 //-------------------------------------
 const getAllData = async () => {
   // await getData();
@@ -343,7 +334,7 @@ const getAllData = async () => {
   const nbaData = await footballDataFunc.getNBAData();
   const euroData = await footballDataFunc.getEuroData();
 
-  return { nbaData, euroData };
+  return { euroData };
 };
 let allData;
 
@@ -461,6 +452,32 @@ app.post("/api/Army_WaBot", async (_req, res) => {
     console.log(e);
     res.status(400).end();
   }
+});
+
+app.post("/api/Test", async (req, res) => {
+  const {
+    euroCycleNum,
+    euroCycleText,
+    euroCycleDate,
+    euroGames,
+    euroGamesList,
+    euroCycleIndexNum,
+    euroUsersIndex,
+    euroGuessData,
+    euroUsersList,
+    euroGuessData_ShlavHanokout,
+  } = allData?.euroData;
+
+  const saved = await footballFunc.getSavedScore(
+    "משה אנסבכר",
+    euroUsersIndex,
+    "5",
+    "שלב הבתים",
+    euroGamesList,
+    "Euro"
+  );
+
+  res.send(saved);
 });
 
 app.post("/api/Whatsapp", async (req, res) => {
