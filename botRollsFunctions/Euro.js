@@ -185,6 +185,7 @@ const Euro = async function (
           "*" +
           " בחצות 😎";
 
+        textMessage2 = "הקש 0 לחזרה לתפריט הראשי";
         break;
       case 1089:
         // Games = await footballFunc.getDataFromSheet("רשימת משחקים לפי מחזור");
