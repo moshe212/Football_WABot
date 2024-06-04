@@ -325,6 +325,15 @@ getAlufotData();
 getMondialData();
 getOlamiData();
 
+// footballFunc.getSavedScore(
+//   "משה אנסבכר",
+//   UsersIndex,
+//   cycleIndexNum,
+//   "שלב הבתים",
+//   GamesList,
+//   "Euro"
+// );
+
 //-------------------------------------
 const getAllData = async () => {
   // await getData();

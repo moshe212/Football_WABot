@@ -8,6 +8,9 @@ const getSavedScore = async function (
   GamesList,
   fileName
 ) {
+  console.log({ UsersIndex });
+  console.log({ cycleIndexNum });
+  console.log({ GamesList });
   const creds = require("../config/CreditTransaction-d9fe1ef7e128.json");
   // Initialize the sheet - doc ID is the long id in the sheets URL
   const id =
@@ -37,7 +40,7 @@ const getSavedScore = async function (
         }
       }
       const GuessData = await sheet.getRows();
-      console.log("GuessData", GuessData);
+
       if (
         GuessData[parseInt(cycleIndexNum) + parseInt(index) - 2]._rawData[1] ===
         user_name
@@ -158,6 +161,8 @@ const getSavedScore = async function (
               console.log("134", SavedGuess[134]);
               console.log("135", SavedGuess[135]);
               console.log("136", SavedGuess[136]);
+              console.log("137", SavedGuess[137]);
+              console.log("138", SavedGuess[138]);
               score1 = SavedGuess[136];
               score2 = SavedGuess[135];
               scoresObj = {
