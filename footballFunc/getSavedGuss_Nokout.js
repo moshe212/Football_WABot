@@ -12,7 +12,9 @@ const getSavedGuss_Nokout = async function (
   const creds = require("../config/CreditTransaction-d9fe1ef7e128.json");
   // Initialize the sheet - doc ID is the long id in the sheets URL
   const doc =
-    fileName === "Mondial"
+    fileName === "Mondial" || fileName === "Euro"
+      ? new GoogleSpreadsheet("1b_hJkbj-fKNlWzpI4irXhIqKi1SxuzvVtAbrgRjBSmc")
+      : fileName === "Mondial" || fileName === "Euro"
       ? new GoogleSpreadsheet("1b_hJkbj-fKNlWzpI4irXhIqKi1SxuzvVtAbrgRjBSmc")
       : new GoogleSpreadsheet("1a8XbSk7anY4S0SvyJawCqrYYcae4WUN3C-NUO7_K-ys");
 
@@ -53,7 +55,10 @@ const getSavedGuss_Nokout = async function (
               score1 = SavedGuess[5];
               score2 = SavedGuess[6];
               teamUp = SavedGuess[7];
-              minute = fileName === "Mondial" ? SavedGuess[8] : SavedGuess[7];
+              minute =
+                fileName === "Mondial" || fileName === "Euro"
+                  ? SavedGuess[8]
+                  : SavedGuess[7];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
@@ -67,7 +72,10 @@ const getSavedGuss_Nokout = async function (
               score1 = SavedGuess[21];
               score2 = SavedGuess[22];
               teamUp = SavedGuess[23];
-              minute = fileName === "Mondial" ? SavedGuess[24] : SavedGuess[23];
+              minute =
+                fileName === "Mondial" || fileName === "Euro"
+                  ? SavedGuess[24]
+                  : SavedGuess[23];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
@@ -80,7 +88,10 @@ const getSavedGuss_Nokout = async function (
               score1 = SavedGuess[37];
               score2 = SavedGuess[38];
               teamUp = SavedGuess[39];
-              minute = fileName === "Mondial" ? SavedGuess[40] : SavedGuess[39];
+              minute =
+                fileName === "Mondial" || fileName === "Euro"
+                  ? SavedGuess[40]
+                  : SavedGuess[39];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
@@ -93,7 +104,10 @@ const getSavedGuss_Nokout = async function (
               score1 = SavedGuess[53];
               score2 = SavedGuess[54];
               teamUp = SavedGuess[55];
-              minute = fileName === "Mondial" ? SavedGuess[56] : SavedGuess[55];
+              minute =
+                fileName === "Mondial" || fileName === "Euro"
+                  ? SavedGuess[56]
+                  : SavedGuess[55];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],
@@ -106,7 +120,10 @@ const getSavedGuss_Nokout = async function (
               score1 = SavedGuess[69];
               score2 = SavedGuess[70];
               teamUp = SavedGuess[71];
-              minute = fileName === "Mondial" ? SavedGuess[72] : SavedGuess[71];
+              minute =
+                fileName === "Mondial" || fileName === "Euro"
+                  ? SavedGuess[72]
+                  : SavedGuess[71];
               scoresObj = {
                 team1: [Team1, score1],
                 team2: [Team2, score2],

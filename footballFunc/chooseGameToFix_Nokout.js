@@ -8,7 +8,7 @@ const chooseGameToFix_Nokout = async function (
   let fullStr = "";
   for (let i = 0; i < GuessData_Saved.length; i++) {
     const endStr =
-      fileName === "Mondial"
+      fileName === "Mondial" || fileName === "Euro"
         ? "*\n*" +
           GuessData_Saved[i].teamUp +
           "* עולה, ב-" +
@@ -38,7 +38,7 @@ const chooseGameToFix_Nokout = async function (
   let fullStrfIX = "";
   for (let f = 0; f < GuessData_Saved.length; f++) {
     const endStrFix =
-      fileName === "Mondial"
+      fileName === "Mondial" || fileName === "Euro"
         ? "*\n*" +
           GuessData_Saved[i].teamUp +
           "* עולה, ב-" +
@@ -80,7 +80,7 @@ const chooseGameToFix_Nokout = async function (
     : "*להלן הניחושים שלכם לשלב-" + cycle + ":*" + "\n" + fullStr;
 
   const TextMsg2 =
-    fileName === "Mondial"
+    fileName === "Mondial" || fileName === "Euro"
       ? "עליכם להשיב במבנה הבא: " +
         "\n" +
         "*משחק 1 תוצאה 2:1 עולה 1 זמן 2*" +
