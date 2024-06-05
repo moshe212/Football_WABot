@@ -1605,7 +1605,7 @@ const shlavHanokOut_Euro = async function (
       textMessage3 = textMessage[2];
 
       break;
-    case 652:
+    case 1188:
       // ----------Start fix auto----------------
       await footballFunc.fixAuto_Main_Nokout(
         GamesList,
