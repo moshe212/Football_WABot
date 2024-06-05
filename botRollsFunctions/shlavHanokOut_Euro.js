@@ -14,6 +14,7 @@ const shlavHanokOut_Euro = async function (
   stage,
   score
 ) {
+  console.log("nockout");
   let teamUp_ToFix = "";
   let minute_toFix = "";
   let teamUp_ToFix_Num = "";
@@ -36,7 +37,7 @@ const shlavHanokOut_Euro = async function (
     cycleNum === "גמר ומקום 3" ? "משחק הגמר והמשחק על המקום ה-3" : cycleNum;
 
   switch (stage) {
-    case 1106:
+    case 1107:
       if (cycleNum !== "0" && cycleText.includes("שלב הנוקאאוט")) {
         console.log({ cycleNum });
 

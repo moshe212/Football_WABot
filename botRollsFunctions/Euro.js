@@ -39,6 +39,7 @@ const Euro = async function (
     // textMessage1 = tableTextMassage;
     textMessage1 = "עובדים על זה..";
   } else if (stage > 1106) {
+    console.log("1107");
     const shlavHanokOutMessages = await shlavHanokOut_Euro(
       message,
       cycleDate,
