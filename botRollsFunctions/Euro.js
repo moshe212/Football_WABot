@@ -38,7 +38,7 @@ const Euro = async function (
     // });
     // textMessage1 = tableTextMassage;
     textMessage1 = "עובדים על זה..";
-  } else if (stage === 480 || (stage > 578 && stage < 665)) {
+  } else if (stage < 1106) {
     const shlavHanokOutMessages = await shlavHanokOut_Euro(
       message,
       cycleDate,
