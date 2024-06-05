@@ -12,10 +12,10 @@ const getSavedGuss_Nokout = async function (
   const creds = require("../config/CreditTransaction-d9fe1ef7e128.json");
   // Initialize the sheet - doc ID is the long id in the sheets URL
   const doc =
-    fileName === "Mondial" || fileName === "Euro"
+    fileName === "Mondial"
       ? new GoogleSpreadsheet("1b_hJkbj-fKNlWzpI4irXhIqKi1SxuzvVtAbrgRjBSmc")
-      : fileName === "Mondial" || fileName === "Euro"
-      ? new GoogleSpreadsheet("1b_hJkbj-fKNlWzpI4irXhIqKi1SxuzvVtAbrgRjBSmc")
+      : fileName === "Euro"
+      ? new GoogleSpreadsheet("1R1Sr-i9PXSCvwl81BQCm1Wwc5FMQld0Di4a3JfY3Fmk")
       : new GoogleSpreadsheet("1a8XbSk7anY4S0SvyJawCqrYYcae4WUN3C-NUO7_K-ys");
 
   try {
