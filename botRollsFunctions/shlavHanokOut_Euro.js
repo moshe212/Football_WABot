@@ -75,7 +75,7 @@ const shlavHanokOut_Euro = async function (
         }
       }
     case 1109:
-      console.log(GamesList);
+      console.log({ GamesList });
       if (cycleText.includes("שלב הנוקאאוט")) {
         Team1 = GamesList[0][0];
         Team2 = GamesList[0][1];
