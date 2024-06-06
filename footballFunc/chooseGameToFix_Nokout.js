@@ -5,6 +5,7 @@ const chooseGameToFix_Nokout = async function (
   cycleText,
   fileName
 ) {
+  console.log("GuessData_Saved_chooseGameToFix_Nokout", GuessData_Saved);
   let fullStr = "";
   for (let i = 0; i < GuessData_Saved.length; i++) {
     const endStr =
