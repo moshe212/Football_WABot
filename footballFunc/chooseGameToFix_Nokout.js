@@ -41,10 +41,10 @@ const chooseGameToFix_Nokout = async function (
     const endStrFix =
       fileName === "Mondial" || fileName === "Euro"
         ? "*\n*" +
-          GuessData_Saved[i].teamUp +
+          GuessData_Saved[f].teamUp +
           "* עולה, ב-" +
           "*" +
-          GuessData_Saved[i].minute +
+          GuessData_Saved[f].minute +
           "*\n"
         : fileName === "Alufot" && cycleText.includes("UP")
         ? "\n*" + GuessData_Saved[f].teamUp + "*" + " עולה"
