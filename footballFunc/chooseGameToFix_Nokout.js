@@ -10,7 +10,7 @@ const chooseGameToFix_Nokout = async function (
   for (let i = 0; i < GuessData_Saved.length; i++) {
     const endStr =
       fileName === "Mondial" || fileName === "Euro"
-        ? "*\n*" +
+        ? "\n*" +
           GuessData_Saved[i].teamUp +
           "* עולה, ב-" +
           "*" +
@@ -40,7 +40,7 @@ const chooseGameToFix_Nokout = async function (
   for (let f = 0; f < GuessData_Saved.length; f++) {
     const endStrFix =
       fileName === "Mondial" || fileName === "Euro"
-        ? "*\n*" +
+        ? "\n*" +
           GuessData_Saved[f].teamUp +
           "* עולה, ב-" +
           "*" +
