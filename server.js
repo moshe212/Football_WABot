@@ -487,7 +487,7 @@ app.post("/api/Whatsapp", async (req, res) => {
   console.log("olamiCycleNum", olamiCycleNum, olamiCycleDate, olamiCycleText);
   // console.log("mondialCycleNum", mondialCycleNum);
   // console.log("mondialGamesList", mondialGamesList);
-  console.log("route", allData);
+  // console.log("route", allData);
   const {
     nbaCycleNum,
     nbaCycleText,
