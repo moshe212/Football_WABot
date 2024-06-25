@@ -76,7 +76,8 @@ const shlavHanokOut = async function (
 
         const str1 = "*" + cycleNum + ", משחק מספר 1:* ";
         textMessage1 = str1 + "\n" + Team1 + " - " + Team2;
-        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+        textMessage2 =
+          "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
       }
       //  else {
       //   textMessage1 = "השתחלתם ללופ של ניחושי גביע המדינה למרות שאי אפשר..";
@@ -242,7 +243,8 @@ const shlavHanokOut = async function (
 
         const str4 = "*" + cycleNum + ", משחק מספר 2:* ";
         textMessage1 = str4 + "\n" + Team1 + " - " + Team2;
-        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+        textMessage2 =
+          "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
         footballFunc.saveData_googleAPI(
           user_name,
@@ -405,7 +407,8 @@ const shlavHanokOut = async function (
 
         const str7 = "*" + cycleNum + ", משחק מספר 3:* ";
         textMessage1 = str7 + "\n" + Team1 + " - " + Team2;
-        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+        textMessage2 =
+          "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
         footballFunc.saveData_googleAPI(
           user_name,
@@ -513,7 +516,8 @@ const shlavHanokOut = async function (
 
       const str10 = "*" + cycleNum + ", משחק מספר 4:* ";
       textMessage1 = str10 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+      textMessage2 =
+        "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
       ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
@@ -698,7 +702,8 @@ const shlavHanokOut = async function (
 
         const str13 = "*" + cycleNum + ", משחק מספר 5:* ";
         textMessage1 = str13 + "\n" + Team1 + " - " + Team2;
-        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+        textMessage2 =
+          "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
         footballFunc.saveData_googleAPI(
           user_name,
@@ -806,7 +811,8 @@ const shlavHanokOut = async function (
 
       const str16 = "*" + cycleNum + ", משחק מספר 6:* ";
       textMessage1 = str16 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+      textMessage2 =
+        "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
       ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
@@ -935,7 +941,8 @@ const shlavHanokOut = async function (
 
       const str19 = "*" + cycleNum + ", משחק מספר 7:* ";
       textMessage1 = str19 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+      textMessage2 =
+        "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
       ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
@@ -1064,7 +1071,8 @@ const shlavHanokOut = async function (
 
       const str22 = "*" + cycleNum + ", משחק מספר 8:* ";
       textMessage1 = str22 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+      textMessage2 =
+        "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
       ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
@@ -1252,7 +1260,7 @@ const shlavHanokOut = async function (
 
     //   // const str50 = "*" + cycleNum + ", משחק מספר 15:* ";
     //   // textMessage1 = str50 + "\n" + Team1 + " - " + Team2;
-    //   // textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+    //   // textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
     //   ChoiseMinut = message;
     //   GameRow = await footballFunc.getGameGuss(

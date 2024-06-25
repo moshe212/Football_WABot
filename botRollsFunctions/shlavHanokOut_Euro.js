@@ -52,7 +52,7 @@ const shlavHanokOut_Euro = async function (
           " בחצות." +
           "\nשניה אחרי אני סוגר הבסטה, אז אל תאחרו!";
         textMessage2 =
-          "*שימו לב*: קיימת התאמה בין התשובות. אם תתנו ניצחון לקבוצה א' ותסמנו שקבוצה ב' עולה - המערכת תתקן באופן אוטומטי לקבוצה א' עולה. איך תדעו? בהודעת סיכום המשחקים, אם יש כוכבית אחת משמאל לשם הנבחרת המודגשת או לזמן המודגש, סימן שהמערכת תיקנה אוטומטית. לכן, שימו לב שאתם עונים בצורה נכונה ונסו לא להתחכם! שנתחיל?";
+          "שימו לב: ניחושים שלא יהיו בקורלציה ישירה אחד עם השני ייפסלו. לדוגמא: אם בחרת שגרמניה מנצחת את ספרד 1:2, אזי בהכרח גרמניה עולה לשלב הבא. אם תבחרו בספרד, התשובה שלכם תסומן בכוכבית ולא תקבלו עליה ניקוד. כנ״ל גם בניחוש הזמן. אם בחרתם שהמשחק יסתיים בתיקו, אזי הוא בהכרח יסתיים בתיקו.  בסיכום המשחקים תוכלו לראות תשובות שגויות שלכם עם סימון כוכבית. אנא הקפידו היטב על ניחושים תקינים.";
         textMessage3 = "\n 1️⃣ כן \n2️⃣ לא";
 
         break;
@@ -85,7 +85,8 @@ const shlavHanokOut_Euro = async function (
             ? "*משחק הגמר*"
             : "*" + cycleNum + ", משחק מספר 1:* ";
         textMessage1 = str1 + "\n" + Team1 + " - " + Team2;
-        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+        textMessage2 =
+          "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
       }
       //  else {
       //   textMessage1 = "השתחלתם ללופ של ניחושי גביע המדינה למרות שאי אפשר..";
@@ -266,7 +267,8 @@ const shlavHanokOut_Euro = async function (
             : "*" + cycleNum + ", משחק מספר 2:* ";
 
         textMessage1 = str4 + "\n" + Team1 + " - " + Team2;
-        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+        textMessage2 =
+          "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
         footballFunc.saveData_googleAPI(
           user_name,
@@ -452,7 +454,8 @@ const shlavHanokOut_Euro = async function (
 
         const str7 = "*" + cycleNum + ", משחק מספר 3:* ";
         textMessage1 = str7 + "\n" + Team1 + " - " + Team2;
-        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+        textMessage2 =
+          "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
         footballFunc.saveData_googleAPI(
           user_name,
@@ -560,7 +563,8 @@ const shlavHanokOut_Euro = async function (
 
       const str10 = "*" + cycleNum + ", משחק מספר 4:* ";
       textMessage1 = str10 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+      textMessage2 =
+        "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
       ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
@@ -759,7 +763,8 @@ const shlavHanokOut_Euro = async function (
 
         const str13 = "*" + cycleNum + ", משחק מספר 5:* ";
         textMessage1 = str13 + "\n" + Team1 + " - " + Team2;
-        textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+        textMessage2 =
+          "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
         footballFunc.saveData_googleAPI(
           user_name,
@@ -867,7 +872,8 @@ const shlavHanokOut_Euro = async function (
 
       const str16 = "*" + cycleNum + ", משחק מספר 6:* ";
       textMessage1 = str16 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+      textMessage2 =
+        "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
       ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
@@ -996,7 +1002,8 @@ const shlavHanokOut_Euro = async function (
 
       const str19 = "*" + cycleNum + ", משחק מספר 7:* ";
       textMessage1 = str19 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+      textMessage2 =
+        "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
       ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
@@ -1125,7 +1132,8 @@ const shlavHanokOut_Euro = async function (
 
       const str22 = "*" + cycleNum + ", משחק מספר 8:* ";
       textMessage1 = str22 + "\n" + Team1 + " - " + Team2;
-      textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+      textMessage2 =
+        "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
       ChoiseMinut = message;
       GameRow = await footballFunc.getGameGuss(
@@ -1327,7 +1335,7 @@ const shlavHanokOut_Euro = async function (
 
     //   // const str50 = "*" + cycleNum + ", משחק מספר 15:* ";
     //   // textMessage1 = str50 + "\n" + Team1 + " - " + Team2;
-    //   // textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי?";
+    //   // textMessage2 = "מה תהיה תוצאת המשחק בתום הזמן החוקי (כולל הארכה באם תהיה)?";
 
     //   ChoiseMinut = message;
     //   GameRow = await footballFunc.getGameGuss(
