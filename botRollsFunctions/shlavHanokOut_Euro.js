@@ -1963,7 +1963,7 @@ const shlavHanokOut_Euro = async function (
 
       break;
 
-    case 664:
+    case 1194:
       gameNum = message.split(" ")[1];
       score1 = message.split(" ")[3].split(":")[1];
       score2 = message.split(" ")[3].split(":")[0];
